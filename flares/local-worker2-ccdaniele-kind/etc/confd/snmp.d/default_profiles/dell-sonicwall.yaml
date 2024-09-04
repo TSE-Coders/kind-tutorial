@@ -1,0 +1,104 @@
+extends:
+- _dell.yaml
+- _generic-if.yaml
+metadata:
+  device:
+    fields:
+      model:
+        symbol:
+          MIB: SONICWALL-COMMON-MIB
+          OID: 1.3.6.1.4.1.8741.2.1.1.1.0
+          name: snwlSysModel
+      serial_number:
+        symbol:
+          MIB: SONICWALL-COMMON-MIB
+          OID: 1.3.6.1.4.1.8741.2.1.1.2.0
+          name: snwlSysSerialNumber
+      type:
+        value: firewall
+      version:
+        symbol:
+          MIB: SONICWALL-COMMON-MIB
+          OID: 1.3.6.1.4.1.8741.2.1.1.3.0
+          name: snwlSysFirmwareVersion
+metrics:
+- MIB: SONICWALL-FIREWALL-IP-STATISTICS-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.8741.1.3.1.3.0
+    name: cpu.usage
+- MIB: SONICWALL-FIREWALL-IP-STATISTICS-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.8741.1.3.1.4.0
+    name: memory.usage
+- MIB: SONICWALL-FIREWALL-IP-STATISTICS-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.8741.1.3.1.1.0
+    name: sonicMaxConnCacheEntries
+- MIB: SONICWALL-FIREWALL-IP-STATISTICS-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.8741.1.3.1.2.0
+    name: sonicCurrentConnCacheEntries
+- MIB: SONICWALL-FIREWALL-IP-STATISTICS-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.8741.1.3.1.5.0
+    name: sonicNatTranslationCount
+- MIB: SONICWALL-FIREWALL-IP-STATISTICS-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.8741.1.3.2.1.1.1.2
+      name: sonicSAStatPeerGateway
+    tag: sonic_sa_stat_peer_gateway
+  - symbol:
+      OID: 1.3.6.1.4.1.8741.1.3.2.1.1.1.3
+      name: sonicSAStatSrcAddrBegin
+    tag: sonic_sa_stat_src_addr_begin
+  - symbol:
+      OID: 1.3.6.1.4.1.8741.1.3.2.1.1.1.4
+      name: sonicSAStatSrcAddrEnd
+    tag: sonic_sa_stat_src_addr_end
+  - symbol:
+      OID: 1.3.6.1.4.1.8741.1.3.2.1.1.1.5
+      name: sonicSAStatDstAddrBegin
+    tag: sonic_sa_stat_dst_addr_begin
+  - symbol:
+      OID: 1.3.6.1.4.1.8741.1.3.2.1.1.1.6
+      name: sonicSAStatDstAddrEnd
+    tag: sonic_sa_stat_dst_addr_end
+  - symbol:
+      OID: 1.3.6.1.4.1.8741.1.3.2.1.1.1.7
+      name: sonicSAStatCreateTime
+    tag: sonic_sa_stat_create_time
+  - symbol:
+      OID: 1.3.6.1.4.1.8741.1.3.2.1.1.1.14
+      name: sonicSAStatUserName
+    tag: sonic_sa_stat_user_name
+  symbols:
+  - OID: 1.3.6.1.4.1.8741.1.3.2.1.1.1.8
+    name: sonicSAStatEncryptPktCount
+  - OID: 1.3.6.1.4.1.8741.1.3.2.1.1.1.9
+    name: sonicSAStatEncryptByteCount
+  - OID: 1.3.6.1.4.1.8741.1.3.2.1.1.1.10
+    name: sonicSAStatDecryptPktCount
+  - OID: 1.3.6.1.4.1.8741.1.3.2.1.1.1.11
+    name: sonicSAStatDecryptByteCount
+  - OID: 1.3.6.1.4.1.8741.1.3.2.1.1.1.12
+    name: sonicSAStatInFragPktCount
+  - OID: 1.3.6.1.4.1.8741.1.3.2.1.1.1.13
+    name: sonicSAStatOutFragPktCount
+  table:
+    OID: 1.3.6.1.4.1.8741.1.3.2.1.1
+    name: sonicSAStatTable
+- MIB: SONICWALL-FIREWALL-IP-STATISTICS-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.8741.1.3.5.1.0
+    name: sonicDpiSslConnCountCur
+- MIB: SONICWALL-FIREWALL-IP-STATISTICS-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.8741.1.3.5.2.0
+    name: sonicDpiSslConnCountHighWater
+- MIB: SONICWALL-FIREWALL-IP-STATISTICS-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.8741.1.3.5.3.0
+    name: sonicDpiSslConnCountMax
+sysobjectid:
+- 1.3.6.1.4.1.8741.1

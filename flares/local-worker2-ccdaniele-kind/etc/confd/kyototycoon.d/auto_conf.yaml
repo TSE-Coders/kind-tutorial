@@ -1,0 +1,5 @@
+ad_identifiers:
+- kyototycoon
+init_config: null
+instances:
+- report_url: http://%%host%%:1978/rpc/report

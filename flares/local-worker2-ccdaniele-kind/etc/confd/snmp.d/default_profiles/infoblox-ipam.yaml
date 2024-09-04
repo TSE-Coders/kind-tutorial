@@ -1,0 +1,238 @@
+extends:
+- _base.yaml
+- _generic-host-resources-base.yaml
+- _generic-if.yaml
+- _generic-ucd.yaml
+metadata:
+  device:
+    fields:
+      vendor:
+        value: infoblox
+metric_tags:
+- OID: 1.3.6.1.4.1.7779.3.1.1.2.1.4.0
+  symbol: ibHardwareType
+  tag: ib_hardware_type
+- OID: 1.3.6.1.4.1.7779.3.1.1.2.1.6.0
+  symbol: ibSerialNumber
+  tag: ib_serial_number
+- OID: 1.3.6.1.4.1.7779.3.1.1.2.1.7.0
+  symbol: ibNiosVersion
+  tag: ib_nios_version
+metrics:
+- MIB: IB-PLATFORMONE-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.7779.3.1.1.2.1.8.1.1.0
+    name: cpu.usage
+- MIB: IB-PLATFORMONE-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.7779.3.1.1.2.1.8.2.1.0
+    name: memory.usage
+- MIB: IB-DHCPONE-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.7779.3.1.1.4.1.4.0
+    name: ibDhcpDeferredQueueSize
+- MIB: IB-DNSONE-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.7779.3.1.1.3.1.1.1.1
+      name: ibBindZoneName
+    tag: ib_bind_zone_name
+  symbols:
+  - OID: 1.3.6.1.4.1.7779.3.1.1.3.1.1.1.2
+    metric_type: monotonic_count
+    name: ibBindZoneSuccess
+  - OID: 1.3.6.1.4.1.7779.3.1.1.3.1.1.1.3
+    metric_type: monotonic_count
+    name: ibBindZoneReferral
+  - OID: 1.3.6.1.4.1.7779.3.1.1.3.1.1.1.4
+    metric_type: monotonic_count
+    name: ibBindZoneNxRRset
+  - OID: 1.3.6.1.4.1.7779.3.1.1.3.1.1.1.5
+    metric_type: monotonic_count
+    name: ibBindZoneNxDomain
+  - OID: 1.3.6.1.4.1.7779.3.1.1.3.1.1.1.6
+    metric_type: monotonic_count
+    name: ibBindZoneRecursion
+  - OID: 1.3.6.1.4.1.7779.3.1.1.3.1.1.1.7
+    metric_type: monotonic_count
+    name: ibBindZoneFailure
+  table:
+    OID: 1.3.6.1.4.1.7779.3.1.1.3.1.1
+    name: ibZoneStatisticsTable
+- MIB: IB-DNSONE-MIB
+  metric_type: monotonic_count
+  symbol:
+    OID: 1.3.6.1.4.1.7779.3.1.1.3.1.3.1.0
+    name: ibDDNSUpdateSuccess
+- MIB: IB-DNSONE-MIB
+  metric_type: monotonic_count
+  symbol:
+    OID: 1.3.6.1.4.1.7779.3.1.1.3.1.3.2.0
+    name: ibDDNSUpdateFailure
+- MIB: IB-DNSONE-MIB
+  metric_type: monotonic_count
+  symbol:
+    OID: 1.3.6.1.4.1.7779.3.1.1.3.1.3.3.0
+    name: ibDDNSUpdateReject
+- MIB: IB-DNSONE-MIB
+  metric_type: monotonic_count
+  symbol:
+    OID: 1.3.6.1.4.1.7779.3.1.1.3.1.3.4.0
+    name: ibDDNSUpdatePrerequisiteReject
+- MIB: IB-DNSONE-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.7779.3.1.1.3.1.6.0
+    name: ibDnsQueryRate
+- MIB: IB-PLATFORMONE-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.7779.3.1.1.2.1.2.1.1
+      name: ibNodeIPAddress
+    tag: ib_node_ip_address
+  - symbol:
+      OID: 1.3.6.1.4.1.7779.3.1.1.2.1.2.1.2
+      name: ibNodeReplicationStatus
+    tag: ib_node_replication_status
+  symbols:
+  - OID: 1.3.6.1.4.1.7779.3.1.1.2.1.2.1.3
+    name: ibNodeQueueFromMaster
+  - OID: 1.3.6.1.4.1.7779.3.1.1.2.1.2.1.5
+    name: ibNodeQueueToMaster
+  table:
+    OID: 1.3.6.1.4.1.7779.3.1.1.2.1.2
+    name: ibClusterReplicationStatusTable
+- MIB: IB-PLATFORMONE-MIB
+  metric_tags:
+  - mapping:
+      1: dhcp
+      2: dns
+      3: ntp
+      4: tftp
+      5: http-file-dist
+      6: ftp
+      7: bloxtools-move
+      8: bloxtools
+      9: node-status
+      10: disk-usage
+      11: enet-lan
+      12: enet-lan2
+      13: enet-ha
+      14: enet-mgmt
+      15: lcd
+      16: memory
+      17: replication
+      18: db-object
+      19: raid-summary
+      20: raid-disk1
+      21: raid-disk2
+      22: raid-disk3
+      23: raid-disk4
+      24: raid-disk5
+      25: raid-disk6
+      26: raid-disk7
+      27: raid-disk8
+      28: fan1
+      29: fan2
+      30: fan3
+      31: fan4
+      32: fan5
+      33: fan6
+      34: fan7
+      35: fan8
+      36: power-supply1
+      37: power-supply2
+      38: ntp-sync
+      39: cpu1-temp
+      40: cpu2-temp
+      41: sys-temp
+      42: raid-battery
+      43: cpu-usage
+      44: ospf
+      45: bgp
+      46: mgm-service
+      47: subgrid-conn
+      48: network-capacity
+      49: reporting
+      50: dns-cache-acceleration
+      51: ospf6
+      52: swap-usage
+      53: discovery-consolidator
+      54: discovery-collector
+      55: discovery-capacity
+      56: threat-protection
+      58: recursive-clients
+    symbol:
+      OID: 1.3.6.1.4.1.7779.3.1.1.2.1.9.1.1
+      name: ibServiceName
+    tag: ib_service_name
+  - symbol:
+      OID: 1.3.6.1.4.1.7779.3.1.1.2.1.9.1.3
+      name: ibServiceDesc
+    tag: ib_service_desc
+  - mapping:
+      1: working
+      2: warning
+      3: failed
+      4: inactive
+      5: unknown
+    symbol:
+      OID: 1.3.6.1.4.1.7779.3.1.1.2.1.9.1.2
+      name: ibServiceStatus
+    tag: ib_service_status
+  symbols:
+  - constant_value_one: true
+    name: ibMemberServiceStatus
+  table:
+    OID: 1.3.6.1.4.1.7779.3.1.1.2.1.9
+    name: ibMemberServiceStatusTable
+sysobjectid:
+- 1.3.6.1.4.1.7779.1.1004
+- 1.3.6.1.4.1.7779.1.1204
+- 1.3.6.1.4.1.7779.1.1301
+- 1.3.6.1.4.1.7779.1.1302
+- 1.3.6.1.4.1.7779.1.1303
+- 1.3.6.1.4.1.7779.1.1401
+- 1.3.6.1.4.1.7779.1.1402
+- 1.3.6.1.4.1.7779.1.1403
+- 1.3.6.1.4.1.7779.1.1404
+- 1.3.6.1.4.1.7779.1.1405
+- 1.3.6.1.4.1.7779.1.1406
+- 1.3.6.1.4.1.7779.1.1407
+- 1.3.6.1.4.1.7779.1.1411
+- 1.3.6.1.4.1.7779.1.1412
+- 1.3.6.1.4.1.7779.1.1413
+- 1.3.6.1.4.1.7779.1.1414
+- 1.3.6.1.4.1.7779.1.1421
+- 1.3.6.1.4.1.7779.1.1422
+- 1.3.6.1.4.1.7779.1.1423
+- 1.3.6.1.4.1.7779.1.1424
+- 1.3.6.1.4.1.7779.1.1425
+- 1.3.6.1.4.1.7779.1.1431
+- 1.3.6.1.4.1.7779.1.1441
+- 1.3.6.1.4.1.7779.1.1442
+- 1.3.6.1.4.1.7779.1.1443
+- 1.3.6.1.4.1.7779.1.1444
+- 1.3.6.1.4.1.7779.1.1501
+- 1.3.6.1.4.1.7779.1.1502
+- 1.3.6.1.4.1.7779.1.1503
+- 1.3.6.1.4.1.7779.1.1504
+- 1.3.6.1.4.1.7779.1.1505
+- 1.3.6.1.4.1.7779.1.1506
+- 1.3.6.1.4.1.7779.1.1507
+- 1.3.6.1.4.1.7779.1.1511
+- 1.3.6.1.4.1.7779.1.1512
+- 1.3.6.1.4.1.7779.1.1513
+- 1.3.6.1.4.1.7779.1.1514
+- 1.3.6.1.4.1.7779.1.1521
+- 1.3.6.1.4.1.7779.1.1522
+- 1.3.6.1.4.1.7779.1.1523
+- 1.3.6.1.4.1.7779.1.1524
+- 1.3.6.1.4.1.7779.1.1525
+- 1.3.6.1.4.1.7779.1.1541
+- 1.3.6.1.4.1.7779.1.1542
+- 1.3.6.1.4.1.7779.1.1543
+- 1.3.6.1.4.1.7779.1.1544
+- 1.3.6.1.4.1.7779.2.2
+- 1.3.6.1.4.1.7779.2.4
+- 1.3.6.1.4.1.7779.3.4
+- 1.3.6.1.4.1.7779.3.7

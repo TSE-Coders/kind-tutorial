@@ -1,0 +1,2 @@
+error reading file '/etc/datadog-agent/system-probe.yaml' to be copy to 'etc/system-probe.yaml': open /etc/datadog-agent/system-probe.yaml: no such file or directory
+error reading file '/etc/datadog-agent/security-agent.yaml' to be copy to 'etc/security-agent.yaml': open /etc/datadog-agent/security-agent.yaml: no such file or directory

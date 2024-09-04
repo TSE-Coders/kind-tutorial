@@ -1,0 +1,32 @@
+device:
+  vendor: arista
+extends:
+- _arista.yaml
+- _arista-metadata.yaml
+- _arista-queue.yaml
+- _base.yaml
+- _generic-if.yaml
+- _generic-ip.yaml
+- _generic-host-resources.yaml
+- _generic-ospf.yaml
+- _generic-bgp4.yaml
+- _generic-tcp.yaml
+- _generic-udp.yaml
+metrics:
+- MIB: ENTITY-SENSOR-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.2.1.99.1.1.1.1
+      name: entPhySensorType
+    tag: sensor_type
+  - index: 1
+    tag: sensor_id
+  symbols:
+  - OID: 1.3.6.1.2.1.99.1.1.1.4
+    name: entPhySensorValue
+  - OID: 1.3.6.1.2.1.99.1.1.1.5
+    name: entPhySensorOperStatus
+  table:
+    OID: 1.3.6.1.2.1.99.1.1.1
+    name: entPhySensorTable
+sysobjectid: 1.3.6.1.4.1.30065.1.*

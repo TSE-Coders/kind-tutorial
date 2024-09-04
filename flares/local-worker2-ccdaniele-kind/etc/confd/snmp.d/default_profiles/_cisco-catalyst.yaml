@@ -1,0 +1,44 @@
+metadata:
+  device:
+    fields:
+      serial_number:
+        symbol:
+          MIB: CISCO-STACK-MIB
+          OID: 1.3.6.1.4.1.9.5.1.2.19.0
+          name: chassisSerialNumberString
+metrics:
+- MIB: CISCO-ENTITY-SENSOR-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.9.9.91.1.1.1.1.1
+      name: entSensorType
+    tag: sensor_type
+  - index: 1
+    tag: sensor_id
+  symbols:
+  - OID: 1.3.6.1.4.1.9.9.91.1.1.1.1.4
+    name: entSensorValue
+  table:
+    OID: 1.3.6.1.4.1.9.9.91.1.1.1
+    name: entSensorValueTable
+- MIB: CISCO-IF-EXTENSION-MIB
+  metric_tags:
+  - MIB: IF-MIB
+    symbol:
+      OID: 1.3.6.1.2.1.31.1.1.1.1
+      name: ifName
+    table: ifXTable
+    tag: interface
+  metric_type: gauge
+  symbols:
+  - OID: 1.3.6.1.4.1.9.9.276.1.1.1.1.1
+    name: cieIfLastInTime
+  - OID: 1.3.6.1.4.1.9.9.276.1.1.1.1.2
+    name: cieIfLastOutTime
+  - OID: 1.3.6.1.4.1.9.9.276.1.1.1.1.10
+    name: cieIfInputQueueDrops
+  - OID: 1.3.6.1.4.1.9.9.276.1.1.1.1.11
+    name: cieIfOutputQueueDrops
+  table:
+    OID: 1.3.6.1.4.1.9.9.276.1.1.1
+    name: cieIfPacketStatsTable

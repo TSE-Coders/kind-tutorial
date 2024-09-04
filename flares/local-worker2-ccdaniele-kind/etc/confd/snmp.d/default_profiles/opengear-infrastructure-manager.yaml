@@ -1,0 +1,97 @@
+extends:
+- _generic-if.yaml
+- _generic-ucd.yaml
+- _opengear.yaml
+metrics:
+- MIB: OG-STATUS-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.25049.16.1.1.2
+      name: ogSerialPortStatusPort
+    tag: og_serial_port_status_port
+  - symbol:
+      OID: 1.3.6.1.4.1.25049.16.1.1.5
+      name: ogSerialPortStatusSpeed
+    tag: og_serial_port_status_speed
+  - symbol:
+      OID: 1.3.6.1.4.1.25049.16.1.1.11
+      name: ogSerialPortStatusLabel
+    tag: og_serial_port_status_label
+  - mapping:
+      0: false
+      1: true
+    symbol:
+      OID: 1.3.6.1.4.1.25049.16.1.1.6
+      name: ogSerialPortStatusDCD
+    tag: og_serial_port_status_dcd
+  - mapping:
+      0: false
+      1: true
+    symbol:
+      OID: 1.3.6.1.4.1.25049.16.1.1.7
+      name: ogSerialPortStatusDTR
+    tag: og_serial_port_status_dtr
+  - mapping:
+      0: false
+      1: true
+    symbol:
+      OID: 1.3.6.1.4.1.25049.16.1.1.8
+      name: ogSerialPortStatusDSR
+    tag: og_serial_port_status_dsr
+  - mapping:
+      0: false
+      1: true
+    symbol:
+      OID: 1.3.6.1.4.1.25049.16.1.1.9
+      name: ogSerialPortStatusCTS
+    tag: og_serial_port_status_cts
+  - mapping:
+      0: false
+      1: true
+    symbol:
+      OID: 1.3.6.1.4.1.25049.16.1.1.10
+      name: ogSerialPortStatusRTS
+    tag: og_serial_port_status_rts
+  symbols:
+  - OID: 1.3.6.1.4.1.25049.16.1.1.3
+    metric_type: monotonic_count
+    name: ogSerialPortStatusRxBytes
+  - OID: 1.3.6.1.4.1.25049.16.1.1.4
+    metric_type: monotonic_count
+    name: ogSerialPortStatusTxBytes
+  table:
+    OID: 1.3.6.1.4.1.25049.16.1
+    name: ogSerialPortStatusTable
+- MIB: OG-STATUS-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.25049.16.3.1.2
+      name: ogRpcStatusName
+    tag: og_rpc_status_name
+  symbols:
+  - OID: 1.3.6.1.4.1.25049.16.3.1.3
+    name: ogRpcStatusMaxTemp
+  - OID: 1.3.6.1.4.1.25049.16.3.1.4
+    name: ogRpcStatusAlertCount
+  table:
+    OID: 1.3.6.1.4.1.25049.16.3
+    name: ogRpcStatusTable
+- MIB: OG-STATUS-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.25049.16.4.1.2
+      name: ogEmdStatusName
+    tag: og_emd_status_name
+  symbols:
+  - OID: 1.3.6.1.4.1.25049.16.4.1.3
+    name: ogEmdStatusTemp
+  - OID: 1.3.6.1.4.1.25049.16.4.1.4
+    name: ogEmdStatusHumidity
+  - OID: 1.3.6.1.4.1.25049.16.4.1.5
+    name: ogEmdStatusAlertCount
+  table:
+    OID: 1.3.6.1.4.1.25049.16.4
+    name: ogEmdStatusTable
+sysobjectid:
+- 1.3.6.1.4.1.25049.1.60
+- 1.3.6.1.4.1.25049.1.61

@@ -1,0 +1,11 @@
+device:
+  vendor: cisco
+extends:
+- _base.yaml
+- _cisco-generic.yaml
+metadata:
+  device:
+    fields:
+      type:
+        value: router
+sysobjectid: 1.3.6.1.4.1.9.1.1537

@@ -1,0 +1,6 @@
+ad_identifiers:
+- memcached
+init_config: null
+instances:
+- port: 11211
+  url: '%%host%%'

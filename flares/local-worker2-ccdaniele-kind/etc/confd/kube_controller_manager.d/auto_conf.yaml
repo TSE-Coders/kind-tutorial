@@ -1,0 +1,11 @@
+ad_identifiers:
+- kube-controller-manager
+init_config: null
+instances:
+- bearer_token_auth: tls_only
+  possible_prometheus_urls:
+  - https://%%host%%:10257/metrics
+  - https://localhost:10257/metrics
+  - http://%%host%%:10252/metrics
+  - http://localhost:10252/metrics
+  ssl_verify: false

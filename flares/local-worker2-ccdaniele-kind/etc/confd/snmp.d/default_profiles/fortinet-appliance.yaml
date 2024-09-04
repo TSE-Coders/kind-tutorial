@@ -1,0 +1,272 @@
+extends:
+- _base.yaml
+- fortinet.yaml
+metrics:
+- MIB: FORTINET-FORTIMANAGER-FORTIANALYZER-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.12356.103.2.1.1.0
+    name: cpu.usage
+- MIB: FORTINET-FORTIMANAGER-FORTIANALYZER-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.12356.103.2.1.2.0
+    name: memory.used
+- MIB: FORTINET-FORTIMANAGER-FORTIANALYZER-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.12356.103.2.1.3.0
+    name: memory.total
+- MIB: FORTINET-FORTIMANAGER-FORTIANALYZER-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.12356.103.2.1.4.0
+    name: fmSysDiskUsage
+- MIB: FORTINET-FORTIMANAGER-FORTIANALYZER-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.12356.103.2.1.5.0
+    name: fmSysDiskCapacity
+- MIB: FORTINET-FORTIMANAGER-FORTIANALYZER-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.12356.103.2.1.6.0
+    name: fmSysCpuUsageExcludedNice
+- MIB: FORTINET-FORTIMANAGER-FORTIANALYZER-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.12356.103.2.1.9.0
+    name: fmLogRate
+- MIB: FORTINET-FORTIMANAGER-FORTIANALYZER-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.12356.103.7.1.3.0
+    name: fmRaidSize
+- MIB: FORTINET-FORTIMANAGER-FORTIANALYZER-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.12356.103.7.1.4.0
+    name: fmRaidDiskNumber
+- MIB: FORTINET-FORTIMANAGER-FORTIANALYZER-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.12356.103.9.1.2.0
+    name: fmHaClusterId
+- MIB: FORTINET-FORTIMANAGER-FORTIANALYZER-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.12356.103.9.1.3.0
+    name: fmHaPeerNumber
+- MIB: FORTINET-FORTIMANAGER-FORTIANALYZER-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.12356.103.6.2.1.2
+      name: fmDeviceEntName
+    tag: fm_device_ent_name
+  - symbol:
+      OID: 1.3.6.1.4.1.12356.103.6.2.1.3
+      name: fmDeviceEntSn
+    tag: fm_device_ent_sn
+  - mapping:
+      0: unregistered
+      1: fmg
+      2: faz
+      3: fmg-faz
+    symbol:
+      OID: 1.3.6.1.4.1.12356.103.6.2.1.4
+      name: fmDeviceEntMode
+    tag: fm_device_ent_mode
+  - symbol:
+      OID: 1.3.6.1.4.1.12356.103.6.2.1.5
+      name: fmDeviceEntAdom
+    tag: fm_device_ent_adom
+  - symbol:
+      OID: 1.3.6.1.4.1.12356.103.6.2.1.6
+      name: fmDeviceEntIp
+    tag: fm_device_ent_ip
+  - mapping:
+      0: standalone
+      1: a-p
+      2: a-a
+      3: elbc
+      4: dual
+      5: fmg
+    symbol:
+      OID: 1.3.6.1.4.1.12356.103.6.2.1.10
+      name: fmDeviceEntHaMode
+    tag: fm_device_ent_ha_mode
+  - symbol:
+      OID: 1.3.6.1.4.1.12356.103.6.2.1.11
+      name: fmDeviceEntHaGroup
+    tag: fm_device_ent_ha_group
+  - symbol:
+      OID: 1.3.6.1.4.1.12356.103.6.2.1.24
+      name: fmDeviceEntDesc
+    tag: fm_device_ent_desc
+  - mapping:
+      0: unknown
+      1: up
+      2: down
+    symbol:
+      OID: 1.3.6.1.4.1.12356.103.6.2.1.12
+      name: fmDeviceEntConnectState
+    tag: fm_device_ent_connect_state
+  - mapping:
+      0: unknown
+      1: not-modified
+      2: modified
+    symbol:
+      OID: 1.3.6.1.4.1.12356.103.6.2.1.13
+      name: fmDeviceEntDbState
+    tag: fm_device_ent_db_state
+  - mapping:
+      0: unknown
+      1: in-sync
+      2: out-of-sync
+    symbol:
+      OID: 1.3.6.1.4.1.12356.103.6.2.1.14
+      name: fmDeviceEntConfigState
+    tag: fm_device_ent_config_state
+  - mapping:
+      0: none
+      1: unknown
+      2: checked-in
+      3: in-progress
+      4: installed
+      5: aborted
+      6: sched
+      7: retry
+      8: canceled
+      9: pending
+      10: retrieved
+      11: changed-conf
+      12: sync-fail
+      13: timeout
+      14: rev-reverted
+      15: auto-updated
+    symbol:
+      OID: 1.3.6.1.4.1.12356.103.6.2.1.15
+      name: fmDeviceEntState
+    tag: fm_device_ent_state
+  - mapping:
+      0: expired
+      1: valid
+    symbol:
+      OID: 1.3.6.1.4.1.12356.103.6.2.1.18
+      name: fmDeviceEntSupportState
+    tag: fm_device_ent_support_state
+  symbols:
+  - constant_value_one: true
+    name: fmDevice
+  table:
+    OID: 1.3.6.1.4.1.12356.103.6.2
+    name: fmDeviceTable
+- MIB: FORTINET-FORTIMANAGER-FORTIANALYZER-MIB
+  metric_tags:
+  - mapping:
+      0: unavailable
+      1: unused
+      2: ok
+      3: rebuilding
+      4: failed
+      5: spare
+    symbol:
+      OID: 1.3.6.1.4.1.12356.103.7.2.1.2
+      name: fmRaidDiskEntState
+    tag: fm_raid_disk_ent_state
+  symbols:
+  - OID: 1.3.6.1.4.1.12356.103.7.2.1.3
+    name: fmRaidDiskEntSize
+  table:
+    OID: 1.3.6.1.4.1.12356.103.7.2
+    name: fmRaidDiskTable
+- MIB: FORTINET-FORTIMANAGER-FORTIANALYZER-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.12356.103.9.2.1.2
+      name: fmHaPeerEntIp
+    tag: fm_ha_peer_ent_ip
+  - symbol:
+      OID: 1.3.6.1.4.1.12356.103.9.2.1.3
+      name: fmHaPeerEntSn
+    tag: fm_ha_peer_ent_sn
+  - symbol:
+      OID: 1.3.6.1.4.1.12356.103.9.2.1.5
+      name: fmHaPeerEntHostName
+    tag: fm_ha_peer_ent_host_name
+  - mapping:
+      1: disabled
+      2: enabled
+    symbol:
+      OID: 1.3.6.1.4.1.12356.103.9.2.1.4
+      name: fmHaPeerEntEnabled
+    tag: fm_ha_peer_ent_enabled
+  - mapping:
+      0: down
+      1: negotiating
+      2: synchronizing
+      3: up
+    symbol:
+      OID: 1.3.6.1.4.1.12356.103.9.2.1.6
+      name: fmHaPeerEntState
+    tag: fm_ha_peer_ent_state
+  symbols:
+  - constant_value_one: true
+    name: fmHaPeer
+  table:
+    OID: 1.3.6.1.4.1.12356.103.9.2
+    name: fmHaPeerTable
+sysobjectid:
+- 1.3.6.1.4.1.12356.103.1.*
+- 1.3.6.1.4.1.12356.103.1.64
+- 1.3.6.1.4.1.12356.103.1.1000
+- 1.3.6.1.4.1.12356.103.1.1001
+- 1.3.6.1.4.1.12356.103.1.1003
+- 1.3.6.1.4.1.12356.103.1.2004
+- 1.3.6.1.4.1.12356.103.1.2005
+- 1.3.6.1.4.1.12356.103.1.2006
+- 1.3.6.1.4.1.12356.103.1.3004
+- 1.3.6.1.4.1.12356.103.1.3005
+- 1.3.6.1.4.1.12356.103.1.3006
+- 1.3.6.1.4.1.12356.103.1.4000
+- 1.3.6.1.4.1.12356.103.1.4001
+- 1.3.6.1.4.1.12356.103.1.4002
+- 1.3.6.1.4.1.12356.103.1.4003
+- 1.3.6.1.4.1.12356.103.1.4005
+- 1.3.6.1.4.1.12356.103.1.10003
+- 1.3.6.1.4.1.12356.103.1.10004
+- 1.3.6.1.4.1.12356.103.1.20000
+- 1.3.6.1.4.1.12356.103.1.20005
+- 1.3.6.1.4.1.12356.103.1.30002
+- 1.3.6.1.4.1.12356.103.1.30003
+- 1.3.6.1.4.1.12356.103.1.30006
+- 1.3.6.1.4.1.12356.103.1.39005
+- 1.3.6.1.4.1.12356.103.1.40004
+- 1.3.6.1.4.1.12356.103.1.40005
+- 1.3.6.1.4.1.12356.103.1.50011
+- 1.3.6.1.4.1.12356.103.3.*
+- 1.3.6.1.4.1.12356.103.3.20
+- 1.3.6.1.4.1.12356.103.3.64
+- 1.3.6.1.4.1.12356.103.3.1000
+- 1.3.6.1.4.1.12356.103.3.1001
+- 1.3.6.1.4.1.12356.103.3.1002
+- 1.3.6.1.4.1.12356.103.3.1003
+- 1.3.6.1.4.1.12356.103.3.2004
+- 1.3.6.1.4.1.12356.103.3.2005
+- 1.3.6.1.4.1.12356.103.3.2006
+- 1.3.6.1.4.1.12356.103.3.3004
+- 1.3.6.1.4.1.12356.103.3.3006
+- 1.3.6.1.4.1.12356.103.3.4000
+- 1.3.6.1.4.1.12356.103.3.4002
+- 1.3.6.1.4.1.12356.103.3.4003
+- 1.3.6.1.4.1.12356.103.3.4005
+- 1.3.6.1.4.1.12356.103.3.8000
+- 1.3.6.1.4.1.12356.103.3.8002
+- 1.3.6.1.4.1.12356.103.3.8006
+- 1.3.6.1.4.1.12356.103.3.10002
+- 1.3.6.1.4.1.12356.103.3.10003
+- 1.3.6.1.4.1.12356.103.3.10004
+- 1.3.6.1.4.1.12356.103.3.10005
+- 1.3.6.1.4.1.12356.103.3.20000
+- 1.3.6.1.4.1.12356.103.3.20001
+- 1.3.6.1.4.1.12356.103.3.20002
+- 1.3.6.1.4.1.12356.103.3.20005
+- 1.3.6.1.4.1.12356.103.3.30004
+- 1.3.6.1.4.1.12356.103.3.30005
+- 1.3.6.1.4.1.12356.103.3.30006
+- 1.3.6.1.4.1.12356.103.3.35005
+- 1.3.6.1.4.1.12356.103.3.35006
+- 1.3.6.1.4.1.12356.103.3.37006
+- 1.3.6.1.4.1.12356.103.3.39005
+- 1.3.6.1.4.1.12356.103.3.40000
+- 1.3.6.1.4.1.12356.103.3.40001
+- 1.3.6.1.4.1.12356.103.3.40002

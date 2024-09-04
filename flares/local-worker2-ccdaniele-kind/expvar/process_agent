@@ -1,0 +1,38 @@
+connections_queue_bytes: 0
+connections_queue_size: 0
+container_count: 12
+container_id: ""
+docker_socket: ""
+drop_check_payloads: []
+enabled_checks:
+- process
+- rtprocess
+endpoints:
+  https://process.datadoghq.com:
+  - 8b8dc
+event_queue_bytes: 0
+event_queue_size: 0
+host: local-worker2-ccdaniele-kind
+language_detection_enabled: true
+last_collect_time: "2024-08-27 17:17:21"
+pid: 1.57849e+06
+pod_queue_bytes: 0
+pod_queue_size: 0
+process_count: 50
+process_queue_bytes: 0
+process_queue_size: 0
+rtprocess_queue_bytes: 0
+rtprocess_queue_size: 0
+system_probe_process_module_enabled: false
+uptime: 71
+uptime_nano: 1.7247789783300634e+18
+version:
+  Commit: be4db09
+  Major: 7
+  Meta: ""
+  Minor: 55
+  Patch: 2
+  Pre: ""
+workloadmeta_extractor_cache_size: 51
+workloadmeta_extractor_diffs_dropped: 0
+workloadmeta_extractor_stale_diffs: 0

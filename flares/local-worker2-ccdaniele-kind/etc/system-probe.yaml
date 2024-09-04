@@ -1,0 +1,48 @@
+network_config:
+  conntrack_init_timeout: 10s
+  enabled: true
+runtime_security_config:
+  activity_dump:
+    cgroup_dump_timeout: 20
+    cgroup_wait_list_size: 0
+    enabled: true
+    path_merge:
+      enabled: false
+    traced_cgroups_count: 3
+  enabled: true
+  fim_enabled: false
+  network:
+    enabled: true
+  policies:
+    dir: /etc/datadog-agent/runtime-security.d
+  remote_configuration:
+    enabled: true
+  security_profile:
+    anomaly_detection:
+      enabled: true
+    auto_suppression:
+      enabled: true
+    enabled: true
+  socket: /var/run/sysprobe/runtime-security.sock
+  syscall_monitor:
+    enabled: false
+  use_secruntime_track: true
+service_monitoring_config:
+  enabled: true
+system_probe_config:
+  apt_config_dir: /host/etc/apt
+  bpf_debug: false
+  btf_path: null
+  collect_dns_stats: true
+  conntrack_max_state_size: 131072
+  debug_port: 0
+  enable_conntrack: true
+  enable_oom_kill: false
+  enable_tcp_queue_length: false
+  enabled: true
+  kernel_header_download_dir: /var/tmp/datadog-agent/system-probe/kernel-headers
+  max_tracked_connections: 131072
+  runtime_compiler_output_dir: /var/tmp/datadog-agent/system-probe/build
+  sysprobe_socket: /var/run/sysprobe/sysprobe.sock
+  yum_repos_dir: /host/etc/yum.repos.d
+  zypper_repos_dir: /host/etc/zypp/repos.d

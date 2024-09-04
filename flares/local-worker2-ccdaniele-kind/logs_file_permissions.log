@@ -1,0 +1,15 @@
+/var/log/pods/default_kind-datadog-648gw_d2128bd6-4ea5-4272-9b4f-d0275e6a6bcf/init-volume/0.log -rw-r-----
+/var/log/pods/default_postgresdb-88647cc65-4ns6l_b1094190-fd62-46ab-aee4-243836fd79e2/postgresdb/0.log -rw-r-----
+/var/log/pods/default_kind-datadog-648gw_d2128bd6-4ea5-4272-9b4f-d0275e6a6bcf/init-config/0.log -rw-r-----
+/var/log/pods/default_kind-datadog-648gw_d2128bd6-4ea5-4272-9b4f-d0275e6a6bcf/seccomp-setup/0.log -rw-r-----
+/var/log/pods/default_kind-datadog-648gw_d2128bd6-4ea5-4272-9b4f-d0275e6a6bcf/process-agent/0.log -rw-r-----
+/var/log/pods/default_kind-datadog-648gw_d2128bd6-4ea5-4272-9b4f-d0275e6a6bcf/security-agent/0.log -rw-r-----
+/var/log/pods/kube-system_kindnet-jn2xr_444c0f23-dbbf-4dd6-8c63-72dce054ac97/kindnet-cni/0.log -rw-r-----
+/var/log/pods/default_kind-datadog-648gw_d2128bd6-4ea5-4272-9b4f-d0275e6a6bcf/trace-agent/0.log -rw-r-----
+/var/log/pods/default_pdserver-bdc89dfcf-v4bdb_1abac9d8-440f-4025-b84e-32c0eca9f00e/pdserver/0.log -rw-r-----
+/var/log/pods/kubernetes-dashboard_kubernetes-dashboard-6d6bbddd49-h2nfh_9c5546d4-8aec-425a-b615-c0b5bd3bd035/kubernetes-dashboard/1.log -rw-r-----
+/var/log/pods/default_kind-datadog-648gw_d2128bd6-4ea5-4272-9b4f-d0275e6a6bcf/agent/0.log -rw-r-----
+/var/log/pods/kube-system_kube-proxy-bddhr_4d6f81ac-8823-46b1-b028-c037325d0faf/kube-proxy/0.log -rw-r-----
+/var/log/pods/ignite-namespace_ignite-cluster-0_9c1e8b7c-028b-40da-86c0-39468ee5708e/ignite-node/0.log -rw-r-----
+/var/log/pods/default_kind-datadog-648gw_d2128bd6-4ea5-4272-9b4f-d0275e6a6bcf/system-probe/0.log -rw-r-----
+/var/log/pods/nginx_nginx-deployment-5b69cd8969-kr887_54d1829f-c260-48d5-aef9-a4fc2dfce85a/nginx/0.log -rw-r-----

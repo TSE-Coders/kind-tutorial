@@ -1,0 +1,645 @@
+device:
+  vendor: chatsworth
+extends:
+- _base.yaml
+metadata:
+  device:
+    fields:
+      type:
+        value: PDU
+      vendor:
+        value: chatsworth
+metric_tags:
+- OID: 1.3.6.1.4.1.30932.1.1.2.40.0
+  symbol: pduName
+  tag: legacy_pdu_name
+- OID: 1.3.6.1.4.1.30932.1.1.1.1.0
+  symbol: version
+  tag: legacy_pdu_version
+- OID: 1.3.6.1.4.1.30932.1.1.1.2.0
+  symbol: modelCode
+  tag: legacy_pdu_model
+- OID: 1.3.6.1.4.1.30932.1.1.1.3.0
+  symbol: hwAddress
+  tag: legacy_pdu_macaddress
+metrics:
+- MIB: CPI-UNITY-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.30932.1.1.2.58.2.0
+    name: pduRole
+- MIB: CPI-UNITY-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.30932.1.1.2.58.12.0
+    name: outOfService
+- MIB: CPI-UNITY-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.30932.1.1.3.8.1.0
+    name: temperatureProbe1
+- MIB: CPI-UNITY-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.30932.1.1.3.8.2.0
+    name: temperatureProbe2
+- MIB: CPI-UNITY-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.30932.1.1.3.9.1.0
+    name: humidityProbe1
+- MIB: CPI-UNITY-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.30932.1.1.3.9.2.0
+    name: humidityProbe2
+- MIB: CPI-UNITY-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.30932.1.1.3.13.1.0
+    name: line1curr
+- MIB: CPI-UNITY-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.30932.1.1.3.13.2.0
+    name: line2curr
+- MIB: CPI-UNITY-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.30932.1.1.3.13.3.0
+    name: line3curr
+- MIB: CPI-UNITY-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.30932.1.1.3.1.1.0
+    name: currentxy1
+- MIB: CPI-UNITY-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.30932.1.1.3.1.2.0
+    name: currentyz1
+- MIB: CPI-UNITY-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.30932.1.1.3.1.3.0
+    name: currentzx1
+- MIB: CPI-UNITY-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.30932.1.1.3.1.4.0
+    name: currentxy2
+- MIB: CPI-UNITY-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.30932.1.1.3.1.5.0
+    name: currentyz2
+- MIB: CPI-UNITY-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.30932.1.1.3.1.6.0
+    name: currentzx2
+- MIB: CPI-UNITY-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.30932.1.1.3.2.1.0
+    name: voltagexy1
+- MIB: CPI-UNITY-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.30932.1.1.3.2.2.0
+    name: voltageyz1
+- MIB: CPI-UNITY-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.30932.1.1.3.2.3.0
+    name: voltagezx1
+- MIB: CPI-UNITY-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.30932.1.1.3.2.4.0
+    name: voltagexy2
+- MIB: CPI-UNITY-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.30932.1.1.3.2.5.0
+    name: voltageyz2
+- MIB: CPI-UNITY-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.30932.1.1.3.2.6.0
+    name: voltagezx2
+- MIB: CPI-UNITY-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.30932.1.1.3.3.1.0
+    name: powerxy1
+- MIB: CPI-UNITY-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.30932.1.1.3.3.2.0
+    name: poweryz1
+- MIB: CPI-UNITY-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.30932.1.1.3.3.3.0
+    name: powerzx1
+- MIB: CPI-UNITY-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.30932.1.1.3.3.4.0
+    name: powerxy2
+- MIB: CPI-UNITY-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.30932.1.1.3.3.5.0
+    name: poweryz2
+- MIB: CPI-UNITY-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.30932.1.1.3.3.6.0
+    name: powerzx2
+- MIB: CPI-UNITY-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.30932.1.1.3.4.1.0
+    name: powerFactxy1
+- MIB: CPI-UNITY-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.30932.1.1.3.4.2.0
+    name: powerFactyz1
+- MIB: CPI-UNITY-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.30932.1.1.3.4.3.0
+    name: powerFactzx1
+- MIB: CPI-UNITY-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.30932.1.1.3.4.4.0
+    name: powerFactxy2
+- MIB: CPI-UNITY-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.30932.1.1.3.4.5.0
+    name: powerFactyz2
+- MIB: CPI-UNITY-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.30932.1.1.3.4.6.0
+    name: powerFactzx2
+- MIB: CPI-UNITY-MIB
+  metric_type: monotonic_count
+  symbol:
+    OID: 1.3.6.1.4.1.30932.1.1.3.11.1.0
+    name: energyxy1s
+- MIB: CPI-UNITY-MIB
+  metric_type: monotonic_count
+  symbol:
+    OID: 1.3.6.1.4.1.30932.1.1.3.11.2.0
+    name: energyyz1s
+- MIB: CPI-UNITY-MIB
+  metric_type: monotonic_count
+  symbol:
+    OID: 1.3.6.1.4.1.30932.1.1.3.11.3.0
+    name: energyzx1s
+- MIB: CPI-UNITY-MIB
+  metric_type: monotonic_count
+  symbol:
+    OID: 1.3.6.1.4.1.30932.1.1.3.11.4.0
+    name: energyxy2s
+- MIB: CPI-UNITY-MIB
+  metric_type: monotonic_count
+  symbol:
+    OID: 1.3.6.1.4.1.30932.1.1.3.11.5.0
+    name: energyyz2s
+- MIB: CPI-UNITY-MIB
+  metric_type: monotonic_count
+  symbol:
+    OID: 1.3.6.1.4.1.30932.1.1.3.11.6.0
+    name: energyzx2s
+- MIB: CPI-UNITY-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.30932.1.1.3.5.1.0
+    name: outlet1Current
+- MIB: CPI-UNITY-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.30932.1.1.3.5.2.0
+    name: outlet2Current
+- MIB: CPI-UNITY-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.30932.1.1.3.5.3.0
+    name: outlet3Current
+- MIB: CPI-UNITY-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.30932.1.1.3.5.4.0
+    name: outlet4Current
+- MIB: CPI-UNITY-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.30932.1.1.3.5.5.0
+    name: outlet5Current
+- MIB: CPI-UNITY-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.30932.1.1.3.5.6.0
+    name: outlet6Current
+- MIB: CPI-UNITY-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.30932.1.1.3.5.7.0
+    name: outlet7Current
+- MIB: CPI-UNITY-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.30932.1.1.3.5.8.0
+    name: outlet8Current
+- MIB: CPI-UNITY-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.30932.1.1.3.5.9.0
+    name: outlet9Current
+- MIB: CPI-UNITY-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.30932.1.1.3.5.10.0
+    name: outlet10Current
+- MIB: CPI-UNITY-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.30932.1.1.3.5.11.0
+    name: outlet11Current
+- MIB: CPI-UNITY-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.30932.1.1.3.5.12.0
+    name: outlet12Current
+- MIB: CPI-UNITY-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.30932.1.1.3.5.13.0
+    name: outlet13Current
+- MIB: CPI-UNITY-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.30932.1.1.3.5.14.0
+    name: outlet14Current
+- MIB: CPI-UNITY-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.30932.1.1.3.5.15.0
+    name: outlet15Current
+- MIB: CPI-UNITY-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.30932.1.1.3.5.16.0
+    name: outlet16Current
+- MIB: CPI-UNITY-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.30932.1.1.3.5.17.0
+    name: outlet17Current
+- MIB: CPI-UNITY-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.30932.1.1.3.5.18.0
+    name: outlet18Current
+- MIB: CPI-UNITY-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.30932.1.1.3.5.19.0
+    name: outlet19Current
+- MIB: CPI-UNITY-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.30932.1.1.3.5.20.0
+    name: outlet20Current
+- MIB: CPI-UNITY-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.30932.1.1.3.5.21.0
+    name: outlet21Current
+- MIB: CPI-UNITY-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.30932.1.1.3.5.22.0
+    name: outlet22Current
+- MIB: CPI-UNITY-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.30932.1.1.3.5.23.0
+    name: outlet23Current
+- MIB: CPI-UNITY-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.30932.1.1.3.5.24.0
+    name: outlet24Current
+- MIB: CPI-UNITY-MIB
+  metric_type: monotonic_count
+  symbol:
+    OID: 1.3.6.1.4.1.30932.1.1.3.12.1.0
+    name: receptacleEnergyoutlet1s
+- MIB: CPI-UNITY-MIB
+  metric_type: monotonic_count
+  symbol:
+    OID: 1.3.6.1.4.1.30932.1.1.3.12.2.0
+    name: receptacleEnergyoutlet2s
+- MIB: CPI-UNITY-MIB
+  metric_type: monotonic_count
+  symbol:
+    OID: 1.3.6.1.4.1.30932.1.1.3.12.3.0
+    name: receptacleEnergyoutlet3s
+- MIB: CPI-UNITY-MIB
+  metric_type: monotonic_count
+  symbol:
+    OID: 1.3.6.1.4.1.30932.1.1.3.12.4.0
+    name: receptacleEnergyoutlet4s
+- MIB: CPI-UNITY-MIB
+  metric_type: monotonic_count
+  symbol:
+    OID: 1.3.6.1.4.1.30932.1.1.3.12.5.0
+    name: receptacleEnergyoutlet5s
+- MIB: CPI-UNITY-MIB
+  metric_type: monotonic_count
+  symbol:
+    OID: 1.3.6.1.4.1.30932.1.1.3.12.6.0
+    name: receptacleEnergyoutlet6s
+- MIB: CPI-UNITY-MIB
+  metric_type: monotonic_count
+  symbol:
+    OID: 1.3.6.1.4.1.30932.1.1.3.12.7.0
+    name: receptacleEnergyoutlet7s
+- MIB: CPI-UNITY-MIB
+  metric_type: monotonic_count
+  symbol:
+    OID: 1.3.6.1.4.1.30932.1.1.3.12.8.0
+    name: receptacleEnergyoutlet8s
+- MIB: CPI-UNITY-MIB
+  metric_type: monotonic_count
+  symbol:
+    OID: 1.3.6.1.4.1.30932.1.1.3.12.9.0
+    name: receptacleEnergyoutlet9s
+- MIB: CPI-UNITY-MIB
+  metric_type: monotonic_count
+  symbol:
+    OID: 1.3.6.1.4.1.30932.1.1.3.12.10.0
+    name: receptacleEnergyoutlet10s
+- MIB: CPI-UNITY-MIB
+  metric_type: monotonic_count
+  symbol:
+    OID: 1.3.6.1.4.1.30932.1.1.3.12.11.0
+    name: receptacleEnergyoutlet11s
+- MIB: CPI-UNITY-MIB
+  metric_type: monotonic_count
+  symbol:
+    OID: 1.3.6.1.4.1.30932.1.1.3.12.12.0
+    name: receptacleEnergyoutlet12s
+- MIB: CPI-UNITY-MIB
+  metric_type: monotonic_count
+  symbol:
+    OID: 1.3.6.1.4.1.30932.1.1.3.12.13.0
+    name: receptacleEnergyoutlet13s
+- MIB: CPI-UNITY-MIB
+  metric_type: monotonic_count
+  symbol:
+    OID: 1.3.6.1.4.1.30932.1.1.3.12.14.0
+    name: receptacleEnergyoutlet14s
+- MIB: CPI-UNITY-MIB
+  metric_type: monotonic_count
+  symbol:
+    OID: 1.3.6.1.4.1.30932.1.1.3.12.15.0
+    name: receptacleEnergyoutlet15s
+- MIB: CPI-UNITY-MIB
+  metric_type: monotonic_count
+  symbol:
+    OID: 1.3.6.1.4.1.30932.1.1.3.12.16.0
+    name: receptacleEnergyoutlet16s
+- MIB: CPI-UNITY-MIB
+  metric_type: monotonic_count
+  symbol:
+    OID: 1.3.6.1.4.1.30932.1.1.3.12.17.0
+    name: receptacleEnergyoutlet17s
+- MIB: CPI-UNITY-MIB
+  metric_type: monotonic_count
+  symbol:
+    OID: 1.3.6.1.4.1.30932.1.1.3.12.18.0
+    name: receptacleEnergyoutlet18s
+- MIB: CPI-UNITY-MIB
+  metric_type: monotonic_count
+  symbol:
+    OID: 1.3.6.1.4.1.30932.1.1.3.12.19.0
+    name: receptacleEnergyoutlet19s
+- MIB: CPI-UNITY-MIB
+  metric_type: monotonic_count
+  symbol:
+    OID: 1.3.6.1.4.1.30932.1.1.3.12.20.0
+    name: receptacleEnergyoutlet20s
+- MIB: CPI-UNITY-MIB
+  metric_type: monotonic_count
+  symbol:
+    OID: 1.3.6.1.4.1.30932.1.1.3.12.21.0
+    name: receptacleEnergyoutlet21s
+- MIB: CPI-UNITY-MIB
+  metric_type: monotonic_count
+  symbol:
+    OID: 1.3.6.1.4.1.30932.1.1.3.12.22.0
+    name: receptacleEnergyoutlet22s
+- MIB: CPI-UNITY-MIB
+  metric_type: monotonic_count
+  symbol:
+    OID: 1.3.6.1.4.1.30932.1.1.3.12.23.0
+    name: receptacleEnergyoutlet23s
+- MIB: CPI-UNITY-MIB
+  metric_type: monotonic_count
+  symbol:
+    OID: 1.3.6.1.4.1.30932.1.1.3.12.24.0
+    name: receptacleEnergyoutlet24s
+- MIB: CPI-UNITY-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.30932.1.10.1.2.10.1.1
+      name: cpiPduMac
+    tag: pdu_macaddress
+  - symbol:
+      OID: 1.3.6.1.4.1.30932.1.10.1.2.10.1.2
+      name: cpiPduModel
+    tag: pdu_model
+  - symbol:
+      OID: 1.3.6.1.4.1.30932.1.10.1.2.10.1.3
+      name: cpiPduName
+    tag: pdu_name
+  - symbol:
+      OID: 1.3.6.1.4.1.30932.1.10.1.2.10.1.11
+      name: cpiPduVersion
+    tag: pdu_version
+  - symbol:
+      OID: 1.3.6.1.4.1.30932.1.10.1.2.10.1.14
+      name: cpiPduIp
+    tag: pdu_ipaddress
+  - symbol:
+      OID: 1.3.6.1.4.1.30932.1.10.1.2.10.1.17
+      name: cpiPduCabinetId
+    tag: pdu_cabinetid
+  symbols:
+  - OID: 1.3.6.1.4.1.30932.1.10.1.2.10.1.8
+    name: cpiPduNumberBranches
+  - OID: 1.3.6.1.4.1.30932.1.10.1.2.10.1.9
+    name: cpiPduNumberOutlets
+  - OID: 1.3.6.1.4.1.30932.1.10.1.2.10.1.10
+    name: cpiPduOutOfService
+  - OID: 1.3.6.1.4.1.30932.1.10.1.2.10.1.12
+    name: cpiPduUpgrade
+  - OID: 1.3.6.1.4.1.30932.1.10.1.2.10.1.13
+    name: cpiPduChainRole
+  - OID: 1.3.6.1.4.1.30932.1.10.1.2.10.1.16
+    name: cpiPduTotalPower
+  table:
+    OID: 1.3.6.1.4.1.30932.1.10.1.2.10
+    name: cpiPduTable
+- MIB: CPI-UNITY-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.30932.1.10.1.7.100.1.2
+      name: cpiPduLockId
+    tag: lock_id
+  symbols:
+  - OID: 1.3.6.1.4.1.30932.1.10.1.7.100.1.3
+    name: cpiPduEasStatus
+  - OID: 1.3.6.1.4.1.30932.1.10.1.7.100.1.4
+    name: cpiPduDoorStatus
+  - OID: 1.3.6.1.4.1.30932.1.10.1.7.100.1.5
+    name: cpiPduLockStatus
+  table:
+    OID: 1.3.6.1.4.1.30932.1.10.1.7.100
+    name: cpiPduOutletTable
+- MIB: CPI-UNITY-MIB
+  metric_tags:
+  - mapping:
+      1: front
+      2: rear
+    symbol:
+      OID: 1.3.6.1.4.1.30932.1.10.1.7.100.1.2
+      name: cpiPduLockId
+    tag: lock_id
+  - mapping:
+      0: inactive
+      1: ready
+      2: error
+    symbol:
+      OID: 1.3.6.1.4.1.30932.1.10.1.7.100.1.3
+      name: cpiPduEasStatus
+    tag: eas_status
+  - mapping:
+      0: closed
+      1: open
+    symbol:
+      OID: 1.3.6.1.4.1.30932.1.10.1.7.100.1.4
+      name: cpiPduDoorStatus
+    tag: door_status
+  - mapping:
+      0: closed
+      1: open
+    symbol:
+      OID: 1.3.6.1.4.1.30932.1.10.1.7.100.1.5
+      name: cpiPduLockStatus
+    tag: lock_status
+  symbols:
+  - constant_value_one: true
+    name: cpiEas
+  table:
+    OID: 1.3.6.1.4.1.30932.1.10.1.7.100
+    name: cpiEasTable
+- MIB: CPI-UNITY-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.30932.1.10.1.5.10.1.2
+      name: cpiPduSensorId
+    tag: sensor_index
+  - symbol:
+      OID: 1.3.6.1.4.1.30932.1.10.1.5.10.1.3
+      name: cpiPduSensorName
+    tag: sensor_name
+  - symbol:
+      OID: 1.3.6.1.4.1.30932.1.10.1.5.10.1.4
+      name: cpiPduSensorType
+    tag: sensor_type
+  symbols:
+  - OID: 1.3.6.1.4.1.30932.1.10.1.5.10.1.5
+    name: cpiPduSensorValue
+  table:
+    OID: 1.3.6.1.4.1.30932.1.10.1.5.10
+    name: cpiPduSensorTable
+- MIB: CPI-UNITY-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.30932.1.10.1.3.10.1.2
+      name: cpiPduLineId
+    tag: line_id
+  symbols:
+  - OID: 1.3.6.1.4.1.30932.1.10.1.3.10.1.3
+    name: cpiPduLineCurrent
+  table:
+    OID: 1.3.6.1.4.1.30932.1.10.1.3.10
+    name: cpiPduLineTable
+- MIB: CPI-UNITY-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.30932.1.10.1.3.110.1.2
+      name: cpiPduBranchId
+    tag: branch_id
+  - index_transform:
+    - end: 13
+      start: 1
+    symbol:
+      OID: 1.3.6.1.4.1.30932.1.10.1.2.10.1.3
+      name: cpiPduName
+    table: cpiPduTable
+    tag: pdu_name
+  - index_transform:
+    - end: 7
+      start: 1
+    symbol:
+      OID: 1.3.6.1.4.1.30932.1.10.1.2.10.1.3
+      name: cpiPduName
+    table: cpiPduTable
+    tag: pdu_name
+  symbols:
+  - OID: 1.3.6.1.4.1.30932.1.10.1.3.110.1.3
+    name: cpiPduBranchCurrent
+  - OID: 1.3.6.1.4.1.30932.1.10.1.3.110.1.4
+    name: cpiPduBranchMaxCurrent
+  - OID: 1.3.6.1.4.1.30932.1.10.1.3.110.1.5
+    name: cpiPduBranchVoltage
+  - OID: 1.3.6.1.4.1.30932.1.10.1.3.110.1.6
+    name: cpiPduBranchPower
+  - OID: 1.3.6.1.4.1.30932.1.10.1.3.110.1.7
+    name: cpiPduBranchPowerFactor
+  - OID: 1.3.6.1.4.1.30932.1.10.1.3.110.1.8
+    name: cpiPduBranchStatus
+  table:
+    OID: 1.3.6.1.4.1.30932.1.10.1.3.110
+    name: cpiPduBranchTable
+- MIB: CPI-UNITY-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.30932.1.10.1.3.110.1.2
+      name: cpiPduBranchId
+    tag: branch_id
+  - index_transform:
+    - end: 13
+      start: 1
+    symbol:
+      OID: 1.3.6.1.4.1.30932.1.10.1.2.10.1.3
+      name: cpiPduName
+    table: cpiPduTable
+    tag: pdu_name
+  - index_transform:
+    - end: 7
+      start: 1
+    symbol:
+      OID: 1.3.6.1.4.1.30932.1.10.1.2.10.1.3
+      name: cpiPduName
+    table: cpiPduTable
+    tag: pdu_name
+  metric_type: monotonic_count
+  symbols:
+  - OID: 1.3.6.1.4.1.30932.1.10.1.3.110.1.9
+    name: cpiPduBranchEnergy
+  table:
+    OID: 1.3.6.1.4.1.30932.1.10.1.3.110
+    name: cpiPduBranchTable
+- MIB: CPI-UNITY-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.30932.1.10.1.4.10.1.2
+      name: cpiPduOutletId
+    tag: outlet_id
+  - symbol:
+      OID: 1.3.6.1.4.1.30932.1.10.1.4.10.1.4
+      name: cpiPduOutletName
+    tag: outlet_name
+  - symbol:
+      OID: 1.3.6.1.4.1.30932.1.10.1.4.10.1.3
+      name: cpiPduOutletBranchId
+    tag: outlet_branchid
+  symbols:
+  - OID: 1.3.6.1.4.1.30932.1.10.1.4.10.1.6
+    name: cpiPduOutletCurrent
+  - OID: 1.3.6.1.4.1.30932.1.10.1.4.10.1.7
+    name: cpiPduOutletVoltage
+  - OID: 1.3.6.1.4.1.30932.1.10.1.4.10.1.8
+    name: cpiPduOutletPower
+  - OID: 1.3.6.1.4.1.30932.1.10.1.4.10.1.9
+    name: cpiPduOutletStatus
+  table:
+    OID: 1.3.6.1.4.1.30932.1.10.1.4.10
+    name: cpiPduOutletTable
+- MIB: CPI-UNITY-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.30932.1.10.1.4.10.1.2
+      name: cpiPduOutletId
+    tag: outlet_id
+  - symbol:
+      OID: 1.3.6.1.4.1.30932.1.10.1.4.10.1.4
+      name: cpiPduOutletName
+    tag: outlet_name
+  - symbol:
+      OID: 1.3.6.1.4.1.30932.1.10.1.4.10.1.3
+      name: cpiPduOutletBranchId
+    tag: outlet_branchid
+  metric_type: monotonic_count
+  symbols:
+  - OID: 1.3.6.1.4.1.30932.1.10.1.4.10.1.10
+    name: cpiPduOutletEnergy
+  table:
+    OID: 1.3.6.1.4.1.30932.1.10.1.4.10
+    name: cpiPduOutletTable
+sysobjectid: 1.3.6.1.4.1.30932.*

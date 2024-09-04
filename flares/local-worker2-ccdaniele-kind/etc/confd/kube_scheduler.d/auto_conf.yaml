@@ -1,0 +1,11 @@
+ad_identifiers:
+- kube-scheduler
+init_config: null
+instances:
+- bearer_token_auth: tls_only
+  possible_prometheus_urls:
+  - https://%%host%%:10259/metrics
+  - https://localhost:10259/metrics
+  - http://%%host%%:10251/metrics
+  - http://localhost:10251/metrics
+  ssl_verify: false

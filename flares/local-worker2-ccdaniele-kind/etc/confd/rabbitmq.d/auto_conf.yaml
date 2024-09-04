@@ -1,0 +1,6 @@
+ad_identifiers:
+- rabbitmq
+init_config: null
+instances:
+- prometheus_plugin:
+    url: http://%%host%%:15692

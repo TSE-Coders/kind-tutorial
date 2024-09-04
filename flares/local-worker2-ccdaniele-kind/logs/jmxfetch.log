@@ -1,0 +1,246 @@
+2024-08-27 17:16:25 UTC | JMX | INFO | StatsdReporter | Initializing Statsd reporter with parameters host=/var/run/datadog/dsd.socket port=0 telemetry=false queueSize=4096 entityId=none blocking=true maxPacketSize=8192
+2024-08-27 17:16:25 UTC | JMX | INFO | HttpClient | Successfully installed dummyTrustManager with TLS
+2024-08-27 17:16:25 UTC | JMX | INFO | App | Found 0 config files
+2024-08-27 17:16:25 UTC | JMX | DEBUG | App | Succesfully registered app telemetry bean
+2024-08-27 17:16:25 UTC | JMX | INFO | App | JMX Fetch 0.49.1 has started
+2024-08-27 17:16:25 UTC | JMX | INFO | HttpClient | Successfully installed dummyTrustManager with TLS
+2024-08-27 17:16:25 UTC | JMX | INFO | App | Cleaning up instances...
+2024-08-27 17:16:25 UTC | JMX | INFO | App | Dealing with YAML config instances...
+2024-08-27 17:16:25 UTC | JMX | INFO | App | Dealing with Auto-Config instances collected...
+2024-08-27 17:16:25 UTC | JMX | INFO | App | Started instance initialization...
+2024-08-27 17:16:25 UTC | JMX | INFO | App | Completed instance initialization...
+2024-08-27 17:16:25 UTC | JMX | DEBUG | HttpClient | attempting to connect to: https://localhost:5001/agent/jmx/configs?timestamp=0
+2024-08-27 17:16:25 UTC | JMX | DEBUG | HttpClient | with body: 
+2024-08-27 17:16:25 UTC | JMX | INFO | App | update is in order - updating timestamp: 1724778985
+2024-08-27 17:16:25 UTC | JMX | DEBUG | App | received config for check 'jmx_bd5ec0f5e49cf8b7'
+2024-08-27 17:16:25 UTC | JMX | INFO | App | Reinitializing...
+2024-08-27 17:16:25 UTC | JMX | INFO | App | Cleaning up instances...
+2024-08-27 17:16:25 UTC | JMX | INFO | App | Dealing with YAML config instances...
+2024-08-27 17:16:25 UTC | JMX | INFO | App | Dealing with Auto-Config instances collected...
+2024-08-27 17:16:25 UTC | JMX | INFO | App | Instantiating instance for: jmx
+2024-08-27 17:16:25 UTC | JMX | WARN | Instance | Cannot find a "conf" section in jmx-10.244.2.26-49112
+2024-08-27 17:16:25 UTC | JMX | ERROR | App | Unable to create instance. Please check your yaml file
+java.lang.ClassCastException: class java.lang.String cannot be cast to class java.lang.Boolean (java.lang.String and java.lang.Boolean are in module java.base of loader 'bootstrap')
+	at org.datadog.jmxfetch.Instance.<init>(Instance.java:235)
+	at org.datadog.jmxfetch.App.instantiate(App.java:896)
+	at org.datadog.jmxfetch.App.init(App.java:999)
+	at org.datadog.jmxfetch.App.start(App.java:489)
+	at org.datadog.jmxfetch.App.run(App.java:253)
+	at org.datadog.jmxfetch.JmxFetch.main(JmxFetch.java:57)
+	at org.datadog.jmxfetch.App.main(App.java:108)
+
+2024-08-27 17:16:25 UTC | JMX | INFO | App | Started instance initialization...
+2024-08-27 17:16:25 UTC | JMX | INFO | App | Completed instance initialization...
+2024-08-27 17:16:25 UTC | JMX | WARN | App | Critical issue initializing instances: java.lang.NullPointerException
+2024-08-27 17:16:25 UTC | JMX | WARN | App | No instance could be initiated. Retrying initialization.
+2024-08-27 17:16:25 UTC | JMX | DEBUG | HttpClient | attempting to connect to: https://localhost:5001/agent/jmx/status
+2024-08-27 17:16:25 UTC | JMX | DEBUG | HttpClient | with body: {"checks":{"failed_checks":{"jmx":[{"message":"Unable to create instance. Please check your yaml file","status":"ERROR"}]},"initialized_checks":{}},"errors":0,"info":{"runtime_version":"11.0.23","version":"0.49.1"},"timestamp":1724778985390}
+2024-08-27 17:16:25 UTC | JMX | INFO | App | Found 0 config files
+2024-08-27 17:16:25 UTC | JMX | INFO | App | Cleaning up instances...
+2024-08-27 17:16:25 UTC | JMX | INFO | App | Dealing with YAML config instances...
+2024-08-27 17:16:25 UTC | JMX | INFO | App | Dealing with Auto-Config instances collected...
+2024-08-27 17:16:25 UTC | JMX | INFO | App | Instantiating instance for: jmx
+2024-08-27 17:16:25 UTC | JMX | WARN | Instance | Cannot find a "conf" section in jmx-10.244.2.26-49112
+2024-08-27 17:16:25 UTC | JMX | ERROR | App | Unable to create instance. Please check your yaml file
+java.lang.ClassCastException: class java.lang.String cannot be cast to class java.lang.Boolean (java.lang.String and java.lang.Boolean are in module java.base of loader 'bootstrap')
+	at org.datadog.jmxfetch.Instance.<init>(Instance.java:235)
+	at org.datadog.jmxfetch.App.instantiate(App.java:896)
+	at org.datadog.jmxfetch.App.init(App.java:999)
+	at org.datadog.jmxfetch.App.start(App.java:499)
+	at org.datadog.jmxfetch.App.run(App.java:253)
+	at org.datadog.jmxfetch.JmxFetch.main(JmxFetch.java:57)
+	at org.datadog.jmxfetch.App.main(App.java:108)
+
+2024-08-27 17:16:25 UTC | JMX | INFO | App | Started instance initialization...
+2024-08-27 17:16:25 UTC | JMX | INFO | App | Completed instance initialization...
+2024-08-27 17:16:25 UTC | JMX | WARN | App | Critical issue initializing instances: java.lang.NullPointerException
+2024-08-27 17:16:25 UTC | JMX | DEBUG | App | Iteration ran in 7 ms
+2024-08-27 17:16:25 UTC | JMX | DEBUG | App | Sleeping for 14993 ms.
+2024-08-27 17:16:40 UTC | JMX | DEBUG | HttpClient | attempting to connect to: https://localhost:5001/agent/jmx/configs?timestamp=0
+2024-08-27 17:16:40 UTC | JMX | DEBUG | HttpClient | with body: 
+2024-08-27 17:16:40 UTC | JMX | INFO | App | update is in order - updating timestamp: 1724779000
+2024-08-27 17:16:40 UTC | JMX | DEBUG | App | received config for check 'jmx_bd5ec0f5e49cf8b7'
+2024-08-27 17:16:40 UTC | JMX | INFO | App | Reinitializing...
+2024-08-27 17:16:40 UTC | JMX | INFO | App | Cleaning up instances...
+2024-08-27 17:16:40 UTC | JMX | INFO | App | Dealing with YAML config instances...
+2024-08-27 17:16:40 UTC | JMX | INFO | App | Dealing with Auto-Config instances collected...
+2024-08-27 17:16:40 UTC | JMX | INFO | App | Instantiating instance for: jmx
+2024-08-27 17:16:40 UTC | JMX | WARN | Instance | Cannot find a "conf" section in jmx-10.244.2.26-49112
+2024-08-27 17:16:40 UTC | JMX | ERROR | App | Unable to create instance. Please check your yaml file
+java.lang.ClassCastException: class java.lang.String cannot be cast to class java.lang.Boolean (java.lang.String and java.lang.Boolean are in module java.base of loader 'bootstrap')
+	at org.datadog.jmxfetch.Instance.<init>(Instance.java:235)
+	at org.datadog.jmxfetch.App.instantiate(App.java:896)
+	at org.datadog.jmxfetch.App.init(App.java:999)
+	at org.datadog.jmxfetch.App.start(App.java:489)
+	at org.datadog.jmxfetch.App.run(App.java:253)
+	at org.datadog.jmxfetch.JmxFetch.main(JmxFetch.java:57)
+	at org.datadog.jmxfetch.App.main(App.java:108)
+
+2024-08-27 17:16:40 UTC | JMX | INFO | App | Started instance initialization...
+2024-08-27 17:16:40 UTC | JMX | INFO | App | Completed instance initialization...
+2024-08-27 17:16:40 UTC | JMX | WARN | App | Critical issue initializing instances: java.lang.NullPointerException
+2024-08-27 17:16:40 UTC | JMX | WARN | App | No instance could be initiated. Retrying initialization.
+2024-08-27 17:16:40 UTC | JMX | DEBUG | HttpClient | attempting to connect to: https://localhost:5001/agent/jmx/status
+2024-08-27 17:16:40 UTC | JMX | DEBUG | HttpClient | with body: {"checks":{"failed_checks":{"jmx":[{"message":"Unable to create instance. Please check your yaml file","status":"ERROR"},{"message":"Unable to create instance. Please check your yaml file","status":"ERROR"}]},"initialized_checks":{}},"errors":0,"info":{"runtime_version":"11.0.23","version":"0.49.1"},"timestamp":1724779000398}
+2024-08-27 17:16:40 UTC | JMX | INFO | App | Found 0 config files
+2024-08-27 17:16:40 UTC | JMX | INFO | App | Cleaning up instances...
+2024-08-27 17:16:40 UTC | JMX | INFO | App | Dealing with YAML config instances...
+2024-08-27 17:16:40 UTC | JMX | INFO | App | Dealing with Auto-Config instances collected...
+2024-08-27 17:16:40 UTC | JMX | INFO | App | Instantiating instance for: jmx
+2024-08-27 17:16:40 UTC | JMX | WARN | Instance | Cannot find a "conf" section in jmx-10.244.2.26-49112
+2024-08-27 17:16:40 UTC | JMX | ERROR | App | Unable to create instance. Please check your yaml file
+java.lang.ClassCastException: class java.lang.String cannot be cast to class java.lang.Boolean (java.lang.String and java.lang.Boolean are in module java.base of loader 'bootstrap')
+	at org.datadog.jmxfetch.Instance.<init>(Instance.java:235)
+	at org.datadog.jmxfetch.App.instantiate(App.java:896)
+	at org.datadog.jmxfetch.App.init(App.java:999)
+	at org.datadog.jmxfetch.App.start(App.java:499)
+	at org.datadog.jmxfetch.App.run(App.java:253)
+	at org.datadog.jmxfetch.JmxFetch.main(JmxFetch.java:57)
+	at org.datadog.jmxfetch.App.main(App.java:108)
+
+2024-08-27 17:16:40 UTC | JMX | INFO | App | Started instance initialization...
+2024-08-27 17:16:40 UTC | JMX | INFO | App | Completed instance initialization...
+2024-08-27 17:16:40 UTC | JMX | WARN | App | Critical issue initializing instances: java.lang.NullPointerException
+2024-08-27 17:16:40 UTC | JMX | DEBUG | App | Iteration ran in 4 ms
+2024-08-27 17:16:40 UTC | JMX | DEBUG | App | Sleeping for 14996 ms.
+2024-08-27 17:16:55 UTC | JMX | DEBUG | HttpClient | attempting to connect to: https://localhost:5001/agent/jmx/configs?timestamp=0
+2024-08-27 17:16:55 UTC | JMX | DEBUG | HttpClient | with body: 
+2024-08-27 17:16:55 UTC | JMX | INFO | App | update is in order - updating timestamp: 1724779015
+2024-08-27 17:16:55 UTC | JMX | DEBUG | App | received config for check 'jmx_bd5ec0f5e49cf8b7'
+2024-08-27 17:16:55 UTC | JMX | INFO | App | Reinitializing...
+2024-08-27 17:16:55 UTC | JMX | INFO | App | Cleaning up instances...
+2024-08-27 17:16:55 UTC | JMX | INFO | App | Dealing with YAML config instances...
+2024-08-27 17:16:55 UTC | JMX | INFO | App | Dealing with Auto-Config instances collected...
+2024-08-27 17:16:55 UTC | JMX | INFO | App | Instantiating instance for: jmx
+2024-08-27 17:16:55 UTC | JMX | WARN | Instance | Cannot find a "conf" section in jmx-10.244.2.26-49112
+2024-08-27 17:16:55 UTC | JMX | ERROR | App | Unable to create instance. Please check your yaml file
+java.lang.ClassCastException: class java.lang.String cannot be cast to class java.lang.Boolean (java.lang.String and java.lang.Boolean are in module java.base of loader 'bootstrap')
+	at org.datadog.jmxfetch.Instance.<init>(Instance.java:235)
+	at org.datadog.jmxfetch.App.instantiate(App.java:896)
+	at org.datadog.jmxfetch.App.init(App.java:999)
+	at org.datadog.jmxfetch.App.start(App.java:489)
+	at org.datadog.jmxfetch.App.run(App.java:253)
+	at org.datadog.jmxfetch.JmxFetch.main(JmxFetch.java:57)
+	at org.datadog.jmxfetch.App.main(App.java:108)
+
+2024-08-27 17:16:55 UTC | JMX | INFO | App | Started instance initialization...
+2024-08-27 17:16:55 UTC | JMX | INFO | App | Completed instance initialization...
+2024-08-27 17:16:55 UTC | JMX | WARN | App | Critical issue initializing instances: java.lang.NullPointerException
+2024-08-27 17:16:55 UTC | JMX | WARN | App | No instance could be initiated. Retrying initialization.
+2024-08-27 17:16:55 UTC | JMX | DEBUG | HttpClient | attempting to connect to: https://localhost:5001/agent/jmx/status
+2024-08-27 17:16:55 UTC | JMX | DEBUG | HttpClient | with body: {"checks":{"failed_checks":{"jmx":[{"message":"Unable to create instance. Please check your yaml file","status":"ERROR"},{"message":"Unable to create instance. Please check your yaml file","status":"ERROR"}]},"initialized_checks":{}},"errors":0,"info":{"runtime_version":"11.0.23","version":"0.49.1"},"timestamp":1724779015404}
+2024-08-27 17:16:55 UTC | JMX | INFO | App | Found 0 config files
+2024-08-27 17:16:55 UTC | JMX | INFO | App | Cleaning up instances...
+2024-08-27 17:16:55 UTC | JMX | INFO | App | Dealing with YAML config instances...
+2024-08-27 17:16:55 UTC | JMX | INFO | App | Dealing with Auto-Config instances collected...
+2024-08-27 17:16:55 UTC | JMX | INFO | App | Instantiating instance for: jmx
+2024-08-27 17:16:55 UTC | JMX | WARN | Instance | Cannot find a "conf" section in jmx-10.244.2.26-49112
+2024-08-27 17:16:55 UTC | JMX | ERROR | App | Unable to create instance. Please check your yaml file
+java.lang.ClassCastException: class java.lang.String cannot be cast to class java.lang.Boolean (java.lang.String and java.lang.Boolean are in module java.base of loader 'bootstrap')
+	at org.datadog.jmxfetch.Instance.<init>(Instance.java:235)
+	at org.datadog.jmxfetch.App.instantiate(App.java:896)
+	at org.datadog.jmxfetch.App.init(App.java:999)
+	at org.datadog.jmxfetch.App.start(App.java:499)
+	at org.datadog.jmxfetch.App.run(App.java:253)
+	at org.datadog.jmxfetch.JmxFetch.main(JmxFetch.java:57)
+	at org.datadog.jmxfetch.App.main(App.java:108)
+
+2024-08-27 17:16:55 UTC | JMX | INFO | App | Started instance initialization...
+2024-08-27 17:16:55 UTC | JMX | INFO | App | Completed instance initialization...
+2024-08-27 17:16:55 UTC | JMX | WARN | App | Critical issue initializing instances: java.lang.NullPointerException
+2024-08-27 17:16:55 UTC | JMX | DEBUG | App | Iteration ran in 2 ms
+2024-08-27 17:16:55 UTC | JMX | DEBUG | App | Sleeping for 14998 ms.
+2024-08-27 17:17:10 UTC | JMX | DEBUG | HttpClient | attempting to connect to: https://localhost:5001/agent/jmx/configs?timestamp=0
+2024-08-27 17:17:10 UTC | JMX | DEBUG | HttpClient | with body: 
+2024-08-27 17:17:10 UTC | JMX | INFO | App | update is in order - updating timestamp: 1724779030
+2024-08-27 17:17:10 UTC | JMX | DEBUG | App | received config for check 'jmx_bd5ec0f5e49cf8b7'
+2024-08-27 17:17:10 UTC | JMX | INFO | App | Reinitializing...
+2024-08-27 17:17:10 UTC | JMX | INFO | App | Cleaning up instances...
+2024-08-27 17:17:10 UTC | JMX | INFO | App | Dealing with YAML config instances...
+2024-08-27 17:17:10 UTC | JMX | INFO | App | Dealing with Auto-Config instances collected...
+2024-08-27 17:17:10 UTC | JMX | INFO | App | Instantiating instance for: jmx
+2024-08-27 17:17:10 UTC | JMX | WARN | Instance | Cannot find a "conf" section in jmx-10.244.2.26-49112
+2024-08-27 17:17:10 UTC | JMX | ERROR | App | Unable to create instance. Please check your yaml file
+java.lang.ClassCastException: class java.lang.String cannot be cast to class java.lang.Boolean (java.lang.String and java.lang.Boolean are in module java.base of loader 'bootstrap')
+	at org.datadog.jmxfetch.Instance.<init>(Instance.java:235)
+	at org.datadog.jmxfetch.App.instantiate(App.java:896)
+	at org.datadog.jmxfetch.App.init(App.java:999)
+	at org.datadog.jmxfetch.App.start(App.java:489)
+	at org.datadog.jmxfetch.App.run(App.java:253)
+	at org.datadog.jmxfetch.JmxFetch.main(JmxFetch.java:57)
+	at org.datadog.jmxfetch.App.main(App.java:108)
+
+2024-08-27 17:17:10 UTC | JMX | INFO | App | Started instance initialization...
+2024-08-27 17:17:10 UTC | JMX | INFO | App | Completed instance initialization...
+2024-08-27 17:17:10 UTC | JMX | WARN | App | Critical issue initializing instances: java.lang.NullPointerException
+2024-08-27 17:17:10 UTC | JMX | WARN | App | No instance could be initiated. Retrying initialization.
+2024-08-27 17:17:10 UTC | JMX | DEBUG | HttpClient | attempting to connect to: https://localhost:5001/agent/jmx/status
+2024-08-27 17:17:10 UTC | JMX | DEBUG | HttpClient | with body: {"checks":{"failed_checks":{"jmx":[{"message":"Unable to create instance. Please check your yaml file","status":"ERROR"},{"message":"Unable to create instance. Please check your yaml file","status":"ERROR"}]},"initialized_checks":{}},"errors":0,"info":{"runtime_version":"11.0.23","version":"0.49.1"},"timestamp":1724779030413}
+2024-08-27 17:17:10 UTC | JMX | INFO | App | Found 0 config files
+2024-08-27 17:17:10 UTC | JMX | INFO | App | Cleaning up instances...
+2024-08-27 17:17:10 UTC | JMX | INFO | App | Dealing with YAML config instances...
+2024-08-27 17:17:10 UTC | JMX | INFO | App | Dealing with Auto-Config instances collected...
+2024-08-27 17:17:10 UTC | JMX | INFO | App | Instantiating instance for: jmx
+2024-08-27 17:17:10 UTC | JMX | WARN | Instance | Cannot find a "conf" section in jmx-10.244.2.26-49112
+2024-08-27 17:17:10 UTC | JMX | ERROR | App | Unable to create instance. Please check your yaml file
+java.lang.ClassCastException: class java.lang.String cannot be cast to class java.lang.Boolean (java.lang.String and java.lang.Boolean are in module java.base of loader 'bootstrap')
+	at org.datadog.jmxfetch.Instance.<init>(Instance.java:235)
+	at org.datadog.jmxfetch.App.instantiate(App.java:896)
+	at org.datadog.jmxfetch.App.init(App.java:999)
+	at org.datadog.jmxfetch.App.start(App.java:499)
+	at org.datadog.jmxfetch.App.run(App.java:253)
+	at org.datadog.jmxfetch.JmxFetch.main(JmxFetch.java:57)
+	at org.datadog.jmxfetch.App.main(App.java:108)
+
+2024-08-27 17:17:10 UTC | JMX | INFO | App | Started instance initialization...
+2024-08-27 17:17:10 UTC | JMX | INFO | App | Completed instance initialization...
+2024-08-27 17:17:10 UTC | JMX | WARN | App | Critical issue initializing instances: java.lang.NullPointerException
+2024-08-27 17:17:10 UTC | JMX | DEBUG | App | Iteration ran in 3 ms
+2024-08-27 17:17:10 UTC | JMX | DEBUG | App | Sleeping for 14997 ms.
+2024-08-27 17:17:25 UTC | JMX | DEBUG | HttpClient | attempting to connect to: https://localhost:5001/agent/jmx/configs?timestamp=0
+2024-08-27 17:17:25 UTC | JMX | DEBUG | HttpClient | with body: 
+2024-08-27 17:17:25 UTC | JMX | INFO | App | update is in order - updating timestamp: 1724779045
+2024-08-27 17:17:25 UTC | JMX | DEBUG | App | received config for check 'jmx_6446c5c32c859fea'
+2024-08-27 17:17:25 UTC | JMX | INFO | App | Reinitializing...
+2024-08-27 17:17:25 UTC | JMX | INFO | App | Cleaning up instances...
+2024-08-27 17:17:25 UTC | JMX | INFO | App | Dealing with YAML config instances...
+2024-08-27 17:17:25 UTC | JMX | INFO | App | Dealing with Auto-Config instances collected...
+2024-08-27 17:17:25 UTC | JMX | INFO | App | Instantiating instance for: jmx
+2024-08-27 17:17:25 UTC | JMX | WARN | Instance | Cannot find a "conf" section in jmx-10.244.2.26-49112
+2024-08-27 17:17:25 UTC | JMX | ERROR | App | Unable to create instance. Please check your yaml file
+java.lang.ClassCastException: class java.lang.String cannot be cast to class java.lang.Boolean (java.lang.String and java.lang.Boolean are in module java.base of loader 'bootstrap')
+	at org.datadog.jmxfetch.Instance.<init>(Instance.java:235)
+	at org.datadog.jmxfetch.App.instantiate(App.java:896)
+	at org.datadog.jmxfetch.App.init(App.java:999)
+	at org.datadog.jmxfetch.App.start(App.java:489)
+	at org.datadog.jmxfetch.App.run(App.java:253)
+	at org.datadog.jmxfetch.JmxFetch.main(JmxFetch.java:57)
+	at org.datadog.jmxfetch.App.main(App.java:108)
+
+2024-08-27 17:17:25 UTC | JMX | INFO | App | Started instance initialization...
+2024-08-27 17:17:25 UTC | JMX | INFO | App | Completed instance initialization...
+2024-08-27 17:17:25 UTC | JMX | WARN | App | Critical issue initializing instances: java.lang.NullPointerException
+2024-08-27 17:17:25 UTC | JMX | WARN | App | No instance could be initiated. Retrying initialization.
+2024-08-27 17:17:25 UTC | JMX | DEBUG | HttpClient | attempting to connect to: https://localhost:5001/agent/jmx/status
+2024-08-27 17:17:25 UTC | JMX | DEBUG | HttpClient | with body: {"checks":{"failed_checks":{"jmx":[{"message":"Unable to create instance. Please check your yaml file","status":"ERROR"},{"message":"Unable to create instance. Please check your yaml file","status":"ERROR"}]},"initialized_checks":{}},"errors":0,"info":{"runtime_version":"11.0.23","version":"0.49.1"},"timestamp":1724779045417}
+2024-08-27 17:17:25 UTC | JMX | INFO | App | Found 0 config files
+2024-08-27 17:17:25 UTC | JMX | INFO | App | Cleaning up instances...
+2024-08-27 17:17:25 UTC | JMX | INFO | App | Dealing with YAML config instances...
+2024-08-27 17:17:25 UTC | JMX | INFO | App | Dealing with Auto-Config instances collected...
+2024-08-27 17:17:25 UTC | JMX | INFO | App | Instantiating instance for: jmx
+2024-08-27 17:17:25 UTC | JMX | WARN | Instance | Cannot find a "conf" section in jmx-10.244.2.26-49112
+2024-08-27 17:17:25 UTC | JMX | ERROR | App | Unable to create instance. Please check your yaml file
+java.lang.ClassCastException: class java.lang.String cannot be cast to class java.lang.Boolean (java.lang.String and java.lang.Boolean are in module java.base of loader 'bootstrap')
+	at org.datadog.jmxfetch.Instance.<init>(Instance.java:235)
+	at org.datadog.jmxfetch.App.instantiate(App.java:896)
+	at org.datadog.jmxfetch.App.init(App.java:999)
+	at org.datadog.jmxfetch.App.start(App.java:499)
+	at org.datadog.jmxfetch.App.run(App.java:253)
+	at org.datadog.jmxfetch.JmxFetch.main(JmxFetch.java:57)
+	at org.datadog.jmxfetch.App.main(App.java:108)
+
+2024-08-27 17:17:25 UTC | JMX | INFO | App | Started instance initialization...
+2024-08-27 17:17:25 UTC | JMX | INFO | App | Completed instance initialization...
+2024-08-27 17:17:25 UTC | JMX | WARN | App | Critical issue initializing instances: java.lang.NullPointerException
+2024-08-27 17:17:25 UTC | JMX | DEBUG | App | Iteration ran in 2 ms
+2024-08-27 17:17:25 UTC | JMX | DEBUG | App | Sleeping for 14998 ms.

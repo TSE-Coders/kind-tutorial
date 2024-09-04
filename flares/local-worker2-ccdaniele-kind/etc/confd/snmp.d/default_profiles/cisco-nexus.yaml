@@ -1,0 +1,61 @@
+device:
+  vendor: cisco
+extends:
+- _base.yaml
+- _cisco-generic.yaml
+metadata:
+  device:
+    fields:
+      type:
+        value: switch
+metrics:
+- MIB: CISCO-ENTITY-SENSOR-MIB
+  metric_tags:
+  - mapping:
+      1: other
+      2: unknown
+      3: volts_ac
+      4: volts_dc
+      5: amperes
+      6: watts
+      7: hertz
+      8: celsius
+      9: percent_rh
+      10: rpm
+      11: cmm
+      12: truthvalue
+      13: special_enum
+      14: dbm
+      15: db
+    symbol:
+      OID: 1.3.6.1.4.1.9.9.91.1.1.1.1.1
+      name: entSensorType
+    tag: sensor_type
+  - index: 1
+    tag: sensor_id
+  symbols:
+  - OID: 1.3.6.1.4.1.9.9.91.1.1.1.1.4
+    name: entSensorValue
+  table:
+    OID: 1.3.6.1.4.1.9.9.91.1.1.1
+    name: entSensorValueTable
+- MIB: CISCO-ENHANCED-MEMPOOL-MIB
+  metric_tags:
+  - index: 1
+    tag: mem
+  symbols:
+  - OID: 1.3.6.1.4.1.9.9.221.1.1.1.1.7
+    name: memory.used
+  - OID: 1.3.6.1.4.1.9.9.221.1.1.1.1.8
+    name: memory.free
+  table:
+    OID: 1.3.6.1.4.1.9.9.221.1.1.1
+    name: cempMemPoolTable
+sysobjectid:
+- 1.3.6.1.4.1.9.1.1216
+- 1.3.6.1.4.1.9.1.1217
+- 1.3.6.1.4.1.9.1.1915
+- 1.3.6.1.4.1.9.1.1923
+- 1.3.6.1.4.1.9.1.1924
+- 1.3.6.1.4.1.9.1.1925
+- 1.3.6.1.4.1.9.12.3.1.3.*

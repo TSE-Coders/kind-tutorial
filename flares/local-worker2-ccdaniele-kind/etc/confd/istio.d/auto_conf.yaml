@@ -1,0 +1,8 @@
+ad_identifiers:
+- proxyv2
+- proxyv2-rhel8
+init_config: null
+instances:
+- istio_mesh_endpoint: http://%%host%%:15020/stats/prometheus
+  send_histograms_buckets: true
+  tag_by_endpoint: false

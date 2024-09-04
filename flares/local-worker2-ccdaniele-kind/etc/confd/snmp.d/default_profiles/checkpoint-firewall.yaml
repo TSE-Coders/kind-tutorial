@@ -1,0 +1,4 @@
+device:
+  vendor: checkpoint
+extends:
+- checkpoint.yaml

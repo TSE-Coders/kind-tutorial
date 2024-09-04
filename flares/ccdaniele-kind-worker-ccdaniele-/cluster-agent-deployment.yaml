@@ -1,0 +1,727 @@
+metadata:
+  annotations:
+    deployment.kubernetes.io/revision: "3"
+    meta.helm.sh/release-name: agent-kind
+    meta.helm.sh/release-namespace: default
+  creationTimestamp: "2024-08-19T14:57:47Z"
+  generation: 3
+  labels:
+    app.kubernetes.io/component: cluster-agent
+    app.kubernetes.io/instance: agent-kind
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/name: agent-kind-datadog
+    app.kubernetes.io/version: "7"
+    helm.sh/chart: datadog-3.69.3
+  managedFields:
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:meta.helm.sh/release-name: {}
+          f:meta.helm.sh/release-namespace: {}
+        f:labels:
+          .: {}
+          f:app.kubernetes.io/component: {}
+          f:app.kubernetes.io/instance: {}
+          f:app.kubernetes.io/managed-by: {}
+          f:app.kubernetes.io/name: {}
+          f:app.kubernetes.io/version: {}
+          f:helm.sh/chart: {}
+      f:spec:
+        f:progressDeadlineSeconds: {}
+        f:replicas: {}
+        f:revisionHistoryLimit: {}
+        f:selector: {}
+        f:strategy:
+          f:rollingUpdate:
+            .: {}
+            f:maxSurge: {}
+            f:maxUnavailable: {}
+          f:type: {}
+        f:template:
+          f:metadata:
+            f:annotations:
+              .: {}
+              f:checksum/application_key: '********'
+              f:checksum/clusteragent-configmap: {}
+              f:checksum/clusteragent_token: '********'
+              f:checksum/confd-config: {}
+              f:checksum/install_info: {}
+            f:labels:
+              .: {}
+              f:admission.datadoghq.com/enabled: {}
+              f:app: {}
+              f:app.kubernetes.io/component: {}
+              f:app.kubernetes.io/instance: {}
+              f:app.kubernetes.io/managed-by: {}
+              f:app.kubernetes.io/name: {}
+            f:name: {}
+          f:spec:
+            f:affinity:
+              .: {}
+              f:podAntiAffinity:
+                .: {}
+                f:preferredDuringSchedulingIgnoredDuringExecution: {}
+            f:automountServiceAccountToken: {}
+            f:containers:
+              k:{"name":"cluster-agent"}:
+                .: {}
+                f:env:
+                  .: {}
+                  k:{"name":"AGENT_DAEMONSET"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"CHART_RELEASE_NAME"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"CLUSTER_AGENT_DEPLOYMENT"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"DD_ADMISSION_CONTROLLER_AUTO_INSTRUMENTATION_APPSEC_ENABLED"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"DD_ADMISSION_CONTROLLER_AUTO_INSTRUMENTATION_APPSEC_SCA_ENABLED"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"DD_ADMISSION_CONTROLLER_AUTO_INSTRUMENTATION_IAST_ENABLED"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"DD_ADMISSION_CONTROLLER_ENABLED"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"DD_ADMISSION_CONTROLLER_FAILURE_POLICY"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"DD_ADMISSION_CONTROLLER_INJECT_CONFIG_LOCAL_SERVICE_NAME"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"DD_ADMISSION_CONTROLLER_INJECT_CONFIG_MODE"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"DD_ADMISSION_CONTROLLER_MUTATE_UNLABELLED"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"DD_ADMISSION_CONTROLLER_PORT"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"DD_ADMISSION_CONTROLLER_SERVICE_NAME"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"DD_ADMISSION_CONTROLLER_WEBHOOK_NAME"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"DD_API_KEY"}:
+                    .: {}
+                    f:name: {}
+                    f:valueFrom:
+                      .: {}
+                      f:secretKeyRef: {}
+                  k:{"name":"DD_APM_INSTRUMENTATION_ENABLED"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"DD_CLUSTER_AGENT_AUTH_TOKEN"}:
+                    .: {}
+                    f:name: {}
+                    f:valueFrom:
+                      .: {}
+                      f:secretKeyRef: {}
+                  k:{"name":"DD_CLUSTER_AGENT_COLLECT_KUBERNETES_TAGS"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"DD_CLUSTER_AGENT_KUBERNETES_SERVICE_NAME"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"DD_CLUSTER_AGENT_LANGUAGE_DETECTION_PATCHER_ENABLED"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"DD_CLUSTER_AGENT_TOKEN_NAME"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"DD_CLUSTER_CHECKS_ENABLED"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"DD_CLUSTER_NAME"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"DD_COLLECT_KUBERNETES_EVENTS"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"DD_EXTRA_CONFIG_PROVIDERS"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"DD_EXTRA_LISTENERS"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"DD_HEALTH_PORT"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"DD_INSTRUMENTATION_INSTALL_ID"}:
+                    .: {}
+                    f:name: {}
+                    f:valueFrom:
+                      .: {}
+                      f:configMapKeyRef: {}
+                  k:{"name":"DD_INSTRUMENTATION_INSTALL_TIME"}:
+                    .: {}
+                    f:name: {}
+                    f:valueFrom:
+                      .: {}
+                      f:configMapKeyRef: {}
+                  k:{"name":"DD_INSTRUMENTATION_INSTALL_TYPE"}:
+                    .: {}
+                    f:name: {}
+                    f:valueFrom:
+                      .: {}
+                      f:configMapKeyRef: {}
+                  k:{"name":"DD_KUBE_RESOURCES_NAMESPACE"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"DD_LANGUAGE_DETECTION_ENABLED"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"DD_LANGUAGE_DETECTION_REPORTING_ENABLED"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"DD_LEADER_ELECTION"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"DD_LEADER_ELECTION_DEFAULT_RESOURCE"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"DD_LEADER_LEASE_NAME"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"DD_LOG_LEVEL"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"DD_ORCHESTRATOR_EXPLORER_CONTAINER_SCRUBBING_ENABLED"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"DD_ORCHESTRATOR_EXPLORER_ENABLED"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"DD_POD_NAME"}:
+                    .: {}
+                    f:name: {}
+                    f:valueFrom:
+                      .: {}
+                      f:fieldRef: {}
+                  k:{"name":"DD_REMOTE_CONFIGURATION_ENABLED"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"DD_TAGS"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"KUBERNETES"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                f:image: {}
+                f:imagePullPolicy: {}
+                f:livenessProbe:
+                  .: {}
+                  f:failureThreshold: {}
+                  f:httpGet:
+                    .: {}
+                    f:path: {}
+                    f:port: {}
+                    f:scheme: {}
+                  f:initialDelaySeconds: {}
+                  f:periodSeconds: {}
+                  f:successThreshold: {}
+                  f:timeoutSeconds: {}
+                f:name: {}
+                f:ports:
+                  .: {}
+                  k:{"containerPort":5000,"protocol":"TCP"}:
+                    .: {}
+                    f:containerPort: {}
+                    f:name: {}
+                    f:protocol: {}
+                  k:{"containerPort":5005,"protocol":"TCP"}:
+                    .: {}
+                    f:containerPort: {}
+                    f:name: {}
+                    f:protocol: {}
+                  k:{"containerPort":8000,"protocol":"TCP"}:
+                    .: {}
+                    f:containerPort: {}
+                    f:name: {}
+                    f:protocol: {}
+                f:readinessProbe:
+                  .: {}
+                  f:failureThreshold: {}
+                  f:httpGet:
+                    .: {}
+                    f:path: {}
+                    f:port: {}
+                    f:scheme: {}
+                  f:initialDelaySeconds: {}
+                  f:periodSeconds: {}
+                  f:successThreshold: {}
+                  f:timeoutSeconds: {}
+                f:resources: {}
+                f:securityContext:
+                  .: {}
+                  f:allowPrivilegeEscalation: {}
+                  f:readOnlyRootFilesystem: {}
+                f:startupProbe:
+                  .: {}
+                  f:failureThreshold: {}
+                  f:httpGet:
+                    .: {}
+                    f:path: {}
+                    f:port: {}
+                    f:scheme: {}
+                  f:initialDelaySeconds: {}
+                  f:periodSeconds: {}
+                  f:successThreshold: {}
+                  f:timeoutSeconds: {}
+                f:terminationMessagePath: {}
+                f:terminationMessagePolicy: {}
+                f:volumeMounts:
+                  .: {}
+                  k:{"mountPath":"/conf.d"}:
+                    .: {}
+                    f:mountPath: {}
+                    f:name: {}
+                    f:readOnly: {}
+                  k:{"mountPath":"/etc/datadog-agent"}:
+                    .: {}
+                    f:mountPath: {}
+                    f:name: {}
+                  k:{"mountPath":"/etc/datadog-agent/install_info"}:
+                    .: {}
+                    f:mountPath: {}
+                    f:name: {}
+                    f:readOnly: {}
+                    f:subPath: {}
+                  k:{"mountPath":"/opt/datadog-agent/run"}:
+                    .: {}
+                    f:mountPath: {}
+                    f:name: {}
+                  k:{"mountPath":"/tmp"}:
+                    .: {}
+                    f:mountPath: {}
+                    f:name: {}
+                  k:{"mountPath":"/var/log/datadog"}:
+                    .: {}
+                    f:mountPath: {}
+                    f:name: {}
+            f:dnsPolicy: {}
+            f:initContainers:
+              .: {}
+              k:{"name":"init-volume"}:
+                .: {}
+                f:args: {}
+                f:command: {}
+                f:image: {}
+                f:imagePullPolicy: {}
+                f:name: {}
+                f:resources: {}
+                f:terminationMessagePath: {}
+                f:terminationMessagePolicy: {}
+                f:volumeMounts:
+                  .: {}
+                  k:{"mountPath":"/opt/datadog-agent"}:
+                    .: {}
+                    f:mountPath: {}
+                    f:name: {}
+            f:nodeSelector: {}
+            f:restartPolicy: {}
+            f:schedulerName: {}
+            f:securityContext: {}
+            f:serviceAccount: {}
+            f:serviceAccountName: {}
+            f:terminationGracePeriodSeconds: {}
+            f:volumes:
+              .: {}
+              k:{"name":"confd"}:
+                .: {}
+                f:configMap:
+                  .: {}
+                  f:defaultMode: {}
+                  f:items: {}
+                  f:name: {}
+                f:name: {}
+              k:{"name":"config"}:
+                .: {}
+                f:emptyDir: {}
+                f:name: {}
+              k:{"name":"datadogrun"}:
+                .: {}
+                f:emptyDir: {}
+                f:name: {}
+              k:{"name":"installinfo"}:
+                .: {}
+                f:configMap:
+                  .: {}
+                  f:defaultMode: {}
+                  f:name: {}
+                f:name: {}
+              k:{"name":"tmpdir"}:
+                .: {}
+                f:emptyDir: {}
+                f:name: {}
+              k:{"name":"varlog"}:
+                .: {}
+                f:emptyDir: {}
+                f:name: {}
+    manager: helm
+    operation: Update
+    time: "2024-08-19T15:35:56Z"
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:deployment.kubernetes.io/revision: {}
+      f:status:
+        f:availableReplicas: {}
+        f:conditions:
+          .: {}
+          k:{"type":"Available"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:lastUpdateTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Progressing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:lastUpdateTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+        f:observedGeneration: {}
+        f:readyReplicas: {}
+        f:replicas: {}
+        f:updatedReplicas: {}
+    manager: kube-controller-manager
+    operation: Update
+    subresource: status
+    time: "2024-08-19T15:36:27Z"
+  name: agent-kind-datadog-cluster-agent
+  namespace: default
+  resourceVersion: "4772"
+  uid: 0bf0f2eb-58bd-4b58-b044-f35af5a587dd
+spec:
+  progressDeadlineSeconds: 600
+  replicas: 1
+  revisionHistoryLimit: 10
+  selector:
+    matchLabels:
+      app: agent-kind-datadog-cluster-agent
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+    type: RollingUpdate
+  template:
+    metadata:
+      annotations:
+        checksum/application_key: '********'
+        checksum/clusteragent-configmap: 71bf7d88438616a93cf946dd6a6cca141ca9d8b94915c138d998522db5a69ad6
+        checksum/clusteragent_token: '********'
+        checksum/confd-config: b393f0ac5e00367d1b6a656740fb4cda708c4bde674ca3c4a3c8f90284095afe
+        checksum/install_info: 88c52cd7ef5158f4eb2738b4c3b575985b7d139c6b2a25213c46c5a6266e22e7
+      creationTimestamp: null
+      labels:
+        admission.datadoghq.com/enabled: "false"
+        app: agent-kind-datadog-cluster-agent
+        app.kubernetes.io/component: cluster-agent
+        app.kubernetes.io/instance: agent-kind
+        app.kubernetes.io/managed-by: Helm
+        app.kubernetes.io/name: agent-kind-datadog
+      name: agent-kind-datadog-cluster-agent
+    spec:
+      affinity:
+        podAntiAffinity:
+          preferredDuringSchedulingIgnoredDuringExecution:
+          - podAffinityTerm:
+              labelSelector:
+                matchLabels:
+                  app: agent-kind-datadog-cluster-agent
+              topologyKey: kubernetes.io/hostname
+            weight: 50
+      automountServiceAccountToken: true
+      containers:
+      - env:
+        - name: DD_POD_NAME
+          valueFrom:
+            fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.name
+        - name: DD_HEALTH_PORT
+          value: "5556"
+        - name: DD_API_KEY
+          valueFrom:
+            secretKeyRef:
+              key: api-key
+              name: datadog-secret
+              optional: true
+        - name: DD_LANGUAGE_DETECTION_ENABLED
+          value: "true"
+        - name: DD_LANGUAGE_DETECTION_REPORTING_ENABLED
+          value: "true"
+        - name: DD_CLUSTER_NAME
+          value: ccdaniele-kind
+        - name: DD_TAGS
+          value: env:kind-testing maintainer:daniel_calderon team:nyc-tse valuesyaml:ddkind-values.yaml
+        - name: KUBERNETES
+          value: "yes"
+        - name: DD_ADMISSION_CONTROLLER_ENABLED
+          value: "true"
+        - name: DD_ADMISSION_CONTROLLER_WEBHOOK_NAME
+          value: datadog-webhook
+        - name: DD_ADMISSION_CONTROLLER_MUTATE_UNLABELLED
+          value: "false"
+        - name: DD_ADMISSION_CONTROLLER_SERVICE_NAME
+          value: agent-kind-datadog-cluster-agent-admission-controller
+        - name: DD_ADMISSION_CONTROLLER_INJECT_CONFIG_MODE
+          value: socket
+        - name: DD_ADMISSION_CONTROLLER_INJECT_CONFIG_LOCAL_SERVICE_NAME
+          value: agent-kind-datadog
+        - name: DD_ADMISSION_CONTROLLER_FAILURE_POLICY
+          value: Ignore
+        - name: DD_ADMISSION_CONTROLLER_PORT
+          value: "8000"
+        - name: DD_REMOTE_CONFIGURATION_ENABLED
+          value: "false"
+        - name: DD_APM_INSTRUMENTATION_ENABLED
+          value: "true"
+        - name: DD_ADMISSION_CONTROLLER_AUTO_INSTRUMENTATION_APPSEC_ENABLED
+          value: "true"
+        - name: DD_ADMISSION_CONTROLLER_AUTO_INSTRUMENTATION_APPSEC_SCA_ENABLED
+          value: "true"
+        - name: DD_ADMISSION_CONTROLLER_AUTO_INSTRUMENTATION_IAST_ENABLED
+          value: "true"
+        - name: DD_CLUSTER_CHECKS_ENABLED
+          value: "true"
+        - name: DD_EXTRA_CONFIG_PROVIDERS
+          value: kube_endpoints kube_services
+        - name: DD_EXTRA_LISTENERS
+          value: kube_endpoints kube_services
+        - name: DD_LOG_LEVEL
+          value: debug
+        - name: DD_LEADER_ELECTION
+          value: "true"
+        - name: DD_LEADER_ELECTION_DEFAULT_RESOURCE
+          value: configmap
+        - name: DD_LEADER_LEASE_NAME
+          value: agent-kind-datadog-leader-election
+        - name: DD_CLUSTER_AGENT_TOKEN_NAME
+          value: agent-kind-datadogtoken
+        - name: DD_COLLECT_KUBERNETES_EVENTS
+          value: "true"
+        - name: DD_CLUSTER_AGENT_KUBERNETES_SERVICE_NAME
+          value: agent-kind-datadog-cluster-agent
+        - name: DD_CLUSTER_AGENT_AUTH_TOKEN
+          valueFrom:
+            secretKeyRef:
+              key: token
+              name: agent-kind-datadog-cluster-agent
+        - name: DD_CLUSTER_AGENT_COLLECT_KUBERNETES_TAGS
+          value: "true"
+        - name: DD_KUBE_RESOURCES_NAMESPACE
+          value: default
+        - name: CHART_RELEASE_NAME
+          value: agent-kind
+        - name: AGENT_DAEMONSET
+          value: agent-kind-datadog
+        - name: CLUSTER_AGENT_DEPLOYMENT
+          value: agent-kind-datadog-cluster-agent
+        - name: DD_ORCHESTRATOR_EXPLORER_ENABLED
+          value: "true"
+        - name: DD_ORCHESTRATOR_EXPLORER_CONTAINER_SCRUBBING_ENABLED
+          value: "true"
+        - name: DD_CLUSTER_AGENT_LANGUAGE_DETECTION_PATCHER_ENABLED
+          value: "true"
+        - name: DD_INSTRUMENTATION_INSTALL_TIME
+          valueFrom:
+            configMapKeyRef:
+              key: install_time
+              name: agent-kind-datadog-kpi-telemetry-configmap
+        - name: DD_INSTRUMENTATION_INSTALL_ID
+          valueFrom:
+            configMapKeyRef:
+              key: install_id
+              name: agent-kind-datadog-kpi-telemetry-configmap
+        - name: DD_INSTRUMENTATION_INSTALL_TYPE
+          valueFrom:
+            configMapKeyRef:
+              key: install_type
+              name: agent-kind-datadog-kpi-telemetry-configmap
+        image: gcr.io/datadoghq/cluster-agent:7.55.2
+        imagePullPolicy: IfNotPresent
+        livenessProbe:
+          failureThreshold: 6
+          httpGet:
+            path: /live
+            port: 5556
+            scheme: HTTP
+          initialDelaySeconds: 15
+          periodSeconds: 15
+          successThreshold: 1
+          timeoutSeconds: 5
+        name: cluster-agent
+        ports:
+        - containerPort: 5005
+          name: agentport
+          protocol: TCP
+        - containerPort: 5000
+          name: agentmetrics
+          protocol: TCP
+        - containerPort: 8000
+          name: datadog-webhook
+          protocol: TCP
+        readinessProbe:
+          failureThreshold: 6
+          httpGet:
+            path: /ready
+            port: 5556
+            scheme: HTTP
+          initialDelaySeconds: 15
+          periodSeconds: 15
+          successThreshold: 1
+          timeoutSeconds: 5
+        resources: {}
+        securityContext:
+          allowPrivilegeEscalation: false
+          readOnlyRootFilesystem: true
+        startupProbe:
+          failureThreshold: 6
+          httpGet:
+            path: /startup
+            port: 5556
+            scheme: HTTP
+          initialDelaySeconds: 15
+          periodSeconds: 15
+          successThreshold: 1
+          timeoutSeconds: 5
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+        volumeMounts:
+        - mountPath: /opt/datadog-agent/run
+          name: datadogrun
+        - mountPath: /var/log/datadog
+          name: varlog
+        - mountPath: /tmp
+          name: tmpdir
+        - mountPath: /etc/datadog-agent/install_info
+          name: installinfo
+          readOnly: true
+          subPath: install_info
+        - mountPath: /conf.d
+          name: confd
+          readOnly: true
+        - mountPath: /etc/datadog-agent
+          name: config
+      dnsPolicy: ClusterFirst
+      initContainers:
+      - args:
+        - /etc/datadog-agent
+        - /opt
+        command:
+        - cp
+        - -r
+        image: gcr.io/datadoghq/cluster-agent:7.55.2
+        imagePullPolicy: IfNotPresent
+        name: init-volume
+        resources: {}
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+        volumeMounts:
+        - mountPath: /opt/datadog-agent
+          name: config
+      nodeSelector:
+        kubernetes.io/os: linux
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      serviceAccount: agent-kind-datadog-cluster-agent
+      serviceAccountName: agent-kind-datadog-cluster-agent
+      terminationGracePeriodSeconds: 30
+      volumes:
+      - emptyDir: {}
+        name: datadogrun
+      - emptyDir: {}
+        name: varlog
+      - emptyDir: {}
+        name: tmpdir
+      - configMap:
+          defaultMode: 420
+          name: agent-kind-datadog-installinfo
+        name: installinfo
+      - configMap:
+          defaultMode: 420
+          items:
+          - key: orchestrator.yaml
+            path: orchestrator.yaml
+          - key: kubernetes_state_core.yaml.default
+            path: kubernetes_state_core.yaml.default
+          name: agent-kind-datadog-cluster-agent-confd
+        name: confd
+      - emptyDir: {}
+        name: config
+status:
+  availableReplicas: 1
+  conditions:
+  - lastTransitionTime: "2024-08-19T14:58:33Z"
+    lastUpdateTime: "2024-08-19T14:58:33Z"
+    message: Deployment has minimum availability.
+    reason: MinimumReplicasAvailable
+    status: "True"
+    type: Available
+  - lastTransitionTime: "2024-08-19T14:57:47Z"
+    lastUpdateTime: "2024-08-19T15:36:27Z"
+    message: ReplicaSet "agent-kind-datadog-cluster-agent-75dd97446" has successfully
+      progressed.
+    reason: NewReplicaSetAvailable
+    status: "True"
+    type: Progressing
+  observedGeneration: 3
+  readyReplicas: 1
+  replicas: 1
+  updatedReplicas: 1

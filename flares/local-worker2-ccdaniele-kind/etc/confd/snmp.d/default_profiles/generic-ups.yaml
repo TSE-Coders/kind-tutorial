@@ -1,0 +1,10 @@
+extends:
+- _base.yaml
+- _generic-ups.yaml
+metadata:
+  device:
+    fields:
+      type:
+        value: UPS
+sysobjectid:
+- 1.3.6.1.2.1.33

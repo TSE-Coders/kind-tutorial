@@ -1,0 +1,327 @@
+=======================
+Cluster Agent (v7.55.2)
+=======================
+  Status date: 2024-08-19 15:37:54.596 UTC (1724081874596)
+  Agent start: 2024-08-19 15:35:57.726 UTC (1724081757726)
+  Pid: 1
+  Go Version: go1.21.11
+  Python Version: n/a
+  Build arch: arm64
+  Agent flavor: cluster_agent
+  Log Level: debug
+
+  Paths
+  =====
+    Config File: /etc/datadog-agent/datadog-cluster.yaml
+    conf.d: /etc/datadog-agent/conf.d
+    checks.d: /etc/datadog-agent/checks.d
+
+========
+Hostname
+========
+
+  hostname: ccdaniele-kind-worker-ccdaniele-kind
+  socket-fqdn: agent-kind-datadog-cluster-agent-75dd97446-nh2pf
+  socket-hostname: agent-kind-datadog-cluster-agent-75dd97446-nh2pf
+  hostname provider: container
+  unused hostname providers:
+    'hostname' configuration/environment: hostname is empty
+    'hostname_file' configuration/environment: 'hostname_file' configuration is not enabled
+    aws: not retrieving hostname from AWS: the host is not an ECS instance and other providers already retrieve non-default hostnames
+    azure: azure_hostname_style is set to 'os'
+    fargate: agent is not runnning on Fargate
+    fqdn: FQDN hostname is not usable
+    gce: unable to retrieve hostname from GCE: GCE metadata API error: Get "http://169.254.169.254/computeMetadata/v1/instance/hostname": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+    os: OS hostname is not usable
+
+=========
+Collector
+=========
+
+
+  Running Checks
+  ==============
+
+    kubernetes_apiserver
+    --------------------
+      Instance ID: kubernetes_apiserver [OK]
+      Configuration Source: file:/etc/datadog-agent/conf.d/kubernetes_apiserver.d/conf.yaml.default
+      Total Runs: 8
+      Metric Samples: Last Run: 0, Total: 0
+      Events: Last Run: 0, Total: 0
+      Service Checks: Last Run: 0, Total: 0
+      Average Execution Time : 125ms
+      Last Execution Date : 2024-08-19 15:37:45 UTC (1724081865000)
+      Last Successful Execution Date : 2024-08-19 15:37:45 UTC (1724081865000)
+
+
+    kubernetes_state_core
+    ---------------------
+      Instance ID: kubernetes_state_core:f0ece86b2bc4e82e [OK]
+      Configuration Source: file:/etc/datadog-agent/conf.d/kubernetes_state_core.yaml.default
+      Total Runs: 8
+      Metric Samples: Last Run: 542, Total: 542
+      Events: Last Run: 0, Total: 0
+      Service Checks: Last Run: 9, Total: 9
+      Average Execution Time : 1ms
+      Last Execution Date : 2024-08-19 15:37:52 UTC (1724081872000)
+      Last Successful Execution Date : 2024-08-19 15:37:52 UTC (1724081872000)
+
+
+    orchestrator
+    ------------
+      Instance ID: orchestrator:5e313062cfc91216 [OK]
+      Configuration Source: file:/etc/datadog-agent/conf.d/orchestrator.yaml
+      Total Runs: 12
+      Metric Samples: Last Run: 0, Total: 0
+      Events: Last Run: 0, Total: 0
+      Service Checks: Last Run: 0, Total: 0
+      Average Execution Time : 86ms
+      Last Execution Date : 2024-08-19 15:37:50 UTC (1724081870000)
+      Last Successful Execution Date : 2024-08-19 15:37:50 UTC (1724081870000)
+
+
+====================
+Admission Controller
+====================
+
+
+    Webhooks info
+    -------------
+      MutatingWebhookConfigurations name: datadog-webhook
+      Created at: 2024-08-19 14:58:10 +0000 UTC
+      ---------
+        Name: datadog.webhook.agent.config
+        CA bundle digest: a03578b9e6592c19
+        Object selector: &LabelSelector{MatchLabels:map[string]string{},MatchExpressions:[]LabelSelectorRequirement{LabelSelectorRequirement{Key:admission.datadoghq.com/enabled,Operator:NotIn,Values:[false],},},}
+        Rule 1: Operations: [CREATE] - APIGroups: [] - APIVersions: [v1] - Resources: [pods]
+        Service: default/agent-kind-datadog-cluster-agent-admission-controller - Port: 443 - Path: /injectconfig
+      ---------
+        Name: datadog.webhook.lib.injection
+        CA bundle digest: a03578b9e6592c19
+        Object selector: &LabelSelector{MatchLabels:map[string]string{},MatchExpressions:[]LabelSelectorRequirement{LabelSelectorRequirement{Key:admission.datadoghq.com/enabled,Operator:NotIn,Values:[false],},},}
+        Rule 1: Operations: [CREATE] - APIGroups: [] - APIVersions: [v1] - Resources: [pods]
+        Service: default/agent-kind-datadog-cluster-agent-admission-controller - Port: 443 - Path: /injectlib
+      ---------
+        Name: datadog.webhook.standard.tags
+        CA bundle digest: a03578b9e6592c19
+        Object selector: &LabelSelector{MatchLabels:map[string]string{},MatchExpressions:[]LabelSelectorRequirement{LabelSelectorRequirement{Key:admission.datadoghq.com/enabled,Operator:NotIn,Values:[false],},},}
+        Rule 1: Operations: [CREATE] - APIGroups: [] - APIVersions: [v1] - Resources: [pods]
+        Service: default/agent-kind-datadog-cluster-agent-admission-controller - Port: 443 - Path: /injecttags
+
+    Secret info
+    -----------
+    Secret name: webhook-certificate
+    Secret namespace: default
+    Created at: 2024-08-19 14:58:10 +0000 UTC
+    CA bundle digest: a03578b9e6592c19
+    Duration before certificate expiration: 8759h20m14.087286083s
+
+==========
+Aggregator
+==========
+
+  Checks Metric Sample: 579
+  Dogstatsd Metric Sample: 1
+  Event: 1
+  Events Flushed: 1
+  Number Of Flushes: 7
+  Series Flushed: 15
+  Service Check: 9
+  Service Checks Flushed: 7
+
+=============
+Autodiscovery
+=============
+
+  Enabled Features
+  ================
+    kube_orchestratorexplorer
+    kubernetes
+
+==========================
+Cluster Checks Dispatching
+==========================
+
+  Status: Leader, warming up
+
+
+=====================
+Custom Metrics Server
+=====================
+
+  Disabled: The external metrics provider is not enabled on the Cluster Agent
+
+=========
+Endpoints
+=========
+
+  https://app.datadoghq.com - API Key ending with:
+      - 8b8dc
+
+=========
+Forwarder
+=========
+
+  Transactions
+  ============
+    Cluster: 1
+    ClusterRole: 1
+    ClusterRoleBinding: 1
+    CronJob: 0
+    CustomResource: 0
+    CustomResourceDefinition: 0
+    DaemonSet: 1
+    Deployment: 1
+    Dropped: 0
+    ECSTask: 0
+    HighPriorityQueueFull: 0
+    HorizontalPodAutoscaler: 0
+    Ingress: 0
+    Job: 0
+    LimitRange: 0
+    Namespace: 1
+    NetworkPolicy: 0
+    Node: 1
+    OrchestratorManifest: 0
+    PersistentVolume: 0
+    PersistentVolumeClaim: 0
+    Pod: 0
+    ReplicaSet: 1
+    Requeued: 0
+    Retried: 0
+    RetryQueueSize: 0
+    Role: 1
+    RoleBinding: 1
+    Service: 1
+    ServiceAccount: 1
+    StatefulSet: 0
+    StorageClass: 0
+    VerticalPodAutoscaler: 0
+
+  Transaction Successes
+  =====================
+    Total number: 27
+    Successes By Endpoint:
+      check_run_v1: 7
+      intake: 1
+      orchestrator: 12
+      series_v2: 7
+
+  On-disk storage
+  ===============
+    On-disk storage is disabled. Configure `forwarder_storage_max_size_in_bytes` to enable it.
+
+===============
+Leader Election
+===============
+  Leader Election Status:  Running
+  Leader Name is: agent-kind-datadog-cluster-agent-75dd97446-nh2pf
+  Last Acquisition of the lease: Mon, 19 Aug 2024 15:37:49 UTC
+  Renewed leadership: Mon, 19 Aug 2024 15:37:49 UTC
+  Number of leader transitions: 3 transitions
+
+=====================
+Orchestrator Explorer
+=====================
+
+
+  Collection Status: The collection is at least partially running since the cache has been populated.
+  Cluster Name: ccdaniele-kind
+  Cluster ID: f5f414af-e9c7-4d66-9ded-567af57bec89
+  Container scrubbing: enabled
+  Manifest collection: enabled
+
+  ======================
+  Orchestrator Endpoints
+  ======================
+    https://orchestrator.datadoghq.com - API Key ending with: 8b8dc
+
+  ===========
+  Cache Stats
+  ===========
+    Elements in the cache: 244
+
+    ClusterRoleBinding
+      Last Run: (Hits: 56 Miss: 1) | Total: (Hits: 0 Miss: 57)
+
+    ClusterRole
+      Last Run: (Hits: 70 Miss: 1) | Total: (Hits: 0 Miss: 71)
+
+    Cluster
+      Last Run: (Hits: 0 Miss: 1) | Total: (Hits: 0 Miss: 1)
+
+    CronJob
+      Last Run: (Hits: 0 Miss: 0) | Total: (Hits: 0 Miss: 0)
+
+    DaemonSet
+      Last Run: (Hits: 2 Miss: 1) | Total: (Hits: 0 Miss: 3)
+
+    Deployment
+      Last Run: (Hits: 2 Miss: 1) | Total: (Hits: 0 Miss: 3)
+
+    HorizontalPodAutoscaler
+      Last Run: (Hits: 0 Miss: 0) | Total: (Hits: 0 Miss: 0)
+
+    Ingress
+      Last Run: (Hits: 0 Miss: 0) | Total: (Hits: 0 Miss: 0)
+
+    Job
+      Last Run: (Hits: 0 Miss: 0) | Total: (Hits: 0 Miss: 0)
+
+    Namespace
+      Last Run: (Hits: 4 Miss: 1) | Total: (Hits: 0 Miss: 5)
+
+    Node
+      Last Run: (Hits: 2 Miss: 1) | Total: (Hits: 0 Miss: 3)
+
+    PersistentVolumeClaim
+      Last Run: (Hits: 0 Miss: 0) | Total: (Hits: 0 Miss: 0)
+
+    PersistentVolume
+      Last Run: (Hits: 0 Miss: 0) | Total: (Hits: 0 Miss: 0)
+
+    Pod
+      Last Run: (Hits: 0 Miss: 0) | Total: (Hits: 0 Miss: 0)
+
+    ReplicaSet
+      Last Run: (Hits: 4 Miss: 1) | Total: (Hits: 0 Miss: 5)
+
+    RoleBinding
+      Last Run: (Hits: 12 Miss: 1) | Total: (Hits: 0 Miss: 13)
+
+    Role
+      Last Run: (Hits: 12 Miss: 1) | Total: (Hits: 0 Miss: 13)
+
+    ServiceAccount
+      Last Run: (Hits: 44 Miss: 1) | Total: (Hits: 0 Miss: 45)
+
+    Service
+      Last Run: (Hits: 4 Miss: 1) | Total: (Hits: 0 Miss: 5)
+
+    StatefulSet
+      Last Run: (Hits: 0 Miss: 0) | Total: (Hits: 0 Miss: 0)
+
+  =====================
+  Manifest Buffer Stats
+  =====================
+  Buffer Flushed : 3 times
+  Last Time Flushed Manifests : 23
+  ==============================
+  Manifests Flushed Per Resource
+  ==============================
+    ClusterRole : 71
+    ClusterRoleBinding : 57
+    DaemonSet : 3
+    Deployment : 3
+    Namespace : 5
+    Node : 3
+    ReplicaSet : 5
+    Role : 13
+    RoleBinding : 13
+    Service : 5
+    ServiceAccount : 45
+
+
+
+

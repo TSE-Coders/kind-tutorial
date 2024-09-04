@@ -1,0 +1,5 @@
+ad_identifiers:
+- _eks_fargate
+init_config: null
+instances:
+- null

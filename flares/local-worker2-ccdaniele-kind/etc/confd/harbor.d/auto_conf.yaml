@@ -1,0 +1,7 @@
+ad_identifiers:
+- nginx-photon
+init_config: null
+instances:
+- password: "********"
+  url: http://%%host%%/
+  username: <USERNAME>

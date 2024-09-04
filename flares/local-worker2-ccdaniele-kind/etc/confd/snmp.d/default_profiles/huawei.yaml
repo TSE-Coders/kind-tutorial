@@ -1,0 +1,220 @@
+extends:
+- _huawei.yaml
+metric_tags:
+- OID: 1.3.6.1.4.1.2011.5.25.31.6.5.0
+  symbol: hwEntitySystemModel
+  tag: huawei_hw_entity_system_model
+metrics:
+- MIB: HUAWEI-ENTITY-EXTENT-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.2011.5.25.31.1.1.1.1.43
+      name: huawei.hwEntityBoardName
+    tag: huawei_hw_entity_board_name
+  - mapping:
+      1: not_supported
+      2: locked
+      3: shutting_down
+      4: unlocked
+      11: up
+      12: down
+      13: loopback
+    symbol:
+      OID: 1.3.6.1.4.1.2011.5.25.31.1.1.1.1.1
+      name: huawei.hwEntityAdminStatus
+    tag: huawei_hw_entity_admin_status
+  - mapping:
+      1: not_supported
+      2: disabled
+      3: enabled
+      4: offline
+      11: up
+      12: down
+      13: connect
+      15: protocol_up
+      16: link_up
+      17: link_down
+      18: present
+      19: absent
+    symbol:
+      OID: 1.3.6.1.4.1.2011.5.25.31.1.1.1.1.2
+      name: huawei.hwEntityOperStatus
+    tag: huawei_hw_entity_oper_status
+  - mapping:
+      1: not_supported
+      2: hot_standby
+      3: cold_standby
+      4: providing_service
+    symbol:
+      OID: 1.3.6.1.4.1.2011.5.25.31.1.1.1.1.3
+      name: huawei.hwEntityStandbyStatus
+    tag: huawei_hw_entity_standby_status
+  - mapping:
+      1: not_supported
+      2: normal
+      3: under_repair
+    symbol:
+      OID: 1.3.6.1.4.1.2011.5.25.31.1.1.1.1.42
+      name: huawei.hwEntityFaultLight
+    tag: huawei_hw_entity_fault_light
+  symbols:
+  - OID: 1.3.6.1.4.1.2011.5.25.31.1.1.1.1.11
+    name: huawei.hwEntityTemperature
+  - OID: 1.3.6.1.4.1.2011.5.25.31.1.1.1.1.13
+    name: huawei.hwEntityVoltage
+  table:
+    OID: 1.3.6.1.4.1.2011.5.25.31.1.1.1
+    name: hwEntityStateTable
+- MIB: HUAWEI-ENTITY-EXTENT-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.2011.5.25.31.1.1.10.1.1
+      name: huawei.hwEntityFanSlot
+    tag: huawei_hw_entity_fan_slot
+  - symbol:
+      OID: 1.3.6.1.4.1.2011.5.25.31.1.1.10.1.2
+      name: huawei.hwEntityFanSn
+    tag: huawei_hw_entity_fan_sn
+  - mapping:
+      1: true
+      2: false
+    symbol:
+      OID: 1.3.6.1.4.1.2011.5.25.31.1.1.10.1.3
+      name: huawei.hwEntityFanReg
+    tag: huawei_hw_entity_fan_reg
+  - mapping:
+      1: auto
+      2: manual
+      3: unknown
+      4: silent
+    symbol:
+      OID: 1.3.6.1.4.1.2011.5.25.31.1.1.10.1.4
+      name: huawei.hwEntityFanSpdAdjMode
+    tag: huawei_hw_entity_fan_spd_adj_mode
+  - mapping:
+      1: present
+      2: absent
+    symbol:
+      OID: 1.3.6.1.4.1.2011.5.25.31.1.1.10.1.6
+      name: huawei.hwEntityFanPresent
+    tag: huawei_hw_entity_fan_present
+  - mapping:
+      1: normal
+      2: abnormal
+    symbol:
+      OID: 1.3.6.1.4.1.2011.5.25.31.1.1.10.1.7
+      name: huawei.hwEntityFanState
+    tag: huawei_hw_entity_fan_state
+  symbols:
+  - OID: 1.3.6.1.4.1.2011.5.25.31.1.1.10.1.5
+    name: huawei.hwEntityFanSpeed
+  table:
+    OID: 1.3.6.1.4.1.2011.5.25.31.1.1.10
+    name: hwFanStatusTable
+- MIB: HUAWEI-ENTITY-EXTENT-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.2011.5.25.31.1.1.14.1.1
+      name: huawei.hwSystemPowerDeviceID
+    tag: huawei_hw_system_power_device_id
+  symbols:
+  - OID: 1.3.6.1.4.1.2011.5.25.31.1.1.14.1.2
+    name: huawei.hwSystemPowerTotalPower
+  - OID: 1.3.6.1.4.1.2011.5.25.31.1.1.14.1.3
+    name: huawei.hwSystemPowerUsedPower
+  - OID: 1.3.6.1.4.1.2011.5.25.31.1.1.14.1.4
+    name: huawei.hwSystemPowerRemainPower
+  table:
+    OID: 1.3.6.1.4.1.2011.5.25.31.1.1.14
+    name: hwSystemPowerTable
+- MIB: HUAWEI-OSPFV2-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.2011.5.25.155.6.1.3
+      name: huawei.hwOspfv2SelfRouterId
+    tag: huawei_hw_ospfv2_self_router_id
+  - symbol:
+      OID: 1.3.6.1.4.1.2011.5.25.155.6.1.9
+      name: huawei.hwOspfv2NbrRouterId
+    tag: huawei_hw_ospfv2_neighbor_router_id
+  - symbol:
+      OID: 1.3.6.1.4.1.2011.5.25.155.6.1.4
+      name: huawei.hwOspfv2SelfIfIpAddress
+    tag: huawei_hw_ospfv2_self_if_ip_address
+  - symbol:
+      OID: 1.3.6.1.4.1.2011.5.25.155.6.1.5
+      name: huawei.hwOspfv2SelfIfName
+    tag: huawei_hw_ospfv2_self_if_name
+  - symbol:
+      OID: 1.3.6.1.4.1.2011.5.25.155.6.1.6
+      name: huawei.hwOspfv2NbrIfDesignatedRouter
+    tag: huawei_hw_ospfv2_nbr_if_designated_router
+  - symbol:
+      OID: 1.3.6.1.4.1.2011.5.25.155.6.1.7
+      name: huawei.hwOspfv2NbrIfBackupDesignatedRouter
+    tag: huawei_hw_ospfv2_nbr_if_backup_designated_router
+  - mapping:
+      1: down
+      2: attempt
+      3: init
+      4: two_way
+      5: exchange_start
+      6: exchange
+      7: loading
+      8: full
+    symbol:
+      OID: 1.3.6.1.4.1.2011.5.25.155.6.1.10
+      name: huawei.hwOspfv2NbrState
+    tag: huawei_hw_ospfv2_nbr_state
+  - mapping:
+      1: master
+      2: slave
+    symbol:
+      OID: 1.3.6.1.4.1.2011.5.25.155.6.1.11
+      name: huawei.hwOspfv2NbrMode
+    tag: huawei_hw_ospfv2_nbr_mode
+  - mapping:
+      1: normal
+      2: doing_gr
+      3: helper
+      4: notsupport
+    symbol:
+      OID: 1.3.6.1.4.1.2011.5.25.155.6.1.16
+      name: huawei.hwOspfv2NbrGrStatus
+    tag: huawei_hw_ospfv2_nbr_gr_status
+  symbols:
+  - OID: 1.3.6.1.4.1.2011.5.25.155.6.1.12
+    name: huawei.hwOspfv2NbrPriority
+  - OID: 1.3.6.1.4.1.2011.5.25.155.6.1.13
+    name: huawei.hwOspfv2NbrUpTime
+  - OID: 1.3.6.1.4.1.2011.5.25.155.6.1.15
+    name: huawei.hwOspfv2NbrDeadTimeLeft
+  table:
+    OID: 1.3.6.1.4.1.2011.5.25.155.6
+    name: hwOspfv2NeighborTable
+- MIB: HUAWEI-DEVICE-MIB
+  metric_tags:
+  - index: 1
+    tag: cpu
+  symbols:
+  - OID: 1.3.6.1.4.1.2011.6.3.4.1.3
+    name: huawei.hwAvgDuty1min
+  table:
+    OID: 1.3.6.1.4.1.2011.6.3.4
+    name: hwCpuDevTable
+- MIB: HUAWEI-DEVICE-MIB
+  metric_tags:
+  - index: 1
+    tag: mem
+  symbols:
+  - OID: 1.3.6.1.4.1.2011.6.3.5.1.1.2
+    metric_type: monotonic_count
+    name: huawei.hwMemoryDevSize
+  - OID: 1.3.6.1.4.1.2011.6.3.5.1.1.3
+    metric_type: monotonic_count
+    name: huawei.hwMemoryDevFree
+  table:
+    OID: 1.3.6.1.4.1.2011.6.3.5.1
+    name: hwMemoryDevTable
+sysobjectid:
+- 1.3.6.1.4.1.2011.2.*

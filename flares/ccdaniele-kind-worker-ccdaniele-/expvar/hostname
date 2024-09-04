@@ -1,0 +1,13 @@
+errors:
+  '''hostname'' configuration/environment': hostname is empty
+  '''hostname_file'' configuration/environment': '''hostname_file'' configuration
+    is not enabled'
+  aws: 'not retrieving hostname from AWS: the host is not an ECS instance and other
+    providers already retrieve non-default hostnames'
+  azure: azure_hostname_style is set to 'os'
+  fargate: agent is not runnning on Fargate
+  fqdn: FQDN hostname is not usable
+  gce: 'unable to retrieve hostname from GCE: GCE metadata API error: Get "http://169.254.169.254/computeMetadata/v1/instance/hostname":
+    context deadline exceeded (Client.Timeout exceeded while awaiting headers)'
+  os: OS hostname is not usable
+provider: container

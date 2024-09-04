@@ -1,0 +1,232 @@
+device:
+  vendor: fortinet
+extends:
+- _base.yaml
+- _generic-if.yaml
+- _fortinet-fortigate-cpu-memory.yaml
+- _fortinet-fortigate-vpn-tunnel.yaml
+metadata:
+  device:
+    fields:
+      model:
+        symbol:
+          OID: 1.3.6.1.2.1.47.1.1.1.1.13.1
+          name: entPhysicalModelName
+      os_name:
+        value: FortiOS
+      os_version:
+        symbol:
+          MIB: FORTINET-FORTIGATE-MIB
+          OID: 1.3.6.1.4.1.12356.101.4.1.1.0
+          match_pattern: v([\d.]+)
+          match_value: $1
+          name: fgSysVersion
+      product_name:
+        symbol:
+          OID: 1.3.6.1.2.1.47.1.1.1.1.10.1
+          match_pattern: ^(\S+)\s+
+          match_value: $1
+          name: entPhysicalSoftwareRev
+      serial_number:
+        symbol:
+          MIB: ENTITY-MIB
+          OID: 1.3.6.1.2.1.47.1.1.1.1.11.1
+          name: entPhysicalSerialNum
+      vendor:
+        value: fortinet
+      version:
+        symbol:
+          MIB: FORTINET-FORTIGATE-MIB
+          OID: 1.3.6.1.4.1.12356.101.4.1.1.0
+          name: fgSysVersion
+metrics:
+- MIB: FORTINET-FORTIGATE-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.12356.101.4.1.3.0
+    name: fgSysCpuUsage
+- MIB: FORTINET-FORTIGATE-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.12356.101.4.4.2.1.1
+      name: fgProcessorEntIndex
+    tag: processor_index
+  metric_type: monotonic_count_and_rate
+  symbols:
+  - OID: 1.3.6.1.4.1.12356.101.4.4.2.1.6
+    name: fgProcessorPktRxCount
+  - OID: 1.3.6.1.4.1.12356.101.4.4.2.1.7
+    name: fgProcessorPktTxCount
+  - OID: 1.3.6.1.4.1.12356.101.4.4.2.1.8
+    name: fgProcessorPktDroppedCount
+  table:
+    OID: 1.3.6.1.4.1.12356.101.4.4.2
+    name: fgProcessorTable
+- MIB: FORTINET-FORTIGATE-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.12356.101.4.4.2.1.1
+      name: fgProcessorEntIndex
+    tag: processor_index
+  symbols:
+  - OID: 1.3.6.1.4.1.12356.101.4.4.2.1.2
+    name: fgProcessorUsage
+  - OID: 1.3.6.1.4.1.12356.101.4.4.2.1.10
+    name: fgProcessorSysUsage
+  table:
+    OID: 1.3.6.1.4.1.12356.101.4.4.2
+    name: fgProcessorTable
+- MIB: FORTINET-FORTIGATE-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.12356.101.4.1.4.0
+    name: fgSysMemUsage
+- MIB: FORTINET-FORTIGATE-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.12356.101.4.1.5.0
+    name: fgSysMemCapacity
+- MIB: FORTINET-FORTIGATE-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.12356.101.4.1.9.0
+    name: fgSysLowMemUsage
+- MIB: FORTINET-FORTIGATE-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.12356.101.4.1.10.0
+    name: fgSysLowMemCapacity
+- MIB: FORTINET-FORTIGATE-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.12356.101.4.1.6.0
+    name: fgSysDiskUsage
+- MIB: FORTINET-FORTIGATE-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.12356.101.4.1.7.0
+    name: fgSysDiskCapacity
+- MIB: FORTINET-FORTIGATE-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.12356.101.3.2.1.1.1
+      name: fgVdEntIndex
+    tag: virtualdomain_index
+  - symbol:
+      OID: 1.3.6.1.4.1.12356.101.3.2.1.1.2
+      name: fgVdEntName
+    tag: virtualdomain_name
+  symbols:
+  - OID: 1.3.6.1.4.1.12356.101.3.2.1.1.3
+    name: fgVdEntOpMode
+  - OID: 1.3.6.1.4.1.12356.101.3.2.1.1.4
+    name: fgVdEntHaState
+  - OID: 1.3.6.1.4.1.12356.101.3.2.1.1.5
+    name: fgVdEntCpuUsage
+  - OID: 1.3.6.1.4.1.12356.101.3.2.1.1.6
+    name: fgVdEntMemUsage
+  - OID: 1.3.6.1.4.1.12356.101.3.2.1.1.7
+    name: fgVdEntSesCount
+  - OID: 1.3.6.1.4.1.12356.101.3.2.1.1.8
+    name: fgVdEntSesRate
+  table:
+    OID: 1.3.6.1.4.1.12356.101.3.2.1
+    name: fgVdTable
+- MIB: FORTINET-FORTIGATE-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.12356.101.3.2.1.1.1
+      name: fgVdEntIndex
+    tag: virtualdomain_index
+  - symbol:
+      OID: 1.3.6.1.4.1.12356.101.3.2.1.1.2
+      name: fgVdEntName
+    tag: virtualdomain_name
+  - mapping:
+      1: primary
+      2: secondary
+      3: standalone
+    symbol:
+      OID: 1.3.6.1.4.1.12356.101.3.2.1.1.4
+      name: fgVdEntHaState
+    tag: virtualdomain_state
+  symbols:
+  - constant_value_one: true
+    name: fgVirtualDomain
+  table:
+    OID: 1.3.6.1.4.1.12356.101.3.2.1
+    name: fgVdTable
+- MIB: FORTINET-FORTIGATE-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.12356.101.3.1.1.0
+    name: fgVdNumber
+- MIB: FORTINET-FORTIGATE-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.12356.101.3.1.2.0
+    name: fgVdMaxVdoms
+- MIB: FORTINET-FORTIGATE-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.12356.101.3.2.1.1.1
+      name: fgVdEntIndex
+    tag: virtualdomain_index
+  - MIB: IF-MIB
+    symbol:
+      OID: 1.3.6.1.2.1.31.1.1.1.1
+      name: ifName
+    table: ifXTable
+    tag: interface
+  symbols:
+  - OID: 1.3.6.1.4.1.12356.101.7.2.1.1.1
+    name: fgIntfEntVdom
+  table:
+    OID: 1.3.6.1.4.1.12356.101.7.2.1
+    name: fgIntfTable
+- MIB: FORTINET-FORTIGATE-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.12356.101.4.1.8.0
+    name: fgSysSesCount
+- MIB: FORTINET-FORTIGATE-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.12356.101.4.1.11.0
+    name: fgSysSesRate1
+- MIB: FORTINET-FORTIGATE-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.12356.101.4.1.15.0
+    name: fgSysSes6Count
+- MIB: FORTINET-FORTIGATE-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.12356.101.4.1.16.0
+    name: fgSysSes6Rate1
+- MIB: FORTINET-FORTIGATE-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.12356.101.10.100.4.0
+    name: fgApHTTPConnections
+- MIB: FORTINET-FORTIGATE-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.12356.101.10.100.5.0
+    name: fgApHTTPMaxConnections
+- MIB: FORTINET-FORTIGATE-MIB
+  metric_tags:
+  - index: 1
+    tag: virtualdomain_index
+  - index: 2
+    tag: policy_index
+  metric_type: monotonic_count_and_rate
+  symbols:
+  - OID: 1.3.6.1.4.1.12356.101.5.1.2.1.1.2
+    name: fgFwPolPktCount
+  - OID: 1.3.6.1.4.1.12356.101.5.1.2.1.1.3
+    name: fgFwPolByteCount
+  table:
+    OID: 1.3.6.1.4.1.12356.101.5.1.2.1
+    name: fgFwPolStatsTable
+- MIB: FORTINET-FORTIGATE-MIB
+  metric_tags:
+  - index: 1
+    tag: virtualdomain_index
+  - index: 2
+    tag: policy6_index
+  metric_type: monotonic_count_and_rate
+  symbols:
+  - OID: 1.3.6.1.4.1.12356.101.5.1.2.2.1.2
+    name: fgFwPol6PktCount
+  - OID: 1.3.6.1.4.1.12356.101.5.1.2.2.1.3
+    name: fgFwPol6ByteCount
+  table:
+    OID: 1.3.6.1.4.1.12356.101.5.1.2.2
+    name: fgFwPol6StatsTable
+sysobjectid: 1.3.6.1.4.1.12356.101.1.*

@@ -1,0 +1,48 @@
+device:
+  vendor: cisco
+extends:
+- _base.yaml
+- _generic-if.yaml
+- _generic-tcp.yaml
+- _generic-udp.yaml
+- _cisco-wlc.yaml
+- _cisco-metadata.yaml
+metadata:
+  device:
+    fields:
+      serial_number:
+        symbol:
+          OID: 1.3.6.1.4.1.14179.1.1.1.4
+          name: agentInventorySerialNumber
+      type:
+        value: WLC
+metrics:
+- MIB: AIRESPACE-SWITCHING-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.14179.1.1.5.1
+    name: cpu.usage
+- MIB: AIRESPACE-SWITCHING-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.14179.1.1.5.3
+    name: memory.free
+    scale_factor: 1000
+- MIB: AIRESPACE-SWITCHING-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.14179.1.1.5.2
+    name: memory.total
+    scale_factor: 1000
+sysobjectid:
+- 1.3.6.1.4.1.9.1.818
+- 1.3.6.1.4.1.9.1.828
+- 1.3.6.1.4.1.9.1.926
+- 1.3.6.1.4.1.9.1.1069
+- 1.3.6.1.4.1.9.1.1279
+- 1.3.6.1.4.1.9.1.1295
+- 1.3.6.1.4.1.9.1.1615
+- 1.3.6.1.4.1.9.1.1631
+- 1.3.6.1.4.1.9.1.1645
+- 1.3.6.1.4.1.9.1.1926
+- 1.3.6.1.4.1.9.1.1927
+- 1.3.6.1.4.1.9.1.2170
+- 1.3.6.1.4.1.9.1.2171
+- 1.3.6.1.4.1.9.1.2427

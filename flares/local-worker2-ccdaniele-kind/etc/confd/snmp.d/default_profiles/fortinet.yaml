@@ -1,0 +1,11 @@
+extends:
+- _base.yaml
+- _generic-if.yaml
+metadata:
+  device:
+    fields:
+      vendor:
+        value: fortinet
+sysobjectid:
+- 1.3.6.1.4.1.12356.103.*
+- 1.3.6.1.4.1.12356.106.*

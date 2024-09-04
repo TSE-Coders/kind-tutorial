@@ -1,0 +1,33 @@
+metadata:
+  device:
+    fields:
+      model:
+        symbol:
+          OID: 1.3.6.1.2.1.1.1.0
+          extract_value: \sSoftware\s+\(([-a-zA-Z0-9_ ]+)\)
+          name: sysDescr
+      os_name:
+        symbols:
+        - OID: 1.3.6.1.2.1.1.1.0
+          match_pattern: Cisco Internetwork Operating System Software
+          match_value: IOS
+          name: sysDescr
+        - OID: 1.3.6.1.2.1.1.1.0
+          match_pattern: Cisco IOS Software
+          match_value: IOS
+          name: sysDescr
+        - OID: 1.3.6.1.2.1.1.1.0
+          match_pattern: Cisco NX-OS
+          match_value: NXOS
+          name: sysDescr
+        - OID: 1.3.6.1.2.1.1.1.0
+          match_pattern: Cisco IOS XR
+          match_value: IOSXR
+          name: sysDescr
+      vendor:
+        value: cisco
+      version:
+        symbol:
+          OID: 1.3.6.1.2.1.1.1.0
+          extract_value: \sVersion\s+([a-zA-Z0-9.()]+)
+          name: sysDescr

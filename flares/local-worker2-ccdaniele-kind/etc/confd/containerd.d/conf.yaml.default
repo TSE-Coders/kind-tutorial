@@ -1,0 +1,14 @@
+ad_identifiers:
+- _containerd
+init_config: null
+instances:
+- collect_events: true
+  filters:
+  - topic=="/containers/create"
+  - topic=="/containers/delete"
+  - topic=="/containers/update"
+  - topic=="/images/update"
+  - topic=="/images/create"
+  - topic=="/images/delete"
+  - topic=="/tasks/oom"
+  - topic=="/tasks/delete"

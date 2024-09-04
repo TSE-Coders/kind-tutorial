@@ -1,0 +1,117 @@
+extends:
+- _base.yaml
+- _generic-if.yaml
+metadata:
+  device:
+    fields:
+      type:
+        value: firewall
+      vendor:
+        value: sophos
+metric_tags:
+- OID: 1.3.6.1.4.1.2604.5.1.1.2.0
+  symbol: sfosDeviceType
+  tag: sfos_device_type
+- OID: 1.3.6.1.4.1.2604.5.1.1.3.0
+  symbol: sfosDeviceFWVersion
+  tag: sfos_device_fw_version
+- OID: 1.3.6.1.4.1.2604.5.1.1.6.0
+  symbol: sfosIPSVersion
+  tag: sfos_ips_version
+metrics:
+- MIB: HOST-RESOURCES-MIB
+  symbol:
+    OID: 1.3.6.1.2.1.25.3.3.1.2.196608
+    name: cpu.usage
+- MIB: SFOS-FIREWALL-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.2604.5.1.2.5.2.0
+    name: memory.usage
+- MIB: SFOS-FIREWALL-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.2604.5.1.2.5.1.0
+    name: memory.total
+- MIB: SFOS-FIREWALL-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.2604.5.1.2.4.1.0
+    name: sfosDiskCapacity
+- MIB: SFOS-FIREWALL-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.2604.5.1.2.4.2.0
+    name: sfosDiskPercentUsage
+- MIB: SFOS-FIREWALL-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.2604.5.1.2.5.3.0
+    name: sfosSwapCapacity
+- MIB: SFOS-FIREWALL-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.2604.5.1.2.5.4.0
+    name: sfosSwapPercentUsage
+- MIB: SFOS-FIREWALL-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.2604.5.1.2.6.0
+    name: sfosLiveUsersCount
+- MIB: SFOS-FIREWALL-MIB
+  metric_type: monotonic_count
+  symbol:
+    OID: 1.3.6.1.4.1.2604.5.1.2.7.0
+    name: sfosHTTPHits
+- MIB: SFOS-FIREWALL-MIB
+  metric_type: monotonic_count
+  symbol:
+    OID: 1.3.6.1.4.1.2604.5.1.2.8.0
+    name: sfosFTPHits
+- MIB: SFOS-FIREWALL-MIB
+  metric_type: monotonic_count
+  symbol:
+    OID: 1.3.6.1.4.1.2604.5.1.2.9.1.0
+    name: sfosPOP3Hits
+- MIB: SFOS-FIREWALL-MIB
+  metric_type: monotonic_count
+  symbol:
+    OID: 1.3.6.1.4.1.2604.5.1.2.9.2.0
+    name: sfosImapHits
+- MIB: SFOS-FIREWALL-MIB
+  metric_type: monotonic_count
+  symbol:
+    OID: 1.3.6.1.4.1.2604.5.1.2.9.3.0
+    name: sfosSmtpHits
+- MIB: SFOS-FIREWALL-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.2604.5.1.6.1.1.1.1.2
+      name: sfosIPSecVpnConnName
+    tag: sfos_ip_sec_vpn_conn_name
+  - symbol:
+      OID: 1.3.6.1.4.1.2604.5.1.6.1.1.1.1.3
+      name: sfosIPSecVpnConnDes
+    tag: sfos_ip_sec_vpn_conn_des
+  - symbol:
+      OID: 1.3.6.1.4.1.2604.5.1.6.1.1.1.1.4
+      name: sfosIPSecVpnPolicyName
+    tag: sfos_ip_sec_vpn_policy_name
+  - symbol:
+      OID: 1.3.6.1.4.1.2604.5.1.6.1.1.1.1.5
+      name: sfosIPSecVpnConnMode
+    tag: sfos_ip_sec_vpn_conn_mode
+  - mapping:
+      1: host-to-host
+      2: site-to-site
+    symbol:
+      OID: 1.3.6.1.4.1.2604.5.1.6.1.1.1.1.6
+      name: sfosIPSecVpnConnType
+    tag: sfos_ip_sec_vpn_conn_type
+  - symbol:
+      OID: 1.3.6.1.4.1.2604.5.1.6.1.1.1.1.7
+      name: sfosIPSecVpnLocalgwPort
+    tag: sfos_ip_sec_vpn_localgw_port
+  symbols:
+  - constant_value_one: true
+    name: sfosIPSecVpnTunnel
+  - OID: 1.3.6.1.4.1.2604.5.1.6.1.1.1.1.8
+    name: sfosIPSecVpnActiveTunnel
+  table:
+    OID: 1.3.6.1.4.1.2604.5.1.6.1.1.1
+    name: sfosIPSecVpnTunnelTable
+sysobjectid:
+- 1.3.6.1.4.1.2604.5

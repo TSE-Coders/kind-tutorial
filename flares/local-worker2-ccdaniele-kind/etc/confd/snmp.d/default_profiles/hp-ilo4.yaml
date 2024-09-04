@@ -1,0 +1,10 @@
+device:
+  vendor: hp
+extends:
+- hp-ilo.yaml
+metadata:
+  device:
+    fields:
+      model:
+        value: iLO4
+sysobjectid: 1.3.6.1.4.1.232.9.4.10

@@ -1,0 +1,3 @@
+apm_config:
+  apm_non_local_traffic: true
+jmx_use_container_support: true

@@ -1,0 +1,10 @@
+ad_identifiers:
+- kube-apiserver
+init_config: null
+instances:
+- bearer_token_auth: tls_only
+  possible_prometheus_urls:
+  - https://%%host%%:6443/metrics
+  - https://%%host%%:8443/metrics
+  tags:
+  - apiserver:%%host%%

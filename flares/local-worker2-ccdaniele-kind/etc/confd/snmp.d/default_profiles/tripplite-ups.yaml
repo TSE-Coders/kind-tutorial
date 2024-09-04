@@ -1,0 +1,147 @@
+extends:
+- _generic-ups.yaml
+- tripplite.yaml
+metadata:
+  device:
+    fields:
+      type:
+        value: UPS
+metric_tags:
+- OID: 1.3.6.1.4.1.850.100.1.1.2.0
+  symbol: tlUpsIdentSerialNum
+  tag: tl_ups_ident_serial_num
+- OID: 1.3.6.1.4.1.850.100.1.1.3.0
+  symbol: tlUpsIdentID
+  tag: tl_ups_ident_id
+- OID: 1.3.6.1.4.1.850.100.1.1.4.0
+  symbol: tlUpsSnmpCardSerialNum
+  tag: tl_ups_snmp_card_serial_num
+- OID: 1.3.6.1.4.1.850.100.1.1.6.0
+  symbol: tlUpsLocation
+  tag: tl_ups_location
+metrics:
+- MIB: TRIPPLITE-12X
+  symbol:
+    OID: 1.3.6.1.4.1.850.100.1.13.1.0
+    name: tlUpsTemperature
+- MIB: TRIPPLITE-12X
+  symbol:
+    OID: 1.3.6.1.4.1.850.100.1.2.1.0
+    name: tlUpsBatteryAge
+- MIB: TRIPPLITE-12X
+  symbol:
+    OID: 1.3.6.1.4.1.850.100.1.2.2.0
+    name: tlUpsTemperatureF
+- MIB: TRIPPLITE-12X
+  symbol:
+    OID: 1.3.6.1.4.1.850.100.1.2.3.0
+    name: tlUpsExternalBatteryAge
+- MIB: TRIPPLITE-12X
+  symbol:
+    OID: 1.3.6.1.4.1.850.100.1.6.1.0
+    name: tlUpsAlarmsPresent
+- MIB: TRIPPLITE-12X
+  symbol:
+    OID: 1.3.6.1.4.1.850.101.1.1.1.0
+    name: tlEnvTemperatureC
+- MIB: TRIPPLITE-12X
+  symbol:
+    OID: 1.3.6.1.4.1.850.101.1.1.2.0
+    name: tlEnvTemperatureF
+- MIB: TRIPPLITE-12X
+  symbol:
+    OID: 1.3.6.1.4.1.850.101.1.2.1.0
+    name: tlEnvHumidity
+- MIB: TRIPPLITE-12X
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.850.100.1.3.2.1.1
+      name: tlUpsInputVoltageIndex
+    tag: tl_ups_input_voltage_index
+  - mapping:
+      0: phase_to_neutral
+      1: phase_to_phase
+    symbol:
+      OID: 1.3.6.1.4.1.850.100.1.3.2.1.2
+      name: tlUpsInputVoltageType
+    tag: tl_ups_input_voltage_type
+  symbols:
+  - OID: 1.3.6.1.4.1.850.100.1.3.2.1.3
+    name: tlUpsInputVoltage
+  table:
+    OID: 1.3.6.1.4.1.850.100.1.3.2
+    name: tlUpsInputVoltageTable
+- MIB: TRIPPLITE-12X
+  metric_tags:
+  - index: 1
+    tag: tl_ups_output_circuit_index
+  - mapping:
+      0: open
+      1: closed
+    symbol:
+      OID: 1.3.6.1.4.1.850.100.1.4.7.1.2
+      name: tlUpsOutputCircuitStatus
+    tag: tl_ups_output_circuit_status
+  symbols:
+  - OID: 1.3.6.1.4.1.850.100.1.4.7.1.3
+    name: tlUpsOutputCircuitLoadCurrent
+  - OID: 1.3.6.1.4.1.850.100.1.4.7.1.4
+    name: tlUpsOutputCircuitVoltage
+  - OID: 1.3.6.1.4.1.850.100.1.4.7.1.5
+    name: tlUpsOutputCircuitPower
+  table:
+    OID: 1.3.6.1.4.1.850.100.1.4.7
+    name: tlUpsOutputCircuitTable
+- MIB: TRIPPLITE-12X
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.850.101.2.1.1.2
+      name: tlEnvContactName
+    tag: tl_env_contact_name
+  - mapping:
+      0: normally_open
+      1: normally_closed
+    symbol:
+      OID: 1.3.6.1.4.1.850.101.2.1.1.4
+      name: tlEnvContactConfig
+    tag: tl_env_contact_config
+  - mapping:
+      0: normal
+      1: alarm
+    symbol:
+      OID: 1.3.6.1.4.1.850.101.2.1.1.3
+      name: tlEnvContactStatus
+    tag: tl_env_contact_status
+  symbols:
+  - constant_value_one: true
+    name: tlEnvContact
+  table:
+    OID: 1.3.6.1.4.1.850.101.2.1
+    name: tlEnvContactTable
+- MIB: TRIPPLITE-12X
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.850.100.1.11.2.1.3
+      name: tlUpsOutletGroupName
+    tag: tl_ups_outlet_group_name
+  - symbol:
+      OID: 1.3.6.1.4.1.850.100.1.11.2.1.4
+      name: tlUpsOutletGroupDesc
+    tag: tl_ups_outlet_group_desc
+  - mapping:
+      0: unknown
+      1: false
+      2: true
+      3: mixed
+    symbol:
+      OID: 1.3.6.1.4.1.850.100.1.11.2.1.5
+      name: tlUpsOutletGroupState
+    tag: tl_ups_outlet_group_state
+  symbols:
+  - constant_value_one: true
+    name: tlUpsOutlet
+  table:
+    OID: 1.3.6.1.4.1.850.100.1.10.2
+    name: tlUpsOutletTable
+sysobjectid:
+- 1.3.6.1.4.1.850.1.1.3.1

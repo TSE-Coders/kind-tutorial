@@ -1,0 +1,27 @@
+===============
+Metadata Mapper
+===============
+
+Node detected: ccdaniele-kind-control-plane
+
+  - Namespace: kube-system
+      - Pod: coredns-7db6d8ff4d-c9dzb
+        Services: [kube-dns]
+      - Pod: coredns-7db6d8ff4d-s99h7
+        Services: [kube-dns]
+
+Node detected: ccdaniele-kind-worker
+
+  - Namespace: default
+      - Pod: agent-kind-datadog-8vf5p
+        Services: [agent-kind-datadog]
+      - Pod: agent-kind-datadog-cluster-agent-75dd97446-nh2pf
+        Services: [agent-kind-datadog-cluster-agent agent-kind-datadog-cluster-agent-admission-controller]
+
+Node detected: ccdaniele-kind-worker2
+
+  - Namespace: default
+      - Pod: agent-kind-datadog-7zcm2
+        Services: [agent-kind-datadog]
+      - Pod: agent-kind-datadog-cluster-agent-668c55cbfc-v2mnv
+        Services: [agent-kind-datadog-cluster-agent agent-kind-datadog-cluster-agent-admission-controller]

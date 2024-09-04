@@ -1,0 +1,13 @@
+BufferFlushed: 3
+ClusterRole: 71
+ClusterRoleBinding: 57
+DaemonSet: 3
+Deployment: 3
+ManifestsFlushedLastTime: 23
+Namespace: 5
+Node: 3
+ReplicaSet: 5
+Role: 13
+RoleBinding: 13
+Service: 5
+ServiceAccount: 45

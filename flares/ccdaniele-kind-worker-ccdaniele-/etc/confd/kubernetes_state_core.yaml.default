@@ -1,0 +1,28 @@
+init_config: null
+instances:
+- annotations_as_tags: {}
+  collectors:
+  - secrets
+  - configmaps
+  - nodes
+  - pods
+  - services
+  - resourcequotas
+  - replicationcontrollers
+  - limitranges
+  - persistentvolumeclaims
+  - persistentvolumes
+  - namespaces
+  - endpoints
+  - daemonsets
+  - deployments
+  - replicasets
+  - statefulsets
+  - cronjobs
+  - jobs
+  - horizontalpodautoscalers
+  - poddisruptionbudgets
+  - storageclasses
+  - volumeattachments
+  - ingresses
+  labels_as_tags: {}

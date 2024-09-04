@@ -1,0 +1,76 @@
+jmx_metrics:
+- include:
+    attribute:
+      PoolActiveConnections:
+        alias: sonarqube.server.database.pool_active_connections
+        metric_type: gauge
+      PoolIdleConnections:
+        alias: sonarqube.server.database.pool_idle_connections
+        metric_type: gauge
+      PoolInitialSize:
+        alias: sonarqube.server.database.pool_initial_size
+        metric_type: gauge
+      PoolMaxActiveConnections:
+        alias: sonarqube.server.database.pool_max_active_connections
+        metric_type: gauge
+      PoolMaxIdleConnections:
+        alias: sonarqube.server.database.pool_max_idle_connections
+        metric_type: gauge
+      PoolMaxWaitMillis:
+        alias: sonarqube.server.database.pool_max_wait_millis
+        metric_type: gauge
+      PoolMinIdleConnections:
+        alias: sonarqube.server.database.pool_min_idle_connections
+        metric_type: gauge
+      PoolRemoveAbandonedTimeoutSeconds:
+        alias: sonarqube.server.database.pool_remove_abandoned_timeout_seconds
+        metric_type: gauge
+    domain: SonarQube
+    exclude_tags:
+    - name
+    name: Database
+- include:
+    attribute:
+      ErrorCount:
+        alias: sonarqube.server.compute_engine_tasks.error_count
+        metric_type: monotonic_count
+      InProgressCount:
+        alias: sonarqube.server.compute_engine_tasks.in_progress_count
+        metric_type: gauge
+      LongestTimePending:
+        alias: sonarqube.server.compute_engine_tasks.longest_pending_time
+        metric_type: gauge
+      PendingCount:
+        alias: sonarqube.server.compute_engine_tasks.pending_count
+        metric_type: monotonic_count
+      ProcessingTime:
+        alias: sonarqube.server.compute_engine_tasks.processing_time
+        metric_type: gauge
+      SuccessCount:
+        alias: sonarqube.server.compute_engine_tasks.success_count
+        metric_type: monotonic_count
+      WorkerCount:
+        alias: sonarqube.server.compute_engine_tasks.worker_count
+        metric_type: gauge
+      WorkerMaxCount:
+        alias: sonarqube.server.compute_engine_tasks.worker_max_count
+        metric_type: gauge
+    domain: SonarQube
+    exclude_tags:
+    - name
+    name: ComputeEngineTasks
+- include:
+    attribute:
+      LargestWorkerCount:
+        alias: sonarqube.server.async_execution.largest_worker_count
+        metric_type: gauge
+      QueueSize:
+        alias: sonarqube.server.async_execution.queue_size
+        metric_type: gauge
+      WorkerCount:
+        alias: sonarqube.server.async_execution.worker_count
+        metric_type: gauge
+    domain: SonarQube
+    exclude_tags:
+    - name
+    name: AsyncExecution

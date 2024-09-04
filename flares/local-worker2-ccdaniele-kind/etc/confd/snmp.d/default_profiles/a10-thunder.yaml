@@ -1,0 +1,488 @@
+extends:
+- a10.yaml
+metric_tags:
+- OID: 1.3.6.1.4.1.22610.2.4.1.6.2.0
+  symbol: axSysSerialNumber
+  tag: ax_sys_serial_number
+- OID: 1.3.6.1.4.1.22610.2.4.1.6.3.0
+  symbol: axSysFirmwareVersion
+  tag: ax_sys_firmware_version
+- OID: 1.3.6.1.4.1.22610.2.4.1.6.4.0
+  symbol: axSysAFleXEngineVersion
+  tag: ax_sys_a_fle_x_engine_version
+metrics:
+- MIB: A10-AX-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.22610.2.4.1.2.1.0
+    name: memory.total
+- MIB: A10-AX-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.22610.2.4.1.2.2.0
+    name: memory.used
+- MIB: A10-AX-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.22610.2.4.1.3.3.0
+    name: cpu.usage
+- MIB: A10-AX-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.22610.2.4.1.4.1.0
+    name: axSysDiskTotalSpace
+- MIB: A10-AX-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.22610.2.4.1.4.2.0
+    name: axSysDiskFreeSpace
+- MIB: A10-AX-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.22610.2.4.1.5.1.0
+    name: axSysHwPhySystemTemp
+- MIB: A10-AX-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.22610.2.4.1.5.10.0
+    name: axPowerSupplyVoltageTotal
+- MIB: A10-AX-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.22610.2.4.3.1.2.1.0
+    name: axAppGlobalTotalCurrentConnections
+- MIB: A10-AX-MIB
+  metric_type: monotonic_count
+  symbol:
+    OID: 1.3.6.1.4.1.22610.2.4.3.1.2.2.0
+    name: axAppGlobalTotalNewConnections
+- MIB: A10-AX-MIB
+  metric_type: monotonic_count
+  symbol:
+    OID: 1.3.6.1.4.1.22610.2.4.3.1.2.3.0
+    name: axAppGlobalTotalNewL4Connections
+- MIB: A10-AX-MIB
+  metric_type: monotonic_count
+  symbol:
+    OID: 1.3.6.1.4.1.22610.2.4.3.1.2.4.0
+    name: axAppGlobalTotalNewL7Connections
+- MIB: A10-AX-MIB
+  metric_type: monotonic_count
+  symbol:
+    OID: 1.3.6.1.4.1.22610.2.4.3.1.2.5.0
+    name: axAppGlobalTotalNewIPNatConnections
+- MIB: A10-AX-MIB
+  metric_type: monotonic_count
+  symbol:
+    OID: 1.3.6.1.4.1.22610.2.4.3.1.2.6.0
+    name: axAppGlobalTotalSSLConnections
+- MIB: A10-AX-MIB
+  metric_type: monotonic_count
+  symbol:
+    OID: 1.3.6.1.4.1.22610.2.4.3.1.2.7.0
+    name: axAppGlobalTotalL7Requests
+- MIB: A10-AX-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.22610.2.4.3.1.2.8.0
+    name: axGlobalAppPacketDrop
+- MIB: A10-AX-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.22610.2.4.3.1.2.9.0
+    name: axGlobalTotalAppPacketDrop
+- MIB: A10-AX-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.22610.2.4.3.1.2.10.0
+    name: axGlobalTotalL4Session
+- MIB: A10-AX-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.22610.2.4.3.1.2.13.0
+    name: axGlobalTotalThroughput
+- MIB: A10-AX-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.22610.2.4.3.1.3.1.0
+    name: axAppGlobalBufferConfigLimit
+- MIB: A10-AX-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.22610.2.4.3.1.3.2.0
+    name: axAppGlobalBufferCurrentUsage
+- MIB: A10-AX-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.22610.2.4.3.5.1.0
+    name: axConnReuseStatTotalOpenPersist
+- MIB: A10-AX-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.22610.2.4.3.5.2.0
+    name: axConnReuseStatTotalActivePersist
+- MIB: A10-AX-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.22610.2.4.3.5.3.0
+    name: axConnReuseStatTotalEstablished
+- MIB: A10-AX-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.22610.2.4.3.5.4.0
+    name: axConnReuseStatTotalTerminated
+- MIB: A10-AX-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.22610.2.4.3.19.1.1.0
+    name: axSessionGlobalStatTCPEstablished
+- MIB: A10-AX-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.22610.2.4.3.19.1.2.0
+    name: axSessionGlobalStatTCPHalfOpen
+- MIB: A10-AX-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.22610.2.4.3.19.1.3.0
+    name: axSessionGlobalStatUDP
+- MIB: A10-AX-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.22610.2.4.3.19.1.4.0
+    name: axSessionGlobalStatNonTcpUdpIPSession
+- MIB: A10-AX-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.22610.2.4.3.19.1.5.0
+    name: axSessionGlobalStatOther
+- MIB: A10-AX-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.22610.2.4.3.19.1.6.0
+    name: axSessionGlobalStatReverseNATTCP
+- MIB: A10-AX-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.22610.2.4.3.19.1.7.0
+    name: axSessionGlobalStatReverseNATUDP
+- MIB: A10-AX-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.22610.2.4.3.19.1.9.0
+    name: axSessionGlobalStatFreeCurrentConns
+- MIB: A10-AX-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.22610.2.4.3.19.1.10.0
+    name: axSessionGlobalStatConnCount
+- MIB: A10-AX-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.22610.2.4.3.19.1.11.0
+    name: axSessionGlobalStatConnFree
+- MIB: A10-AX-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.22610.2.4.3.19.1.12.0
+    name: axSessionGlobalStatTCPSynHalfOpen
+- MIB: A10-AX-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.22610.2.4.3.19.1.13.0
+    name: axSessionGlobalStatConnSMPAllocated
+- MIB: A10-AX-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.22610.2.4.3.19.1.14.0
+    name: axSessionGlobalStatConnSMPFree
+- MIB: A10-AX-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.22610.2.4.1.5.9.1.2
+      name: axFanName
+    tag: ax_fan_name
+  - mapping:
+      -2: not_ready
+      -1: unknown
+      0: failed
+      4: ok_fixed_high
+      5: ok_low_med
+      6: ok_med_med
+      7: ok_med_high
+    symbol:
+      OID: 1.3.6.1.4.1.22610.2.4.1.5.9.1.3
+      name: axFanStatus
+    tag: ax_fan_status
+  symbols:
+  - OID: 1.3.6.1.4.1.22610.2.4.1.5.9.1.4
+    name: axFanSpeed
+  table:
+    OID: 1.3.6.1.4.1.22610.2.4.1.5.9
+    name: axSysFanStatusTable
+- MIB: A10-AX-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.22610.2.4.1.5.11.1.3
+      name: axPowerSupplyVoltageDescription
+    tag: ax_power_supply_voltage_description
+  - mapping:
+      0: invalid
+      1: normal
+      2: unknown
+    symbol:
+      OID: 1.3.6.1.4.1.22610.2.4.1.5.11.1.2
+      name: axPowerSupplyVoltageStatus
+    tag: ax_power_supply_voltage_status
+  symbols:
+  - constant_value_one: true
+    name: axPowerSupplyVoltage
+  table:
+    OID: 1.3.6.1.4.1.22610.2.4.1.5.11
+    name: axPowerSupplyVoltageTable
+- MIB: A10-AX-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.22610.2.4.1.5.12.1.2
+      name: axPowerSupplyName
+    tag: ax_power_supply_name
+  - mapping:
+      -1: unknown
+      0: false
+      1: true
+      2: absent
+    symbol:
+      OID: 1.3.6.1.4.1.22610.2.4.1.5.12.1.3
+      name: axPowerSupplyStatus
+    tag: ax_power_supply_status
+  symbols:
+  - constant_value_one: true
+    name: axSysPowerSupplyStatus
+  table:
+    OID: 1.3.6.1.4.1.22610.2.4.1.5.12
+    name: axSysPowerSupplyStatusTable
+- MIB: A10-AX-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.22610.2.4.3.1.1.1.1.2
+      name: axAppGlobalSystemResourceName
+    tag: ax_app_global_system_resource_name
+  symbols:
+  - OID: 1.3.6.1.4.1.22610.2.4.3.1.1.1.1.3
+    name: axAppGlobalAllowedCurrentValue
+  - OID: 1.3.6.1.4.1.22610.2.4.3.1.1.1.1.6
+    name: axAppGlobalAllowedMaxValue
+  table:
+    OID: 1.3.6.1.4.1.22610.2.4.3.1.1.1
+    name: axAppGlobalSystemResourceUsageTable
+- MIB: A10-AX-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.22610.2.4.3.2.1.2.1.1
+      name: axServerName
+    tag: ax_server_name
+  - mapping:
+      0: disabled
+      1: enabled
+    symbol:
+      OID: 1.3.6.1.4.1.22610.2.4.3.2.1.2.1.3
+      name: axServerEnabledState
+    tag: ax_server_enabled_state
+  - mapping:
+      0: disabled
+      1: up
+      2: down
+    symbol:
+      OID: 1.3.6.1.4.1.22610.2.4.3.2.1.2.1.5
+      name: axServerMonitorState
+    tag: ax_server_monitor_state
+  symbols:
+  - constant_value_one: true
+    name: axServer
+  table:
+    OID: 1.3.6.1.4.1.22610.2.4.3.2.1.2
+    name: axServerTable
+- MIB: A10-AX-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.22610.2.4.3.2.2.2.1.2
+      name: axServerStatName
+    tag: ax_server_stat_name
+  - mapping:
+      0: disabled
+      1: up
+      2: down
+    symbol:
+      OID: 1.3.6.1.4.1.22610.2.4.3.2.2.2.1.10
+      name: axServerStatServerStatus
+    tag: ax_server_stat_server_status
+  symbols:
+  - OID: 1.3.6.1.4.1.22610.2.4.3.2.2.2.1.8
+    name: axServerStatServerCurConns
+  - OID: 1.3.6.1.4.1.22610.2.4.3.2.2.2.1.12
+    metric_type: monotonic_count
+    name: axServerStatServerTotalCurrL7Reqs
+  table:
+    OID: 1.3.6.1.4.1.22610.2.4.3.2.2.2
+    name: axServerStatTable
+- MIB: A10-AX-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.22610.2.4.3.3.1.2.1.1
+      name: axServiceGroupName
+    tag: ax_service_group_name
+  - mapping:
+      1: firewall
+      2: tcp
+      3: udp
+    symbol:
+      OID: 1.3.6.1.4.1.22610.2.4.3.3.1.2.1.2
+      name: axServiceGroupType
+    tag: ax_service_group_type
+  - mapping:
+      0: round_robin
+      1: weight_round_robin
+      2: least_connection
+      3: weight_least_connection
+      4: service_least_connection
+      5: service_weight_least_connection
+      6: fast_response_time
+      7: least_request
+      8: round_robin_strict
+    symbol:
+      OID: 1.3.6.1.4.1.22610.2.4.3.3.1.2.1.3
+      name: axServiceGroupLbAlgorithm
+    tag: ax_service_group_lb_algorithm
+  - mapping:
+      1: all_up
+      2: functional_up
+      3: partial_up
+      4: stopped
+    symbol:
+      OID: 1.3.6.1.4.1.22610.2.4.3.3.1.2.1.4
+      name: axServiceGroupDisplayStatus
+    tag: ax_service_group_display_status
+  symbols:
+  - constant_value_one: true
+    name: axServiceGroup
+  table:
+    OID: 1.3.6.1.4.1.22610.2.4.3.3.1.2
+    name: axServiceGroupTable
+- MIB: A10-AX-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.22610.2.4.3.4.1.2.1.1
+      name: axVirtualServerName
+    tag: ax_virtual_server_name
+  - symbol:
+      OID: 1.3.6.1.4.1.22610.2.4.3.4.1.2.1.4
+      name: axVirtualServerHAGroup
+    tag: ax_virtual_server_ha_group
+  - mapping:
+      0: disabled
+      1: enabled
+    symbol:
+      OID: 1.3.6.1.4.1.22610.2.4.3.4.1.2.1.3
+      name: axVirtualServerEnabled
+    tag: ax_virtual_server_enabled
+  - mapping:
+      0: disabled
+      1: all_up
+      2: functional_up
+      3: partial_up
+      4: stopped
+    symbol:
+      OID: 1.3.6.1.4.1.22610.2.4.3.4.1.2.1.5
+      name: axVirtualServerDisplayStatus
+    tag: ax_virtual_server_display_status
+  symbols:
+  - constant_value_one: true
+    name: axVirtualServer
+  table:
+    OID: 1.3.6.1.4.1.22610.2.4.3.4.1.2
+    name: axVirtualServerTable
+- MIB: A10-AX-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.22610.2.4.3.4.2.1.1.1
+      name: axVirtualServerStatAddress
+    tag: ax_virtual_server_stat_address
+  - symbol:
+      OID: 1.3.6.1.4.1.22610.2.4.3.4.2.1.1.2
+      name: axVirtualServerStatName
+    tag: ax_virtual_server_stat_name
+  - mapping:
+      1: up
+      2: down
+      3: disabled
+    symbol:
+      OID: 1.3.6.1.4.1.22610.2.4.3.4.2.1.1.10
+      name: axVirtualServerStatStatus
+    tag: ax_virtual_server_stat_status
+  - mapping:
+      1: up
+      2: down
+      3: disabled
+    symbol:
+      OID: 1.3.6.1.4.1.22610.2.4.3.4.2.1.1.11
+      name: axVirtualServerStatDisplayStatus
+    tag: ax_virtual_server_stat_display_status
+  symbols:
+  - OID: 1.3.6.1.4.1.22610.2.4.3.4.2.1.1.3
+    metric_type: monotonic_count
+    name: axVirtualServerStatPktsIn
+  - OID: 1.3.6.1.4.1.22610.2.4.3.4.2.1.1.4
+    metric_type: monotonic_count
+    name: axVirtualServerStatBytesIn
+  - OID: 1.3.6.1.4.1.22610.2.4.3.4.2.1.1.5
+    metric_type: monotonic_count
+    name: axVirtualServerStatPktsOut
+  - OID: 1.3.6.1.4.1.22610.2.4.3.4.2.1.1.6
+    metric_type: monotonic_count
+    name: axVirtualServerStatBytesOut
+  - OID: 1.3.6.1.4.1.22610.2.4.3.4.2.1.1.7
+    name: axVirtualServerStatPersistConns
+  - OID: 1.3.6.1.4.1.22610.2.4.3.4.2.1.1.8
+    metric_type: monotonic_count
+    name: axVirtualServerStatTotConns
+  - OID: 1.3.6.1.4.1.22610.2.4.3.4.2.1.1.9
+    name: axVirtualServerStatCurConns
+  - OID: 1.3.6.1.4.1.22610.2.4.3.4.2.1.1.12
+    metric_type: monotonic_count
+    name: axVirtualServerStatTotalL7Reqs
+  - OID: 1.3.6.1.4.1.22610.2.4.3.4.2.1.1.13
+    metric_type: monotonic_count
+    name: axVirtualServerStatTotalCurrL7Reqs
+  - OID: 1.3.6.1.4.1.22610.2.4.3.4.2.1.1.14
+    metric_type: monotonic_count
+    name: axVirtualServerStatTotalSuccL7Reqs
+  table:
+    OID: 1.3.6.1.4.1.22610.2.4.3.4.2.1
+    name: axVirtualServerStatTable
+- MIB: A10-AX-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.22610.2.4.3.4.4.1.1.1
+      name: axVirtualServerPortStatAddress
+    tag: ax_virtual_server_port_stat_address
+  - mapping:
+      1: firewall
+      2: tcp
+      3: udp
+      5: others
+      8: rtsp
+      9: ftp
+      10: mms
+      11: sip
+      12: fast_http
+      14: http
+      15: https
+      16: ssl_proxy
+      17: smtp
+      18: sip_tcp
+      19: sips
+    symbol:
+      OID: 1.3.6.1.4.1.22610.2.4.3.4.4.1.1.2
+      name: axVirtualServerStatPortType
+    tag: ax_virtual_server_stat_port_type
+  - symbol:
+      OID: 1.3.6.1.4.1.22610.2.4.3.4.4.1.1.3
+      name: axVirtualServerStatPortNum
+    tag: ax_virtual_server_stat_port_num
+  - symbol:
+      OID: 1.3.6.1.4.1.22610.2.4.3.4.4.1.1.4
+      name: axVirtualServerPortStatName
+    tag: ax_virtual_server_port_stat_name
+  - mapping:
+      1: up
+      2: down
+      3: disabled
+    symbol:
+      OID: 1.3.6.1.4.1.22610.2.4.3.4.4.1.1.5
+      name: axVirtualServerStatPortStatus
+    tag: ax_virtual_server_stat_port_status
+  - mapping:
+      0: disabled
+      1: all_up
+      2: functional_up
+      4: stopped
+    symbol:
+      OID: 1.3.6.1.4.1.22610.2.4.3.4.4.1.1.13
+      name: axVirtualServerStatPortDisplayStatus
+    tag: ax_virtual_server_stat_port_display_status
+  symbols:
+  - OID: 1.3.6.1.4.1.22610.2.4.3.4.4.1.1.12
+    name: axVirtualServerPortStatCurConns
+  table:
+    OID: 1.3.6.1.4.1.22610.2.4.3.4.4.1
+    name: axVirtualServerPortStatTable
+sysobjectid: 1.3.6.1.4.1.22610.1.3.*

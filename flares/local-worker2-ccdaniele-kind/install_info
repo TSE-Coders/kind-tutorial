@@ -1,0 +1,5 @@
+---
+install_method:
+  tool: helm
+  tool_version: Helm
+  installer_version: datadog-3.69.3

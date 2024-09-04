@@ -1,0 +1,69 @@
+extends:
+- _base.yaml
+- _generic-host-resources-base.yaml
+- _generic-if.yaml
+metadata:
+  device:
+    fields:
+      type:
+        value: server
+      vendor:
+        value: vmware
+metrics:
+- MIB: VMWARE-RESOURCES-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.6876.3.5.2.1.2
+      name: vmwHbaDeviceName
+    tag: vmw_hba_device_name
+  - mapping:
+      1: unknown
+      2: normal
+      3: marginal
+      4: critical
+      5: failed
+    symbol:
+      OID: 1.3.6.1.4.1.6876.3.5.2.1.4
+      name: vmwHbaStatus
+    tag: vmw_hba_status
+  symbols:
+  - constant_value_one: true
+    name: vmwHostBusAdapter
+  table:
+    OID: 1.3.6.1.4.1.6876.3.5.2
+    name: vmwHostBusAdapterTable
+- MIB: VMWARE-ENV-MIB
+  metric_tags:
+  - mapping:
+      1: unknown
+      2: chassis
+      3: power_supply
+      4: fan
+      5: cpu
+      6: memory
+      7: battery
+      8: temperature_sensor
+      9: raid_controller
+      10: voltage
+    symbol:
+      OID: 1.3.6.1.4.1.6876.4.20.3.1.2
+      name: vmwSubsystemType
+    tag: vmw_subsystem_type
+  - mapping:
+      1: unknown
+      2: normal
+      3: marginal
+      4: critical
+      5: failed
+    symbol:
+      OID: 1.3.6.1.4.1.6876.4.20.3.1.3
+      name: vmwHardwareStatus
+    tag: vmw_hardware_status
+  symbols:
+  - constant_value_one: true
+    name: vmwEnv
+  table:
+    OID: 1.3.6.1.4.1.6876.4.20.3
+    name: vmwEnvTable
+sysobjectid:
+- 1.3.6.1.4.1.6876.4.1

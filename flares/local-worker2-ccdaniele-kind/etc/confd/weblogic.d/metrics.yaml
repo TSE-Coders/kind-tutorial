@@ -1,0 +1,135 @@
+jmx_metrics:
+- include:
+    attribute:
+      OpenSocketsCurrentCount:
+        alias: weblogic.server_runtime.open_sockets
+    bean_regex: com.bea:Name=([-/.\w]+),Type=ServerRuntime
+    domain: com.bea
+- include:
+    attribute:
+      MaxOpenSockCount:
+        alias: weblogic.server.max_open_sockets
+      ThreadPoolPercentSocketReaders:
+        alias: weblogic.server.threadpool_socket_readers_percent
+    bean_regex: com.bea:Name=([-/.\w]+),Type=Server
+    domain: com.bea
+- include:
+    attribute:
+      CompletedRequestCount:
+        alias: weblogic.threadpool_runtime.completed_requests
+        metric_type: monotonic_count
+      ExecuteThreadIdleCount:
+        alias: weblogic.threadpool_runtime.execute_threads_idle
+        metric_type: gauge
+      ExecuteThreadTotalCount:
+        alias: weblogic.threadpool_runtime.execute_threads_total
+      HoggingThreadCount:
+        alias: weblogic.threadpool_runtime.threads_hogging
+      OverloadRejectedRequestsCount:
+        alias: weblogic.threadpool_runtime.overload_rejected_requests
+      PendingUserRequestCount:
+        alias: weblogic.threadpool_runtime.user_requests_pending
+        metric_type: gauge
+      QueueLength:
+        alias: weblogic.threadpool_runtime.queue_length
+      SharedCapacityForWorkManagers:
+        alias: weblogic.threadpool_runtime.shared_capacity_work_managers
+      StandbyThreadCount:
+        alias: weblogic.threadpool_runtime.threads_standby
+      StuckThreadCount:
+        alias: weblogic.threadpool_runtime.threads_stuck
+      Throughput:
+        alias: weblogic.threadpool_runtime.throughput
+    bean_regex: com.bea:ServerRuntime=([-.\w]+),Name=ThreadPoolRuntime,Type=ThreadPoolRuntime
+    domain: com.bea
+- include:
+    attribute:
+      HeapFreeCurrent:
+        alias: weblogic.jvm_runtime.heap_free
+      HeapFreePercent:
+        alias: weblogic.jvm_runtime.heap_free_percent
+      HeapSizeCurrent:
+        alias: weblogic.jvm_runtime.heap_size
+      HeapSizeMax:
+        alias: weblogic.jvm_runtime.heap_size_max
+    bean_regex: com.bea:ServerRuntime=([-.\w]+),Name=([-/.\w]+),Type=JVMRuntime
+    domain: com.bea
+- include:
+    attribute:
+      ActiveConnectionsCurrentCount:
+        alias: weblogic.connector_connection_pool_runtime.connections_active
+      ConnectionsCreatedTotalCount:
+        alias: weblogic.connector_connection_pool_runtime.connections_created_total
+        metric_type: monotonic_count
+      FreeConnectionsCurrentCount:
+        alias: weblogic.connector_connection_pool_runtime.connections_free
+    bean_regex: com.bea:ServerRuntime=([-.\w]+),Name=([-/.\w]+),ApplicationRuntime=([-.\w]+),Type=ConnectorConnectionPoolRuntime,ConnectorComponentRuntime=([-.\w]+)
+    domain: com.bea
+- include:
+    attribute:
+      ConnectionsCurrentCount:
+        alias: weblogic.jms_runtime.connections_current
+      ConnectionsTotalCount:
+        alias: weblogic.jms_runtime.connections_total
+        metric_type: monotonic_count
+      JMSServersCurrentCount:
+        alias: weblogic.jms_runtime.jms_servers
+      JMSServersTotalCount:
+        alias: weblogic.jms_runtime.jms_servers_total
+        metric_type: monotonic_count
+    bean_regex: com.bea:ServerRuntime=([-.\w]+),Name=([-/.\w]+),Type=JMSRuntime
+    domain: com.bea
+- include:
+    attribute:
+      CompletedRequests:
+        alias: weblogic.work_manager_runtime.requests_completed
+        metric_type: monotonic_count
+      PendingRequests:
+        alias: weblogic.work_manager_runtime.requests_pending
+      StuckThreadCount:
+        alias: weblogic.work_manager_runtime.threads_stuck
+    bean_regex: com.bea:ServerRuntime=([-.\w]+),Name=([-/.\w]+),ApplicationRuntime=([-_.\w]+),Type=WorkManagerRuntime
+    domain: com.bea
+- include:
+    attribute:
+      AcceptCount:
+        alias: weblogic.server_channel_runtime.sockets_accepted
+        metric_type: monotonic_count
+      BytesReceivedCount:
+        alias: weblogic.server_channel_runtime.bytes_received
+        metric_type: monotonic_count
+      BytesSentCount:
+        alias: weblogic.server_channel_runtime.bytes_sent
+        metric_type: monotonic_count
+      ConnectionsCount:
+        alias: weblogic.server_channel_runtime.connections_active
+      MessagesReceivedCount:
+        alias: weblogic.server_channel_runtime.messages_received
+        metric_type: monotonic_count
+      MessagesSentCount:
+        alias: weblogic.server_channel_runtime.messages_sent
+        metric_type: monotonic_count
+    bean_regex: com.bea:ServerRuntime=([-_.\w]+),Name=([\[\-_/.\]\w]+),Type=ServerChannelRuntime
+    domain: com.bea
+- include:
+    attribute:
+      ExecutionTimeHigh:
+        alias: weblogic.servlet_runtime.exec_time_high
+        metric_type: monotonic_count
+      ExecutionTimeLow:
+        alias: weblogic.servlet_runtime.exec_time_low
+      ExecutionTimeTotal:
+        alias: weblogic.servlet_runtime.exec_time_total
+        metric_type: monotonic_count
+      PoolMaxCapacity:
+        alias: weblogic.servlet_runtime.pool_max_capacity
+      ReloadTotalCount:
+        alias: weblogic.servlet_runtime.reloads_total
+    bean_regex: com.bea:ServerRuntime=([-_.\w]+),Name=([\[\-_/.\]\w]+),ApplicationRuntime=([-_.\w]+),Type=ServletRuntime,WebAppComponentRuntime=([-_/.\w]+)
+    domain: com.bea
+- include:
+    attribute:
+      OpenSessionsCurrentCount:
+        alias: weblogic.webapp_component_runtime.sessions_current
+    bean_regex: com.bea:ServerRuntime=([-_.\w]+),Name=([\[\-_/.\]\w]+),ApplicationRuntime=([-_.\w]+),Type=WebAppComponentRuntime
+    domain: com.bea

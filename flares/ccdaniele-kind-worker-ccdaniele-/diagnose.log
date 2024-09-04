@@ -1,0 +1,41 @@
+=== Starting diagnose ===
+==============
+Suite: connectivity-datadog-autodiscovery
+1. --------------
+  PASS Alibaba Metadata availability
+  Diagnosis: [Ignore if not applied] Alibaba HostAliases: unable to query metadata endpoint: Get "http://100.100.100.200/latest/meta-data/instance-id": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+
+2. --------------
+  PASS Azure Metadata availability
+  Diagnosis: [Ignore if not applied] Azure HostAliases: unable to query metadata endpoint: Get "http://169.254.169.254/metadata/instance/compute/vmId?api-version=2017-04-02&format=text": dial tcp 169.254.169.254:80: connect: connection refused
+
+3. --------------
+  PASS Cluster Agent availability
+  Diagnosis: Successfully connected to Cluster Agent availability environment
+
+4. --------------
+  PASS EC2 Metadata availability
+  Diagnosis: [Ignore if not applied] Get "http://169.254.169.254/latest/meta-data/hostname": dial tcp 169.254.169.254:80: connect: connection refused
+
+5. --------------
+  PASS GCE Metadata availability
+  Diagnosis: [Ignore if not applied] unable to retrieve hostname from GCE: GCE metadata API error: Get "http://169.254.169.254/computeMetadata/v1/instance/hostname": dial tcp 169.254.169.254:80: connect: connection refused
+
+6. --------------
+  PASS IBM cloud Metadata availability
+  Diagnosis: [Ignore if not applied] IBM HostAliases: unable to get a token: Put "http://169.254.169.254/instance_identity/v1/token?version=2022-03-08": dial tcp 169.254.169.254:80: connect: connection refused
+
+7. --------------
+  PASS Kubernetes API Server availability
+  Diagnosis: Successfully connected to Kubernetes API Server availability environment
+
+8. --------------
+  PASS OracleCloud Metadata availability
+  Diagnosis: [Ignore if not applied] Oracle HostAliases: unable to query metadata endpoint: Get "http://169.254.169.254/opc/v2/instance/id": dial tcp 169.254.169.254:80: connect: connection refused
+
+9. --------------
+  PASS Tencent Metadata availability
+  Diagnosis: [Ignore if not applied] unable to get TencentCloud CVM instanceID: cloud provider is disabled by configuration
+
+-------------------------
+  Total:9, Success:9

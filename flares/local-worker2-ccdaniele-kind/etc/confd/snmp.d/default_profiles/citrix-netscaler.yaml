@@ -1,0 +1,776 @@
+extends:
+- _generic-if.yaml
+- citrix.yaml
+metadata:
+  device:
+    fields:
+      serial_number:
+        symbol:
+          MIB: NS-ROOT-MIB
+          OID: 1.3.6.1.4.1.5951.4.1.1.14.0
+          name: sysHardwareSerialNumber
+      type:
+        value: load_balancer
+      version:
+        symbol:
+          MIB: NS-ROOT-MIB
+          OID: 1.3.6.1.4.1.5951.4.1.1.1.0
+          name: sysBuildVersion
+metrics:
+- MIB: NS-ROOT-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.5951.4.1.1.41.1.0
+    name: cpu.usage
+- MIB: NS-ROOT-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.5951.4.1.1.41.2.0
+    name: memory.usage
+- MIB: NS-ROOT-MIB
+  metric_type: monotonic_count
+  symbol:
+    OID: 1.3.6.1.4.1.5951.4.1.1.23.4.0
+    name: netscaler.haTotStateTransitions
+- MIB: NS-ROOT-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.5951.4.1.1.23.5.0
+    name: netscaler.haTimeofLastStateTransition
+- MIB: NS-ROOT-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.5951.4.1.2.6.1.0
+    name: netscaler.svcCount
+- MIB: NS-ROOT-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.5951.4.1.2.6.2.0
+    name: netscaler.serverCount
+- MIB: NS-ROOT-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.5951.4.1.2.6.3.0
+    name: netscaler.svcgroupCount
+- MIB: NS-ROOT-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.5951.4.1.2.6.4.0
+    name: netscaler.svcgroupmemCount
+- MIB: NS-ROOT-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.5951.4.1.2.6.5.0
+    name: netscaler.syssvcCount
+- MIB: NS-ROOT-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.5951.4.1.2.6.6.0
+    name: netscaler.sysupsvcCount
+- MIB: NS-ROOT-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.5951.4.1.2.6.7.0
+    name: netscaler.sysupsvcitmCount
+- MIB: NS-ROOT-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.5951.4.1.3.5.1.0
+    name: netscaler.curConfigVservers
+- MIB: NS-ROOT-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.5951.4.1.3.5.2.0
+    name: netscaler.vsvrBindCount
+- MIB: NS-ROOT-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.5951.4.1.3.5.3.0
+    name: netscaler.vsvrSvcGrpBindCount
+- MIB: NS-ROOT-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.5951.4.1.3.5.4.0
+    name: netscaler.curConfigLbVservers
+- MIB: NS-ROOT-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.5951.4.1.3.5.5.0
+    name: netscaler.curConfigGslbVservers
+- MIB: NS-ROOT-MIB
+  metric_type: monotonic_count
+  symbol:
+    OID: 1.3.6.1.4.1.5951.4.1.3.5.6.0
+    name: netscaler.totSpilloverCount
+- MIB: NS-ROOT-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.5951.4.1.1.47.296.0
+    name: netscaler.sslCurSessions
+- MIB: NS-ROOT-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.5951.4.1.1.47.3.0
+    name: netscaler.sslSessionsPerSec
+- MIB: NS-ROOT-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.5951.4.1.1.46.12.0
+    name: netscaler.tcpCurClientConnEstablished
+- MIB: NS-ROOT-MIB
+  metric_type: monotonic_count
+  symbol:
+    OID: 1.3.6.1.4.1.5951.4.1.1.46.69.0
+    name: netscaler.tcpErrAnyPortFail
+- MIB: NS-ROOT-MIB
+  metric_type: monotonic_count
+  symbol:
+    OID: 1.3.6.1.4.1.5951.4.1.1.46.70.0
+    name: netscaler.tcpErrIpPortFail
+- MIB: NS-ROOT-MIB
+  metric_type: monotonic_count
+  symbol:
+    OID: 1.3.6.1.4.1.5951.4.1.1.46.59.0
+    name: netscaler.tcpErrRetransmit
+- MIB: NS-ROOT-MIB
+  metric_type: monotonic_count
+  symbol:
+    OID: 1.3.6.1.4.1.5951.4.1.1.46.61.0
+    name: netscaler.tcpTotRxPkts
+- MIB: NS-ROOT-MIB
+  metric_type: monotonic_count
+  symbol:
+    OID: 1.3.6.1.4.1.5951.4.1.1.46.63.0
+    name: netscaler.tcpTotTxPkts
+- MIB: NS-ROOT-MIB
+  metric_type: monotonic_count
+  symbol:
+    OID: 1.3.6.1.4.1.5951.4.1.1.48.45.0
+    name: netscaler.httpTotGets
+- MIB: NS-ROOT-MIB
+  metric_type: monotonic_count
+  symbol:
+    OID: 1.3.6.1.4.1.5951.4.1.1.48.46.0
+    name: netscaler.httpTotPosts
+- MIB: NS-ROOT-MIB
+  metric_type: monotonic_count
+  symbol:
+    OID: 1.3.6.1.4.1.5951.4.1.1.48.47.0
+    name: netscaler.httpTotOthers
+- MIB: NS-ROOT-MIB
+  metric_type: monotonic_count
+  symbol:
+    OID: 1.3.6.1.4.1.5951.4.1.1.48.48.0
+    name: netscaler.httpTotRxRequestBytes
+- MIB: NS-ROOT-MIB
+  metric_type: monotonic_count
+  symbol:
+    OID: 1.3.6.1.4.1.5951.4.1.1.48.49.0
+    name: netscaler.httpTotRxResponseBytes
+- MIB: NS-ROOT-MIB
+  metric_type: monotonic_count
+  symbol:
+    OID: 1.3.6.1.4.1.5951.4.1.1.48.50.0
+    name: netscaler.httpTotTxRequestBytes
+- MIB: NS-ROOT-MIB
+  metric_type: monotonic_count
+  symbol:
+    OID: 1.3.6.1.4.1.5951.4.1.1.48.51.0
+    name: netscaler.httpTotTxResponseBytes
+- MIB: NS-ROOT-MIB
+  metric_type: monotonic_count
+  symbol:
+    OID: 1.3.6.1.4.1.5951.4.1.1.48.52.0
+    name: netscaler.httpTot10Requests
+- MIB: NS-ROOT-MIB
+  metric_type: monotonic_count
+  symbol:
+    OID: 1.3.6.1.4.1.5951.4.1.1.48.53.0
+    name: netscaler.httpTotResponses
+- MIB: NS-ROOT-MIB
+  metric_type: monotonic_count
+  symbol:
+    OID: 1.3.6.1.4.1.5951.4.1.1.48.54.0
+    name: netscaler.httpTot10Responses
+- MIB: NS-ROOT-MIB
+  metric_type: monotonic_count
+  symbol:
+    OID: 1.3.6.1.4.1.5951.4.1.1.48.57.0
+    name: netscaler.httpErrIncompleteRequests
+- MIB: NS-ROOT-MIB
+  metric_type: monotonic_count
+  symbol:
+    OID: 1.3.6.1.4.1.5951.4.1.1.48.58.0
+    name: netscaler.httpErrIncompleteResponses
+- MIB: NS-ROOT-MIB
+  metric_type: monotonic_count
+  symbol:
+    OID: 1.3.6.1.4.1.5951.4.1.1.48.60.0
+    name: netscaler.httpErrIncompleteHeaders
+- MIB: NS-ROOT-MIB
+  metric_type: monotonic_count
+  symbol:
+    OID: 1.3.6.1.4.1.5951.4.1.1.48.61.0
+    name: netscaler.httpErrServerBusy
+- MIB: NS-ROOT-MIB
+  metric_type: monotonic_count
+  symbol:
+    OID: 1.3.6.1.4.1.5951.4.1.2.1.1.48.0
+    name: netscaler.svcTotalClients
+- MIB: NS-ROOT-MIB
+  metric_type: monotonic_count
+  symbol:
+    OID: 1.3.6.1.4.1.5951.4.1.2.1.1.49.0
+    name: netscaler.svcTotalServers
+- MIB: NS-ROOT-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.5951.4.1.3.1.1.1
+      name: netscaler.vsvrName
+    tag: netscaler_vsvr_name
+  - symbol:
+      OID: 1.3.6.1.4.1.5951.4.1.3.1.1.2
+      name: netscaler.vsvrIpAddress
+    tag: netscaler_vsvr_ip_address
+  - symbol:
+      OID: 1.3.6.1.4.1.5951.4.1.3.1.1.3
+      name: netscaler.vsvrPort
+    tag: netscaler_vsvr_port
+  - mapping:
+      0: http
+      1: ftp
+      2: tcp
+      3: udp
+      4: ssl_bridge
+      5: monitor
+      6: monitor_udp
+      7: nntp
+      8: httpserver
+      9: httpclient
+      10: rpcserver
+      11: rpcclient
+      12: nat
+      13: any
+      14: ssl
+      16: dns
+      17: adns
+      18: snmp
+      19: ha
+      20: monitor_ping
+      21: ssl_other_tcp
+      22: aaa
+      23: secure_monitor
+      24: sslvpn_udp
+      25: rip
+      26: dns_client
+      27: rpc_server
+      28: rpc_client
+      36: dhcrpa
+      39: sipudp
+      40: siptcp
+      41: siptls
+      48: dnstcp
+      49: adnstcp
+      50: rtsp
+      52: push
+      53: ssl_push
+      54: dhcp_client
+      55: radius
+      61: rdp
+      62: mysql
+      63: mssql
+      73: diameter
+      74: ssl_diameter
+      75: tftp
+      90: tftp
+      91: pptp
+      92: gre
+      95: fix
+      96: ssl_fix
+      104: user_tcp
+      105: user_ssl_tcp
+      113: mongo
+      114: mongo_tls
+      116: mqtt
+      117: mqtt_tls
+      118: quic_bridge
+      120: service_unknown
+    symbol:
+      OID: 1.3.6.1.4.1.5951.4.1.3.1.1.4
+      name: netscaler.vsvrType
+    tag: netscaler_vsvr_type
+  - mapping:
+      1: down
+      2: unknown
+      3: busy
+      4: out_of_service
+      5: transition_to_out_of_service
+      7: up
+      8: transition_to_out_of_service_down
+    symbol:
+      OID: 1.3.6.1.4.1.5951.4.1.3.1.1.5
+      name: netscaler.vsvrState
+    tag: netscaler_vsvr_state
+  symbols:
+  - OID: 1.3.6.1.4.1.5951.4.1.3.1.1.7
+    name: netscaler.vsvrCurClntConnections
+  table:
+    OID: 1.3.6.1.4.1.5951.4.1.3.1
+    name: vserverTable
+- MIB: NS-ROOT-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.5951.4.1.1.41.8.1.1
+      name: netscaler.sysHealthDiskName
+    tag: netscaler_sys_health_disk_name
+  symbols:
+  - OID: 1.3.6.1.4.1.5951.4.1.1.41.8.1.2
+    name: netscaler.sysHealthDiskSize
+  - OID: 1.3.6.1.4.1.5951.4.1.1.41.8.1.3
+    name: netscaler.sysHealthDiskAvail
+  - OID: 1.3.6.1.4.1.5951.4.1.1.41.8.1.4
+    name: netscaler.sysHealthDiskUsed
+  - OID: 1.3.6.1.4.1.5951.4.1.1.41.8.1.5
+    name: netscaler.sysHealthDiskPerusage
+  table:
+    OID: 1.3.6.1.4.1.5951.4.1.1.41.8
+    name: nsSysHealthDiskTable
+- MIB: NS-ROOT-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.5951.4.1.1.54.1.1
+      name: netscaler.ifName
+    tag: netscaler_if_name
+  - symbol:
+      OID: 1.3.6.1.4.1.5951.4.1.1.54.1.2
+      name: netscaler.ifMedia
+    tag: netscaler_if_media
+  symbols:
+  - OID: 1.3.6.1.4.1.5951.4.1.1.54.1.3
+    metric_type: monotonic_count
+    name: netscaler.ifTotRxBytes
+  - OID: 1.3.6.1.4.1.5951.4.1.1.54.1.4
+    name: netscaler.ifRxAvgBandwidthUsage
+  - OID: 1.3.6.1.4.1.5951.4.1.1.54.1.7
+    metric_type: monotonic_count
+    name: netscaler.ifTotTxBytes
+  - OID: 1.3.6.1.4.1.5951.4.1.1.54.1.8
+    name: netscaler.ifTxAvgBandwidthUsage
+  - OID: 1.3.6.1.4.1.5951.4.1.1.54.1.48
+    name: netscaler.ifThroughput
+  - OID: 1.3.6.1.4.1.5951.4.1.1.54.1.19
+    metric_type: monotonic_count
+    name: netscaler.ifTotRxMbits
+  - OID: 1.3.6.1.4.1.5951.4.1.1.54.1.20
+    metric_type: monotonic_count
+    name: netscaler.ifTotTxMbits
+  table:
+    OID: 1.3.6.1.4.1.5951.4.1.1.54
+    name: nsIfStatsTable
+- MIB: NS-ROOT-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.5951.4.1.3.2.1.8
+      name: netscaler.vsvrServiceName
+    tag: netscaler_vsvr_service_name
+  - symbol:
+      OID: 1.3.6.1.4.1.5951.4.1.3.2.1.9
+      name: netscaler.vsvrServiceFullName
+    tag: netscaler_vsvr_service_full_name
+  - symbol:
+      OID: 1.3.6.1.4.1.5951.4.1.3.2.1.10
+      name: netscaler.vserverFullName
+    tag: netscaler_vserver_full_name
+  symbols:
+  - OID: 1.3.6.1.4.1.5951.4.1.3.2.1.5
+    metric_type: monotonic_count
+    name: netscaler.vsvrServiceHits
+  - OID: 1.3.6.1.4.1.5951.4.1.3.2.1.6
+    metric_type: monotonic_count
+    name: netscaler.servicePersistentHits
+  table:
+    OID: 1.3.6.1.4.1.5951.4.1.3.2
+    name: vserverServiceTable
+- MIB: NS-ROOT-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.5951.4.1.1.41.6.1.1
+      name: netscaler.nsCPUname
+    tag: netscaler_ns_cp_uname
+  symbols:
+  - OID: 1.3.6.1.4.1.5951.4.1.1.41.6.1.2
+    name: netscaler.nsCPUusage
+  table:
+    OID: 1.3.6.1.4.1.5951.4.1.1.41.6
+    name: nsCPUTable
+- MIB: NS-ROOT-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.5951.4.1.1.46.2.0
+    name: netscaler.tcpCurClientConn
+- MIB: NS-ROOT-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.5951.4.1.1.46.10.0
+    name: netscaler.tcpCurServerConnEstablished
+- MIB: NS-ROOT-MIB
+  metric_type: monotonic_count
+  symbol:
+    OID: 1.3.6.1.4.1.5951.4.1.1.47.204.0
+    name: netscaler.sslTotSessions
+- MIB: NS-ROOT-MIB
+  metric_tags:
+  - mapping:
+      1: weighted_round_robin
+      2: least_connections
+      3: least_response
+      4: asynchronous_mac
+      5: url_hashed
+      6: domain_hashed
+      7: destination_ip_hashed
+      8: source_ip_hashed
+      9: least_bandwidth
+      10: least_packets
+      11: custom_load
+      12: token
+      13: static_proximity
+      14: rdp
+      15: leastreq
+      16: rtt
+      17: source_ip_destination_ip_hashed
+      18: source_ip_source_port
+      19: lrtm
+      20: call_id_hashed
+      21: api
+    symbol:
+      OID: 1.3.6.1.4.1.5951.4.1.3.6.1.1
+      name: netscaler.lbvsvrLBMethod
+    tag: netscaler_lbvsvr_lb_method
+  - mapping:
+      0: none
+      1: source_ip
+      2: cookie_insert
+      3: cookie_delete
+      4: cookie_read
+      5: cookie_hash
+      6: session_id
+      7: server
+      8: rule
+      9: url_passive
+      10: custom_server_id
+      11: group_source_id
+      12: group_cookie_insert
+      13: group_rule
+      14: destination_ip
+      15: spill_over
+      16: source_i_pdestination_ip
+      17: caller_id
+      18: gslb_backup
+      19: rtsp_session_id
+      20: diameter
+      21: fix_session
+      22: user_session
+    symbol:
+      OID: 1.3.6.1.4.1.5951.4.1.3.6.1.2
+      name: netscaler.lbvsvrPersistanceType
+    tag: netscaler_lbvsvr_persistance_type
+  symbols:
+  - OID: 1.3.6.1.4.1.5951.4.1.3.6.1.3
+    name: netscaler.lbvsvrPersistenceTimeOut
+  - OID: 1.3.6.1.4.1.5951.4.1.3.6.1.4
+    name: netscaler.lbvsvrActiveConn
+  - OID: 1.3.6.1.4.1.5951.4.1.3.6.1.5
+    name: netscaler.lbvsvrAvgSvrTTFB
+  table:
+    OID: 1.3.6.1.4.1.5951.4.1.3.6
+    name: lbvserverTable
+- MIB: NS-ROOT-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.5951.4.1.2.11.1.1
+      name: netscaler.svcgrpSvcGroupName
+    tag: netscaler_svcgrp_svc_group_name
+  - mapping:
+      0: http
+      1: ftp
+      2: tcp
+      3: udp
+      4: ssl_bridge
+      5: monitor
+      6: monitor_udp
+      7: nntp
+      8: httpserver
+      9: httpclient
+      10: rpcserver
+      11: rpcclient
+      12: nat
+      13: any
+      14: ssl
+      16: dns
+      17: adns
+      18: snmp
+      19: ha
+      20: monitor_ping
+      21: ssl_other_tcp
+      22: aaa
+      23: secure_monitor
+      24: sslvpn_udp
+      25: rip
+      26: dns_client
+      27: rpc_server
+      28: rpc_client
+      36: dhcrpa
+      39: sipudp
+      40: siptcp
+      41: siptls
+      48: dnstcp
+      49: adnstcp
+      50: rtsp
+      52: push
+      53: ssl_push
+      54: dhcp_client
+      55: radius
+      61: rdp
+      62: mysql
+      63: mssql
+      73: diameter
+      74: ssl_diameter
+      75: tftp
+      90: tftp
+      91: pptp
+      92: gre
+      95: fix
+      96: ssl_fix
+      104: user_tcp
+      105: user_ssl_tcp
+      113: mongo
+      114: mongo_tls
+      116: mqtt
+      117: mqtt_tls
+      118: quic_bridge
+      120: service_unknown
+    symbol:
+      OID: 1.3.6.1.4.1.5951.4.1.2.11.1.2
+      name: netscaler.svcgrpSvcGroupType
+    tag: netscaler_svcgrp_svc_group_type
+  - symbol:
+      OID: 1.3.6.1.4.1.5951.4.1.2.11.1.4
+      name: netscaler.svcgrpSvcGroupFullName
+    tag: netscaler_svcgrp_svc_group_full_name
+  - mapping:
+      0: disabled
+      1: enabled
+    symbol:
+      OID: 1.3.6.1.4.1.5951.4.1.2.11.1.3
+      name: netscaler.svcgrpSvcGroupState
+    tag: netscaler_svcgrp_svc_group_state
+  symbols:
+  - constant_value_one: true
+    name: netscaler.serviceGroup
+  table:
+    OID: 1.3.6.1.4.1.5951.4.1.2.11
+    name: serviceGroupTable
+- MIB: NS-ROOT-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.5951.4.1.1.56.1.1.1
+      name: netscaler.sslCertKeyName
+    tag: netscaler_ssl_cert_key_name
+  symbols:
+  - OID: 1.3.6.1.4.1.5951.4.1.1.56.1.1.5
+    name: netscaler.sslDaysToExpire
+  table:
+    OID: 1.3.6.1.4.1.5951.4.1.1.56.1
+    name: sslCertKeyTable
+- MIB: NS-ROOT-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.5951.4.1.3.1.1.59
+      name: netscaler.vsvrFullName
+    tag: netscaler_vsvr_full_name
+  - mapping:
+      0: not_applicable
+      1: active
+      2: backup
+    symbol:
+      OID: 1.3.6.1.4.1.5951.4.1.3.1.1.66
+      name: netscaler.vsvrActiveActiveState
+    tag: netscaler_vsvr_active_active_state
+  symbols:
+  - OID: 1.3.6.1.4.1.5951.4.1.3.1.1.8
+    name: netscaler.vsvrCurSrvrConnections
+  - OID: 1.3.6.1.4.1.5951.4.1.3.1.1.30
+    metric_type: monotonic_count
+    name: netscaler.vsvrTotalRequests
+  - OID: 1.3.6.1.4.1.5951.4.1.3.1.1.31
+    metric_type: monotonic_count
+    name: netscaler.vsvrTotalRequestBytes
+  - OID: 1.3.6.1.4.1.5951.4.1.3.1.1.32
+    metric_type: monotonic_count
+    name: netscaler.vsvrTotalResponses
+  - OID: 1.3.6.1.4.1.5951.4.1.3.1.1.33
+    metric_type: monotonic_count
+    name: netscaler.vsvrTotalResponseBytes
+  - OID: 1.3.6.1.4.1.5951.4.1.3.1.1.37
+    name: netscaler.vsvrCurServicesDown
+  - OID: 1.3.6.1.4.1.5951.4.1.3.1.1.41
+    name: netscaler.vsvrCurServicesUp
+  - OID: 1.3.6.1.4.1.5951.4.1.3.1.1.43
+    name: netscaler.vsvrRequestRate
+  - OID: 1.3.6.1.4.1.5951.4.1.3.1.1.44
+    name: netscaler.vsvrRxBytesRate
+  - OID: 1.3.6.1.4.1.5951.4.1.3.1.1.45
+    name: netscaler.vsvrTxBytesRate
+  - OID: 1.3.6.1.4.1.5951.4.1.3.1.1.46
+    name: netscaler.vsvrSynfloodRate
+  - OID: 1.3.6.1.4.1.5951.4.1.3.1.1.54
+    metric_type: monotonic_count
+    name: netscaler.vsvrTotSpillOvers
+  - OID: 1.3.6.1.4.1.5951.4.1.3.1.1.56
+    metric_type: monotonic_count
+    name: netscaler.vsvrTotalClients
+  - OID: 1.3.6.1.4.1.5951.4.1.3.1.1.61
+    name: netscaler.vsvrTotalServicesBound
+  - OID: 1.3.6.1.4.1.5951.4.1.3.1.1.62
+    name: netscaler.vsvrHealth
+  - OID: 1.3.6.1.4.1.5951.4.1.3.1.1.65
+    metric_type: monotonic_count
+    name: netscaler.vsvrTotalServers
+  - OID: 1.3.6.1.4.1.5951.4.1.3.1.1.70
+    name: netscaler.vsvrSoThreshold
+  table:
+    OID: 1.3.6.1.4.1.5951.4.1.3.1
+    name: vserverTable
+- MIB: NS-ROOT-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.5951.4.1.2.1.1.1
+      name: netscaler.svcServiceName
+    tag: netscaler_svc_service_name
+  - symbol:
+      OID: 1.3.6.1.4.1.5951.4.1.2.1.1.2
+      name: netscaler.svcIpAddress
+    tag: netscaler_svc_ip_address
+  - symbol:
+      OID: 1.3.6.1.4.1.5951.4.1.2.1.1.3
+      name: netscaler.svcPort
+    tag: netscaler_svc_port
+  - mapping:
+      0: http
+      1: ftp
+      2: tcp
+      3: udp
+      4: ssl_bridge
+      5: monitor
+      6: monitor_udp
+      7: nntp
+      8: httpserver
+      9: httpclient
+      10: rpcserver
+      11: rpcclient
+      12: nat
+      13: any
+      14: ssl
+      16: dns
+      17: adns
+      18: snmp
+      19: ha
+      20: monitor_ping
+      21: ssl_other_tcp
+      22: aaa
+      23: secure_monitor
+      24: sslvpn_udp
+      25: rip
+      26: dns_client
+      27: rpc_server
+      28: rpc_client
+      36: dhcrpa
+      39: sipudp
+      40: siptcp
+      41: siptls
+      48: dnstcp
+      49: adnstcp
+      50: rtsp
+      52: push
+      53: ssl_push
+      54: dhcp_client
+      55: radius
+      61: rdp
+      62: mysql
+      63: mssql
+      73: diameter
+      74: ssl_diameter
+      75: tftp
+      90: tftp
+      91: pptp
+      92: gre
+      95: fix
+      96: ssl_fix
+      104: user_tcp
+      105: user_ssl_tcp
+      113: mongo
+      114: mongo_tls
+      116: mqtt
+      117: mqtt_tls
+      118: quic_bridge
+      120: service_unknown
+    symbol:
+      OID: 1.3.6.1.4.1.5951.4.1.2.1.1.4
+      name: netscaler.svcServiceType
+    tag: netscaler_svc_service_type
+  - symbol:
+      OID: 1.3.6.1.4.1.5951.4.1.2.1.1.54
+      name: netscaler.svcServiceFullName
+    tag: netscaler_svc_service_full_name
+  symbols:
+  - OID: 1.3.6.1.4.1.5951.4.1.2.1.1.7
+    name: netscaler.svcAvgTransactionTime
+  - OID: 1.3.6.1.4.1.5951.4.1.2.1.1.8
+    name: netscaler.svcEstablishedConn
+  - OID: 1.3.6.1.4.1.5951.4.1.2.1.1.9
+    name: netscaler.svcActiveConn
+  - OID: 1.3.6.1.4.1.5951.4.1.2.1.1.10
+    name: netscaler.svcSurgeCount
+  - OID: 1.3.6.1.4.1.5951.4.1.2.1.1.30
+    metric_type: monotonic_count
+    name: netscaler.svcTotalRequests
+  - OID: 1.3.6.1.4.1.5951.4.1.2.1.1.31
+    metric_type: monotonic_count
+    name: netscaler.svcTotalRequestBytes
+  - OID: 1.3.6.1.4.1.5951.4.1.2.1.1.32
+    metric_type: monotonic_count
+    name: netscaler.svcTotalResponses
+  - OID: 1.3.6.1.4.1.5951.4.1.2.1.1.33
+    metric_type: monotonic_count
+    name: netscaler.svcTotalResponseBytes
+  - OID: 1.3.6.1.4.1.5951.4.1.2.1.1.34
+    metric_type: monotonic_count
+    name: netscaler.svcTotalPktsRecvd
+  - OID: 1.3.6.1.4.1.5951.4.1.2.1.1.35
+    metric_type: monotonic_count
+    name: netscaler.svcTotalPktsSent
+  - OID: 1.3.6.1.4.1.5951.4.1.2.1.1.38
+    name: netscaler.svcAvgSvrTTFB
+  - OID: 1.3.6.1.4.1.5951.4.1.2.1.1.41
+    name: netscaler.svcCurClntConnections
+  - OID: 1.3.6.1.4.1.5951.4.1.2.1.1.42
+    name: netscaler.svcRequestRate
+  - OID: 1.3.6.1.4.1.5951.4.1.2.1.1.43
+    name: netscaler.svcRxBytesRate
+  - OID: 1.3.6.1.4.1.5951.4.1.2.1.1.44
+    name: netscaler.svcTxBytesRate
+  - OID: 1.3.6.1.4.1.5951.4.1.2.1.1.53
+    name: netscaler.svcActiveTransactions
+  table:
+    OID: 1.3.6.1.4.1.5951.4.1.2.1
+    name: serviceTable
+- MIB: NS-ROOT-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.5951.4.1.2.2.1.1
+      name: netscaler.serverName
+    tag: netscaler_server_name
+  - symbol:
+      OID: 1.3.6.1.4.1.5951.4.1.2.2.1.2
+      name: netscaler.serverIpAddress
+    tag: netscaler_server_ip_address
+  - mapping:
+      1: down
+      2: unknown
+      3: busy
+      4: out_of_service
+      5: transition_to_out_of_service
+      7: up
+      8: transition_to_out_of_service_down
+    symbol:
+      OID: 1.3.6.1.4.1.5951.4.1.2.2.1.3
+      name: netscaler.serverState
+    tag: netscaler_server_state
+  symbols:
+  - constant_value_one: true
+    name: netscaler.server
+  table:
+    OID: 1.3.6.1.4.1.5951.4.1.2.2
+    name: serverTable
+sysobjectid:
+- 1.3.6.1.4.1.5951.1

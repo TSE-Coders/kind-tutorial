@@ -1,0 +1,453 @@
+
+=== Entity kubernetes_deployment sources(merged):[kubeapiserver] id: default/agent-kind-datadog-cluster-agent ===
+----------- Entity ID -----------
+Kind: kubernetes_deployment ID: default/agent-kind-datadog-cluster-agent
+
+----------- Unified Service Tagging -----------
+Env : 
+Service : 
+Version : 
+----------- Injectable Languages -----------
+----------- Detected Languages -----------
+===
+
+=== Entity kubernetes_deployment sources(merged):[kubeapiserver] id: kube-system/coredns ===
+----------- Entity ID -----------
+Kind: kubernetes_deployment ID: kube-system/coredns
+
+----------- Unified Service Tagging -----------
+Env : 
+Service : 
+Version : 
+----------- Injectable Languages -----------
+----------- Detected Languages -----------
+===
+
+=== Entity kubernetes_deployment sources(merged):[kubeapiserver] id: local-path-storage/local-path-provisioner ===
+----------- Entity ID -----------
+Kind: kubernetes_deployment ID: local-path-storage/local-path-provisioner
+
+----------- Unified Service Tagging -----------
+Env : 
+Service : 
+Version : 
+----------- Injectable Languages -----------
+----------- Detected Languages -----------
+===
+
+=== Entity kubernetes_node sources(merged):[kubeapiserver] id: ccdaniele-kind-control-plane ===
+----------- Entity ID -----------
+Kind: kubernetes_node ID: ccdaniele-kind-control-plane
+
+----------- Entity Meta -----------
+Name: ccdaniele-kind-control-plane
+Namespace: 
+Annotations: kubeadm.alpha.kubernetes.io/cri-socket:unix:///run/containerd/containerd.sock node.alpha.kubernetes.io/ttl:0 volumes.kubernetes.io/controller-managed-attach-detach:true 
+Labels: node-role.kubernetes.io/control-plane: node.kubernetes.io/exclude-from-external-load-balancers: beta.kubernetes.io/arch:arm64 beta.kubernetes.io/os:linux kubernetes.io/arch:arm64 kubernetes.io/hostname:ccdaniele-kind-control-plane kubernetes.io/os:linux 
+===
+
+=== Entity kubernetes_node sources(merged):[kubeapiserver] id: ccdaniele-kind-worker ===
+----------- Entity ID -----------
+Kind: kubernetes_node ID: ccdaniele-kind-worker
+
+----------- Entity Meta -----------
+Name: ccdaniele-kind-worker
+Namespace: 
+Annotations: kubeadm.alpha.kubernetes.io/cri-socket:unix:///run/containerd/containerd.sock node.alpha.kubernetes.io/ttl:0 volumes.kubernetes.io/controller-managed-attach-detach:true 
+Labels: kubernetes.io/hostname:ccdaniele-kind-worker kubernetes.io/os:linux beta.kubernetes.io/arch:arm64 beta.kubernetes.io/os:linux kubernetes.io/arch:arm64 
+===
+
+=== Entity kubernetes_node sources(merged):[kubeapiserver] id: ccdaniele-kind-worker2 ===
+----------- Entity ID -----------
+Kind: kubernetes_node ID: ccdaniele-kind-worker2
+
+----------- Entity Meta -----------
+Name: ccdaniele-kind-worker2
+Namespace: 
+Annotations: node.alpha.kubernetes.io/ttl:0 volumes.kubernetes.io/controller-managed-attach-detach:true kubeadm.alpha.kubernetes.io/cri-socket:unix:///run/containerd/containerd.sock 
+Labels: beta.kubernetes.io/os:linux kubernetes.io/arch:arm64 kubernetes.io/hostname:ccdaniele-kind-worker2 kubernetes.io/os:linux beta.kubernetes.io/arch:arm64 
+===
+
+=== Entity kubernetes_pod sources(merged):[kubeapiserver] id: 344052d9-642b-435e-ac82-18dd12a4a856 ===
+----------- Entity ID -----------
+Kind: kubernetes_pod ID: 344052d9-642b-435e-ac82-18dd12a4a856
+
+----------- Entity Meta -----------
+Name: kube-proxy-6tvg4
+Namespace: kube-system
+Annotations: 
+Labels: controller-revision-hash:79cf874c65 k8s-app:kube-proxy pod-template-generation:1 
+----------- Owners -----------
+Kind: DaemonSet Name: kube-proxy
+ID: 4e061be8-e583-4c89-b0a6-74af070cb0df
+----------- Pod Info -----------
+Ready: true
+Phase: Running
+IP: 172.18.0.2
+Priority Class: system-node-critical
+QOS Class: BestEffort
+PVCs: 
+Kube Services: 
+Namespace Labels: 
+Namespace Annotations: 
+===
+
+=== Entity kubernetes_pod sources(merged):[kubeapiserver] id: 5501859a-4267-48cb-8712-5c4de1c9dec9 ===
+----------- Entity ID -----------
+Kind: kubernetes_pod ID: 5501859a-4267-48cb-8712-5c4de1c9dec9
+
+----------- Entity Meta -----------
+Name: etcd-ccdaniele-kind-control-plane
+Namespace: kube-system
+Annotations: kubernetes.io/config.hash:***************************e3c84 kubernetes.io/config.mirror:***************************e3c84 kubernetes.io/config.seen:2024-08-19T14:55:00.202095961Z kubernetes.io/config.source:file kubeadm.kubernetes.io/etcd.advertise-client-urls:https://172.18.0.3:2379 
+Labels: component:etcd tier:control-plane 
+----------- Owners -----------
+Kind: Node Name: ccdaniele-kind-control-plane
+ID: 660e9993-61b0-4593-a937-47197f529b7f
+----------- Pod Info -----------
+Ready: true
+Phase: Running
+IP: 172.18.0.3
+Priority Class: system-node-critical
+QOS Class: Burstable
+PVCs: 
+Kube Services: 
+Namespace Labels: 
+Namespace Annotations: 
+===
+
+=== Entity kubernetes_pod sources(merged):[kubeapiserver] id: 704f229c-f53f-4675-9f14-53558d18abc6 ===
+----------- Entity ID -----------
+Kind: kubernetes_pod ID: 704f229c-f53f-4675-9f14-53558d18abc6
+
+----------- Entity Meta -----------
+Name: kube-controller-manager-ccdaniele-kind-control-plane
+Namespace: kube-system
+Annotations: kubernetes.io/config.source:file kubernetes.io/config.hash:***************************a1835 kubernetes.io/config.mirror:***************************a1835 kubernetes.io/config.seen:2024-08-19T14:55:04.932139213Z 
+Labels: component:kube-controller-manager tier:control-plane 
+----------- Owners -----------
+Kind: Node Name: ccdaniele-kind-control-plane
+ID: 660e9993-61b0-4593-a937-47197f529b7f
+----------- Pod Info -----------
+Ready: true
+Phase: Running
+IP: 172.18.0.3
+Priority Class: system-node-critical
+QOS Class: Burstable
+PVCs: 
+Kube Services: 
+Namespace Labels: 
+Namespace Annotations: 
+===
+
+=== Entity kubernetes_pod sources(merged):[kubeapiserver] id: cd10dd4e-04d0-4eec-9300-6a3d091b5def ===
+----------- Entity ID -----------
+Kind: kubernetes_pod ID: cd10dd4e-04d0-4eec-9300-6a3d091b5def
+
+----------- Entity Meta -----------
+Name: kube-proxy-z74vc
+Namespace: kube-system
+Annotations: 
+Labels: controller-revision-hash:79cf874c65 k8s-app:kube-proxy pod-template-generation:1 
+----------- Owners -----------
+Kind: DaemonSet Name: kube-proxy
+ID: 4e061be8-e583-4c89-b0a6-74af070cb0df
+----------- Pod Info -----------
+Ready: true
+Phase: Running
+IP: 172.18.0.3
+Priority Class: system-node-critical
+QOS Class: BestEffort
+PVCs: 
+Kube Services: 
+Namespace Labels: 
+Namespace Annotations: 
+===
+
+=== Entity kubernetes_pod sources(merged):[kubeapiserver] id: fee5595b-129f-456d-87a7-205f6403c378 ===
+----------- Entity ID -----------
+Kind: kubernetes_pod ID: fee5595b-129f-456d-87a7-205f6403c378
+
+----------- Entity Meta -----------
+Name: kindnet-ct8xn
+Namespace: kube-system
+Annotations: 
+Labels: app:kindnet controller-revision-hash:f6d65b8cd k8s-app:kindnet pod-template-generation:1 tier:node 
+----------- Owners -----------
+Kind: DaemonSet Name: kindnet
+ID: f50cbd53-8820-4c00-924e-71da13e78051
+----------- Pod Info -----------
+Ready: true
+Phase: Running
+IP: 172.18.0.2
+Priority Class: 
+QOS Class: Guaranteed
+PVCs: 
+Kube Services: 
+Namespace Labels: 
+Namespace Annotations: 
+===
+
+=== Entity kubernetes_pod sources(merged):[kubeapiserver] id: 27d5c2d0-bac9-49fd-9368-705b4dd1b307 ===
+----------- Entity ID -----------
+Kind: kubernetes_pod ID: 27d5c2d0-bac9-49fd-9368-705b4dd1b307
+
+----------- Entity Meta -----------
+Name: agent-kind-datadog-8vf5p
+Namespace: default
+Annotations: checksum/clusteragent_token:774ea3fcfa300d675641aa50d6fda9428b82d9bcb97fbca2dd3cb3a5873f0060 checksum/confd-config:44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a checksum/install_info:88c52cd7ef5158f4eb2738b4c3b575985b7d139c6b2a25213c46c5a6266e22e7 checksum/autoconf-config:74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b checksum/checksd-config:44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a 
+Labels: app.kubernetes.io/managed-by:Helm app.kubernetes.io/name:agent-kind-datadog controller-revision-hash:74784bc6b7 pod-template-generation:3 admission.datadoghq.com/enabled:false app:agent-kind-datadog app.kubernetes.io/component:agent app.kubernetes.io/instance:agent-kind 
+----------- Owners -----------
+Kind: DaemonSet Name: agent-kind-datadog
+ID: 037aa861-fd8b-4899-8342-a6b850ca034e
+----------- Pod Info -----------
+Ready: true
+Phase: Running
+IP: 10.244.1.6
+Priority Class: 
+QOS Class: BestEffort
+PVCs: 
+Kube Services: 
+Namespace Labels: 
+Namespace Annotations: 
+===
+
+=== Entity kubernetes_pod sources(merged):[kubeapiserver] id: 53f35026-cbc6-471f-b5ee-3bff2035dbc6 ===
+----------- Entity ID -----------
+Kind: kubernetes_pod ID: 53f35026-cbc6-471f-b5ee-3bff2035dbc6
+
+----------- Entity Meta -----------
+Name: kube-scheduler-ccdaniele-kind-control-plane
+Namespace: kube-system
+Annotations: kubernetes.io/config.hash:***************************0bafc kubernetes.io/config.mirror:***************************0bafc kubernetes.io/config.seen:2024-08-19T14:55:04.932139630Z kubernetes.io/config.source:file 
+Labels: component:kube-scheduler tier:control-plane 
+----------- Owners -----------
+Kind: Node Name: ccdaniele-kind-control-plane
+ID: 660e9993-61b0-4593-a937-47197f529b7f
+----------- Pod Info -----------
+Ready: true
+Phase: Running
+IP: 172.18.0.3
+Priority Class: system-node-critical
+QOS Class: Burstable
+PVCs: 
+Kube Services: 
+Namespace Labels: 
+Namespace Annotations: 
+===
+
+=== Entity kubernetes_pod sources(merged):[kubeapiserver] id: 33e41f8a-3219-4fec-bc71-6312bb323aae ===
+----------- Entity ID -----------
+Kind: kubernetes_pod ID: 33e41f8a-3219-4fec-bc71-6312bb323aae
+
+----------- Entity Meta -----------
+Name: kindnet-rtcx4
+Namespace: kube-system
+Annotations: 
+Labels: k8s-app:kindnet pod-template-generation:1 tier:node app:kindnet controller-revision-hash:f6d65b8cd 
+----------- Owners -----------
+Kind: DaemonSet Name: kindnet
+ID: f50cbd53-8820-4c00-924e-71da13e78051
+----------- Pod Info -----------
+Ready: true
+Phase: Running
+IP: 172.18.0.4
+Priority Class: 
+QOS Class: Guaranteed
+PVCs: 
+Kube Services: 
+Namespace Labels: 
+Namespace Annotations: 
+===
+
+=== Entity kubernetes_pod sources(merged):[kubeapiserver] id: 52d0408f-068e-46c8-8890-48f83cb2c981 ===
+----------- Entity ID -----------
+Kind: kubernetes_pod ID: 52d0408f-068e-46c8-8890-48f83cb2c981
+
+----------- Entity Meta -----------
+Name: kube-proxy-ds5pg
+Namespace: kube-system
+Annotations: 
+Labels: controller-revision-hash:79cf874c65 k8s-app:kube-proxy pod-template-generation:1 
+----------- Owners -----------
+Kind: DaemonSet Name: kube-proxy
+ID: 4e061be8-e583-4c89-b0a6-74af070cb0df
+----------- Pod Info -----------
+Ready: true
+Phase: Running
+IP: 172.18.0.4
+Priority Class: system-node-critical
+QOS Class: BestEffort
+PVCs: 
+Kube Services: 
+Namespace Labels: 
+Namespace Annotations: 
+===
+
+=== Entity kubernetes_pod sources(merged):[kubeapiserver] id: 8d104a41-9ba0-4491-a74d-e39a4bc58481 ===
+----------- Entity ID -----------
+Kind: kubernetes_pod ID: 8d104a41-9ba0-4491-a74d-e39a4bc58481
+
+----------- Entity Meta -----------
+Name: coredns-7db6d8ff4d-c9dzb
+Namespace: kube-system
+Annotations: 
+Labels: k8s-app:kube-dns pod-template-hash:7db6d8ff4d 
+----------- Owners -----------
+Kind: ReplicaSet Name: coredns-7db6d8ff4d
+ID: bc330932-5094-4a37-860f-5206edc4d317
+----------- Pod Info -----------
+Ready: true
+Phase: Running
+IP: 10.244.0.4
+Priority Class: system-cluster-critical
+QOS Class: Burstable
+PVCs: 
+Kube Services: 
+Namespace Labels: 
+Namespace Annotations: 
+===
+
+=== Entity kubernetes_pod sources(merged):[kubeapiserver] id: aa8cda0c-7a81-40be-9ab1-16664ed9703b ===
+----------- Entity ID -----------
+Kind: kubernetes_pod ID: aa8cda0c-7a81-40be-9ab1-16664ed9703b
+
+----------- Entity Meta -----------
+Name: agent-kind-datadog-7zcm2
+Namespace: default
+Annotations: checksum/install_info:88c52cd7ef5158f4eb2738b4c3b575985b7d139c6b2a25213c46c5a6266e22e7 checksum/autoconf-config:74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b checksum/checksd-config:44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a checksum/clusteragent_token:774ea3fcfa300d675641aa50d6fda9428b82d9bcb97fbca2dd3cb3a5873f0060 checksum/confd-config:44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a 
+Labels: app.kubernetes.io/component:agent app.kubernetes.io/instance:agent-kind app.kubernetes.io/managed-by:Helm app.kubernetes.io/name:agent-kind-datadog controller-revision-hash:74784bc6b7 pod-template-generation:3 admission.datadoghq.com/enabled:false app:agent-kind-datadog 
+----------- Owners -----------
+Kind: DaemonSet Name: agent-kind-datadog
+ID: 037aa861-fd8b-4899-8342-a6b850ca034e
+----------- Pod Info -----------
+Ready: true
+Phase: Running
+IP: 10.244.2.5
+Priority Class: 
+QOS Class: BestEffort
+PVCs: 
+Kube Services: 
+Namespace Labels: 
+Namespace Annotations: 
+===
+
+=== Entity kubernetes_pod sources(merged):[kubeapiserver] id: d6e28246-3bdf-4483-a871-a5d39b417121 ===
+----------- Entity ID -----------
+Kind: kubernetes_pod ID: d6e28246-3bdf-4483-a871-a5d39b417121
+
+----------- Entity Meta -----------
+Name: kindnet-h4dv8
+Namespace: kube-system
+Annotations: 
+Labels: app:kindnet controller-revision-hash:f6d65b8cd k8s-app:kindnet pod-template-generation:1 tier:node 
+----------- Owners -----------
+Kind: DaemonSet Name: kindnet
+ID: f50cbd53-8820-4c00-924e-71da13e78051
+----------- Pod Info -----------
+Ready: true
+Phase: Running
+IP: 172.18.0.3
+Priority Class: 
+QOS Class: Guaranteed
+PVCs: 
+Kube Services: 
+Namespace Labels: 
+Namespace Annotations: 
+===
+
+=== Entity kubernetes_pod sources(merged):[kubeapiserver] id: f42e5cdb-df56-4326-a363-00e2669b6f87 ===
+----------- Entity ID -----------
+Kind: kubernetes_pod ID: f42e5cdb-df56-4326-a363-00e2669b6f87
+
+----------- Entity Meta -----------
+Name: agent-kind-datadog-cluster-agent-75dd97446-nh2pf
+Namespace: default
+Annotations: checksum/install_info:88c52cd7ef5158f4eb2738b4c3b575985b7d139c6b2a25213c46c5a6266e22e7 checksum/application_key:01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b checksum/clusteragent-configmap:71bf7d88438616a93cf946dd6a6cca141ca9d8b94915c138d998522db5a69ad6 checksum/clusteragent_token:0b68ba28c3abec613678c465396ccc5ffdbc72f13a6a70126194feb79dbbf5d0 checksum/confd-config:b393f0ac5e00367d1b6a656740fb4cda708c4bde674ca3c4a3c8f90284095afe 
+Labels: pod-template-hash:75dd97446 admission.datadoghq.com/enabled:false app:agent-kind-datadog-cluster-agent app.kubernetes.io/component:cluster-agent app.kubernetes.io/instance:agent-kind app.kubernetes.io/managed-by:Helm app.kubernetes.io/name:agent-kind-datadog 
+----------- Owners -----------
+Kind: ReplicaSet Name: agent-kind-datadog-cluster-agent-75dd97446
+ID: 948f0572-285a-4e0e-8014-3b067303049b
+----------- Pod Info -----------
+Ready: true
+Phase: Running
+IP: 10.244.1.5
+Priority Class: 
+QOS Class: BestEffort
+PVCs: 
+Kube Services: 
+Namespace Labels: 
+Namespace Annotations: 
+===
+
+=== Entity kubernetes_pod sources(merged):[kubeapiserver] id: 53b22f4b-7bea-454b-83a0-19eb4800d623 ===
+----------- Entity ID -----------
+Kind: kubernetes_pod ID: 53b22f4b-7bea-454b-83a0-19eb4800d623
+
+----------- Entity Meta -----------
+Name: coredns-7db6d8ff4d-s99h7
+Namespace: kube-system
+Annotations: 
+Labels: k8s-app:kube-dns pod-template-hash:7db6d8ff4d 
+----------- Owners -----------
+Kind: ReplicaSet Name: coredns-7db6d8ff4d
+ID: bc330932-5094-4a37-860f-5206edc4d317
+----------- Pod Info -----------
+Ready: true
+Phase: Running
+IP: 10.244.0.2
+Priority Class: system-cluster-critical
+QOS Class: Burstable
+PVCs: 
+Kube Services: 
+Namespace Labels: 
+Namespace Annotations: 
+===
+
+=== Entity kubernetes_pod sources(merged):[kubeapiserver] id: b779f822-4cb3-4d22-9b4a-f7ba24399dca ===
+----------- Entity ID -----------
+Kind: kubernetes_pod ID: b779f822-4cb3-4d22-9b4a-f7ba24399dca
+
+----------- Entity Meta -----------
+Name: local-path-provisioner-988d74bc-4p2hf
+Namespace: local-path-storage
+Annotations: 
+Labels: pod-template-hash:988d74bc app:local-path-provisioner 
+----------- Owners -----------
+Kind: ReplicaSet Name: local-path-provisioner-988d74bc
+ID: 60eba822-ec72-46e2-9d54-bac2fc819989
+----------- Pod Info -----------
+Ready: true
+Phase: Running
+IP: 10.244.0.3
+Priority Class: 
+QOS Class: BestEffort
+PVCs: 
+Kube Services: 
+Namespace Labels: 
+Namespace Annotations: 
+===
+
+=== Entity kubernetes_pod sources(merged):[kubeapiserver] id: fc202e05-923f-4a3c-bb7a-8eedf3bab00a ===
+----------- Entity ID -----------
+Kind: kubernetes_pod ID: fc202e05-923f-4a3c-bb7a-8eedf3bab00a
+
+----------- Entity Meta -----------
+Name: kube-apiserver-ccdaniele-kind-control-plane
+Namespace: kube-system
+Annotations: kubernetes.io/config.mirror:***************************a3970 kubernetes.io/config.seen:2024-08-19T14:55:04.932138713Z kubernetes.io/config.source:file kubeadm.kubernetes.io/kube-apiserver.advertise-address.endpoint:172.18.0.3:6443 kubernetes.io/config.hash:***************************a3970 
+Labels: component:kube-apiserver tier:control-plane 
+----------- Owners -----------
+Kind: Node Name: ccdaniele-kind-control-plane
+ID: 660e9993-61b0-4593-a937-47197f529b7f
+----------- Pod Info -----------
+Ready: true
+Phase: Running
+IP: 172.18.0.3
+Priority Class: system-node-critical
+QOS Class: Burstable
+PVCs: 
+Kube Services: 
+Namespace Labels: 
+Namespace Annotations: 
+===

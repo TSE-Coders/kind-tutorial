@@ -1,0 +1,323 @@
+extends:
+- _aruba-base.yaml
+- _base.yaml
+- _generic-if.yaml
+metadata:
+  device:
+    fields:
+      type:
+        value: WLC
+metric_tags:
+- OID: 1.3.6.1.4.1.14823.2.2.1.2.1.27.0
+  symbol: wlsxSysExtHwVersion
+  tag: wlsx_sys_ext_hw_version
+- OID: 1.3.6.1.4.1.14823.2.2.1.2.1.28.0
+  symbol: wlsxSysExtSwVersion
+  tag: wlsx_sys_ext_sw_version
+- OID: 1.3.6.1.4.1.14823.2.2.1.1.1.2.0
+  symbol: wlsxModelName
+  tag: wlsx_model_name
+- OID: 1.3.6.1.4.1.14823.2.2.1.1.1.4.0
+  mapping:
+    1: master
+    2: local
+    3: standbymaster
+    4: branch
+    5: md
+  symbol: wlsxSwitchRole
+  tag: wlsx_switch_role
+- OID: 1.3.6.1.4.1.14823.2.2.1.1.1.12.0
+  symbol: wlsxSwitchLicenseSerialNumber
+  tag: wlsx_switch_license_serial_number
+metrics:
+- MIB: WLSX-SYSTEMEXT-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.14823.2.2.1.2.1.30.0
+    name: cpu.usage
+- MIB: WLSX-SYSTEMEXT-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.14823.2.2.1.2.1.31.0
+    name: memory.usage
+- MIB: WLSX-SYSTEMEXT-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.14823.2.2.1.2.1.32.0
+    name: wlsxSysExtPacketLossPercent
+- MIB: WLSX-SWITCH-MIB
+  metric_tags:
+  - mapping:
+      1: ram
+      2: flash_memory
+    symbol:
+      OID: 1.3.6.1.4.1.14823.2.2.1.1.1.10.1.2
+      name: sysXStorageType
+    tag: sys_x_storage_type
+  - symbol:
+      OID: 1.3.6.1.4.1.14823.2.2.1.1.1.10.1.5
+      name: sysXStorageName
+    tag: sys_x_storage_name
+  symbols:
+  - OID: 1.3.6.1.4.1.14823.2.2.1.1.1.10.1.3
+    name: sysXStorageSize
+  - OID: 1.3.6.1.4.1.14823.2.2.1.1.1.10.1.4
+    name: sysXStorageUsed
+  table:
+    OID: 1.3.6.1.4.1.14823.2.2.1.1.1.10
+    name: wlsxSysXStorageTable
+- MIB: WLSX-SWITCH-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.14823.2.2.1.1.3.3.1.2
+      name: apESSID
+    tag: ap_essid
+  - mapping:
+      1: dot11a
+      2: dot11b
+      3: dot11g
+    symbol:
+      OID: 1.3.6.1.4.1.14823.2.2.1.1.3.3.1.6
+      name: apPhyType
+    tag: ap_phy_type
+  - mapping:
+      1: ap
+      2: am
+    symbol:
+      OID: 1.3.6.1.4.1.14823.2.2.1.1.3.3.1.7
+      name: apType
+    tag: ap_type
+  - symbol:
+      OID: 1.3.6.1.4.1.14823.2.2.1.1.3.3.1.8
+      name: apCurrentChannel
+    tag: ap_current_channel
+  - mapping:
+      1: "true"
+      2: "false"
+    symbol:
+      OID: 1.3.6.1.4.1.14823.2.2.1.1.3.3.1.12
+      name: apLoadBalancing
+    tag: ap_load_balancing
+  symbols:
+  - OID: 1.3.6.1.4.1.14823.2.2.1.1.3.3.1.13
+    name: apChannelNoise
+  - OID: 1.3.6.1.4.1.14823.2.2.1.1.3.3.1.14
+    name: apSignalToNoiseRatio
+  table:
+    OID: 1.3.6.1.4.1.14823.2.2.1.1.3.3
+    name: wlsxSwitchAccessPointTable
+- MIB: WLSX-SWITCH-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.14823.2.2.1.1.3.5.1.1
+      name: apStatsChannel
+    tag: ap_stats_channel
+  symbols:
+  - OID: 1.3.6.1.4.1.14823.2.2.1.1.3.5.1.2
+    name: apChannelBwRate
+  - OID: 1.3.6.1.4.1.14823.2.2.1.1.3.5.1.3
+    name: apChannelFrameRetryRate
+  - OID: 1.3.6.1.4.1.14823.2.2.1.1.3.5.1.4
+    name: apChannelFrameLowSpeedRate
+  - OID: 1.3.6.1.4.1.14823.2.2.1.1.3.5.1.5
+    name: apChannelFrameNonUnicastRate
+  - OID: 1.3.6.1.4.1.14823.2.2.1.1.3.5.1.6
+    name: apChannelFrameFragmentationRate
+  - OID: 1.3.6.1.4.1.14823.2.2.1.1.3.5.1.7
+    name: apChannelFrameReceiveErrorRate
+  - OID: 1.3.6.1.4.1.14823.2.2.1.1.3.5.1.8
+    metric_type: monotonic_count
+    name: apBSSTxPackets
+  - OID: 1.3.6.1.4.1.14823.2.2.1.1.3.5.1.9
+    metric_type: monotonic_count
+    name: apBSSTxBytes
+  - OID: 1.3.6.1.4.1.14823.2.2.1.1.3.5.1.10
+    metric_type: monotonic_count
+    name: apBSSRxPackets
+  - OID: 1.3.6.1.4.1.14823.2.2.1.1.3.5.1.11
+    metric_type: monotonic_count
+    name: apBSSRxBytes
+  - OID: 1.3.6.1.4.1.14823.2.2.1.1.3.5.1.12
+    name: apBSSBwRate
+  - OID: 1.3.6.1.4.1.14823.2.2.1.1.3.5.1.13
+    name: apBSSFrameRetryRate
+  - OID: 1.3.6.1.4.1.14823.2.2.1.1.3.5.1.14
+    name: apBSSFrameLowSpeedRate
+  - OID: 1.3.6.1.4.1.14823.2.2.1.1.3.5.1.15
+    name: apBSSFrameNonUnicastRate
+  - OID: 1.3.6.1.4.1.14823.2.2.1.1.3.5.1.16
+    name: apBSSFrameFragmentationRate
+  - OID: 1.3.6.1.4.1.14823.2.2.1.1.3.5.1.17
+    name: apBSSFrameReceiveErrorRate
+  table:
+    OID: 1.3.6.1.4.1.14823.2.2.1.1.3.5
+    name: wlsxSwitchAccessPointStatsTable
+- MIB: WLSX-USER-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.14823.2.2.1.4.1.4.1.0
+    name: wlsxNumOfUsers8021x
+- MIB: WLSX-USER-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.14823.2.2.1.4.1.4.2.0
+    name: wlsxNumOfUsersVPN
+- MIB: WLSX-USER-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.14823.2.2.1.4.1.4.3.0
+    name: wlsxNumOfUsersCP
+- MIB: WLSX-USER-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.14823.2.2.1.4.1.4.4.0
+    name: wlsxNumOfUsersMAC
+- MIB: WLSX-USER-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.14823.2.2.1.4.1.4.5.0
+    name: wlsxNumOfUsersStateful8021x
+- MIB: WLSX-HA-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.14823.2.2.1.20.1.2.1.1.0
+    name: haActiveAPs
+- MIB: WLSX-HA-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.14823.2.2.1.20.1.2.1.2.0
+    name: haStandbyAPs
+- MIB: WLSX-HA-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.14823.2.2.1.20.1.2.1.3.0
+    name: haTotalAPs
+- MIB: WLSX-HA-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.14823.2.2.1.20.1.1.1.2
+      name: haMembership
+    table: wlsxHighAvalabilityConfigTable
+    tag: ha_membership
+  symbols:
+  - OID: 1.3.6.1.4.1.14823.2.2.1.20.1.5.1.1
+    name: haActiveVapTunnels
+  - OID: 1.3.6.1.4.1.14823.2.2.1.20.1.5.1.2
+    name: haStandbyVapTunnels
+  - OID: 1.3.6.1.4.1.14823.2.2.1.20.1.5.1.3
+    name: haTotalVapTunnels
+  - OID: 1.3.6.1.4.1.14823.2.2.1.20.1.5.1.4
+    name: haAPHbtTunnels
+  table:
+    OID: 1.3.6.1.4.1.14823.2.2.1.20.1.5
+    name: wlsxHighAvalabilityTunnelTable
+- MIB: WLSX-WLAN-MIB
+  metric_tags:
+  - mapping:
+      1: dot11a
+      2: dot11b
+      3: dot11g
+      4: dot11ag
+      5: wired
+    symbol:
+      OID: 1.3.6.1.4.1.14823.2.2.1.5.2.2.1.1.3
+      name: wlanStaPhyType
+    tag: wlan_sta_phy_type
+  - symbol:
+      OID: 1.3.6.1.4.1.14823.2.2.1.5.2.2.1.1.12
+      name: wlanStaAccessPointESSID
+    tag: wlan_sta_access_point_essid
+  - symbol:
+      OID: 1.3.6.1.4.1.14823.2.2.1.5.2.2.1.1.6
+      name: wlanStaChannel
+    tag: wlan_sta_channel
+  - symbol:
+      OID: 1.3.6.1.4.1.14823.2.2.1.5.2.2.1.1.7
+      name: wlanStaVlanId
+    tag: wlan_sta_vlan_id
+  - mapping:
+      1: "true"
+      2: "false"
+    symbol:
+      OID: 1.3.6.1.4.1.14823.2.2.1.5.2.2.1.1.4
+      name: wlanStaIsAuthenticated
+    tag: wlan_sta_is_authenticated
+  - mapping:
+      1: "true"
+      2: "false"
+    symbol:
+      OID: 1.3.6.1.4.1.14823.2.2.1.5.2.2.1.1.5
+      name: wlanStaIsAssociated
+    tag: wlan_sta_is_associated
+  - mapping:
+      1: none
+      2: ht20
+      3: ht40
+      4: vht20
+      5: vht40
+      6: vht80
+      7: vht160
+      8: vht80plus80
+      9: he20
+      10: he40
+      11: he80
+      12: he160
+      13: he80plus80
+    symbol:
+      OID: 1.3.6.1.4.1.14823.2.2.1.5.2.2.1.1.16
+      name: wlanStaHTMode
+    tag: wlan_sta_ht_mode
+  symbols:
+  - OID: 1.3.6.1.4.1.14823.2.2.1.5.2.2.1.1.10
+    name: wlanStaTransmitRate
+  - OID: 1.3.6.1.4.1.14823.2.2.1.5.2.2.1.1.14
+    name: wlanStaRSSI
+  - OID: 1.3.6.1.4.1.14823.2.2.1.5.2.2.1.1.15
+    name: wlanStaUpTime
+  - OID: 1.3.6.1.4.1.14823.2.2.1.5.2.2.1.1.17
+    name: wlanStaTransmitRateCode
+  table:
+    OID: 1.3.6.1.4.1.14823.2.2.1.5.2.2.1
+    name: wlsxWlanStationTable
+- MIB: WLSX-WLAN-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.14823.2.2.1.5.3.2.1.1.1
+      name: wlanStaChannelNum
+    tag: wlan_sta_channel_num
+  symbols:
+  - OID: 1.3.6.1.4.1.14823.2.2.1.5.3.2.1.1.25
+    name: wlanStaTxBytes64
+  - OID: 1.3.6.1.4.1.14823.2.2.1.5.3.2.1.1.26
+    name: wlanStaRxBytes64
+  table:
+    OID: 1.3.6.1.4.1.14823.2.2.1.5.3.2.1
+    name: wlsxWlanStationStatsTable
+sysobjectid:
+- 1.3.6.1.4.1.14823.1.1.1
+- 1.3.6.1.4.1.14823.1.1.2
+- 1.3.6.1.4.1.14823.1.1.3
+- 1.3.6.1.4.1.14823.1.1.4
+- 1.3.6.1.4.1.14823.1.1.7
+- 1.3.6.1.4.1.14823.1.1.8
+- 1.3.6.1.4.1.14823.1.1.9
+- 1.3.6.1.4.1.14823.1.1.10
+- 1.3.6.1.4.1.14823.1.1.11
+- 1.3.6.1.4.1.14823.1.1.12
+- 1.3.6.1.4.1.14823.1.1.13
+- 1.3.6.1.4.1.14823.1.1.14
+- 1.3.6.1.4.1.14823.1.1.15
+- 1.3.6.1.4.1.14823.1.1.16
+- 1.3.6.1.4.1.14823.1.1.17
+- 1.3.6.1.4.1.14823.1.1.18
+- 1.3.6.1.4.1.14823.1.1.19
+- 1.3.6.1.4.1.14823.1.1.20
+- 1.3.6.1.4.1.14823.1.1.23
+- 1.3.6.1.4.1.14823.1.1.24
+- 1.3.6.1.4.1.14823.1.1.25
+- 1.3.6.1.4.1.14823.1.1.26
+- 1.3.6.1.4.1.14823.1.1.27
+- 1.3.6.1.4.1.14823.1.1.28
+- 1.3.6.1.4.1.14823.1.1.29
+- 1.3.6.1.4.1.14823.1.1.30
+- 1.3.6.1.4.1.14823.1.1.31
+- 1.3.6.1.4.1.14823.1.1.32
+- 1.3.6.1.4.1.14823.1.1.33
+- 1.3.6.1.4.1.14823.1.1.34
+- 1.3.6.1.4.1.14823.1.1.35
+- 1.3.6.1.4.1.14823.1.1.39
+- 1.3.6.1.4.1.14823.1.1.40
+- 1.3.6.1.4.1.14823.1.1.41
+- 1.3.6.1.4.1.14823.1.1.42
+- 1.3.6.1.4.1.14823.1.1.47
+- 1.3.6.1.4.1.14823.1.1.48
+- 1.3.6.1.4.1.14823.1.1.56

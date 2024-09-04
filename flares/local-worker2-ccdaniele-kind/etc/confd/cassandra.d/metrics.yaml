@@ -1,0 +1,446 @@
+jmx_metrics:
+- include:
+    attribute:
+    - 75thPercentile
+    - 95thPercentile
+    - OneMinuteRate
+    domain: org.apache.cassandra.metrics
+    name:
+    - Latency
+    type: ClientRequest
+- include:
+    attribute:
+    - OneMinuteRate
+    domain: org.apache.cassandra.metrics
+    name:
+    - Dropped
+    type: DroppedMessage
+- include:
+    domain: org.apache.cassandra.metrics
+    name:
+    - PendingTasks
+    - CurrentlyBlockedTasks
+    - TotalBlockedTasks
+    path:
+    - request
+    scope:
+    - MutationStage
+    - CounterMutationStage
+    - ReadStage
+    - ViewMutationStage
+    type: ThreadPools
+- include:
+    domain: org.apache.cassandra.metrics
+    name:
+    - PendingTasks
+    - CurrentlyBlockedTasks
+    - TotalBlockedTasks
+    path:
+    - internal
+    scope:
+    - MemtableFlushWriter
+    - HintsDispatcher
+    - MemtablePostFlush
+    - MigrationStage
+    - MiscStage
+    - SecondaryIndexManagement
+    type: ThreadPools
+- include:
+    domain: org.apache.cassandra.metrics
+    name:
+    - Load
+    - Exceptions
+    type: Storage
+- exclude:
+    keyspace:
+    - system
+    - system_auth
+    - system_distributed
+    - system_schema
+    - system_traces
+  include:
+    attribute:
+    - 75thPercentile
+    - 95thPercentile
+    - 99thPercentile
+    - OneMinuteRate
+    bean_regex:
+    - .*keyspace=.*
+    domain: org.apache.cassandra.metrics
+    name:
+    - ReadLatency
+    - WriteLatency
+    type: Table
+- exclude:
+    keyspace:
+    - system
+    - system_auth
+    - system_distributed
+    - system_schema
+    - system_traces
+  include:
+    attribute:
+    - 75thPercentile
+    - 95thPercentile
+    - OneMinuteRate
+    bean_regex:
+    - .*keyspace=.*
+    domain: org.apache.cassandra.metrics
+    name:
+    - RangeLatency
+    - CasPrepareLatency
+    - CasProposeLatency
+    - CasCommitLatency
+    - ViewLockAcquireTime
+    - ViewReadTime
+    type: Table
+- exclude:
+    keyspace:
+    - system
+    - system_auth
+    - system_distributed
+    - system_schema
+    - system_traces
+  include:
+    attribute:
+    - 75thPercentile
+    - 95thPercentile
+    bean_regex:
+    - .*keyspace=.*
+    domain: org.apache.cassandra.metrics
+    name:
+    - SSTablesPerReadHistogram
+    - TombstoneScannedHistogram
+    - WaitingOnFreeMemtableSpace
+    type: Table
+- exclude:
+    keyspace:
+    - system
+    - system_auth
+    - system_distributed
+    - system_schema
+    - system_traces
+  include:
+    attribute:
+    - Min
+    - 75thPercentile
+    - 95thPercentile
+    bean_regex:
+    - .*keyspace=.*
+    domain: org.apache.cassandra.metrics
+    name:
+    - ColUpdateTimeDeltaHistogram
+    type: Table
+- exclude:
+    keyspace:
+    - system
+    - system_auth
+    - system_distributed
+    - system_schema
+    - system_traces
+  include:
+    attribute:
+    - Value
+    bean_regex:
+    - .*keyspace=.*
+    domain: org.apache.cassandra.metrics
+    name:
+    - BloomFilterFalseRatio
+    - CompressionRatio
+    - KeyCacheHitRate
+    - LiveSSTableCount
+    - MaxPartitionSize
+    - MeanPartitionSize
+    - MeanRowSize
+    - MaxRowSize
+    - PendingCompactions
+    - SnapshotsSize
+    type: Table
+- exclude:
+    keyspace:
+    - system
+    - system_auth
+    - system_distributed
+    - system_schema
+    - system_traces
+  include:
+    attribute:
+    - Count
+    bean_regex:
+    - .*keyspace=.*
+    domain: org.apache.cassandra.metrics
+    name:
+    - CompactionBytesWritten
+    - BytesFlushed
+    - PendingFlushes
+    - LiveDiskSpaceUsed
+    - TotalDiskSpaceUsed
+    - RowCacheHitOutOfRange
+    - RowCacheHit
+    - RowCacheMiss
+    type: Table
+- include:
+    attribute:
+    - Count
+    domain: org.apache.cassandra.metrics
+    name:
+    - HitRate
+    scope: KeyCache
+    type: Cache
+- include:
+    attribute:
+    - Value
+    domain: org.apache.cassandra.metrics
+    name:
+    - PendingTasks
+    - TotalCommitLogSize
+    type: CommitLog
+- include:
+    domain: org.apache.cassandra.metrics
+    name:
+    - ActiveTasks
+    path: request
+    type: ThreadPools
+- include:
+    attribute:
+    - Count
+    - OneMinuteRate
+    domain: org.apache.cassandra.metrics
+    name:
+    - Timeouts
+    scope:
+    - Read
+    - Write
+    type: ClientRequest
+- include:
+    attribute:
+      DroppableTombstoneRatio:
+        alias: cassandra.db.droppable_tombstone_ratio
+    domain: org.apache.cassandra.db
+    type: Tables
+- include:
+    attribute:
+    - DownEndpointCount
+    - UpEndpointCount
+    domain: org.apache.cassandra.net
+    type: FailureDetector
+- include:
+    attribute:
+      CollectionCount:
+        alias: jmx.gc.minor_collection_count
+        metric_type: counter
+      CollectionTime:
+        alias: jmx.gc.minor_collection_time
+        metric_type: counter
+    domain: java.lang
+    name: Copy
+    type: GarbageCollector
+- include:
+    attribute:
+      CollectionCount:
+        alias: jmx.gc.minor_collection_count
+        metric_type: counter
+      CollectionTime:
+        alias: jmx.gc.minor_collection_time
+        metric_type: counter
+    domain: java.lang
+    name: PS Scavenge
+    type: GarbageCollector
+- include:
+    attribute:
+      CollectionCount:
+        alias: jmx.gc.minor_collection_count
+        metric_type: counter
+      CollectionTime:
+        alias: jmx.gc.minor_collection_time
+        metric_type: counter
+    domain: java.lang
+    name: ParNew
+    type: GarbageCollector
+- include:
+    attribute:
+      CollectionCount:
+        alias: jmx.gc.minor_collection_count
+        metric_type: counter
+      CollectionTime:
+        alias: jmx.gc.minor_collection_time
+        metric_type: counter
+    domain: java.lang
+    name: G1 Young Generation
+    type: GarbageCollector
+- include:
+    attribute:
+      CollectionCount:
+        alias: jmx.gc.major_collection_count
+        metric_type: counter
+      CollectionTime:
+        alias: jmx.gc.major_collection_time
+        metric_type: counter
+    domain: java.lang
+    name: MarkSweepCompact
+    type: GarbageCollector
+- include:
+    attribute:
+      CollectionCount:
+        alias: jmx.gc.major_collection_count
+        metric_type: counter
+      CollectionTime:
+        alias: jmx.gc.major_collection_time
+        metric_type: counter
+    domain: java.lang
+    name: PS MarkSweep
+    type: GarbageCollector
+- include:
+    attribute:
+      CollectionCount:
+        alias: jmx.gc.major_collection_count
+        metric_type: counter
+      CollectionTime:
+        alias: jmx.gc.major_collection_time
+        metric_type: counter
+    domain: java.lang
+    name: ConcurrentMarkSweep
+    type: GarbageCollector
+- include:
+    attribute:
+      CollectionCount:
+        alias: jmx.gc.major_collection_count
+        metric_type: counter
+      CollectionTime:
+        alias: jmx.gc.major_collection_time
+        metric_type: counter
+    domain: java.lang
+    name: G1 Mixed Generation
+    type: GarbageCollector
+- exclude:
+    keyspace:
+    - system
+    - system_auth
+    - system_distributed
+    - system_schema
+    - system_traces
+  include:
+    attribute:
+    - 75thPercentile
+    - 95thPercentile
+    - 99thPercentile
+    - OneMinuteRate
+    bean_regex:
+    - .*keyspace=.*
+    domain: org.apache.cassandra.metrics
+    name:
+    - ReadLatency
+    - WriteLatency
+    type: ColumnFamily
+- exclude:
+    keyspace:
+    - system
+    - system_auth
+    - system_distributed
+    - system_schema
+    - system_traces
+  include:
+    attribute:
+    - 75thPercentile
+    - 95thPercentile
+    - OneMinuteRate
+    bean_regex:
+    - .*keyspace=.*
+    domain: org.apache.cassandra.metrics
+    name:
+    - RangeLatency
+    - CasPrepareLatency
+    - CasProposeLatency
+    - CasCommitLatency
+    - ViewLockAcquireTime
+    - ViewReadTime
+    type: ColumnFamily
+- exclude:
+    keyspace:
+    - system
+    - system_auth
+    - system_distributed
+    - system_schema
+    - system_traces
+  include:
+    attribute:
+    - 75thPercentile
+    - 95thPercentile
+    bean_regex:
+    - .*keyspace=.*
+    domain: org.apache.cassandra.metrics
+    name:
+    - SSTablesPerReadHistogram
+    - TombstoneScannedHistogram
+    - WaitingOnFreeMemtableSpace
+    type: ColumnFamily
+- exclude:
+    keyspace:
+    - system
+    - system_auth
+    - system_distributed
+    - system_schema
+    - system_traces
+  include:
+    attribute:
+    - Min
+    - 75thPercentile
+    - 95thPercentile
+    bean_regex:
+    - .*keyspace=.*
+    domain: org.apache.cassandra.metrics
+    name:
+    - ColUpdateTimeDeltaHistogram
+    type: ColumnFamily
+- exclude:
+    keyspace:
+    - system
+    - system_auth
+    - system_distributed
+    - system_schema
+    - system_traces
+  include:
+    attribute:
+    - Value
+    bean_regex:
+    - .*keyspace=.*
+    domain: org.apache.cassandra.metrics
+    name:
+    - BloomFilterFalseRatio
+    - CompressionRatio
+    - KeyCacheHitRate
+    - LiveSSTableCount
+    - MaxPartitionSize
+    - MeanPartitionSize
+    - MeanRowSize
+    - MaxRowSize
+    - PendingCompactions
+    - SnapshotsSize
+    type: ColumnFamily
+- exclude:
+    keyspace:
+    - system
+    - system_auth
+    - system_distributed
+    - system_schema
+    - system_traces
+  include:
+    attribute:
+    - Count
+    bean_regex:
+    - .*keyspace=.*
+    domain: org.apache.cassandra.metrics
+    name:
+    - PendingFlushes
+    - LiveDiskSpaceUsed
+    - TotalDiskSpaceUsed
+    - RowCacheHitOutOfRange
+    - RowCacheHit
+    - RowCacheMiss
+    type: ColumnFamily
+- include:
+    attribute:
+      DroppableTombstoneRatio:
+        alias: cassandra.db.droppable_tombstone_ratio
+    domain: org.apache.cassandra.db
+    type: ColumnFamilies

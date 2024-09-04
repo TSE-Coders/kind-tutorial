@@ -1,0 +1,136 @@
+extends:
+- cisco.yaml
+metadata:
+  device:
+    fields:
+      type:
+        value: load_balancer
+metrics:
+- MIB: CISCO-SLB-MIB
+  metric_tags:
+  - index: 1
+    tag: slb_entity
+  symbols:
+  - OID: 1.3.6.1.4.1.9.9.161.1.1.1.1.6
+    metric_type: monotonic_count
+    name: slbStatsCreatedConnections
+  - OID: 1.3.6.1.4.1.9.9.161.1.1.1.1.7
+    metric_type: monotonic_count
+    name: slbStatsCreatedHCConnections
+  - OID: 1.3.6.1.4.1.9.9.161.1.1.1.1.8
+    metric_type: monotonic_count
+    name: slbStatsEstablishedConnections
+  - OID: 1.3.6.1.4.1.9.9.161.1.1.1.1.9
+    metric_type: monotonic_count
+    name: slbStatsEstablishedHCConnections
+  - OID: 1.3.6.1.4.1.9.9.161.1.1.1.1.10
+    metric_type: monotonic_count
+    name: slbStatsDestroyedConnections
+  - OID: 1.3.6.1.4.1.9.9.161.1.1.1.1.11
+    metric_type: monotonic_count
+    name: slbStatsDestroyedHCConnections
+  - OID: 1.3.6.1.4.1.9.9.161.1.1.1.1.12
+    metric_type: monotonic_count
+    name: slbStatsReassignedConnections
+  - OID: 1.3.6.1.4.1.9.9.161.1.1.1.1.13
+    metric_type: monotonic_count
+    name: slbStatsReassignedHCConnections
+  table:
+    OID: 1.3.6.1.4.1.9.9.161.1.1.1
+    name: slbStatsTable
+- MIB: CISCO-SLB-EXT-MIB
+  metric_tags:
+  - index: 1
+    tag: slb_entity
+  symbols:
+  - OID: 1.3.6.1.4.1.9.9.254.1.1.1.1.3
+    name: cslbxStatsCurrConnections
+  - OID: 1.3.6.1.4.1.9.9.254.1.1.1.1.5
+    metric_type: monotonic_count
+    name: cslbxStatsFailedConns
+  - OID: 1.3.6.1.4.1.9.9.254.1.1.1.1.7
+    metric_type: monotonic_count
+    name: cslbxStatsL4PolicyConns
+  - OID: 1.3.6.1.4.1.9.9.254.1.1.1.1.8
+    metric_type: monotonic_count
+    name: cslbxStatsL7PolicyConns
+  - OID: 1.3.6.1.4.1.9.9.254.1.1.1.1.9
+    metric_type: monotonic_count
+    name: cslbxStatsDroppedL4PolicyConns
+  - OID: 1.3.6.1.4.1.9.9.254.1.1.1.1.10
+    metric_type: monotonic_count
+    name: cslbxStatsDroppedL7PolicyConns
+  - OID: 1.3.6.1.4.1.9.9.254.1.1.1.1.11
+    metric_type: monotonic_count
+    name: cslbxStatsFtpConns
+  - OID: 1.3.6.1.4.1.9.9.254.1.1.1.1.12
+    metric_type: monotonic_count
+    name: cslbxStatsHttpRedirectConns
+  - OID: 1.3.6.1.4.1.9.9.254.1.1.1.1.13
+    metric_type: monotonic_count
+    name: cslbxStatsDroppedRedirectConns
+  - OID: 1.3.6.1.4.1.9.9.254.1.1.1.1.14
+    metric_type: monotonic_count
+    name: cslbxStatsNoMatchPolicyRejects
+  - OID: 1.3.6.1.4.1.9.9.254.1.1.1.1.15
+    metric_type: monotonic_count
+    name: cslbxStatsNoCfgPolicyRejects
+  - OID: 1.3.6.1.4.1.9.9.254.1.1.1.1.16
+    metric_type: monotonic_count
+    name: cslbxStatsNoActiveServerRejects
+  - OID: 1.3.6.1.4.1.9.9.254.1.1.1.1.17
+    metric_type: monotonic_count
+    name: cslbxStatsAclDenyRejects
+  - OID: 1.3.6.1.4.1.9.9.254.1.1.1.1.18
+    metric_type: monotonic_count
+    name: cslbxStatsMaxParseLenRejects
+  - OID: 1.3.6.1.4.1.9.9.254.1.1.1.1.19
+    metric_type: monotonic_count
+    name: cslbxStatsBadSslFormatRejects
+  - OID: 1.3.6.1.4.1.9.9.254.1.1.1.1.20
+    metric_type: monotonic_count
+    name: cslbxStatsL7ParserErrorRejects
+  - OID: 1.3.6.1.4.1.9.9.254.1.1.1.1.21
+    metric_type: monotonic_count
+    name: cslbxStatsVerMismatchRejects
+  - OID: 1.3.6.1.4.1.9.9.254.1.1.1.1.22
+    metric_type: monotonic_count
+    name: cslbxStatsOutOfMemoryRejects
+  - OID: 1.3.6.1.4.1.9.9.254.1.1.1.1.23
+    metric_type: monotonic_count
+    name: cslbxStatsTimedOutConnections
+  - OID: 1.3.6.1.4.1.9.9.254.1.1.1.1.24
+    metric_type: monotonic_count
+    name: cslbxStatsTcpChecksumErrorPkts
+  - OID: 1.3.6.1.4.1.9.9.254.1.1.1.1.25
+    metric_type: monotonic_count
+    name: cslbxStatsIpChecksumErrorPkts
+  - OID: 1.3.6.1.4.1.9.9.254.1.1.1.1.26
+    metric_type: monotonic_count
+    name: cslbxStatsL4PolicyHCConns
+  - OID: 1.3.6.1.4.1.9.9.254.1.1.1.1.27
+    metric_type: monotonic_count
+    name: cslbxStatsL7PolicyHCConns
+  - OID: 1.3.6.1.4.1.9.9.254.1.1.1.1.28
+    metric_type: monotonic_count
+    name: cslbxStatsDroppedL4PolicyHCConns
+  - OID: 1.3.6.1.4.1.9.9.254.1.1.1.1.29
+    metric_type: monotonic_count
+    name: cslbxStatsDroppedL7PolicyHCConns
+  - OID: 1.3.6.1.4.1.9.9.254.1.1.1.1.30
+    metric_type: monotonic_count
+    name: cslbxStatsNoMatchPolicyHCRejects
+  - OID: 1.3.6.1.4.1.9.9.254.1.1.1.1.31
+    metric_type: monotonic_count
+    name: cslbxStatsNoCfgPolicyHCRejects
+  - OID: 1.3.6.1.4.1.9.9.254.1.1.1.1.32
+    metric_type: monotonic_count
+    name: cslbxStatsAclDenyHCRejects
+  - OID: 1.3.6.1.4.1.9.9.254.1.1.1.1.33
+    metric_type: monotonic_count
+    name: cslbxStatsVerMismatchHCRejects
+  table:
+    OID: 1.3.6.1.4.1.9.9.254.1.1.1
+    name: cslbxStatsTable
+sysobjectid:
+- 1.3.6.1.4.1.9.1.824

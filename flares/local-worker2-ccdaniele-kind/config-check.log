@@ -1,0 +1,393 @@
+
+=== container check ===
+Configuration provider: file
+Configuration source: file:/etc/datadog-agent/conf.d/container.d/conf.yaml.default
+Config for instance ID: container:7f588b05dc024c96
+{}
+~
+Auto-discovery IDs:
+* _container
+===
+
+=== container_collect_all check ===
+Configuration provider: kubernetes-container-allinone
+Configuration source: container:containerd://1e4de88be41d323193b69a435771ef6958f9c45b6ce780829daa173be00e477e
+Log Config:
+- {}
+Auto-discovery IDs:
+* containerd://1e4de88be41d323193b69a435771ef6958f9c45b6ce780829daa173be00e477e
+===
+
+=== container_collect_all check ===
+Configuration provider: kubernetes-container-allinone
+Configuration source: container:containerd://5405d334a0b01bcba8ee3c72a6119b6ffc63b119d993d21d650753da7aef3bb8
+Log Config:
+- {}
+Auto-discovery IDs:
+* containerd://5405d334a0b01bcba8ee3c72a6119b6ffc63b119d993d21d650753da7aef3bb8
+===
+
+=== container_collect_all check ===
+Configuration provider: kubernetes-container-allinone
+Configuration source: container:containerd://f41e407bd3295bf2ae57090757caa9c4c4282c126363c4d7749477613d4ffa50
+Log Config:
+- {}
+Auto-discovery IDs:
+* containerd://f41e407bd3295bf2ae57090757caa9c4c4282c126363c4d7749477613d4ffa50
+===
+
+=== container_collect_all check ===
+Configuration provider: kubernetes-container-allinone
+Configuration source: container:containerd://824c53928750de386daac7f4ed021809024360be66f38a735fd2c30b094469cb
+Log Config:
+- {}
+Auto-discovery IDs:
+* containerd://824c53928750de386daac7f4ed021809024360be66f38a735fd2c30b094469cb
+===
+
+=== container_collect_all check ===
+Configuration provider: kubernetes-container-allinone
+Configuration source: container:containerd://b4075a4c0098c4deb8567005dde19df9d010a15e60bc1c9833afd4f3faa3d2c2
+Log Config:
+- {}
+Auto-discovery IDs:
+* containerd://b4075a4c0098c4deb8567005dde19df9d010a15e60bc1c9833afd4f3faa3d2c2
+===
+
+=== container_collect_all check ===
+Configuration provider: kubernetes-container-allinone
+Configuration source: container:containerd://0b7626ca1769c3a435021fd41d2e52fe259349ee7fc5f846533b4c9c6f19f94c
+Log Config:
+- {}
+Auto-discovery IDs:
+* containerd://0b7626ca1769c3a435021fd41d2e52fe259349ee7fc5f846533b4c9c6f19f94c
+===
+
+=== container_collect_all check ===
+Configuration provider: kubernetes-container-allinone
+Configuration source: container:containerd://25e8c301e77bb1eb9788a4037cd570e4e7b93edba9216ee3771fbf409b9f8991
+Log Config:
+- {}
+Auto-discovery IDs:
+* containerd://25e8c301e77bb1eb9788a4037cd570e4e7b93edba9216ee3771fbf409b9f8991
+===
+
+=== container_collect_all check ===
+Configuration provider: kubernetes-container-allinone
+Configuration source: container:containerd://c081d6764618185a8739e45ce6851e58d80329664c259d6f6aa191fe07e4f361
+Log Config:
+- {}
+Auto-discovery IDs:
+* containerd://c081d6764618185a8739e45ce6851e58d80329664c259d6f6aa191fe07e4f361
+===
+
+=== container_collect_all check ===
+Configuration provider: kubernetes-container-allinone
+Configuration source: container:containerd://59be02ec44b26610c24ffaea13f6d1a6053afd807db262e00ea705e53b103090
+Log Config:
+- {}
+Auto-discovery IDs:
+* containerd://59be02ec44b26610c24ffaea13f6d1a6053afd807db262e00ea705e53b103090
+===
+
+=== container_collect_all check ===
+Configuration provider: kubernetes-container-allinone
+Configuration source: container:containerd://663d511872d9b53bdc281efc09ba93e1b30cdc367a9780a5601c58be7bcda798
+Log Config:
+- {}
+Auto-discovery IDs:
+* containerd://663d511872d9b53bdc281efc09ba93e1b30cdc367a9780a5601c58be7bcda798
+===
+
+=== container_collect_all check ===
+Configuration provider: kubernetes-container-allinone
+Configuration source: container:containerd://1ed8df0d1c9875ff28e7789621c2ab92d9010ebaeebc54b2fbb523f5bf7edbdd
+Log Config:
+- {}
+Auto-discovery IDs:
+* containerd://1ed8df0d1c9875ff28e7789621c2ab92d9010ebaeebc54b2fbb523f5bf7edbdd
+===
+
+=== container_collect_all check ===
+Configuration provider: kubernetes-container-allinone
+Configuration source: container:containerd://6ad2903dedea8e002e04c28b39a561c1826201755ac181367f6da8ae60c4b1d9
+Log Config:
+- {}
+Auto-discovery IDs:
+* containerd://6ad2903dedea8e002e04c28b39a561c1826201755ac181367f6da8ae60c4b1d9
+===
+
+=== container_collect_all check ===
+Configuration provider: kubernetes-container-allinone
+Configuration source: container:containerd://0ab011e9f4c2afdaff2812162f8c32968a66ef52ebec40c198ac04d9e4447f3b
+Log Config:
+- {}
+Auto-discovery IDs:
+* containerd://0ab011e9f4c2afdaff2812162f8c32968a66ef52ebec40c198ac04d9e4447f3b
+===
+
+=== container_collect_all check ===
+Configuration provider: kubernetes-container-allinone
+Configuration source: container:containerd://060e140eccd57c419df7f0837de9457c716c27d79747c5e471cb3e147ccff5a1
+Log Config:
+- {}
+Auto-discovery IDs:
+* containerd://060e140eccd57c419df7f0837de9457c716c27d79747c5e471cb3e147ccff5a1
+===
+
+=== container_collect_all check ===
+Configuration provider: kubernetes-container-allinone
+Configuration source: container:containerd://5ebb4ed14cd425a1fa5029daad82f4722bbe4d446c7b4ecaaf379173f46c976e
+Log Config:
+- {}
+Auto-discovery IDs:
+* containerd://5ebb4ed14cd425a1fa5029daad82f4722bbe4d446c7b4ecaaf379173f46c976e
+===
+
+=== container_image check ===
+Configuration provider: file
+Configuration source: file:/etc/datadog-agent/conf.d/container_image.d/conf.yaml.default
+Config for instance ID: container_image:2ac6bde1700038e4
+{}
+~
+Auto-discovery IDs:
+* _container_image
+===
+
+=== container_lifecycle check ===
+Configuration provider: file
+Configuration source: file:/etc/datadog-agent/conf.d/container_lifecycle.d/conf.yaml.default
+Config for instance ID: container_lifecycle:b628cf9ded5c9324
+{}
+~
+Auto-discovery IDs:
+* _container_lifecycle
+===
+
+=== containerd check ===
+Configuration provider: file
+Configuration source: file:/etc/datadog-agent/conf.d/containerd.d/conf.yaml.default
+Config for instance ID: containerd:d266b5e2410c457b
+collect_events: true
+filters:
+- topic=="/containers/create"
+- topic=="/containers/delete"
+- topic=="/containers/update"
+- topic=="/images/update"
+- topic=="/images/create"
+- topic=="/images/delete"
+- topic=="/tasks/oom"
+- topic=="/tasks/delete"
+~
+Auto-discovery IDs:
+* _containerd
+===
+
+=== cpu check ===
+Configuration provider: file
+Configuration source: file:/etc/datadog-agent/conf.d/cpu.d/conf.yaml.default
+Config for instance ID: cpu:e331d61ed1323219
+{}
+~
+===
+
+=== cri check ===
+Configuration provider: file
+Configuration source: file:/etc/datadog-agent/conf.d/cri.d/conf.yaml.default
+Config for instance ID: cri:7d86c477f0c44f32
+{}
+~
+Auto-discovery IDs:
+* _cri
+===
+
+=== disk check ===
+Configuration provider: file
+Configuration source: file:/etc/datadog-agent/conf.d/disk.d/conf.yaml.default
+Config for instance ID: disk:67cc0574430a16ba
+use_mount: false
+~
+===
+
+=== file_handle check ===
+Configuration provider: file
+Configuration source: file:/etc/datadog-agent/conf.d/file_handle.d/conf.yaml.default
+Config for instance ID: file_handle:381b8b6ca58d37b0
+{}
+~
+===
+
+=== io check ===
+Configuration provider: file
+Configuration source: file:/etc/datadog-agent/conf.d/io.d/conf.yaml.default
+Config for instance ID: io:541b60d158de04a7
+{}
+~
+===
+
+=== jmx check ===
+Configuration provider: kubernetes-container-allinone
+Configuration source: container:containerd://1ed8df0d1c9875ff28e7789621c2ab92d9010ebaeebc54b2fbb523f5bf7edbdd
+Config for instance ID: jmx:f7b72d822f025773
+collect_default_jvm_metrics: "true"
+host: 10.244.2.26
+port: "49112"
+tags:
+- image_id:********@sha256:6cea072d41963159d9cf1287e4c11572759712900c9cf1f92aad17fc27a4247d
+- image_name:gridgain/community
+- image_tag:8.8.27
+- kube_container_name:ignite-node
+- kube_namespace:ignite-namespace
+- kube_ownerref_kind:statefulset
+- kube_qos:BestEffort
+- kube_service:ignite-service
+- kube_stateful_set:ignite-cluster
+- pdnamespace:ignite-namespace
+- persistentvolumeclaim:storage-vol-ignite-cluster-0
+- persistentvolumeclaim:wal-vol-ignite-cluster-0
+- persistentvolumeclaim:walarchive-vol-ignite-cluster-0
+- persistentvolumeclaim:work-vol-ignite-cluster-0
+- pod_phase:running
+- short_image:community
+~
+Init Config:
+collect_default_metrics: "true"
+is_jmx: "true"
+Auto-discovery IDs:
+* containerd://1ed8df0d1c9875ff28e7789621c2ab92d9010ebaeebc54b2fbb523f5bf7edbdd
+===
+
+=== kubelet check ===
+Configuration provider: file
+Configuration source: file:/etc/datadog-agent/conf.d/kubelet.d/conf.yaml.default
+Config for instance ID: kubelet:2b9bec749170d31d
+min_collection_interval: 20
+~
+Auto-discovery IDs:
+* _kubelet
+===
+
+=== load check ===
+Configuration provider: file
+Configuration source: file:/etc/datadog-agent/conf.d/load.d/conf.yaml.default
+Config for instance ID: load:bf7cea93fb3aa780
+{}
+~
+===
+
+=== memory check ===
+Configuration provider: file
+Configuration source: file:/etc/datadog-agent/conf.d/memory.d/conf.yaml.default
+Config for instance ID: memory:3f1f6288b95b9979
+{}
+~
+===
+
+=== network check ===
+Configuration provider: file
+Configuration source: file:/etc/datadog-agent/conf.d/network.d/conf.yaml.default
+Config for instance ID: network:4b0649b7e11f0772
+{}
+~
+===
+
+=== nginx check ===
+Configuration provider: kubernetes-container-allinone
+Configuration source: container:containerd://1e4de88be41d323193b69a435771ef6958f9c45b6ce780829daa173be00e477e
+Config for instance ID: nginx:6dd1c2bc95cdc2f2
+nginx_status_url: http://10.244.2.36:81/nginx_status/
+tags:
+- image_id:********@sha256:447a8665cc1dab95b1ca778e162215839ccbb9189104c79d7ec3a81e14577add
+- image_name:nginx
+- image_tag:latest
+- kube_container_name:nginx
+- kube_deployment:nginx-deployment
+- kube_namespace:nginx
+- kube_ownerref_kind:replicaset
+- kube_qos:BestEffort
+- kube_replica_set:nginx-deployment-5b69cd8969
+- kube_service:nginx-svc
+- pdnamespace:nginx
+- pod_phase:running
+- short_image:nginx
+~
+Init Config:
+{}
+Auto-discovery IDs:
+* containerd://1e4de88be41d323193b69a435771ef6958f9c45b6ce780829daa173be00e477e
+===
+
+=== ntp check ===
+Configuration provider: file
+Configuration source: file:/etc/datadog-agent/conf.d/ntp.d/conf.yaml.default
+Config for instance ID: ntp:3c427a42a70bbf8
+{}
+~
+===
+
+=== orchestrator_pod check ===
+Configuration provider: file
+Configuration source: file:/etc/datadog-agent/conf.d/orchestrator_pod.d/conf.yaml.default
+Config for instance ID: orchestrator_pod:888ebc42a3817b00
+{}
+~
+Auto-discovery IDs:
+* _kube_orchestrator
+===
+
+=== postgres check ===
+Configuration provider: kubernetes-container-allinone
+Configuration source: container:containerd://663d511872d9b53bdc281efc09ba93e1b30cdc367a9780a5601c58be7bcda798
+Config for instance ID: postgres:c975648b1bc2ca9b
+dbm: "true"
+host: 10.244.2.65
+password: "********"
+port: "5432"
+tags:
+- image_id:********@sha256:d1ecc67a80f7774715a4d1f250641642379a7ea791d747eb996e5e18a6e8659b
+- image_name:ccdaniele/pdrace-postgres
+- image_tag:docker-v1-arm64
+- kube_container_name:postgresdb
+- kube_deployment:postgresdb
+- kube_namespace:default
+- kube_ownerref_kind:replicaset
+- kube_qos:BestEffort
+- kube_replica_set:postgresdb-88647cc65
+- kube_service:postgresdb-svc
+- pdcomponent:postgresdb
+- pdnamespace:default
+- pod_phase:running
+- short_image:pdrace-postgres
+username: datadog
+~
+Init Config:
+{}
+Auto-discovery IDs:
+* containerd://663d511872d9b53bdc281efc09ba93e1b30cdc367a9780a5601c58be7bcda798
+===
+
+=== sbom check ===
+Configuration provider: file
+Configuration source: file:/etc/datadog-agent/conf.d/sbom.d/conf.yaml.default
+Config for instance ID: sbom:addf1cd7a0d1bccb
+{}
+~
+Auto-discovery IDs:
+* _sbom
+===
+
+=== telemetry check ===
+Configuration provider: file
+Configuration source: file:/etc/datadog-agent/conf.d/telemetry.d/conf.yaml.default
+Config for instance ID: telemetry:4d459fc318a47aa4
+{}
+~
+===
+
+=== uptime check ===
+Configuration provider: file
+Configuration source: file:/etc/datadog-agent/conf.d/uptime.d/conf.yaml.default
+Config for instance ID: uptime:c72f390abdefdf1a
+{}
+~
+===

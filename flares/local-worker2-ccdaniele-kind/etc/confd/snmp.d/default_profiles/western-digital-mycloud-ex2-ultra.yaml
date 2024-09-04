@@ -1,0 +1,128 @@
+extends:
+- _base.yaml
+- _generic-host-resources-base.yaml
+- _generic-if.yaml
+metadata:
+  device:
+    fields:
+      type:
+        value: storage
+      vendor:
+        value: western-digital
+metric_tags:
+- OID: 1.3.6.1.4.1.5127.1.1.1.8.1.1.0
+  symbol: wdmycloudex2AgentVer
+  tag: wdmycloudex2_agent_ver
+- OID: 1.3.6.1.4.1.5127.1.1.1.8.1.2.0
+  symbol: wdmycloudex2SoftwareVersion
+  tag: wdmycloudex2_software_version
+- OID: 1.3.6.1.4.1.5127.1.1.1.8.1.3.0
+  symbol: wdmycloudex2HostName
+  tag: wdmycloudex2_host_name
+- OID: 1.3.6.1.4.1.5127.1.1.1.8.1.5.0
+  mapping:
+    0: disable
+    1: enable
+  symbol: wdmycloudex2FTPServer
+  tag: wdmycloudex2_ftp_server
+- OID: 1.3.6.1.4.1.5127.1.1.1.8.1.6.0
+  mapping:
+    0: workgroup
+    1: active_directory
+  symbol: wdmycloudex2NetType
+  tag: wdmycloudex2_net_type
+metrics:
+- MIB: HOST-RESOURCES-MIB
+  symbol:
+    OID: 1.3.6.1.2.1.25.2.3.1.5.1
+    name: memory.total
+- MIB: HOST-RESOURCES-MIB
+  symbol:
+    OID: 1.3.6.1.2.1.25.2.3.1.6.1
+    name: memory.used
+- MIB: HOST-RESOURCES-MIB
+  symbol:
+    OID: 1.3.6.1.2.1.25.3.3.1.2.196608
+    name: cpu.usage
+- MIB: WDMYCLOUDEX2-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.5127.1.1.1.8.1.9.1.1
+      name: wdmycloudex2VolumeNum
+    tag: wdmycloudex2_volume_num
+  - symbol:
+      OID: 1.3.6.1.4.1.5127.1.1.1.8.1.9.1.2
+      name: wdmycloudex2VolumeName
+    tag: wdmycloudex2_volume_name
+  - symbol:
+      OID: 1.3.6.1.4.1.5127.1.1.1.8.1.9.1.3
+      name: wdmycloudex2VolumeFsType
+    tag: wdmycloudex2_volume_fs_type
+  - symbol:
+      OID: 1.3.6.1.4.1.5127.1.1.1.8.1.9.1.4
+      name: wdmycloudex2VolumeRaidLevel
+    tag: wdmycloudex2_volume_raid_level
+  symbols:
+  - constant_value_one: true
+    name: wdmycloudex2Volume
+  table:
+    OID: 1.3.6.1.4.1.5127.1.1.1.8.1.9
+    name: wdmycloudex2VolumeTable
+- MIB: WDMYCLOUDEX2-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.5127.1.1.1.8.1.10.1.1
+      name: wdmycloudex2DiskNum
+    tag: wdmycloudex2_disk_num
+  - symbol:
+      OID: 1.3.6.1.4.1.5127.1.1.1.8.1.10.1.2
+      name: wdmycloudex2DiskVendor
+    tag: wdmycloudex2_disk_vendor
+  - symbol:
+      OID: 1.3.6.1.4.1.5127.1.1.1.8.1.10.1.3
+      name: wdmycloudex2DiskModel
+    tag: wdmycloudex2_disk_model
+  - symbol:
+      OID: 1.3.6.1.4.1.5127.1.1.1.8.1.10.1.4
+      name: wdmycloudex2DiskSerialNumber
+    tag: wdmycloudex2_disk_serial_number
+  - symbol:
+      OID: 1.3.6.1.4.1.5127.1.1.1.8.1.10.1.6
+      name: wdmycloudex2DiskCapacity
+    tag: wdmycloudex2_disk_capacity
+  symbols:
+  - constant_value_one: true
+    name: wdmycloudex2Disk
+  table:
+    OID: 1.3.6.1.4.1.5127.1.1.1.8.1.10
+    name: wdmycloudex2DiskTable
+- MIB: WDMYCLOUDEX2-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.5127.1.1.1.8.1.11.1.1
+      name: wdmycloudex2UPSNum
+    tag: wdmycloudex2_ups_num
+  - symbol:
+      OID: 1.3.6.1.4.1.5127.1.1.1.8.1.11.1.2
+      name: wdmycloudex2UPSMode
+    tag: wdmycloudex2_ups_mode
+  - symbol:
+      OID: 1.3.6.1.4.1.5127.1.1.1.8.1.11.1.3
+      name: wdmycloudex2UPSManufacturer
+    tag: wdmycloudex2_ups_manufacturer
+  - symbol:
+      OID: 1.3.6.1.4.1.5127.1.1.1.8.1.11.1.4
+      name: wdmycloudex2UPSProduct
+    tag: wdmycloudex2_ups_product
+  - symbol:
+      OID: 1.3.6.1.4.1.5127.1.1.1.8.1.11.1.6
+      name: wdmycloudex2UPSStatus
+    tag: wdmycloudex2_ups_status
+  symbols:
+  - constant_value_one: true
+    name: wdmycloudex2UPS
+  table:
+    OID: 1.3.6.1.4.1.5127.1.1.1.8.1.11
+    name: wdmycloudex2UPSTable
+sysobjectid:
+- 1.3.6.1.4.1.5127.1.1.1.8

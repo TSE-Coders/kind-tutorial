@@ -1,0 +1,160 @@
+metrics:
+- MIB: HOST-RESOURCES-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.2.1.25.4.2.1.1
+      name: hrSWRunIndex
+    table: hrSWRunTable
+    tag: run_index
+  symbols:
+  - OID: 1.3.6.1.2.1.25.5.1.1.2
+    name: hrSWRunPerfMem
+  - OID: 1.3.6.1.2.1.25.5.1.1.1
+    name: hrSWRunPerfCPU
+  table:
+    OID: 1.3.6.1.2.1.25.5.1
+    name: hrSWRunPerfTable
+- MIB: HOST-RESOURCES-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.2.1.25.4.2.1.1
+      name: hrSWRunIndex
+    table: hrSWRunTable
+    tag: run_index
+  symbols:
+  - OID: 1.3.6.1.2.1.25.4.2.1.7
+    name: hrSWRunStatus
+  table:
+    OID: 1.3.6.1.2.1.25.4.2
+    name: hrSWRunTable
+- MIB: CISCO-CVP-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.9.9.590.1.5.1.1.1
+      name: ccvpServiceIndex
+    table: ccvpServiceTable
+    tag: service_index
+  symbols:
+  - OID: 1.3.6.1.4.1.9.9.590.1.6.1.1.5
+    name: ccvpSipIntAvgLatency1
+  - OID: 1.3.6.1.4.1.9.9.590.1.6.1.1.6
+    name: ccvpSipIntAvgLatency2
+  - OID: 1.3.6.1.4.1.9.9.590.1.6.1.1.4
+    name: ccvpSipIntConnectsRcv
+  - OID: 1.3.6.1.4.1.9.9.590.1.6.1.1.3
+    name: ccvpSipIntNewCalls
+  - OID: 1.3.6.1.4.1.9.9.590.1.6.1.1.1
+    name: ccvpSipRtActiveCalls
+  - OID: 1.3.6.1.4.1.9.9.590.1.6.1.1.2
+    name: ccvpSipRtTotalCallLegs
+  table:
+    OID: 1.3.6.1.4.1.9.9.590.1.6.1
+    name: ccvpSipTable
+- MIB: CISCO-CVP-MIB
+  metric_type: gauge
+  symbol:
+    OID: 1.3.6.1.4.1.9.9.590.1.2.12.0
+    name: ccvpLicAggMaxPortsInUse
+- MIB: CISCO-CVP-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.9.9.590.1.2.2.0
+    name: ccvpLicRtPortsInUse
+- MIB: CISCO-CCM-MIB
+  metric_type: gauge
+  symbol:
+    OID: 1.3.6.1.4.1.9.9.156.1.5.8.0
+    name: ccmRegisteredGateways
+- MIB: CISCO-CCM-MIB
+  metric_type: gauge
+  symbol:
+    OID: 1.3.6.1.4.1.9.9.156.1.5.5.0
+    name: ccmRegisteredPhones
+- MIB: CISCO-CCM-MIB
+  metric_type: gauge
+  symbol:
+    OID: 1.3.6.1.4.1.9.9.156.1.5.7.0
+    name: ccmRejectedPhones
+- MIB: CISCO-CCM-MIB
+  metric_type: gauge
+  symbol:
+    OID: 1.3.6.1.4.1.9.9.156.1.5.6.0
+    name: ccmUnregisteredPhones
+- MIB: CISCO-VOICE-DIAL-CONTROL-MIB
+  metric_tags:
+  - MIB: IF-MIB
+    symbol:
+      OID: 1.3.6.1.2.1.31.1.1.1.1
+      name: ifName
+    table: ifXTable
+    tag: interface
+  symbols:
+  - OID: 1.3.6.1.4.1.9.9.63.1.3.8.5.1.1
+    name: cvCallVolMediaIncomingCalls
+  - OID: 1.3.6.1.4.1.9.9.63.1.3.8.5.1.2
+    name: cvCallVolMediaOutgoingCalls
+  table:
+    OID: 1.3.6.1.4.1.9.9.63.1.3.8.5
+    name: cvCallVolIfTable
+- MIB: CISCO-VOICE-DIAL-CONTROL-MIB
+  metric_tags:
+  - index: 1
+    tag: peer_index
+  symbols:
+  - OID: 1.3.6.1.4.1.9.9.63.1.3.8.4.1.1
+    name: cvCallVolPeerIncomingCalls
+  - OID: 1.3.6.1.4.1.9.9.63.1.3.8.4.1.2
+    name: cvCallVolPeerOutgoingCalls
+  table:
+    OID: 1.3.6.1.4.1.9.9.63.1.3.8.4
+    name: cvCallVolPeerTable
+- MIB: DIAL-CONTROL-MIB
+  metric_tags:
+  - index: 1
+    tag: peer_index
+  metric_type: monotonic_count
+  symbols:
+  - OID: 1.3.6.1.2.1.10.21.1.2.2.1.5
+    name: dialCtlPeerStatsAcceptCalls
+  - OID: 1.3.6.1.2.1.10.21.1.2.2.1.4
+    name: dialCtlPeerStatsFailCalls
+  - OID: 1.3.6.1.2.1.10.21.1.2.2.1.6
+    name: dialCtlPeerStatsRefuseCalls
+  - OID: 1.3.6.1.2.1.10.21.1.2.2.1.3
+    name: dialCtlPeerStatsSuccessCalls
+  table:
+    OID: 1.3.6.1.2.1.10.21.1.2.2
+    name: dialCtlPeerStatsTable
+- MIB: CISCO-CONTACT-CENTER-APPS-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.9.9.473.1.3.6.1.1
+      name: cccaPimNumber
+    tag: pim_num
+  - symbol:
+      OID: 1.3.6.1.4.1.9.9.473.1.3.6.1.2
+      name: cccaPimPeripheralName
+    tag: pim_name
+  - symbol:
+      OID: 1.3.6.1.4.1.9.9.473.1.3.6.1.5
+      name: cccaPimPeripheralHostName
+    tag: pim_host
+  symbols:
+  - OID: 1.3.6.1.4.1.9.9.473.1.3.6.1.4
+    name: cccaPimStatus
+  table:
+    OID: 1.3.6.1.4.1.9.9.473.1.3.6
+    name: cccaPimTable
+- MIB: CISCO-CONTACT-CENTER-APPS-MIB
+  metric_tags:
+  - index: 1
+    tag: instance_number
+  symbols:
+  - OID: 1.3.6.1.4.1.9.9.473.1.3.1.1.3
+    name: cccaRouterAgentsLoggedOn
+  - OID: 1.3.6.1.4.1.9.9.473.1.3.1.1.4
+    name: cccaRouterCallsInProgress
+  - OID: 1.3.6.1.4.1.9.9.473.1.3.1.1.8
+    name: cccaRouterCallsInQueue
+  table:
+    OID: 1.3.6.1.4.1.9.9.473.1.3.1
+    name: cccaRouterTable

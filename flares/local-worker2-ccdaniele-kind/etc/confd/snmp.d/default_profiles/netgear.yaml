@@ -1,0 +1,9 @@
+extends:
+- _base.yaml
+- _generic-if.yaml
+metadata:
+  device:
+    fields:
+      vendor:
+        value: netgear
+sysobjectid: 1.3.6.1.4.1.4526.*

@@ -1,0 +1,5 @@
+ad_identifiers:
+- couchdb
+init_config: null
+instances:
+- server: http://%%host%%:5984

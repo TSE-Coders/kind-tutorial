@@ -1,0 +1,461 @@
+2024-08-19 15:35:57 UTC | CLUSTER | INFO | (pkg/util/log/log.go:826 in func1) | Starting to load the configuration
+2024-08-19 15:35:57 UTC | CLUSTER | INFO | (pkg/util/log/log.go:826 in func1) | Loading proxy settings
+2024-08-19 15:35:57 UTC | CLUSTER | DEBUG | (pkg/util/log/log.go:791 in func1) | 'use_proxy_for_cloud_metadata' is enabled: adding cloud provider URL to the no_proxy list
+2024-08-19 15:35:57 UTC | CLUSTER | INFO | (pkg/util/log/log.go:826 in func1) | Starting to resolve secrets
+2024-08-19 15:35:57 UTC | CLUSTER | WARN | (pkg/util/log/log.go:871 in func1) | Agent configuration relax permissions constraint on the secret backend cmd, Group can read and exec
+2024-08-19 15:35:57 UTC | CLUSTER | INFO | (pkg/util/log/log.go:826 in func1) | Finished resolving secrets
+2024-08-19 15:35:57 UTC | CLUSTER | DEBUG | (pkg/util/log/log.go:786 in func1) | FIPS mode is disabled
+2024-08-19 15:35:57 UTC | CLUSTER | INFO | (pkg/util/log/log.go:831 in func1) | 2 Features detected from environment: kubernetes,kube_orchestratorexplorer
+2024-08-19 15:35:57 UTC | CLUSTER | INFO | (comp/core/tagger/taggerimpl/tagger.go:160 in newTaggerClient) | TaggerClient is created, defaultTagger type:  *local.Tagger
+2024-08-19 15:35:57 UTC | CLUSTER | INFO | (comp/forwarder/defaultforwarder/default_forwarder.go:242 in NewDefaultForwarder) | Retry queue storage on disk is disabled
+2024-08-19 15:35:57 UTC | CLUSTER | DEBUG | (pkg/util/hostname/providers.go:154 in GetWithProvider) | trying to get hostname from 'configuration' provider
+2024-08-19 15:35:57 UTC | CLUSTER | DEBUG | (pkg/util/hostname/providers.go:161 in GetWithProvider) | unable to get the hostname from 'configuration' provider: hostname is empty
+2024-08-19 15:35:57 UTC | CLUSTER | DEBUG | (pkg/util/hostname/providers.go:154 in GetWithProvider) | trying to get hostname from 'hostnameFile' provider
+2024-08-19 15:35:57 UTC | CLUSTER | DEBUG | (pkg/util/hostname/providers.go:161 in GetWithProvider) | unable to get the hostname from 'hostnameFile' provider: 'hostname_file' configuration is not enabled
+2024-08-19 15:35:57 UTC | CLUSTER | DEBUG | (pkg/util/hostname/providers.go:154 in GetWithProvider) | trying to get hostname from 'fargate' provider
+2024-08-19 15:35:57 UTC | CLUSTER | DEBUG | (pkg/util/hostname/providers.go:161 in GetWithProvider) | unable to get the hostname from 'fargate' provider: agent is not runnning on Fargate
+2024-08-19 15:35:57 UTC | CLUSTER | DEBUG | (pkg/util/hostname/providers.go:154 in GetWithProvider) | trying to get hostname from 'gce' provider
+2024-08-19 15:35:57 UTC | CLUSTER | DEBUG | (pkg/config/setup/config.go:2230 in IsCloudProviderEnabled) | cloud_provider_metadata is set to [aws gcp azure alibaba oracle ibm] in agent configuration, trying endpoints for GCP Cloud Provider
+2024-08-19 15:35:57 UTC | CLUSTER | DEBUG | (pkg/util/http/transport.go:144 in 1) | URL 'http://169.254.169.254/computeMetadata/v1/instance/hostname' matches no_proxy list item '169.254.169.254': not using any proxy
+2024-08-19 15:35:58 UTC | CLUSTER | DEBUG | (pkg/util/hostname/providers.go:161 in GetWithProvider) | unable to get the hostname from 'gce' provider: unable to retrieve hostname from GCE: GCE metadata API error: Get "http://169.254.169.254/computeMetadata/v1/instance/hostname": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+2024-08-19 15:35:58 UTC | CLUSTER | DEBUG | (pkg/util/hostname/providers.go:154 in GetWithProvider) | trying to get hostname from 'azure' provider
+2024-08-19 15:35:58 UTC | CLUSTER | DEBUG | (pkg/util/hostname/providers.go:161 in GetWithProvider) | unable to get the hostname from 'azure' provider: azure_hostname_style is set to 'os'
+2024-08-19 15:35:58 UTC | CLUSTER | DEBUG | (pkg/util/hostname/providers.go:154 in GetWithProvider) | trying to get hostname from 'fqdn' provider
+2024-08-19 15:35:58 UTC | CLUSTER | DEBUG | (pkg/util/hostname/providers.go:161 in GetWithProvider) | unable to get the hostname from 'fqdn' provider: FQDN hostname is not usable
+2024-08-19 15:35:58 UTC | CLUSTER | DEBUG | (pkg/util/hostname/providers.go:154 in GetWithProvider) | trying to get hostname from 'container' provider
+2024-08-19 15:35:58 UTC | CLUSTER | DEBUG | (pkg/util/hostname/container.go:34 in callContainerProvider) | GetHostname trying provider 'kube_apiserver' ...
+2024-08-19 15:35:58 UTC | CLUSTER | DEBUG | (pkg/util/kubernetes/apiserver/apiserver.go:405 in connect) | Connected to kubernetes apiserver, version v1
+2024-08-19 15:35:58 UTC | CLUSTER | INFO | (pkg/util/kubernetes/clustername/clustername.go:78 in getClusterName) | Got cluster name ccdaniele-kind from config
+2024-08-19 15:35:58 UTC | CLUSTER | INFO | (pkg/util/kubernetes/clustername/clustername.go:129 in getClusterName) | Using cluster name ccdaniele-kind from the node label
+2024-08-19 15:35:58 UTC | CLUSTER | DEBUG | (pkg/util/hostname/providers.go:165 in GetWithProvider) | hostname provider 'container' successfully found hostname 'ccdaniele-kind-worker-ccdaniele-kind'
+2024-08-19 15:35:58 UTC | CLUSTER | DEBUG | (pkg/util/hostname/providers.go:154 in GetWithProvider) | trying to get hostname from 'os' provider
+2024-08-19 15:35:58 UTC | CLUSTER | DEBUG | (pkg/util/hostname/providers.go:161 in GetWithProvider) | unable to get the hostname from 'os' provider: OS hostname is not usable
+2024-08-19 15:35:58 UTC | CLUSTER | DEBUG | (pkg/util/hostname/providers.go:154 in GetWithProvider) | trying to get hostname from 'aws' provider
+2024-08-19 15:35:58 UTC | CLUSTER | DEBUG | (pkg/util/hostname/common.go:131 in fromEC2) | Detected a default EC2 hostname: false
+2024-08-19 15:35:58 UTC | CLUSTER | DEBUG | (pkg/util/hostname/common.go:132 in fromEC2) | ec2_prioritize_instance_id_as_hostname is set to false
+2024-08-19 15:35:58 UTC | CLUSTER | DEBUG | (pkg/util/hostname/providers.go:161 in GetWithProvider) | unable to get the hostname from 'aws' provider: not retrieving hostname from AWS: the host is not an ECS instance and other providers already retrieve non-default hostnames
+2024-08-19 15:35:58 UTC | CLUSTER | INFO | (comp/forwarder/defaultforwarder/default_forwarder.go:242 in NewDefaultForwarder) | Retry queue storage on disk is disabled
+2024-08-19 15:35:58 UTC | CLUSTER | INFO | (pkg/aggregator/demultiplexer.go:224 in getDogStatsDWorkerAndPipelineCount) | Dogstatsd workers and pipelines count:  10  workers,  1  pipelines
+2024-08-19 15:35:58 UTC | CLUSTER | INFO | (pkg/aggregator/demultiplexer.go:142 in GetDogStatsDWorkerAndPipelineCount) | Dogstatsd configured to run with 10 workers and 1 pipelines
+2024-08-19 15:35:58 UTC | CLUSTER | DEBUG | (pkg/aggregator/demultiplexer_agent.go:164 in initAgentDemultiplexer) | the Demultiplexer will use 1 pipelines
+2024-08-19 15:35:58 UTC | CLUSTER | INFO | (pkg/aggregator/time_sampler.go:54 in NewTimeSampler) | Creating TimeSampler #0
+2024-08-19 15:35:58 UTC | CLUSTER | WARN | (pkg/config/model/viper.go:214 in checkKnownKey) | config key runtime_security_config.sbom.enabled is unknown
+2024-08-19 15:35:58 UTC | CLUSTER | INFO | (comp/core/workloadmeta/store.go:99 in start) | workloadmeta store initialized successfully
+2024-08-19 15:35:58 UTC | CLUSTER | INFO | (comp/forwarder/defaultforwarder/default_forwarder.go:391 in Start) | Forwarder started, sending to 1 endpoint(s) with 1 worker(s) each: "https://7-55-2-app.agent.datadoghq.com" (1 api key(s))
+2024-08-19 15:35:58 UTC | CLUSTER | INFO | (comp/forwarder/defaultforwarder/default_forwarder.go:391 in Start) | Forwarder started, sending to 1 endpoint(s) with 1 worker(s) each: "https://orchestrator.datadoghq.com" (1 api key(s))
+2024-08-19 15:35:58 UTC | CLUSTER | INFO | (pkg/collector/runner/runner.go:97 in ensureMinWorkers) | Runner 1 added 4 workers (total: 4)
+2024-08-19 15:35:58 UTC | CLUSTER | DEBUG | (pkg/collector/scheduler/scheduler.go:164 in func1) | Starting scheduler loop...
+2024-08-19 15:35:58 UTC | CLUSTER | DEBUG | (comp/collector/collector/collectorimpl/collector.go:162 in start) | Collector up and running!
+2024-08-19 15:35:58 UTC | CLUSTER | DEBUG | (comp/core/healthprobe/impl/healthprobe.go:47 in start) | Health check listening on port 5556
+2024-08-19 15:35:58 UTC | CLUSTER | DEBUG | (comp/core/workloadmeta/collectors/internal/kubeapiserver/node.go:42 in newNodeStore) | node reflector enabled
+2024-08-19 15:35:58 UTC | CLUSTER | DEBUG | (pkg/collector/worker/worker.go:123 in Run) | Runner 1, worker 1: Ready to process checks...
+2024-08-19 15:35:58 UTC | CLUSTER | DEBUG | (comp/core/workloadmeta/collectors/internal/kubeapiserver/pod.go:44 in newPodStore) | pod reflector enabled
+2024-08-19 15:35:58 UTC | CLUSTER | INFO | (comp/core/workloadmeta/store.go:569 in startCandidates) | workloadmeta collector "kubeapiserver" started successfully
+2024-08-19 15:35:58 UTC | CLUSTER | INFO | (comp/core/workloadmeta/collectors/internal/kubeapiserver/kubeapiserver.go:153 in startReadiness) | Starting readiness waiting for 3 k8s reflectors to sync
+2024-08-19 15:35:58 UTC | CLUSTER | WARN | (pkg/config/model/viper.go:214 in checkKnownKey) | config key cluster_agent.max_connections is unknown
+2024-08-19 15:35:58 UTC | CLUSTER | DEBUG | (api/v1/install.go:23 in InstallMetadataEndpoints) | Registering metadata endpoints
+2024-08-19 15:35:58 UTC | CLUSTER | INFO | (pkg/api/security/security.go:142 in fetchAuthToken) | [/go/src/github.com/DataDog/datadog-agent/pkg/api/util/util.go:54] Creating a new authentication token
+2024-08-19 15:35:58 UTC | CLUSTER | INFO | (pkg/api/security/security.go:241 in saveAuthToken) | Saving a new authentication token in /etc/datadog-agent/auth_token
+2024-08-19 15:35:58 UTC | CLUSTER | INFO | (pkg/api/security/security.go:256 in saveAuthToken) | Wrote auth token in /etc/datadog-agent/auth_token
+2024-08-19 15:35:58 UTC | CLUSTER | INFO | (pkg/api/security/security.go:155 in fetchAuthToken) | Saved a new authentication token to /etc/datadog-agent/auth_token
+2024-08-19 15:35:58 UTC | CLUSTER | INFO | (pkg/api/security/security.go:194 in getClusterAgentAuthToken) | Using configured cluster_agent.auth_token
+2024-08-19 15:35:58 UTC | CLUSTER | INFO | (pkg/api/security/security.go:74 in GenerateRootCert) | [/go/src/github.com/DataDog/datadog-agent/cmd/cluster-agent/api/server.go:89] Generating root certificate for hosts 127.0.0.1, localhost
+2024-08-19 15:35:58 UTC | CLUSTER | DEBUG | (pkg/collector/worker/worker.go:123 in Run) | Runner 1, worker 2: Ready to process checks...
+2024-08-19 15:35:58 UTC | CLUSTER | DEBUG | (pkg/collector/worker/worker.go:123 in Run) | Runner 1, worker 4: Ready to process checks...
+2024-08-19 15:35:58 UTC | CLUSTER | DEBUG | (pkg/collector/worker/worker.go:123 in Run) | Runner 1, worker 3: Ready to process checks...
+2024-08-19 15:35:58 UTC | CLUSTER | INFO | (comp/core/tagger/taggerimpl/collectors/workloadmeta_main.go:138 in stream) | workloadmeta tagger collector started
+2024-08-19 15:35:58 UTC | CLUSTER | DEBUG | (pkg/aggregator/demultiplexer_agent.go:259 in run) | Starting forwarders
+2024-08-19 15:35:58 UTC | CLUSTER | DEBUG | (pkg/aggregator/demultiplexer_agent.go:267 in run) | not starting the container lifecycle forwarder
+2024-08-19 15:35:58 UTC | CLUSTER | DEBUG | (pkg/aggregator/demultiplexer_agent.go:270 in run) | Forwarders started
+2024-08-19 15:35:58 UTC | CLUSTER | INFO | (subcommands/start/command.go:273 in start) | Waiting to obtain APIClient connection
+2024-08-19 15:35:58 UTC | CLUSTER | INFO | (subcommands/start/command.go:278 in start) | Got APIClient connection
+2024-08-19 15:35:58 UTC | CLUSTER | INFO | (subcommands/start/command.go:285 in start) | Hostname is: ccdaniele-kind-worker-ccdaniele-kind
+2024-08-19 15:35:58 UTC | CLUSTER | DEBUG | (pkg/util/kubernetes/apiserver/leaderelection/leaderelection.go:140 in init) | Init LeaderEngine with HolderIdentity: "agent-kind-datadog-cluster-agent-75dd97446-nh2pf"
+2024-08-19 15:35:58 UTC | CLUSTER | DEBUG | (pkg/util/kubernetes/apiserver/leaderelection/leaderelection.go:148 in init) | LeaderLeaseDuration: 1m0s
+2024-08-19 15:35:58 UTC | CLUSTER | DEBUG | (pkg/util/kubernetes/apiserver/leaderelection/leaderelection.go:175 in init) | leader election will use ConfigMaps to store the leader token
+2024-08-19 15:35:58 UTC | CLUSTER | DEBUG | (pkg/util/kubernetes/apiserver/leaderelection/leaderelection_engine.go:147 in newElection) | Current registered leader is "agent-kind-datadog-cluster-agent-668c55cbfc-v2mnv", building leader elector "agent-kind-datadog-cluster-agent-75dd97446-nh2pf" as candidate
+2024-08-19 15:35:58 UTC | CLUSTER | DEBUG | (pkg/util/kubernetes/apiserver/leaderelection/leaderelection.go:183 in init) | Leader Engine for "agent-kind-datadog-cluster-agent-75dd97446-nh2pf" successfully initialized
+2024-08-19 15:35:58 UTC | CLUSTER | INFO | (pkg/util/kubernetes/apiserver/controllers/controllers.go:85 in StartControllers) | "autoscalers" is disabled
+2024-08-19 15:35:58 UTC | CLUSTER | INFO | (pkg/util/kubernetes/apiserver/controllers/metadata_controller.go:74 in run) | Starting metadata controller
+2024-08-19 15:35:58 UTC | CLUSTER | DEBUG | (pkg/util/kubernetes/apiserver/controllers/metadata_controller.go:154 in addEndpoints) | Adding endpoints default/agent-kind-datadog
+2024-08-19 15:35:58 UTC | CLUSTER | DEBUG | (pkg/util/kubernetes/apiserver/controllers/metadata_controller.go:154 in addEndpoints) | Adding endpoints default/agent-kind-datadog-cluster-agent
+2024-08-19 15:35:58 UTC | CLUSTER | DEBUG | (pkg/util/kubernetes/apiserver/controllers/metadata_controller.go:154 in addEndpoints) | Adding endpoints default/agent-kind-datadog-cluster-agent-admission-controller
+2024-08-19 15:35:58 UTC | CLUSTER | DEBUG | (pkg/util/kubernetes/apiserver/controllers/metadata_controller.go:154 in addEndpoints) | Adding endpoints default/kubernetes
+2024-08-19 15:35:58 UTC | CLUSTER | DEBUG | (pkg/util/kubernetes/apiserver/controllers/metadata_controller.go:154 in addEndpoints) | Adding endpoints kube-system/kube-dns
+2024-08-19 15:35:58 UTC | CLUSTER | DEBUG | (pkg/util/kubernetes/apiserver/util.go:47 in func1) | Sync done for informer v1/endpoints in 100.195833ms, last resource version: 4694
+2024-08-19 15:35:58 UTC | CLUSTER | DEBUG | (pkg/util/kubernetes/apiserver/util.go:47 in func1) | Sync done for informer v1/services in 100.27525ms, last resource version: 4631
+2024-08-19 15:35:58 UTC | CLUSTER | DEBUG | (pkg/util/kubernetes/apiserver/controllers/metadata_controller.go:141 in addNode) | Detected node ccdaniele-kind-control-plane
+2024-08-19 15:35:58 UTC | CLUSTER | DEBUG | (pkg/util/kubernetes/apiserver/controllers/metadata_controller.go:141 in addNode) | Detected node ccdaniele-kind-worker
+2024-08-19 15:35:58 UTC | CLUSTER | DEBUG | (pkg/util/kubernetes/apiserver/controllers/metadata_controller.go:141 in addNode) | Detected node ccdaniele-kind-worker2
+2024-08-19 15:35:58 UTC | CLUSTER | INFO | (subcommands/start/command.go:334 in start) | Cluster ID: f5f414af-e9c7-4d66-9ded-567af57bec89, Cluster Name: ccdaniele-kind
+2024-08-19 15:35:58 UTC | CLUSTER | INFO | (comp/core/autodiscovery/providers/config_reader.go:171 in read) | Searching for configuration files at: /etc/datadog-agent/conf.d
+2024-08-19 15:35:58 UTC | CLUSTER | DEBUG | (comp/core/autodiscovery/providers/config_reader.go:295 in collectEntry) | Found valid configuration in file: /etc/datadog-agent/conf.d/kubernetes_apiserver.d/conf.yaml.default
+2024-08-19 15:35:58 UTC | CLUSTER | DEBUG | (comp/core/autodiscovery/providers/config_reader.go:295 in collectEntry) | Found valid configuration in file: /etc/datadog-agent/conf.d/kubernetes_state_core.yaml.default
+2024-08-19 15:35:58 UTC | CLUSTER | DEBUG | (comp/core/autodiscovery/providers/config_reader.go:295 in collectEntry) | Found valid configuration in file: /etc/datadog-agent/conf.d/orchestrator.d/conf.yaml.default
+2024-08-19 15:35:58 UTC | CLUSTER | DEBUG | (comp/core/autodiscovery/providers/config_reader.go:295 in collectEntry) | Found valid configuration in file: /etc/datadog-agent/conf.d/orchestrator.yaml
+2024-08-19 15:35:58 UTC | CLUSTER | INFO | (comp/core/autodiscovery/providers/config_reader.go:171 in read) | Searching for configuration files at: /opt/datadog-agent/bin/dist/conf.d
+2024-08-19 15:35:58 UTC | CLUSTER | WARN | (comp/core/autodiscovery/providers/config_reader.go:175 in read) | Skipping, open /opt/datadog-agent/bin/dist/conf.d: no such file or directory
+2024-08-19 15:35:58 UTC | CLUSTER | INFO | (comp/core/autodiscovery/providers/config_reader.go:171 in read) | Searching for configuration files at: 
+2024-08-19 15:35:58 UTC | CLUSTER | WARN | (comp/core/autodiscovery/providers/config_reader.go:175 in read) | Skipping, open : no such file or directory
+2024-08-19 15:35:58 UTC | CLUSTER | DEBUG | (comp/core/autodiscovery/providers/config_reader.go:229 in read) | Ignoring default config file 'orchestrator' because non-default config was found
+2024-08-19 15:35:58 UTC | CLUSTER | DEBUG | (comp/core/autodiscovery/autodiscoveryimpl/autoconfig.go:485 in addListenerCandidates) | Listener kube_endpoints was registered
+2024-08-19 15:35:58 UTC | CLUSTER | DEBUG | (comp/core/autodiscovery/autodiscoveryimpl/autoconfig.go:485 in addListenerCandidates) | Listener kube_services was registered
+2024-08-19 15:35:58 UTC | CLUSTER | DEBUG | (comp/core/autodiscovery/autodiscoveryimpl/autoconfig.go:485 in addListenerCandidates) | Listener environment was registered
+2024-08-19 15:35:58 UTC | CLUSTER | DEBUG | (comp/core/autodiscovery/autodiscoveryimpl/autoconfig.go:485 in addListenerCandidates) | Listener static config was registered
+2024-08-19 15:35:58 UTC | CLUSTER | INFO | (comp/core/autodiscovery/autodiscoveryimpl/autoconfig.go:499 in initListenerCandidates) | kube_endpoints listener successfully started
+2024-08-19 15:35:58 UTC | CLUSTER | DEBUG | (comp/core/autodiscovery/listeners/kube_endpoints.go:344 in createService) | Creating a new AD service: kube_endpoint_uid://kube-system/kube-dns/10.244.0.2
+2024-08-19 15:35:58 UTC | CLUSTER | DEBUG | (comp/core/autodiscovery/listeners/kube_endpoints.go:344 in createService) | Creating a new AD service: kube_endpoint_uid://kube-system/kube-dns/10.244.0.4
+2024-08-19 15:35:58 UTC | CLUSTER | DEBUG | (comp/core/autodiscovery/listeners/kube_endpoints.go:344 in createService) | Creating a new AD service: kube_endpoint_uid://kube-system/kube-dns/10.244.0.2
+2024-08-19 15:35:58 UTC | CLUSTER | DEBUG | (comp/core/autodiscovery/listeners/kube_endpoints.go:344 in createService) | Creating a new AD service: kube_endpoint_uid://kube-system/kube-dns/10.244.0.4
+2024-08-19 15:35:58 UTC | CLUSTER | DEBUG | (comp/core/autodiscovery/autodiscoveryimpl/configmgr.go:126 in processNewService) | Service kube_endpoint_uid://kube-system/kube-dns/10.244.0.2 is already tracked by autodiscovery
+2024-08-19 15:35:58 UTC | CLUSTER | DEBUG | (comp/core/autodiscovery/autodiscoveryimpl/configmgr.go:126 in processNewService) | Service kube_endpoint_uid://kube-system/kube-dns/10.244.0.4 is already tracked by autodiscovery
+2024-08-19 15:35:58 UTC | CLUSTER | INFO | (comp/core/autodiscovery/autodiscoveryimpl/autoconfig.go:499 in initListenerCandidates) | kube_services listener successfully started
+2024-08-19 15:35:58 UTC | CLUSTER | INFO | (comp/core/autodiscovery/autodiscoveryimpl/autoconfig.go:499 in initListenerCandidates) | environment listener successfully started
+2024-08-19 15:35:58 UTC | CLUSTER | INFO | (comp/core/autodiscovery/autodiscoveryimpl/autoconfig.go:499 in initListenerCandidates) | static config listener successfully started
+2024-08-19 15:35:58 UTC | CLUSTER | DEBUG | (pkg/collector/scheduler.go:75 in InitCheckScheduler) | Added Core Check Loader to Check Scheduler
+2024-08-19 15:35:58 UTC | CLUSTER | INFO | (comp/core/autodiscovery/autodiscoveryimpl/config_poller.go:168 in collectOnce) | file provider: collected 3 new configurations, removed 0
+2024-08-19 15:35:58 UTC | CLUSTER | INFO | (comp/core/autodiscovery/autodiscoveryimpl/autoconfig.go:391 in LoadAndRun) | Started config provider "file"
+2024-08-19 15:35:58 UTC | CLUSTER | DEBUG | (comp/core/autodiscovery/autodiscoveryimpl/config_poller.go:170 in collectOnce) | kubernetes-endpoints provider: no configuration change
+2024-08-19 15:35:58 UTC | CLUSTER | INFO | (comp/core/autodiscovery/autodiscoveryimpl/autoconfig.go:389 in LoadAndRun) | Started config provider "kubernetes-endpoints", polled every 10s
+2024-08-19 15:35:58 UTC | CLUSTER | DEBUG | (comp/core/autodiscovery/autodiscoveryimpl/config_poller.go:170 in collectOnce) | kubernetes-services provider: no configuration change
+2024-08-19 15:35:58 UTC | CLUSTER | INFO | (comp/core/autodiscovery/autodiscoveryimpl/autoconfig.go:389 in LoadAndRun) | Started config provider "kubernetes-services", polled every 10s
+2024-08-19 15:35:58 UTC | CLUSTER | INFO | (pkg/clusteragent/clusterchecks/dispatcher_main.go:70 in newDispatcher) | Adding both tags cluster_name and kube_cluster_name. You can use 'disable_cluster_name_tag_key' in the Agent config to keep the kube_cluster_name tag only
+2024-08-19 15:35:58 UTC | CLUSTER | INFO | (subcommands/start/command.go:533 in setupClusterCheck) | Started cluster check Autodiscovery
+2024-08-19 15:35:58 UTC | CLUSTER | DEBUG | (api/v1/install.go:33 in InstallChecksEndpoints) | Registering checks endpoints
+2024-08-19 15:35:58 UTC | CLUSTER | INFO | (pkg/clusteragent/languagedetection/patcher.go:103 in func1) | Starting language detection patcher
+2024-08-19 15:35:58 UTC | CLUSTER | INFO | (subcommands/start/command.go:454 in start) | Auto instrumentation patcher is disabled
+2024-08-19 15:35:58 UTC | CLUSTER | INFO | (comp/core/autodiscovery/listeners/environment.go:64 in createServices) | Listener created kube_orchestrator service from environment
+2024-08-19 15:35:58 UTC | CLUSTER | DEBUG | (comp/core/autodiscovery/autodiscoveryimpl/configmgr.go:126 in processNewService) | Service kube_service://kube-system/kube-dns is already tracked by autodiscovery
+2024-08-19 15:35:58 UTC | CLUSTER | INFO | (comp/core/autodiscovery/listeners/environment.go:64 in createServices) | Listener created kubelet service from environment
+2024-08-19 15:35:58 UTC | CLUSTER | INFO | (comp/core/autodiscovery/listeners/environment.go:71 in createServices) | Listener created container service from environment
+2024-08-19 15:35:58 UTC | CLUSTER | INFO | (pkg/clusteragent/clusterchecks/handler.go:116 in Run) | Becoming leader, waiting 30s for node-agents to report
+2024-08-19 15:35:58 UTC | CLUSTER | INFO | (pkg/util/kubernetes/apiserver/leaderelection/leaderelection.go:230 in runLeaderElection) | Starting leader election process for "agent-kind-datadog-cluster-agent-75dd97446-nh2pf"...
+2024-08-19 15:35:58 UTC | CLUSTER | INFO | (client-go@v0.28.6/tools/leaderelection/leaderelection.go:250 in acquire) | attempting to acquire leader lease default/agent-kind-datadog-leader-election...
+2024-08-19 15:35:58 UTC | CLUSTER | DEBUG | (pkg/collector/scheduler.go:191 in getChecks) | Loading check instance for check 'orchestrator' using default loaders
+2024-08-19 15:35:58 UTC | CLUSTER | INFO | (pkg/util/kubernetes/apiserver/leaderelection/leaderelection_engine.go:152 in func1) | New leader "agent-kind-datadog-cluster-agent-668c55cbfc-v2mnv"
+2024-08-19 15:35:58 UTC | CLUSTER | ERROR | (pkg/clusteragent/admission/controllers/webhook/controller_base.go:107 in mutatingWebhooks) | failed to register CWS Instrumentation webhook: can't initialize CWS Instrumentation in remote_copy mode without providing a service account name in config (cluster_agent.service_account_name)
+2024-08-19 15:35:58 UTC | CLUSTER | INFO | (pkg/clusteragent/admission/controllers/webhook/controller_v1.go:90 in Run) | Starting webhook controller for secret default/webhook-certificate and webhook datadog-webhook - Using admissionregistration/v1
+2024-08-19 15:35:58 UTC | CLUSTER | INFO | (pkg/clusteragent/admission/controllers/secret/controller.go:78 in Run) | Starting secrets controller for default/webhook-certificate
+2024-08-19 15:35:58 UTC | CLUSTER | WARN | (pkg/collector/corechecks/cluster/orchestrator/collector_bundle.go:179 in addCollectorFromConfig) | check:orchestrator | collector nodes has already been added
+2024-08-19 15:35:58 UTC | CLUSTER | DEBUG | (pkg/util/kubernetes/apiserver/util.go:83 in func1) | Sync done for informer v1/pods in 292ns, last resource version: 4692
+2024-08-19 15:35:59 UTC | CLUSTER | DEBUG | (pkg/util/kubernetes/apiserver/util.go:47 in func1) | Sync done for informer admissionregistration.k8s.io/v1/mutatingwebhookconfigurations in 100.066417ms, last resource version: 4631
+2024-08-19 15:35:59 UTC | CLUSTER | DEBUG | (pkg/clusteragent/admission/controllers/webhook/controller_v1.go:155 in reconcile) | The Webhook datadog-webhook was found, updating it
+2024-08-19 15:35:59 UTC | CLUSTER | DEBUG | (pkg/util/kubernetes/apiserver/util.go:47 in func1) | Sync done for informer v1/secrets in 100.092291ms, last resource version: 4634
+2024-08-19 15:35:59 UTC | CLUSTER | INFO | (subcommands/start/command.go:493 in start) | All components started. Cluster Agent now running.
+2024-08-19 15:35:59 UTC | CLUSTER | DEBUG | (pkg/clusteragent/admission/controllers/secret/controller.go:216 in reconcile) | The certificate is up-to-date, doing nothing. Duration before expiration: 8759h22m9.937535581s
+2024-08-19 15:35:59 UTC | CLUSTER | DEBUG | (pkg/clusteragent/admission/controllers/secret/controller.go:179 in processNextWorkItem) | Secret default/webhook-certificate reconciled successfully
+2024-08-19 15:35:59 UTC | CLUSTER | DEBUG | (pkg/util/kubernetes/apiserver/util.go:83 in func1) | Sync done for informer rbac.authorization.k8s.io/v1/clusterroles in 100.048125ms, last resource version: 4687
+2024-08-19 15:35:59 UTC | CLUSTER | DEBUG | (pkg/util/kubernetes/apiserver/util.go:83 in func1) | Sync done for informer rbac.authorization.k8s.io/v1/roles in 100.121958ms, last resource version: 4630
+2024-08-19 15:35:59 UTC | CLUSTER | DEBUG | (pkg/util/kubernetes/apiserver/util.go:83 in func1) | Sync done for informer apps/v1/deployments in 100.071625ms, last resource version: 4659
+2024-08-19 15:35:59 UTC | CLUSTER | DEBUG | (pkg/util/kubernetes/apiserver/util.go:83 in func1) | Sync done for informer apps/v1/daemonsets in 100.133958ms, last resource version: 4671
+2024-08-19 15:35:59 UTC | CLUSTER | DEBUG | (pkg/util/kubernetes/apiserver/util.go:83 in func1) | Sync done for informer clusters in 100.131875ms, last resource version: 4629
+2024-08-19 15:35:59 UTC | CLUSTER | DEBUG | (pkg/util/kubernetes/apiserver/util.go:83 in func1) | Sync done for informer rbac.authorization.k8s.io/v1/clusterrolebindings in 100.109708ms, last resource version: 4694
+2024-08-19 15:35:59 UTC | CLUSTER | DEBUG | (pkg/util/kubernetes/apiserver/util.go:83 in func1) | Sync done for informer v1/serviceaccounts in 100.106167ms, last resource version: 4627
+2024-08-19 15:35:59 UTC | CLUSTER | DEBUG | (pkg/util/kubernetes/apiserver/util.go:83 in func1) | Sync done for informer batch/v1/jobs in 100.104834ms, last resource version: 4672
+2024-08-19 15:35:59 UTC | CLUSTER | DEBUG | (pkg/util/kubernetes/apiserver/util.go:83 in func1) | Sync done for informer rbac.authorization.k8s.io/v1/rolebindings in 100.124167ms, last resource version: 4687
+2024-08-19 15:35:59 UTC | CLUSTER | DEBUG | (pkg/util/kubernetes/apiserver/util.go:83 in func1) | Sync done for informer v1/namespaces in 100.134833ms, last resource version: 4629
+2024-08-19 15:35:59 UTC | CLUSTER | DEBUG | (pkg/util/kubernetes/apiserver/util.go:83 in func1) | Sync done for informer autoscaling/v2/horizontalpodautoscalers in 100.130333ms, last resource version: 4627
+2024-08-19 15:35:59 UTC | CLUSTER | DEBUG | (pkg/util/kubernetes/apiserver/util.go:83 in func1) | Sync done for informer networking.k8s.io/v1/ingresses in 100.058334ms, last resource version: 4630
+2024-08-19 15:35:59 UTC | CLUSTER | DEBUG | (pkg/util/kubernetes/apiserver/util.go:83 in func1) | Sync done for informer batch/v1/cronjobs in 100.042791ms, last resource version: 4631
+2024-08-19 15:35:59 UTC | CLUSTER | DEBUG | (pkg/util/kubernetes/apiserver/util.go:83 in func1) | Sync done for informer v1/persistentvolumes in 100.063125ms, last resource version: 4630
+2024-08-19 15:35:59 UTC | CLUSTER | DEBUG | (pkg/util/kubernetes/apiserver/util.go:83 in func1) | Sync done for informer apps/v1/statefulsets in 100.069167ms, last resource version: 4630
+2024-08-19 15:35:59 UTC | CLUSTER | DEBUG | (pkg/util/kubernetes/apiserver/util.go:83 in func1) | Sync done for informer apps/v1/replicasets in 100.060291ms, last resource version: 4655
+2024-08-19 15:35:59 UTC | CLUSTER | DEBUG | (pkg/util/kubernetes/apiserver/util.go:83 in func1) | Sync done for informer v1/persistentvolumeclaims in 100.601875ms, last resource version: 4687
+2024-08-19 15:35:59 UTC | CLUSTER | DEBUG | (pkg/clusteragent/admission/controllers/webhook/controller_base.go:261 in processNextWorkItem) | Webhook datadog-webhook reconciled successfully
+2024-08-19 15:35:59 UTC | CLUSTER | DEBUG | (pkg/util/kubernetes/apiserver/util.go:83 in func1) | Sync done for informer v1/services in 300.103084ms, last resource version: 4631
+2024-08-19 15:35:59 UTC | CLUSTER | DEBUG | (pkg/collector/scheduler.go:202 in getChecks) | Core Check Loader: successfully loaded check 'orchestrator'
+2024-08-19 15:35:59 UTC | CLUSTER | INFO | (pkg/collector/scheduler/scheduler.go:93 in Enter) | Scheduling check orchestrator:5e313062cfc91216 with an interval of 10s
+2024-08-19 15:35:59 UTC | CLUSTER | DEBUG | (pkg/collector/scheduler.go:191 in getChecks) | Loading check instance for check 'kubernetes_apiserver' using default loaders
+2024-08-19 15:35:59 UTC | CLUSTER | DEBUG | (pkg/collector/scheduler.go:202 in getChecks) | Core Check Loader: successfully loaded check 'kubernetes_apiserver'
+2024-08-19 15:35:59 UTC | CLUSTER | INFO | (pkg/collector/scheduler/scheduler.go:93 in Enter) | Scheduling check kubernetes_apiserver with an interval of 15s
+2024-08-19 15:35:59 UTC | CLUSTER | DEBUG | (pkg/collector/scheduler/job.go:165 in func1) | Job queue is running...
+2024-08-19 15:35:59 UTC | CLUSTER | DEBUG | (pkg/collector/scheduler.go:191 in getChecks) | Loading check instance for check 'kubernetes_state_core' using default loaders
+2024-08-19 15:35:59 UTC | CLUSTER | DEBUG | (pkg/collector/scheduler/job.go:165 in func1) | Job queue is running...
+2024-08-19 15:35:59 UTC | CLUSTER | INFO | (v2@v2.120.1/klog.go:813 in infoS) | "Active resources" activeStoreNames="configmaps,cronjobs,daemonsets,deployments,endpoints,horizontalpodautoscalers,ingresses,jobs,jobs_extended,limitranges,namespaces,nodes,nodes_extended,persistentvolumeclaims,persistentvolumes,poddisruptionbudgets,pods,pods_extended,replicasets,replicationcontrollers,resourcequotas,secrets,services,statefulsets,storageclasses,volumeattachments"
+2024-08-19 15:35:59 UTC | CLUSTER | DEBUG | (pkg/collector/scheduler.go:202 in getChecks) | Core Check Loader: successfully loaded check 'kubernetes_state_core'
+2024-08-19 15:35:59 UTC | CLUSTER | INFO | (pkg/collector/scheduler/scheduler.go:93 in Enter) | Scheduling check kubernetes_state_core:f0ece86b2bc4e82e with an interval of 15s
+2024-08-19 15:35:59 UTC | CLUSTER | INFO | (comp/core/workloadmeta/collectors/internal/kubeapiserver/kubeapiserver.go:190 in startReadiness) | All (3) K8S reflectors synced to workloadmeta
+2024-08-19 15:36:00 UTC | CLUSTER | INFO | (pkg/collector/worker/check_logger.go:40 in CheckStarted) | check:kubernetes_apiserver | Running check...
+2024-08-19 15:36:00 UTC | CLUSTER | INFO | (pkg/collector/worker/check_logger.go:40 in CheckStarted) | check:orchestrator | Running check...
+2024-08-19 15:36:00 UTC | CLUSTER | INFO | (client-go@v0.28.6/rest/request.go:697 in Infof) | Waited for 1.106229376s due to client-side throttling, not priority and fairness, request: GET:https://10.96.0.1:443/api/v1/nodes?limit=500&resourceVersion=0
+2024-08-19 15:36:01 UTC | CLUSTER | INFO | (pkg/util/kubernetes/apiserver/leaderelection/leaderelection.go:218 in EnsureLeaderElectionRuns) | Leader election running, current leader is "agent-kind-datadog-cluster-agent-668c55cbfc-v2mnv"
+2024-08-19 15:36:01 UTC | CLUSTER | DEBUG | (pkg/collector/corechecks/cluster/orchestrator/orchestrator.go:186 in Run) | Not leader (leader is "agent-kind-datadog-cluster-agent-668c55cbfc-v2mnv"). Skipping the Orchestrator check
+2024-08-19 15:36:01 UTC | CLUSTER | INFO | (pkg/collector/worker/check_logger.go:59 in CheckFinished) | check:orchestrator | Done running check
+2024-08-19 15:36:01 UTC | CLUSTER | DEBUG | (pkg/util/kubernetes/apiserver/leaderelection/leaderelection.go:203 in EnsureLeaderElectionRuns) | Currently Leader: false. Leader identity: "agent-kind-datadog-cluster-agent-668c55cbfc-v2mnv"
+2024-08-19 15:36:01 UTC | CLUSTER | DEBUG | (pkg/collector/corechecks/cluster/kubernetesapiserver/kubernetes_apiserver.go:209 in Run) | Not leader (leader is "agent-kind-datadog-cluster-agent-668c55cbfc-v2mnv"). Skipping the Kubernetes API Server check
+2024-08-19 15:36:01 UTC | CLUSTER | INFO | (pkg/collector/worker/check_logger.go:59 in CheckFinished) | check:kubernetes_apiserver | Done running check
+2024-08-19 15:36:07 UTC | CLUSTER | INFO | (pkg/collector/worker/check_logger.go:40 in CheckStarted) | check:kubernetes_state_core | Running check...
+2024-08-19 15:36:07 UTC | CLUSTER | DEBUG | (pkg/util/kubernetes/apiserver/leaderelection/leaderelection.go:203 in EnsureLeaderElectionRuns) | Currently Leader: false. Leader identity: "agent-kind-datadog-cluster-agent-668c55cbfc-v2mnv"
+2024-08-19 15:36:07 UTC | CLUSTER | DEBUG | (pkg/collector/corechecks/cluster/ksm/kubernetes_state.go:488 in Run) | Not leader (leader is "agent-kind-datadog-cluster-agent-668c55cbfc-v2mnv"). Skipping the kube-state-metrics core check
+2024-08-19 15:36:07 UTC | CLUSTER | INFO | (pkg/collector/worker/check_logger.go:59 in CheckFinished) | check:kubernetes_state_core | Done running check
+2024-08-19 15:36:08 UTC | CLUSTER | DEBUG | (comp/core/autodiscovery/autodiscoveryimpl/config_poller.go:154 in poll) | No modifications in the templates stored in kubernetes-endpoints configuration provider
+2024-08-19 15:36:08 UTC | CLUSTER | DEBUG | (comp/core/autodiscovery/autodiscoveryimpl/config_poller.go:154 in poll) | No modifications in the templates stored in kubernetes-services configuration provider
+2024-08-19 15:36:10 UTC | CLUSTER | INFO | (pkg/collector/worker/check_logger.go:40 in CheckStarted) | check:orchestrator | Running check...
+2024-08-19 15:36:10 UTC | CLUSTER | DEBUG | (pkg/util/kubernetes/apiserver/leaderelection/leaderelection.go:203 in EnsureLeaderElectionRuns) | Currently Leader: false. Leader identity: "agent-kind-datadog-cluster-agent-668c55cbfc-v2mnv"
+2024-08-19 15:36:10 UTC | CLUSTER | DEBUG | (pkg/collector/corechecks/cluster/orchestrator/orchestrator.go:186 in Run) | Not leader (leader is "agent-kind-datadog-cluster-agent-668c55cbfc-v2mnv"). Skipping the Orchestrator check
+2024-08-19 15:36:10 UTC | CLUSTER | INFO | (pkg/collector/worker/check_logger.go:59 in CheckFinished) | check:orchestrator | Done running check
+2024-08-19 15:36:12 UTC | CLUSTER | INFO | (comp/core/healthprobe/impl/healthprobe.go:165 in healthHandler) | Healthcheck failed on: [ad-servicelistening tagger-workloadmeta workloadmeta-store workloadmeta-puller ad-config-provider-kubernetes-endpoints collector-queue-10s aggregator tagger-store ad-config-provider-kubernetes-services clusterchecks-leadership process-language-detection-patcher collector-queue-15s workloadmeta-kubeapiserver]
+2024-08-19 15:36:13 UTC | CLUSTER | DEBUG | (pkg/aggregator/demultiplexer.go:129 in sendIterableSeries) | Demultiplexer: sendIterableSeries: start sending iterable series to the serializer
+2024-08-19 15:36:13 UTC | CLUSTER | DEBUG | (pkg/aggregator/aggregator.go:679 in sendEvents) | Flushing 1 events to the forwarder
+2024-08-19 15:36:13 UTC | CLUSTER | DEBUG | (pkg/aggregator/aggregator.go:620 in sendServiceChecks) | Flushing 1 service checks to the forwarder
+2024-08-19 15:36:13 UTC | CLUSTER | DEBUG | (pkg/aggregator/demultiplexer.go:135 in sendIterableSeries) | Demultiplexer: sendIterableSeries: stop routine
+2024-08-19 15:36:13 UTC | CLUSTER | INFO | (comp/forwarder/defaultforwarder/transaction/transaction.go:417 in internalProcess) | Successfully posted payload to "https://7-55-2-app.agent.datadoghq.com/intake/" (202 Accepted), the agent will only log transaction success every 500 transactions
+2024-08-19 15:36:15 UTC | CLUSTER | INFO | (pkg/collector/worker/check_logger.go:40 in CheckStarted) | check:kubernetes_apiserver | Running check...
+2024-08-19 15:36:15 UTC | CLUSTER | DEBUG | (pkg/util/kubernetes/apiserver/leaderelection/leaderelection.go:203 in EnsureLeaderElectionRuns) | Currently Leader: false. Leader identity: "agent-kind-datadog-cluster-agent-668c55cbfc-v2mnv"
+2024-08-19 15:36:15 UTC | CLUSTER | DEBUG | (pkg/collector/corechecks/cluster/kubernetesapiserver/kubernetes_apiserver.go:209 in Run) | Not leader (leader is "agent-kind-datadog-cluster-agent-668c55cbfc-v2mnv"). Skipping the Kubernetes API Server check
+2024-08-19 15:36:15 UTC | CLUSTER | INFO | (pkg/collector/worker/check_logger.go:59 in CheckFinished) | check:kubernetes_apiserver | Done running check
+2024-08-19 15:36:18 UTC | CLUSTER | DEBUG | (comp/core/autodiscovery/autodiscoveryimpl/config_poller.go:154 in poll) | No modifications in the templates stored in kubernetes-endpoints configuration provider
+2024-08-19 15:36:18 UTC | CLUSTER | DEBUG | (comp/core/autodiscovery/autodiscoveryimpl/config_poller.go:154 in poll) | No modifications in the templates stored in kubernetes-services configuration provider
+2024-08-19 15:36:20 UTC | CLUSTER | INFO | (pkg/collector/worker/check_logger.go:40 in CheckStarted) | check:orchestrator | Running check...
+2024-08-19 15:36:20 UTC | CLUSTER | DEBUG | (pkg/util/kubernetes/apiserver/leaderelection/leaderelection.go:203 in EnsureLeaderElectionRuns) | Currently Leader: false. Leader identity: "agent-kind-datadog-cluster-agent-668c55cbfc-v2mnv"
+2024-08-19 15:36:20 UTC | CLUSTER | DEBUG | (pkg/collector/corechecks/cluster/orchestrator/orchestrator.go:186 in Run) | Not leader (leader is "agent-kind-datadog-cluster-agent-668c55cbfc-v2mnv"). Skipping the Orchestrator check
+2024-08-19 15:36:20 UTC | CLUSTER | INFO | (pkg/collector/worker/check_logger.go:59 in CheckFinished) | check:orchestrator | Done running check
+2024-08-19 15:36:22 UTC | CLUSTER | INFO | (pkg/collector/worker/check_logger.go:40 in CheckStarted) | check:kubernetes_state_core | Running check...
+2024-08-19 15:36:22 UTC | CLUSTER | DEBUG | (pkg/util/kubernetes/apiserver/leaderelection/leaderelection.go:203 in EnsureLeaderElectionRuns) | Currently Leader: false. Leader identity: "agent-kind-datadog-cluster-agent-668c55cbfc-v2mnv"
+2024-08-19 15:36:22 UTC | CLUSTER | DEBUG | (pkg/collector/corechecks/cluster/ksm/kubernetes_state.go:488 in Run) | Not leader (leader is "agent-kind-datadog-cluster-agent-668c55cbfc-v2mnv"). Skipping the kube-state-metrics core check
+2024-08-19 15:36:22 UTC | CLUSTER | INFO | (pkg/collector/worker/check_logger.go:59 in CheckFinished) | check:kubernetes_state_core | Done running check
+2024-08-19 15:36:27 UTC | CLUSTER | DEBUG | (comp/core/autodiscovery/listeners/kube_endpoints.go:400 in removeService) | Entity 7df4040f-68af-4ec2-88c0-60460fbd2610 not found, not removing
+2024-08-19 15:36:27 UTC | CLUSTER | DEBUG | (comp/core/autodiscovery/listeners/kube_endpoints.go:400 in removeService) | Entity 55a610c7-0769-499e-b980-cdae22de71f1 not found, not removing
+2024-08-19 15:36:27 UTC | CLUSTER | DEBUG | (comp/core/autodiscovery/listeners/kube_endpoints.go:400 in removeService) | Entity 7df4040f-68af-4ec2-88c0-60460fbd2610 not found, not removing
+2024-08-19 15:36:27 UTC | CLUSTER | DEBUG | (comp/core/autodiscovery/listeners/kube_endpoints.go:400 in removeService) | Entity 55a610c7-0769-499e-b980-cdae22de71f1 not found, not removing
+2024-08-19 15:36:27 UTC | CLUSTER | DEBUG | (comp/core/autodiscovery/listeners/kube_endpoints.go:400 in removeService) | Entity 579765da-c4d1-4ccb-8bcd-9d517feb26bb not found, not removing
+2024-08-19 15:36:27 UTC | CLUSTER | DEBUG | (comp/core/autodiscovery/listeners/kube_endpoints.go:400 in removeService) | Entity 579765da-c4d1-4ccb-8bcd-9d517feb26bb not found, not removing
+2024-08-19 15:36:28 UTC | CLUSTER | DEBUG | (pkg/aggregator/demultiplexer.go:129 in sendIterableSeries) | Demultiplexer: sendIterableSeries: start sending iterable series to the serializer
+2024-08-19 15:36:28 UTC | CLUSTER | DEBUG | (pkg/aggregator/aggregator.go:620 in sendServiceChecks) | Flushing 1 service checks to the forwarder
+2024-08-19 15:36:28 UTC | CLUSTER | DEBUG | (pkg/aggregator/demultiplexer.go:135 in sendIterableSeries) | Demultiplexer: sendIterableSeries: stop routine
+2024-08-19 15:36:28 UTC | CLUSTER | DEBUG | (comp/core/autodiscovery/autodiscoveryimpl/config_poller.go:154 in poll) | No modifications in the templates stored in kubernetes-endpoints configuration provider
+2024-08-19 15:36:28 UTC | CLUSTER | DEBUG | (comp/core/autodiscovery/autodiscoveryimpl/config_poller.go:154 in poll) | No modifications in the templates stored in kubernetes-services configuration provider
+2024-08-19 15:36:29 UTC | CLUSTER | DEBUG | (comp/core/autodiscovery/listeners/kube_endpoints.go:400 in removeService) | Entity 579765da-c4d1-4ccb-8bcd-9d517feb26bb not found, not removing
+2024-08-19 15:36:30 UTC | CLUSTER | INFO | (pkg/collector/worker/check_logger.go:40 in CheckStarted) | check:kubernetes_apiserver | Running check...
+2024-08-19 15:36:30 UTC | CLUSTER | INFO | (pkg/collector/worker/check_logger.go:40 in CheckStarted) | check:orchestrator | Running check...
+2024-08-19 15:36:30 UTC | CLUSTER | DEBUG | (pkg/util/kubernetes/apiserver/leaderelection/leaderelection.go:203 in EnsureLeaderElectionRuns) | Currently Leader: false. Leader identity: "agent-kind-datadog-cluster-agent-668c55cbfc-v2mnv"
+2024-08-19 15:36:30 UTC | CLUSTER | DEBUG | (pkg/collector/corechecks/cluster/orchestrator/orchestrator.go:186 in Run) | Not leader (leader is "agent-kind-datadog-cluster-agent-668c55cbfc-v2mnv"). Skipping the Orchestrator check
+2024-08-19 15:36:30 UTC | CLUSTER | INFO | (pkg/collector/worker/check_logger.go:59 in CheckFinished) | check:orchestrator | Done running check
+2024-08-19 15:36:30 UTC | CLUSTER | DEBUG | (pkg/util/kubernetes/apiserver/leaderelection/leaderelection.go:203 in EnsureLeaderElectionRuns) | Currently Leader: false. Leader identity: "agent-kind-datadog-cluster-agent-668c55cbfc-v2mnv"
+2024-08-19 15:36:30 UTC | CLUSTER | DEBUG | (pkg/collector/corechecks/cluster/kubernetesapiserver/kubernetes_apiserver.go:209 in Run) | Not leader (leader is "agent-kind-datadog-cluster-agent-668c55cbfc-v2mnv"). Skipping the Kubernetes API Server check
+2024-08-19 15:36:30 UTC | CLUSTER | INFO | (pkg/collector/worker/check_logger.go:59 in CheckFinished) | check:kubernetes_apiserver | Done running check
+2024-08-19 15:36:33 UTC | CLUSTER | DEBUG | (/usr/local/go/src/net/http/httputil/reverseproxy.go:664 in logf) | Error while forwarding to leader DCA: http: proxy error: dial tcp 10.244.2.3:5005: i/o timeout
+2024-08-19 15:36:35 UTC | CLUSTER | DEBUG | (/usr/local/go/src/net/http/httputil/reverseproxy.go:664 in logf) | Error while forwarding to leader DCA: http: proxy error: dial tcp 10.244.2.3:5005: i/o timeout
+2024-08-19 15:36:36 UTC | CLUSTER | DEBUG | (/usr/local/go/src/net/http/httputil/reverseproxy.go:664 in logf) | Error while forwarding to leader DCA: http: proxy error: dial tcp 10.244.2.3:5005: i/o timeout
+2024-08-19 15:36:37 UTC | CLUSTER | INFO | (pkg/collector/worker/check_logger.go:40 in CheckStarted) | check:kubernetes_state_core | Running check...
+2024-08-19 15:36:37 UTC | CLUSTER | DEBUG | (pkg/util/kubernetes/apiserver/leaderelection/leaderelection.go:203 in EnsureLeaderElectionRuns) | Currently Leader: false. Leader identity: "agent-kind-datadog-cluster-agent-668c55cbfc-v2mnv"
+2024-08-19 15:36:37 UTC | CLUSTER | DEBUG | (pkg/collector/corechecks/cluster/ksm/kubernetes_state.go:488 in Run) | Not leader (leader is "agent-kind-datadog-cluster-agent-668c55cbfc-v2mnv"). Skipping the kube-state-metrics core check
+2024-08-19 15:36:37 UTC | CLUSTER | INFO | (pkg/collector/worker/check_logger.go:59 in CheckFinished) | check:kubernetes_state_core | Done running check
+2024-08-19 15:36:37 UTC | CLUSTER | DEBUG | (/usr/local/go/src/net/http/httputil/reverseproxy.go:664 in logf) | Error while forwarding to leader DCA: http: proxy error: dial tcp 10.244.2.3:5005: i/o timeout
+2024-08-19 15:36:38 UTC | CLUSTER | DEBUG | (comp/core/autodiscovery/autodiscoveryimpl/config_poller.go:154 in poll) | No modifications in the templates stored in kubernetes-services configuration provider
+2024-08-19 15:36:38 UTC | CLUSTER | DEBUG | (comp/core/autodiscovery/autodiscoveryimpl/config_poller.go:154 in poll) | No modifications in the templates stored in kubernetes-endpoints configuration provider
+2024-08-19 15:36:40 UTC | CLUSTER | INFO | (pkg/collector/worker/check_logger.go:40 in CheckStarted) | check:orchestrator | Running check...
+2024-08-19 15:36:40 UTC | CLUSTER | DEBUG | (pkg/util/kubernetes/apiserver/leaderelection/leaderelection.go:203 in EnsureLeaderElectionRuns) | Currently Leader: false. Leader identity: "agent-kind-datadog-cluster-agent-668c55cbfc-v2mnv"
+2024-08-19 15:36:40 UTC | CLUSTER | DEBUG | (pkg/collector/corechecks/cluster/orchestrator/orchestrator.go:186 in Run) | Not leader (leader is "agent-kind-datadog-cluster-agent-668c55cbfc-v2mnv"). Skipping the Orchestrator check
+2024-08-19 15:36:40 UTC | CLUSTER | INFO | (pkg/collector/worker/check_logger.go:59 in CheckFinished) | check:orchestrator | Done running check, next runs will be logged every 500 runs
+2024-08-19 15:36:41 UTC | CLUSTER | DEBUG | (/usr/local/go/src/net/http/httputil/reverseproxy.go:664 in logf) | Error while forwarding to leader DCA: http: proxy error: dial tcp 10.244.2.3:5005: i/o timeout
+2024-08-19 15:36:41 UTC | CLUSTER | DEBUG | (/usr/local/go/src/net/http/httputil/reverseproxy.go:664 in logf) | Error while forwarding to leader DCA: http: proxy error: dial tcp 10.244.2.3:5005: i/o timeout
+2024-08-19 15:36:43 UTC | CLUSTER | DEBUG | (pkg/aggregator/demultiplexer.go:129 in sendIterableSeries) | Demultiplexer: sendIterableSeries: start sending iterable series to the serializer
+2024-08-19 15:36:43 UTC | CLUSTER | DEBUG | (pkg/aggregator/demultiplexer.go:135 in sendIterableSeries) | Demultiplexer: sendIterableSeries: stop routine
+2024-08-19 15:36:43 UTC | CLUSTER | DEBUG | (pkg/aggregator/aggregator.go:620 in sendServiceChecks) | Flushing 1 service checks to the forwarder
+2024-08-19 15:36:45 UTC | CLUSTER | INFO | (pkg/collector/worker/check_logger.go:40 in CheckStarted) | check:kubernetes_apiserver | Running check...
+2024-08-19 15:36:45 UTC | CLUSTER | DEBUG | (pkg/util/kubernetes/apiserver/leaderelection/leaderelection.go:203 in EnsureLeaderElectionRuns) | Currently Leader: false. Leader identity: "agent-kind-datadog-cluster-agent-668c55cbfc-v2mnv"
+2024-08-19 15:36:45 UTC | CLUSTER | DEBUG | (pkg/collector/corechecks/cluster/kubernetesapiserver/kubernetes_apiserver.go:209 in Run) | Not leader (leader is "agent-kind-datadog-cluster-agent-668c55cbfc-v2mnv"). Skipping the Kubernetes API Server check
+2024-08-19 15:36:45 UTC | CLUSTER | INFO | (pkg/collector/worker/check_logger.go:59 in CheckFinished) | check:kubernetes_apiserver | Done running check
+2024-08-19 15:36:47 UTC | CLUSTER | DEBUG | (/usr/local/go/src/net/http/httputil/reverseproxy.go:664 in logf) | Error while forwarding to leader DCA: http: proxy error: dial tcp 10.244.2.3:5005: i/o timeout
+2024-08-19 15:36:48 UTC | CLUSTER | DEBUG | (/usr/local/go/src/net/http/httputil/reverseproxy.go:664 in logf) | Error while forwarding to leader DCA: http: proxy error: dial tcp 10.244.2.3:5005: i/o timeout
+2024-08-19 15:36:48 UTC | CLUSTER | DEBUG | (comp/core/autodiscovery/autodiscoveryimpl/config_poller.go:154 in poll) | No modifications in the templates stored in kubernetes-services configuration provider
+2024-08-19 15:36:48 UTC | CLUSTER | DEBUG | (comp/core/autodiscovery/autodiscoveryimpl/config_poller.go:154 in poll) | No modifications in the templates stored in kubernetes-endpoints configuration provider
+2024-08-19 15:36:50 UTC | CLUSTER | DEBUG | (pkg/collector/worker/check_logger.go:44 in CheckStarted) | check:orchestrator | Running check...
+2024-08-19 15:36:50 UTC | CLUSTER | DEBUG | (pkg/util/kubernetes/apiserver/leaderelection/leaderelection.go:203 in EnsureLeaderElectionRuns) | Currently Leader: false. Leader identity: "agent-kind-datadog-cluster-agent-668c55cbfc-v2mnv"
+2024-08-19 15:36:50 UTC | CLUSTER | DEBUG | (pkg/collector/corechecks/cluster/orchestrator/orchestrator.go:186 in Run) | Not leader (leader is "agent-kind-datadog-cluster-agent-668c55cbfc-v2mnv"). Skipping the Orchestrator check
+2024-08-19 15:36:50 UTC | CLUSTER | DEBUG | (pkg/collector/worker/check_logger.go:61 in CheckFinished) | check:orchestrator | Done running check
+2024-08-19 15:36:51 UTC | CLUSTER | DEBUG | (/usr/local/go/src/net/http/httputil/reverseproxy.go:664 in logf) | Error while forwarding to leader DCA: http: proxy error: dial tcp 10.244.2.3:5005: i/o timeout
+2024-08-19 15:36:52 UTC | CLUSTER | INFO | (pkg/collector/worker/check_logger.go:40 in CheckStarted) | check:kubernetes_state_core | Running check...
+2024-08-19 15:36:52 UTC | CLUSTER | DEBUG | (pkg/util/kubernetes/apiserver/leaderelection/leaderelection.go:203 in EnsureLeaderElectionRuns) | Currently Leader: false. Leader identity: "agent-kind-datadog-cluster-agent-668c55cbfc-v2mnv"
+2024-08-19 15:36:52 UTC | CLUSTER | DEBUG | (pkg/collector/corechecks/cluster/ksm/kubernetes_state.go:488 in Run) | Not leader (leader is "agent-kind-datadog-cluster-agent-668c55cbfc-v2mnv"). Skipping the kube-state-metrics core check
+2024-08-19 15:36:52 UTC | CLUSTER | INFO | (pkg/collector/worker/check_logger.go:59 in CheckFinished) | check:kubernetes_state_core | Done running check
+2024-08-19 15:36:52 UTC | CLUSTER | DEBUG | (/usr/local/go/src/net/http/httputil/reverseproxy.go:664 in logf) | Error while forwarding to leader DCA: http: proxy error: dial tcp 10.244.2.3:5005: i/o timeout
+2024-08-19 15:36:53 UTC | CLUSTER | DEBUG | (/usr/local/go/src/net/http/httputil/reverseproxy.go:664 in logf) | Error while forwarding to leader DCA: http: proxy error: dial tcp 10.244.2.3:5005: i/o timeout
+2024-08-19 15:36:57 UTC | CLUSTER | DEBUG | (/usr/local/go/src/net/http/httputil/reverseproxy.go:664 in logf) | Error while forwarding to leader DCA: http: proxy error: dial tcp 10.244.2.3:5005: i/o timeout
+2024-08-19 15:36:58 UTC | CLUSTER | DEBUG | (/usr/local/go/src/net/http/httputil/reverseproxy.go:664 in logf) | Error while forwarding to leader DCA: http: proxy error: dial tcp 10.244.2.3:5005: i/o timeout
+2024-08-19 15:36:58 UTC | CLUSTER | DEBUG | (pkg/aggregator/demultiplexer.go:129 in sendIterableSeries) | Demultiplexer: sendIterableSeries: start sending iterable series to the serializer
+2024-08-19 15:36:58 UTC | CLUSTER | DEBUG | (pkg/aggregator/aggregator.go:620 in sendServiceChecks) | Flushing 1 service checks to the forwarder
+2024-08-19 15:36:58 UTC | CLUSTER | DEBUG | (pkg/aggregator/demultiplexer.go:135 in sendIterableSeries) | Demultiplexer: sendIterableSeries: stop routine
+2024-08-19 15:36:58 UTC | CLUSTER | DEBUG | (comp/core/autodiscovery/autodiscoveryimpl/config_poller.go:154 in poll) | No modifications in the templates stored in kubernetes-services configuration provider
+2024-08-19 15:36:58 UTC | CLUSTER | DEBUG | (comp/core/autodiscovery/autodiscoveryimpl/config_poller.go:154 in poll) | No modifications in the templates stored in kubernetes-endpoints configuration provider
+2024-08-19 15:36:59 UTC | CLUSTER | DEBUG | (comp/core/autodiscovery/listeners/kube_endpoints.go:400 in removeService) | Entity 579765da-c4d1-4ccb-8bcd-9d517feb26bb not found, not removing
+2024-08-19 15:37:00 UTC | CLUSTER | DEBUG | (pkg/collector/worker/check_logger.go:44 in CheckStarted) | check:orchestrator | Running check...
+2024-08-19 15:37:00 UTC | CLUSTER | DEBUG | (pkg/util/kubernetes/apiserver/leaderelection/leaderelection.go:203 in EnsureLeaderElectionRuns) | Currently Leader: false. Leader identity: "agent-kind-datadog-cluster-agent-668c55cbfc-v2mnv"
+2024-08-19 15:37:00 UTC | CLUSTER | DEBUG | (pkg/collector/corechecks/cluster/orchestrator/orchestrator.go:186 in Run) | Not leader (leader is "agent-kind-datadog-cluster-agent-668c55cbfc-v2mnv"). Skipping the Orchestrator check
+2024-08-19 15:37:00 UTC | CLUSTER | DEBUG | (pkg/collector/worker/check_logger.go:61 in CheckFinished) | check:orchestrator | Done running check
+2024-08-19 15:37:00 UTC | CLUSTER | INFO | (pkg/collector/worker/check_logger.go:40 in CheckStarted) | check:kubernetes_apiserver | Running check...
+2024-08-19 15:37:00 UTC | CLUSTER | DEBUG | (pkg/util/kubernetes/apiserver/leaderelection/leaderelection.go:203 in EnsureLeaderElectionRuns) | Currently Leader: false. Leader identity: "agent-kind-datadog-cluster-agent-668c55cbfc-v2mnv"
+2024-08-19 15:37:00 UTC | CLUSTER | DEBUG | (pkg/collector/corechecks/cluster/kubernetesapiserver/kubernetes_apiserver.go:209 in Run) | Not leader (leader is "agent-kind-datadog-cluster-agent-668c55cbfc-v2mnv"). Skipping the Kubernetes API Server check
+2024-08-19 15:37:00 UTC | CLUSTER | INFO | (pkg/collector/worker/check_logger.go:59 in CheckFinished) | check:kubernetes_apiserver | Done running check, next runs will be logged every 500 runs
+2024-08-19 15:37:00 UTC | CLUSTER | DEBUG | (/usr/local/go/src/net/http/httputil/reverseproxy.go:664 in logf) | Error while forwarding to leader DCA: http: proxy error: dial tcp 10.244.2.3:5005: i/o timeout
+2024-08-19 15:37:01 UTC | CLUSTER | DEBUG | (/usr/local/go/src/net/http/httputil/reverseproxy.go:664 in logf) | Error while forwarding to leader DCA: http: proxy error: dial tcp 10.244.2.3:5005: i/o timeout
+2024-08-19 15:37:02 UTC | CLUSTER | DEBUG | (/usr/local/go/src/net/http/httputil/reverseproxy.go:664 in logf) | Error while forwarding to leader DCA: http: proxy error: dial tcp 10.244.2.3:5005: i/o timeout
+2024-08-19 15:37:07 UTC | CLUSTER | INFO | (pkg/collector/worker/check_logger.go:40 in CheckStarted) | check:kubernetes_state_core | Running check...
+2024-08-19 15:37:07 UTC | CLUSTER | DEBUG | (pkg/util/kubernetes/apiserver/leaderelection/leaderelection.go:203 in EnsureLeaderElectionRuns) | Currently Leader: false. Leader identity: "agent-kind-datadog-cluster-agent-668c55cbfc-v2mnv"
+2024-08-19 15:37:07 UTC | CLUSTER | DEBUG | (pkg/collector/corechecks/cluster/ksm/kubernetes_state.go:488 in Run) | Not leader (leader is "agent-kind-datadog-cluster-agent-668c55cbfc-v2mnv"). Skipping the kube-state-metrics core check
+2024-08-19 15:37:07 UTC | CLUSTER | INFO | (pkg/collector/worker/check_logger.go:59 in CheckFinished) | check:kubernetes_state_core | Done running check, next runs will be logged every 500 runs
+2024-08-19 15:37:07 UTC | CLUSTER | DEBUG | (/usr/local/go/src/net/http/httputil/reverseproxy.go:664 in logf) | Error while forwarding to leader DCA: http: proxy error: dial tcp 10.244.2.3:5005: i/o timeout
+2024-08-19 15:37:08 UTC | CLUSTER | DEBUG | (/usr/local/go/src/net/http/httputil/reverseproxy.go:664 in logf) | Error while forwarding to leader DCA: http: proxy error: dial tcp 10.244.2.3:5005: i/o timeout
+2024-08-19 15:37:08 UTC | CLUSTER | DEBUG | (comp/core/autodiscovery/autodiscoveryimpl/config_poller.go:154 in poll) | No modifications in the templates stored in kubernetes-services configuration provider
+2024-08-19 15:37:08 UTC | CLUSTER | DEBUG | (comp/core/autodiscovery/autodiscoveryimpl/config_poller.go:154 in poll) | No modifications in the templates stored in kubernetes-endpoints configuration provider
+2024-08-19 15:37:10 UTC | CLUSTER | DEBUG | (pkg/collector/worker/check_logger.go:44 in CheckStarted) | check:orchestrator | Running check...
+2024-08-19 15:37:10 UTC | CLUSTER | DEBUG | (pkg/util/kubernetes/apiserver/leaderelection/leaderelection.go:203 in EnsureLeaderElectionRuns) | Currently Leader: false. Leader identity: "agent-kind-datadog-cluster-agent-668c55cbfc-v2mnv"
+2024-08-19 15:37:10 UTC | CLUSTER | DEBUG | (pkg/collector/corechecks/cluster/orchestrator/orchestrator.go:186 in Run) | Not leader (leader is "agent-kind-datadog-cluster-agent-668c55cbfc-v2mnv"). Skipping the Orchestrator check
+2024-08-19 15:37:10 UTC | CLUSTER | DEBUG | (pkg/collector/worker/check_logger.go:61 in CheckFinished) | check:orchestrator | Done running check
+2024-08-19 15:37:11 UTC | CLUSTER | DEBUG | (/usr/local/go/src/net/http/httputil/reverseproxy.go:664 in logf) | Error while forwarding to leader DCA: http: proxy error: dial tcp 10.244.2.3:5005: i/o timeout
+2024-08-19 15:37:12 UTC | CLUSTER | DEBUG | (/usr/local/go/src/net/http/httputil/reverseproxy.go:664 in logf) | Error while forwarding to leader DCA: http: proxy error: dial tcp 10.244.2.3:5005: i/o timeout
+2024-08-19 15:37:13 UTC | CLUSTER | DEBUG | (pkg/aggregator/demultiplexer.go:129 in sendIterableSeries) | Demultiplexer: sendIterableSeries: start sending iterable series to the serializer
+2024-08-19 15:37:13 UTC | CLUSTER | DEBUG | (pkg/aggregator/demultiplexer.go:135 in sendIterableSeries) | Demultiplexer: sendIterableSeries: stop routine
+2024-08-19 15:37:13 UTC | CLUSTER | DEBUG | (pkg/aggregator/aggregator.go:620 in sendServiceChecks) | Flushing 1 service checks to the forwarder
+2024-08-19 15:37:15 UTC | CLUSTER | DEBUG | (pkg/collector/worker/check_logger.go:44 in CheckStarted) | check:kubernetes_apiserver | Running check...
+2024-08-19 15:37:15 UTC | CLUSTER | DEBUG | (pkg/util/kubernetes/apiserver/leaderelection/leaderelection.go:203 in EnsureLeaderElectionRuns) | Currently Leader: false. Leader identity: "agent-kind-datadog-cluster-agent-668c55cbfc-v2mnv"
+2024-08-19 15:37:15 UTC | CLUSTER | DEBUG | (pkg/collector/corechecks/cluster/kubernetesapiserver/kubernetes_apiserver.go:209 in Run) | Not leader (leader is "agent-kind-datadog-cluster-agent-668c55cbfc-v2mnv"). Skipping the Kubernetes API Server check
+2024-08-19 15:37:15 UTC | CLUSTER | DEBUG | (pkg/collector/worker/check_logger.go:61 in CheckFinished) | check:kubernetes_apiserver | Done running check
+2024-08-19 15:37:17 UTC | CLUSTER | DEBUG | (/usr/local/go/src/net/http/httputil/reverseproxy.go:664 in logf) | Error while forwarding to leader DCA: http: proxy error: dial tcp 10.244.2.3:5005: i/o timeout
+2024-08-19 15:37:18 UTC | CLUSTER | DEBUG | (/usr/local/go/src/net/http/httputil/reverseproxy.go:664 in logf) | Error while forwarding to leader DCA: http: proxy error: dial tcp 10.244.2.3:5005: i/o timeout
+2024-08-19 15:37:18 UTC | CLUSTER | DEBUG | (comp/core/autodiscovery/autodiscoveryimpl/config_poller.go:154 in poll) | No modifications in the templates stored in kubernetes-services configuration provider
+2024-08-19 15:37:18 UTC | CLUSTER | DEBUG | (comp/core/autodiscovery/autodiscoveryimpl/config_poller.go:154 in poll) | No modifications in the templates stored in kubernetes-endpoints configuration provider
+2024-08-19 15:37:19 UTC | CLUSTER | DEBUG | (/usr/local/go/src/net/http/httputil/reverseproxy.go:664 in logf) | Error while forwarding to leader DCA: http: proxy error: dial tcp 10.244.2.3:5005: i/o timeout
+2024-08-19 15:37:20 UTC | CLUSTER | DEBUG | (pkg/collector/worker/check_logger.go:44 in CheckStarted) | check:orchestrator | Running check...
+2024-08-19 15:37:20 UTC | CLUSTER | DEBUG | (pkg/util/kubernetes/apiserver/leaderelection/leaderelection.go:203 in EnsureLeaderElectionRuns) | Currently Leader: false. Leader identity: "agent-kind-datadog-cluster-agent-668c55cbfc-v2mnv"
+2024-08-19 15:37:20 UTC | CLUSTER | DEBUG | (pkg/collector/corechecks/cluster/orchestrator/orchestrator.go:186 in Run) | Not leader (leader is "agent-kind-datadog-cluster-agent-668c55cbfc-v2mnv"). Skipping the Orchestrator check
+2024-08-19 15:37:20 UTC | CLUSTER | DEBUG | (pkg/collector/worker/check_logger.go:61 in CheckFinished) | check:orchestrator | Done running check
+2024-08-19 15:37:21 UTC | CLUSTER | DEBUG | (/usr/local/go/src/net/http/httputil/reverseproxy.go:664 in logf) | Error while forwarding to leader DCA: http: proxy error: dial tcp 10.244.2.3:5005: i/o timeout
+2024-08-19 15:37:22 UTC | CLUSTER | DEBUG | (pkg/collector/worker/check_logger.go:44 in CheckStarted) | check:kubernetes_state_core | Running check...
+2024-08-19 15:37:22 UTC | CLUSTER | DEBUG | (pkg/util/kubernetes/apiserver/leaderelection/leaderelection.go:203 in EnsureLeaderElectionRuns) | Currently Leader: false. Leader identity: "agent-kind-datadog-cluster-agent-668c55cbfc-v2mnv"
+2024-08-19 15:37:22 UTC | CLUSTER | DEBUG | (pkg/collector/corechecks/cluster/ksm/kubernetes_state.go:488 in Run) | Not leader (leader is "agent-kind-datadog-cluster-agent-668c55cbfc-v2mnv"). Skipping the kube-state-metrics core check
+2024-08-19 15:37:22 UTC | CLUSTER | DEBUG | (pkg/collector/worker/check_logger.go:61 in CheckFinished) | check:kubernetes_state_core | Done running check
+2024-08-19 15:37:22 UTC | CLUSTER | DEBUG | (/usr/local/go/src/net/http/httputil/reverseproxy.go:664 in logf) | Error while forwarding to leader DCA: http: proxy error: dial tcp 10.244.2.3:5005: i/o timeout
+2024-08-19 15:37:26 UTC | CLUSTER | DEBUG | (/usr/local/go/src/net/http/httputil/reverseproxy.go:664 in logf) | Error while forwarding to leader DCA: http: proxy error: dial tcp 10.244.2.3:5005: i/o timeout
+2024-08-19 15:37:27 UTC | CLUSTER | DEBUG | (/usr/local/go/src/net/http/httputil/reverseproxy.go:664 in logf) | Error while forwarding to leader DCA: http: proxy error: dial tcp 10.244.2.3:5005: i/o timeout
+2024-08-19 15:37:28 UTC | CLUSTER | DEBUG | (/usr/local/go/src/net/http/httputil/reverseproxy.go:664 in logf) | Error while forwarding to leader DCA: http: proxy error: dial tcp 10.244.2.3:5005: i/o timeout
+2024-08-19 15:37:28 UTC | CLUSTER | DEBUG | (pkg/aggregator/demultiplexer.go:129 in sendIterableSeries) | Demultiplexer: sendIterableSeries: start sending iterable series to the serializer
+2024-08-19 15:37:28 UTC | CLUSTER | DEBUG | (pkg/aggregator/aggregator.go:620 in sendServiceChecks) | Flushing 1 service checks to the forwarder
+2024-08-19 15:37:28 UTC | CLUSTER | DEBUG | (pkg/aggregator/demultiplexer.go:135 in sendIterableSeries) | Demultiplexer: sendIterableSeries: stop routine
+2024-08-19 15:37:28 UTC | CLUSTER | DEBUG | (comp/core/autodiscovery/autodiscoveryimpl/config_poller.go:154 in poll) | No modifications in the templates stored in kubernetes-endpoints configuration provider
+2024-08-19 15:37:28 UTC | CLUSTER | DEBUG | (comp/core/autodiscovery/autodiscoveryimpl/config_poller.go:154 in poll) | No modifications in the templates stored in kubernetes-services configuration provider
+2024-08-19 15:37:30 UTC | CLUSTER | DEBUG | (pkg/collector/worker/check_logger.go:44 in CheckStarted) | check:orchestrator | Running check...
+2024-08-19 15:37:30 UTC | CLUSTER | DEBUG | (pkg/util/kubernetes/apiserver/leaderelection/leaderelection.go:203 in EnsureLeaderElectionRuns) | Currently Leader: false. Leader identity: "agent-kind-datadog-cluster-agent-668c55cbfc-v2mnv"
+2024-08-19 15:37:30 UTC | CLUSTER | DEBUG | (pkg/collector/corechecks/cluster/orchestrator/orchestrator.go:186 in Run) | Not leader (leader is "agent-kind-datadog-cluster-agent-668c55cbfc-v2mnv"). Skipping the Orchestrator check
+2024-08-19 15:37:30 UTC | CLUSTER | DEBUG | (pkg/collector/worker/check_logger.go:61 in CheckFinished) | check:orchestrator | Done running check
+2024-08-19 15:37:30 UTC | CLUSTER | DEBUG | (pkg/collector/worker/check_logger.go:44 in CheckStarted) | check:kubernetes_apiserver | Running check...
+2024-08-19 15:37:30 UTC | CLUSTER | DEBUG | (pkg/util/kubernetes/apiserver/leaderelection/leaderelection.go:203 in EnsureLeaderElectionRuns) | Currently Leader: false. Leader identity: "agent-kind-datadog-cluster-agent-668c55cbfc-v2mnv"
+2024-08-19 15:37:30 UTC | CLUSTER | DEBUG | (pkg/collector/corechecks/cluster/kubernetesapiserver/kubernetes_apiserver.go:209 in Run) | Not leader (leader is "agent-kind-datadog-cluster-agent-668c55cbfc-v2mnv"). Skipping the Kubernetes API Server check
+2024-08-19 15:37:30 UTC | CLUSTER | DEBUG | (pkg/collector/worker/check_logger.go:61 in CheckFinished) | check:kubernetes_apiserver | Done running check
+2024-08-19 15:37:31 UTC | CLUSTER | DEBUG | (/usr/local/go/src/net/http/httputil/reverseproxy.go:664 in logf) | Error while forwarding to leader DCA: http: proxy error: dial tcp 10.244.2.3:5005: i/o timeout
+2024-08-19 15:37:32 UTC | CLUSTER | DEBUG | (/usr/local/go/src/net/http/httputil/reverseproxy.go:664 in logf) | Error while forwarding to leader DCA: http: proxy error: dial tcp 10.244.2.3:5005: i/o timeout
+2024-08-19 15:37:37 UTC | CLUSTER | DEBUG | (pkg/collector/worker/check_logger.go:44 in CheckStarted) | check:kubernetes_state_core | Running check...
+2024-08-19 15:37:37 UTC | CLUSTER | DEBUG | (pkg/util/kubernetes/apiserver/leaderelection/leaderelection.go:203 in EnsureLeaderElectionRuns) | Currently Leader: false. Leader identity: "agent-kind-datadog-cluster-agent-668c55cbfc-v2mnv"
+2024-08-19 15:37:37 UTC | CLUSTER | DEBUG | (pkg/collector/corechecks/cluster/ksm/kubernetes_state.go:488 in Run) | Not leader (leader is "agent-kind-datadog-cluster-agent-668c55cbfc-v2mnv"). Skipping the kube-state-metrics core check
+2024-08-19 15:37:37 UTC | CLUSTER | DEBUG | (pkg/collector/worker/check_logger.go:61 in CheckFinished) | check:kubernetes_state_core | Done running check
+2024-08-19 15:37:37 UTC | CLUSTER | DEBUG | (/usr/local/go/src/net/http/httputil/reverseproxy.go:664 in logf) | Error while forwarding to leader DCA: http: proxy error: dial tcp 10.244.2.3:5005: i/o timeout
+2024-08-19 15:37:38 UTC | CLUSTER | DEBUG | (/usr/local/go/src/net/http/httputil/reverseproxy.go:664 in logf) | Error while forwarding to leader DCA: http: proxy error: dial tcp 10.244.2.3:5005: i/o timeout
+2024-08-19 15:37:38 UTC | CLUSTER | DEBUG | (comp/core/autodiscovery/autodiscoveryimpl/config_poller.go:154 in poll) | No modifications in the templates stored in kubernetes-endpoints configuration provider
+2024-08-19 15:37:38 UTC | CLUSTER | DEBUG | (comp/core/autodiscovery/autodiscoveryimpl/config_poller.go:154 in poll) | No modifications in the templates stored in kubernetes-services configuration provider
+2024-08-19 15:37:40 UTC | CLUSTER | DEBUG | (pkg/collector/worker/check_logger.go:44 in CheckStarted) | check:orchestrator | Running check...
+2024-08-19 15:37:40 UTC | CLUSTER | DEBUG | (pkg/util/kubernetes/apiserver/leaderelection/leaderelection.go:203 in EnsureLeaderElectionRuns) | Currently Leader: false. Leader identity: "agent-kind-datadog-cluster-agent-668c55cbfc-v2mnv"
+2024-08-19 15:37:40 UTC | CLUSTER | DEBUG | (pkg/collector/corechecks/cluster/orchestrator/orchestrator.go:186 in Run) | Not leader (leader is "agent-kind-datadog-cluster-agent-668c55cbfc-v2mnv"). Skipping the Orchestrator check
+2024-08-19 15:37:40 UTC | CLUSTER | DEBUG | (pkg/collector/worker/check_logger.go:61 in CheckFinished) | check:orchestrator | Done running check
+2024-08-19 15:37:41 UTC | CLUSTER | DEBUG | (/usr/local/go/src/net/http/httputil/reverseproxy.go:664 in logf) | Error while forwarding to leader DCA: http: proxy error: dial tcp 10.244.2.3:5005: i/o timeout
+2024-08-19 15:37:42 UTC | CLUSTER | DEBUG | (/usr/local/go/src/net/http/httputil/reverseproxy.go:664 in logf) | Error while forwarding to leader DCA: http: proxy error: dial tcp 10.244.2.3:5005: i/o timeout
+2024-08-19 15:37:43 UTC | CLUSTER | DEBUG | (pkg/aggregator/demultiplexer.go:129 in sendIterableSeries) | Demultiplexer: sendIterableSeries: start sending iterable series to the serializer
+2024-08-19 15:37:43 UTC | CLUSTER | DEBUG | (pkg/aggregator/demultiplexer.go:135 in sendIterableSeries) | Demultiplexer: sendIterableSeries: stop routine
+2024-08-19 15:37:43 UTC | CLUSTER | DEBUG | (pkg/aggregator/aggregator.go:620 in sendServiceChecks) | Flushing 1 service checks to the forwarder
+2024-08-19 15:37:45 UTC | CLUSTER | DEBUG | (pkg/collector/worker/check_logger.go:44 in CheckStarted) | check:kubernetes_apiserver | Running check...
+2024-08-19 15:37:45 UTC | CLUSTER | DEBUG | (pkg/util/kubernetes/apiserver/leaderelection/leaderelection.go:203 in EnsureLeaderElectionRuns) | Currently Leader: false. Leader identity: "agent-kind-datadog-cluster-agent-668c55cbfc-v2mnv"
+2024-08-19 15:37:45 UTC | CLUSTER | DEBUG | (pkg/collector/corechecks/cluster/kubernetesapiserver/kubernetes_apiserver.go:209 in Run) | Not leader (leader is "agent-kind-datadog-cluster-agent-668c55cbfc-v2mnv"). Skipping the Kubernetes API Server check
+2024-08-19 15:37:45 UTC | CLUSTER | DEBUG | (pkg/collector/worker/check_logger.go:61 in CheckFinished) | check:kubernetes_apiserver | Done running check
+2024-08-19 15:37:45 UTC | CLUSTER | DEBUG | (/usr/local/go/src/net/http/httputil/reverseproxy.go:664 in logf) | Error while forwarding to leader DCA: http: proxy error: dial tcp 10.244.2.3:5005: i/o timeout
+2024-08-19 15:37:47 UTC | CLUSTER | DEBUG | (/usr/local/go/src/net/http/httputil/reverseproxy.go:664 in logf) | Error while forwarding to leader DCA: http: proxy error: dial tcp 10.244.2.3:5005: i/o timeout
+2024-08-19 15:37:48 UTC | CLUSTER | DEBUG | (/usr/local/go/src/net/http/httputil/reverseproxy.go:664 in logf) | Error while forwarding to leader DCA: http: proxy error: dial tcp 10.244.2.3:5005: i/o timeout
+2024-08-19 15:37:48 UTC | CLUSTER | DEBUG | (comp/core/autodiscovery/autodiscoveryimpl/config_poller.go:154 in poll) | No modifications in the templates stored in kubernetes-services configuration provider
+2024-08-19 15:37:48 UTC | CLUSTER | DEBUG | (comp/core/autodiscovery/autodiscoveryimpl/config_poller.go:154 in poll) | No modifications in the templates stored in kubernetes-endpoints configuration provider
+2024-08-19 15:37:49 UTC | CLUSTER | INFO | (client-go@v0.28.6/tools/leaderelection/leaderelection.go:260 in func1) | successfully acquired lease default/agent-kind-datadog-leader-election
+2024-08-19 15:37:49 UTC | CLUSTER | INFO | (pkg/util/kubernetes/apiserver/leaderelection/leaderelection_engine.go:152 in func1) | New leader "agent-kind-datadog-cluster-agent-75dd97446-nh2pf"
+2024-08-19 15:37:49 UTC | CLUSTER | INFO | (pkg/util/kubernetes/apiserver/leaderelection/leaderelection_engine.go:158 in func2) | Started leading as "agent-kind-datadog-cluster-agent-75dd97446-nh2pf"...
+2024-08-19 15:37:49 UTC | CLUSTER | INFO | (pkg/clusteragent/admission/controllers/secret/controller.go:102 in enqueueOnLeaderNotif) | Got a leader notification, enqueuing a reconciliation for default/webhook-certificate
+2024-08-19 15:37:49 UTC | CLUSTER | DEBUG | (pkg/clusteragent/admission/controllers/secret/controller.go:216 in reconcile) | The certificate is up-to-date, doing nothing. Duration before expiration: 8759h20m19.494899155s
+2024-08-19 15:37:49 UTC | CLUSTER | DEBUG | (pkg/clusteragent/admission/controllers/secret/controller.go:179 in processNextWorkItem) | Secret default/webhook-certificate reconciled successfully
+2024-08-19 15:37:49 UTC | CLUSTER | INFO | (pkg/clusteragent/admission/controllers/webhook/controller_base.go:149 in enqueueOnLeaderNotif) | Got a leader notification, enqueuing a reconciliation for "datadog-webhook"
+2024-08-19 15:37:49 UTC | CLUSTER | DEBUG | (pkg/clusteragent/admission/controllers/webhook/controller_v1.go:155 in reconcile) | The Webhook datadog-webhook was found, updating it
+2024-08-19 15:37:49 UTC | CLUSTER | DEBUG | (pkg/clusteragent/admission/controllers/webhook/controller_base.go:261 in processNextWorkItem) | Webhook datadog-webhook reconciled successfully
+2024-08-19 15:37:50 UTC | CLUSTER | DEBUG | (pkg/collector/worker/check_logger.go:44 in CheckStarted) | check:orchestrator | Running check...
+2024-08-19 15:37:50 UTC | CLUSTER | DEBUG | (pkg/util/kubernetes/apiserver/leaderelection/leaderelection.go:203 in EnsureLeaderElectionRuns) | Currently Leader: true. Leader identity: "agent-kind-datadog-cluster-agent-75dd97446-nh2pf"
+2024-08-19 15:37:50 UTC | CLUSTER | DEBUG | (pkg/collector/corechecks/cluster/orchestrator/collector_bundle.go:345 in Run) | Collector v1/pods run stats: listed=0 processed=0 messages=0 duration=106.708µs
+2024-08-19 15:37:50 UTC | CLUSTER | DEBUG | (pkg/collector/corechecks/cluster/orchestrator/collector_bundle.go:345 in Run) | Collector clusters run stats: listed=1 processed=1 messages=1 duration=8.401333ms
+2024-08-19 15:37:50 UTC | CLUSTER | DEBUG | (pkg/collector/corechecks/cluster/orchestrator/collector_bundle.go:345 in Run) | Collector apps/v1/deployments run stats: listed=3 processed=3 messages=1 duration=6.293875ms
+2024-08-19 15:37:50 UTC | CLUSTER | DEBUG | (pkg/collector/corechecks/cluster/orchestrator/collector_bundle.go:345 in Run) | Collector v1/namespaces run stats: listed=5 processed=5 messages=1 duration=388.041µs
+2024-08-19 15:37:50 UTC | CLUSTER | DEBUG | (pkg/collector/corechecks/cluster/orchestrator/collector_bundle.go:345 in Run) | Collector v1/nodes run stats: listed=3 processed=3 messages=1 duration=877.666µs
+2024-08-19 15:37:50 UTC | CLUSTER | DEBUG | (pkg/collector/corechecks/cluster/orchestrator/collector_bundle.go:345 in Run) | Collector apps/v1/replicasets run stats: listed=5 processed=5 messages=1 duration=3.896667ms
+2024-08-19 15:37:50 UTC | CLUSTER | DEBUG | (pkg/collector/corechecks/cluster/orchestrator/collector_bundle.go:345 in Run) | Collector batch/v1/jobs run stats: listed=0 processed=0 messages=0 duration=2.666µs
+2024-08-19 15:37:50 UTC | CLUSTER | DEBUG | (pkg/collector/corechecks/cluster/orchestrator/collector_bundle.go:345 in Run) | Collector batch/v1/cronjobs run stats: listed=0 processed=0 messages=0 duration=3.792µs
+2024-08-19 15:37:50 UTC | CLUSTER | DEBUG | (pkg/collector/corechecks/cluster/orchestrator/collector_bundle.go:345 in Run) | Collector v1/services run stats: listed=5 processed=5 messages=1 duration=664.333µs
+2024-08-19 15:37:50 UTC | CLUSTER | DEBUG | (pkg/collector/corechecks/cluster/orchestrator/collector_bundle.go:345 in Run) | Collector apps/v1/daemonsets run stats: listed=3 processed=3 messages=1 duration=3.389459ms
+2024-08-19 15:37:50 UTC | CLUSTER | DEBUG | (pkg/collector/corechecks/cluster/orchestrator/collector_bundle.go:345 in Run) | Collector apps/v1/statefulsets run stats: listed=0 processed=0 messages=0 duration=1.917µs
+2024-08-19 15:37:50 UTC | CLUSTER | DEBUG | (pkg/collector/corechecks/cluster/orchestrator/collector_bundle.go:345 in Run) | Collector networking.k8s.io/v1/ingresses run stats: listed=0 processed=0 messages=0 duration=2.792µs
+2024-08-19 15:37:50 UTC | CLUSTER | DEBUG | (pkg/collector/corechecks/cluster/orchestrator/collector_bundle.go:345 in Run) | Collector v1/persistentvolumeclaims run stats: listed=0 processed=0 messages=0 duration=6.375µs
+2024-08-19 15:37:50 UTC | CLUSTER | DEBUG | (pkg/collector/corechecks/cluster/orchestrator/collector_bundle.go:345 in Run) | Collector v1/persistentvolumes run stats: listed=0 processed=0 messages=0 duration=1.125µs
+2024-08-19 15:37:50 UTC | CLUSTER | DEBUG | (pkg/collector/corechecks/cluster/orchestrator/collector_bundle.go:345 in Run) | Collector rbac.authorization.k8s.io/v1/roles run stats: listed=13 processed=13 messages=1 duration=441.791µs
+2024-08-19 15:37:50 UTC | CLUSTER | DEBUG | (pkg/collector/corechecks/cluster/orchestrator/collector_bundle.go:345 in Run) | Collector rbac.authorization.k8s.io/v1/rolebindings run stats: listed=13 processed=13 messages=1 duration=359.792µs
+2024-08-19 15:37:50 UTC | CLUSTER | DEBUG | (pkg/collector/corechecks/cluster/orchestrator/collector_bundle.go:345 in Run) | Collector rbac.authorization.k8s.io/v1/clusterroles run stats: listed=71 processed=71 messages=1 duration=879µs
+2024-08-19 15:37:50 UTC | CLUSTER | DEBUG | (pkg/collector/corechecks/cluster/orchestrator/collector_bundle.go:345 in Run) | Collector rbac.authorization.k8s.io/v1/clusterrolebindings run stats: listed=57 processed=57 messages=1 duration=4.5945ms
+2024-08-19 15:37:50 UTC | CLUSTER | DEBUG | (pkg/collector/corechecks/cluster/orchestrator/collector_bundle.go:345 in Run) | Collector v1/serviceaccounts run stats: listed=45 processed=45 messages=1 duration=427.625µs
+2024-08-19 15:37:50 UTC | CLUSTER | DEBUG | (pkg/collector/corechecks/cluster/orchestrator/collector_bundle.go:345 in Run) | Collector autoscaling/v2/horizontalpodautoscalers run stats: listed=0 processed=0 messages=0 duration=5.333µs
+2024-08-19 15:37:50 UTC | CLUSTER | DEBUG | (pkg/collector/worker/check_logger.go:61 in CheckFinished) | check:orchestrator | Done running check
+2024-08-19 15:37:51 UTC | CLUSTER | DEBUG | (/usr/local/go/src/net/http/httputil/reverseproxy.go:664 in logf) | Error while forwarding to leader DCA: http: proxy error: dial tcp 10.244.2.3:5005: i/o timeout
+2024-08-19 15:37:51 UTC | CLUSTER | DEBUG | (/usr/local/go/src/net/http/httputil/reverseproxy.go:664 in logf) | Error while forwarding to leader DCA: http: proxy error: dial tcp 10.244.2.3:5005: i/o timeout
+2024-08-19 15:37:52 UTC | CLUSTER | DEBUG | (pkg/collector/worker/check_logger.go:44 in CheckStarted) | check:kubernetes_state_core | Running check...
+2024-08-19 15:37:52 UTC | CLUSTER | DEBUG | (pkg/util/kubernetes/apiserver/leaderelection/leaderelection.go:203 in EnsureLeaderElectionRuns) | Currently Leader: true. Leader identity: "agent-kind-datadog-cluster-agent-75dd97446-nh2pf"
+2024-08-19 15:37:52 UTC | CLUSTER | DEBUG | (pkg/collector/worker/check_logger.go:61 in CheckFinished) | check:kubernetes_state_core | Done running check
+2024-08-19 15:37:52 UTC | CLUSTER | DEBUG | (/usr/local/go/src/net/http/httputil/reverseproxy.go:664 in logf) | Error while forwarding to leader DCA: http: proxy error: dial tcp 10.244.2.3:5005: i/o timeout
+2024-08-19 15:37:53 UTC | CLUSTER | INFO | (pkg/clusteragent/clusterchecks/handler.go:116 in Run) | Becoming leader, waiting 30s for node-agents to report
+2024-08-19 15:37:54 UTC | CLUSTER | INFO | (api/agent/agent.go:128 in makeFlare) | Making a flare
+2024-08-19 15:37:54 UTC | CLUSTER | DEBUG | (pkg/config/setup/config.go:2230 in IsCloudProviderEnabled) | cloud_provider_metadata is set to [aws gcp azure alibaba oracle ibm] in agent configuration, trying endpoints for AWS Cloud Provider
+2024-08-19 15:37:54 UTC | CLUSTER | DEBUG | (pkg/util/http/transport.go:144 in 1) | URL 'http://169.254.169.254/latest/meta-data/hostname' matches no_proxy list item '169.254.169.254': not using any proxy
+2024-08-19 15:37:54 UTC | CLUSTER | DEBUG | (pkg/config/setup/config.go:2230 in IsCloudProviderEnabled) | cloud_provider_metadata is set to [aws gcp azure alibaba oracle ibm] in agent configuration, trying endpoints for AWS Cloud Provider
+2024-08-19 15:37:54 UTC | CLUSTER | DEBUG | (pkg/util/http/transport.go:144 in 1) | URL 'http://169.254.169.254/latest/meta-data/instance-id' matches no_proxy list item '169.254.169.254': not using any proxy
+2024-08-19 15:37:54 UTC | CLUSTER | DEBUG | (pkg/config/setup/config.go:2230 in IsCloudProviderEnabled) | cloud_provider_metadata is set to [aws gcp azure alibaba oracle ibm] in agent configuration, trying endpoints for Alibaba Cloud Provider
+2024-08-19 15:37:54 UTC | CLUSTER | DEBUG | (pkg/util/http/transport.go:144 in 1) | URL 'http://100.100.100.200/latest/meta-data/instance-id' matches no_proxy list item '100.100.100.200': not using any proxy
+2024-08-19 15:37:54 UTC | CLUSTER | DEBUG | (pkg/util/cloudproviders/cloudfoundry/cloudfoundry.go:32 in GetHostAliases) | cloud_foundry is not enabled in the conf: no cloudfoudry host alias
+2024-08-19 15:37:54 UTC | CLUSTER | DEBUG | (pkg/config/setup/config.go:2230 in IsCloudProviderEnabled) | cloud_provider_metadata is set to [aws gcp azure alibaba oracle ibm] in agent configuration, trying endpoints for AWS Cloud Provider
+2024-08-19 15:37:54 UTC | CLUSTER | DEBUG | (pkg/util/http/transport.go:144 in 1) | URL 'http://169.254.169.254/latest/meta-data/instance-id' matches no_proxy list item '169.254.169.254': not using any proxy
+2024-08-19 15:37:54 UTC | CLUSTER | DEBUG | (pkg/config/setup/config.go:2230 in IsCloudProviderEnabled) | cloud_provider_metadata is set to [aws gcp azure alibaba oracle ibm] in agent configuration, trying endpoints for Azure Cloud Provider
+2024-08-19 15:37:54 UTC | CLUSTER | DEBUG | (pkg/util/http/transport.go:144 in 1) | URL 'http://169.254.169.254/metadata/instance/compute/vmId?api-version=2017-04-02&format=text' matches no_proxy list item '169.254.169.254': not using any proxy
+2024-08-19 15:37:54 UTC | CLUSTER | DEBUG | (pkg/config/setup/config.go:2230 in IsCloudProviderEnabled) | cloud_provider_metadata is set to [aws gcp azure alibaba oracle ibm] in agent configuration, trying endpoints for GCP Cloud Provider
+2024-08-19 15:37:54 UTC | CLUSTER | DEBUG | (pkg/util/http/transport.go:144 in 1) | URL 'http://169.254.169.254/computeMetadata/v1/instance/hostname' matches no_proxy list item '169.254.169.254': not using any proxy
+2024-08-19 15:37:54 UTC | CLUSTER | DEBUG | (pkg/util/cloudproviders/cloudproviders.go:132 in func1) | No kubelet Host Alias: Kubernetes support not build: couldn't extract a host alias from the kubelet
+2024-08-19 15:37:54 UTC | CLUSTER | DEBUG | (pkg/config/setup/config.go:2230 in IsCloudProviderEnabled) | cloud_provider_metadata is set to [aws gcp azure alibaba oracle ibm] in agent configuration, trying endpoints for Oracle Cloud Provider
+2024-08-19 15:37:54 UTC | CLUSTER | DEBUG | (pkg/util/http/transport.go:144 in 1) | URL 'http://169.254.169.254/opc/v2/instance/id' matches no_proxy list item '169.254.169.254': not using any proxy
+2024-08-19 15:37:54 UTC | CLUSTER | DEBUG | (pkg/config/setup/config.go:2230 in IsCloudProviderEnabled) | cloud_provider_metadata is set to [aws gcp azure alibaba oracle ibm] in agent configuration, trying endpoints for IBM Cloud Provider
+2024-08-19 15:37:54 UTC | CLUSTER | DEBUG | (pkg/util/http/transport.go:144 in 1) | URL 'http://169.254.169.254/instance_identity/v1/token?version=2022-03-08' matches no_proxy list item '169.254.169.254': not using any proxy
+2024-08-19 15:37:54 UTC | CLUSTER | DEBUG | (pkg/config/setup/config.go:2237 in IsCloudProviderEnabled) | cloud_provider_metadata is set to [aws gcp azure alibaba oracle ibm] in agent configuration, skipping Tencent Cloud Provider
+2024-08-19 15:37:54 UTC | CLUSTER | DEBUG | (pkg/util/cloudproviders/cloudproviders.go:132 in func1) | No Tencent Host Alias: unable to get TencentCloud CVM instanceID: cloud provider is disabled by configuration
+2024-08-19 15:37:54 UTC | CLUSTER | DEBUG | (pkg/util/ec2/ec2.go:148 in GetHostAliases) | failed to get instance ID from metadata API for Host Alias: Get "http://169.254.169.254/latest/meta-data/instance-id": dial tcp 169.254.169.254:80: connect: connection refused
+2024-08-19 15:37:54 UTC | CLUSTER | DEBUG | (pkg/util/ec2/ec2.go:155 in GetHostAliases) | failed to get instance ID from DMI for Host Alias: board vendor is not AWS
+2024-08-19 15:37:54 UTC | CLUSTER | DEBUG | (pkg/config/setup/config.go:2230 in IsCloudProviderEnabled) | cloud_provider_metadata is set to [aws gcp azure alibaba oracle ibm] in agent configuration, trying endpoints for AWS Cloud Provider
+2024-08-19 15:37:54 UTC | CLUSTER | DEBUG | (pkg/util/http/transport.go:144 in 1) | URL 'http://169.254.169.254/latest/api/token' matches no_proxy list item '169.254.169.254': not using any proxy
+2024-08-19 15:37:54 UTC | CLUSTER | DEBUG | (pkg/util/cloudproviders/cloudproviders.go:132 in func1) | No Oracle Host Alias: Oracle HostAliases: unable to query metadata endpoint: Get "http://169.254.169.254/opc/v2/instance/id": dial tcp 169.254.169.254:80: connect: connection refused
+2024-08-19 15:37:54 UTC | CLUSTER | DEBUG | (pkg/util/cloudproviders/cloudproviders.go:132 in func1) | No Azure Host Alias: Azure HostAliases: unable to query metadata endpoint: Get "http://169.254.169.254/metadata/instance/compute/vmId?api-version=2017-04-02&format=text": dial tcp 169.254.169.254:80: connect: connection refused
+2024-08-19 15:37:54 UTC | CLUSTER | DEBUG | (pkg/util/cloudproviders/gce/gce.go:62 in GetHostAliases) | failed to get hostname to use as Host Alias: unable to retrieve hostname from GCE: GCE metadata API error: Get "http://169.254.169.254/computeMetadata/v1/instance/hostname": dial tcp 169.254.169.254:80: connect: connection refused
+2024-08-19 15:37:54 UTC | CLUSTER | DEBUG | (pkg/config/setup/config.go:2230 in IsCloudProviderEnabled) | cloud_provider_metadata is set to [aws gcp azure alibaba oracle ibm] in agent configuration, trying endpoints for GCP Cloud Provider
+2024-08-19 15:37:54 UTC | CLUSTER | DEBUG | (pkg/util/http/transport.go:144 in 1) | URL 'http://169.254.169.254/computeMetadata/v1/instance/name' matches no_proxy list item '169.254.169.254': not using any proxy
+2024-08-19 15:37:54 UTC | CLUSTER | DEBUG | (pkg/util/ec2/ec2.go:164 in GetHostAliases) | failed to get instance ID from IMDSV2 for Host Alias: Could not fetch token from IMDSv2
+2024-08-19 15:37:54 UTC | CLUSTER | DEBUG | (pkg/util/cloudproviders/cloudproviders.go:132 in func1) | No IBM Host Alias: IBM HostAliases: unable to get a token: Put "http://169.254.169.254/instance_identity/v1/token?version=2022-03-08": dial tcp 169.254.169.254:80: connect: connection refused
+2024-08-19 15:37:54 UTC | CLUSTER | DEBUG | (pkg/util/cloudproviders/gce/gce.go:68 in GetHostAliases) | failed to get Host Alias: unable to retrieve instance name and hostname from GCE: GCE metadata API error: Get "http://169.254.169.254/computeMetadata/v1/instance/name": dial tcp 169.254.169.254:80: connect: connection refused
+2024-08-19 15:37:54 UTC | CLUSTER | DEBUG | (pkg/util/cloudproviders/cloudproviders.go:132 in func1) | No Alibaba Host Alias: Alibaba HostAliases: unable to query metadata endpoint: Get "http://100.100.100.200/latest/meta-data/instance-id": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+2024-08-19 15:37:54 UTC | CLUSTER | INFO | (comp/metadata/host/hostimpl/hosttags/tags.go:130 in Get) | Adding both tags cluster_name and kube_cluster_name. You can use 'disable_cluster_name_tag_key' in the Agent config to keep the kube_cluster_name tag only
+2024-08-19 15:37:54 UTC | CLUSTER | DEBUG | (pkg/config/setup/config.go:2230 in IsCloudProviderEnabled) | cloud_provider_metadata is set to [aws gcp azure alibaba oracle ibm] in agent configuration, trying endpoints for GCP Cloud Provider
+2024-08-19 15:37:54 UTC | CLUSTER | DEBUG | (pkg/config/setup/config.go:2230 in IsCloudProviderEnabled) | cloud_provider_metadata is set to [aws gcp azure alibaba oracle ibm] in agent configuration, trying endpoints for GCP Cloud Provider
+2024-08-19 15:37:54 UTC | CLUSTER | DEBUG | (pkg/util/http/transport.go:144 in 1) | URL 'http://169.254.169.254/computeMetadata/v1/?recursive=true' matches no_proxy list item '169.254.169.254': not using any proxy
+2024-08-19 15:37:54 UTC | CLUSTER | DEBUG | (comp/metadata/host/hostimpl/hosttags/tags.go:157 in Get) | No gce host tags, remaining attempts: 0, err: unable to get tags from gce and cache is empty: GCE metadata API error: Get "http://169.254.169.254/computeMetadata/v1/?recursive=true": dial tcp 169.254.169.254:80: connect: connection refused
+2024-08-19 15:37:54 UTC | CLUSTER | INFO | (comp/metadata/host/hostimpl/hosttags/tags.go:159 in Get) | Unable to get host tags from source: gce - using cached host tags
+2024-08-19 15:37:54 UTC | CLUSTER | DEBUG | (comp/metadata/host/hostimpl/hosttags/tags.go:153 in Get) | Host tags from kubernetes retrieved successfully
+2024-08-19 15:37:54 UTC | CLUSTER | DEBUG | (pkg/util/cloudproviders/network.go:39 in func1) | GetNetworkID trying GCE
+2024-08-19 15:37:54 UTC | CLUSTER | DEBUG | (pkg/config/setup/config.go:2230 in IsCloudProviderEnabled) | cloud_provider_metadata is set to [aws gcp azure alibaba oracle ibm] in agent configuration, trying endpoints for GCP Cloud Provider
+2024-08-19 15:37:54 UTC | CLUSTER | DEBUG | (pkg/util/http/transport.go:144 in 1) | URL 'http://169.254.169.254/computeMetadata/v1/instance/network-interfaces/' matches no_proxy list item '169.254.169.254': not using any proxy
+2024-08-19 15:37:54 UTC | CLUSTER | DEBUG | (pkg/util/cloudproviders/network.go:45 in func1) | GetNetworkID trying EC2
+2024-08-19 15:37:54 UTC | CLUSTER | DEBUG | (pkg/config/setup/config.go:2230 in IsCloudProviderEnabled) | cloud_provider_metadata is set to [aws gcp azure alibaba oracle ibm] in agent configuration, trying endpoints for AWS Cloud Provider
+2024-08-19 15:37:54 UTC | CLUSTER | DEBUG | (pkg/util/http/transport.go:144 in 1) | URL 'http://169.254.169.254/latest/meta-data/network/interfaces/macs' matches no_proxy list item '169.254.169.254': not using any proxy
+2024-08-19 15:37:54 UTC | CLUSTER | INFO | (comp/metadata/host/hostimpl/utils/host.go:105 in getNetworkMeta) | could not get network metadata: could not detect network ID
+2024-08-19 15:37:54 UTC | CLUSTER | DEBUG | (pkg/util/kubernetes/apiserver/leaderelection/leaderelection.go:341 in getConfigMapLeaderElectionRecord) | LeaderElection cm is &v1.ConfigMap{TypeMeta:v1.TypeMeta{Kind:"", APIVersion:""}, ObjectMeta:v1.ObjectMeta{Name:"agent-kind-datadog-leader-election", GenerateName:"", Namespace:"default", SelfLink:"", UID:"4f263295-cbd6-44f7-8667-abde3599b231", ResourceVersion:"4946", Generation:0, CreationTimestamp:time.Date(2024, time.August, 19, 14, 58, 8, 0, time.Local), DeletionTimestamp:<nil>, DeletionGracePeriodSeconds:(*int64)(nil), Labels:map[string]string(nil), Annotations:map[string]string{"control-plane.alpha.kubernetes.io/leader":"{\"holderIdentity\":\"agent-kind-datadog-cluster-agent-75dd97446-nh2pf\",\"leaseDurationSeconds\":60,\"acquireTime\":\"2024-08-19T15:37:49Z\",\"renewTime\":\"2024-08-19T15:37:49Z\",\"leaderTransitions\":3}"}, OwnerReferences:[]v1.OwnerReference(nil), Finalizers:[]string(nil), ManagedFields:[]v1.ManagedFieldsEntry(nil)}, Immutable:(*bool)(nil), Data:map[string]string(nil), BinaryData:map[string][]uint8(nil)}

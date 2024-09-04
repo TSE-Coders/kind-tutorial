@@ -1,0 +1,107 @@
+extends:
+- _hp.yaml
+- _generic-if.yaml
+metadata:
+  device:
+    fields:
+      type:
+        value: storage
+metrics:
+- MIB: NIMBLE-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.37447.1.2.1.3
+      name: nimble.volName
+    tag: nimble_vol_name
+  - mapping:
+      1: "true"
+      2: "false"
+    symbol:
+      OID: 1.3.6.1.4.1.37447.1.2.1.10
+      name: nimble.volOnline
+    tag: nimble_vol_online
+  symbols:
+  - OID: 1.3.6.1.4.1.37447.1.2.1.4
+    name: nimble.volSizeLow
+  - OID: 1.3.6.1.4.1.37447.1.2.1.5
+    name: nimble.volSizeHigh
+  - OID: 1.3.6.1.4.1.37447.1.2.1.6
+    name: nimble.volUsageLow
+  - OID: 1.3.6.1.4.1.37447.1.2.1.7
+    name: nimble.volUsageHigh
+  - OID: 1.3.6.1.4.1.37447.1.2.1.8
+    name: nimble.volReserveLow
+  - OID: 1.3.6.1.4.1.37447.1.2.1.9
+    name: nimble.volReserveHigh
+  - OID: 1.3.6.1.4.1.37447.1.2.1.13
+    metric_type: monotonic_count
+    name: nimble.volIoReads
+  - OID: 1.3.6.1.4.1.37447.1.2.1.34
+    metric_type: monotonic_count
+    name: nimble.volIoWrites
+  table:
+    OID: 1.3.6.1.4.1.37447.1.2
+    name: volTable
+- MIB: NIMBLE-MIB
+  metric_type: monotonic_count
+  symbol:
+    OID: 1.3.6.1.4.1.37447.1.3.2.0
+    name: nimble.ioReads
+- MIB: NIMBLE-MIB
+  metric_type: monotonic_count
+  symbol:
+    OID: 1.3.6.1.4.1.37447.1.3.4.0
+    name: nimble.ioWrites
+- MIB: NIMBLE-MIB
+  metric_type: monotonic_count
+  symbol:
+    OID: 1.3.6.1.4.1.37447.1.3.6.0
+    name: nimble.ioReadTimeMicrosec
+- MIB: NIMBLE-MIB
+  metric_type: monotonic_count
+  symbol:
+    OID: 1.3.6.1.4.1.37447.1.3.7.0
+    name: nimble.ioWriteTimeMicrosec
+- MIB: NIMBLE-MIB
+  metric_type: monotonic_count
+  symbol:
+    OID: 1.3.6.1.4.1.37447.1.3.8.0
+    name: nimble.ioReadBytes
+- MIB: NIMBLE-MIB
+  metric_type: monotonic_count
+  symbol:
+    OID: 1.3.6.1.4.1.37447.1.3.9.0
+    name: nimble.ioSeqReadBytes
+- MIB: NIMBLE-MIB
+  metric_type: monotonic_count
+  symbol:
+    OID: 1.3.6.1.4.1.37447.1.3.10.0
+    name: nimble.ioWriteBytes
+- MIB: NIMBLE-MIB
+  metric_type: monotonic_count
+  symbol:
+    OID: 1.3.6.1.4.1.37447.1.3.11.0
+    name: nimble.ioSeqWriteBytes
+- MIB: NIMBLE-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.37447.1.3.12.0
+    name: nimble.diskVolBytesUsedLow
+- MIB: NIMBLE-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.37447.1.3.13.0
+    name: nimble.diskVolBytesUsedHigh
+- MIB: NIMBLE-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.37447.1.3.14.0
+    name: nimble.diskSnapBytesUsedLow
+- MIB: NIMBLE-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.37447.1.3.15.0
+    name: nimble.diskSnapBytesUsedHigh
+- MIB: NIMBLE-MIB
+  metric_type: monotonic_count
+  symbol:
+    OID: 1.3.6.1.4.1.37447.1.3.16.0
+    name: nimble.ioNonseqReadHits
+sysobjectid:
+- 1.3.6.1.4.1.37447.3.1

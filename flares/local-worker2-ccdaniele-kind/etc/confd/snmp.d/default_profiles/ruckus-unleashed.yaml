@@ -1,0 +1,80 @@
+extends:
+- ruckus.yaml
+metadata:
+  device:
+    fields:
+      type:
+        value: WLC
+metric_tags:
+- OID: 1.3.6.1.4.1.25053.1.15.1.1.1.1.9.0
+  symbol: ruckusUnleashedSystemModel
+  tag: ruckus_unleashed_system_model
+- OID: 1.3.6.1.4.1.25053.1.15.1.1.1.1.12.0
+  symbol: ruckusUnleashedSystemLicensedAPs
+  tag: ruckus_unleashed_system_licensed_aps
+- OID: 1.3.6.1.4.1.25053.1.15.1.1.1.1.15.0
+  symbol: ruckusUnleashedSystemSerialNumber
+  tag: ruckus_unleashed_system_serial_number
+metrics:
+- MIB: RUCKUS-UNLEASHED-SYSTEM-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.25053.1.15.1.1.1.15.13.0
+    name: cpu.usage
+- MIB: RUCKUS-UNLEASHED-SYSTEM-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.25053.1.15.1.1.1.15.14.0
+    name: memory.usage
+- MIB: RUCKUS-UNLEASHED-SYSTEM-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.25053.1.15.1.1.1.15.15.0
+    name: ruckusUnleashedSystemStatsNumRegisteredAP
+- MIB: RUCKUS-UNLEASHED-SYSTEM-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.25053.1.15.1.1.1.15.1.0
+    name: ruckusUnleashedSystemStatsNumAP
+- MIB: RUCKUS-UNLEASHED-SYSTEM-MIB
+  metric_type: monotonic_count
+  symbol:
+    OID: 1.3.6.1.4.1.25053.1.15.1.1.1.15.5.0
+    name: ruckusUnleashedSystemStatsWLANTotalRxPkts
+- MIB: RUCKUS-UNLEASHED-SYSTEM-MIB
+  metric_type: monotonic_count
+  symbol:
+    OID: 1.3.6.1.4.1.25053.1.15.1.1.1.15.6.0
+    name: ruckusUnleashedSystemStatsWLANTotalRxBytes
+- MIB: RUCKUS-UNLEASHED-SYSTEM-MIB
+  metric_type: monotonic_count
+  symbol:
+    OID: 1.3.6.1.4.1.25053.1.15.1.1.1.15.8.0
+    name: ruckusUnleashedSystemStatsWLANTotalTxPkts
+- MIB: RUCKUS-UNLEASHED-SYSTEM-MIB
+  metric_type: monotonic_count
+  symbol:
+    OID: 1.3.6.1.4.1.25053.1.15.1.1.1.15.9.0
+    name: ruckusUnleashedSystemStatsWLANTotalTxBytes
+- MIB: RUCKUS-UNLEASHED-SYSTEM-MIB
+  metric_type: monotonic_count
+  symbol:
+    OID: 1.3.6.1.4.1.25053.1.15.1.1.1.15.11.0
+    name: ruckusUnleashedSystemStatsWLANTotalTxFail
+- MIB: RUCKUS-UNLEASHED-SYSTEM-MIB
+  metric_type: monotonic_count
+  symbol:
+    OID: 1.3.6.1.4.1.25053.1.15.1.1.1.15.12.0
+    name: ruckusUnleashedSystemStatsWLANTotalTxRetry
+- MIB: RUCKUS-UNLEASHED-SYSTEM-MIB
+  metric_type: monotonic_count
+  symbol:
+    OID: 1.3.6.1.4.1.25053.1.15.1.1.1.15.16.0
+    name: ruckusUnleashedSystemStatsWLANTotalAssocFail
+- MIB: RUCKUS-UNLEASHED-SYSTEM-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.25053.1.15.1.1.1.15.30.0
+    name: ruckusUnleashedSystemStatsAllNumSta
+sysobjectid:
+- 1.3.6.1.4.1.25053.3.1.5.*
+- 1.3.6.1.4.1.25053.3.1.5.1
+- 1.3.6.1.4.1.25053.3.1.5.2
+- 1.3.6.1.4.1.25053.3.1.5.3
+- 1.3.6.1.4.1.25053.3.1.5.8
+- 1.3.6.1.4.1.25053.3.1.5.15

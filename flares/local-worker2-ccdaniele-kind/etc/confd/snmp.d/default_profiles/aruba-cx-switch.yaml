@@ -1,0 +1,132 @@
+extends:
+- aruba.yaml
+metadata:
+  device:
+    fields:
+      type:
+        value: switch
+metrics:
+- MIB: HOST-RESOURCES-MIB
+  symbol:
+    OID: 1.3.6.1.2.1.25.2.3.1.5.1
+    name: memory.total
+- MIB: HOST-RESOURCES-MIB
+  symbol:
+    OID: 1.3.6.1.2.1.25.2.3.1.6.1
+    name: memory.used
+- MIB: HOST-RESOURCES-MIB
+  symbol:
+    OID: 1.3.6.1.2.1.25.3.3.1.2.196608
+    name: cpu.usage
+- MIB: ARUBAWIRED-TEMPSENSOR-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.47196.4.1.1.3.11.3.1.1.5
+      name: arubaWiredTempSensorName
+    tag: aruba_wired_temp_sensor_name
+  - symbol:
+      OID: 1.3.6.1.4.1.47196.4.1.1.3.11.3.1.1.6
+      name: arubaWiredTempSensorState
+    tag: aruba_wired_temp_sensor_state
+  symbols:
+  - OID: 1.3.6.1.4.1.47196.4.1.1.3.11.3.1.1.7
+    name: arubaWiredTempSensorTemperature
+  table:
+    OID: 1.3.6.1.4.1.47196.4.1.1.3.11.3.1
+    name: arubaWiredTempSensorTable
+- MIB: ARUBAWIRED-POWERSUPPLY-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.47196.4.1.1.3.11.2.1.1.3
+      name: arubaWiredPSUName
+    tag: aruba_wired_psu_name
+  - symbol:
+      OID: 1.3.6.1.4.1.47196.4.1.1.3.11.2.1.1.5
+      name: arubaWiredPSUProductName
+    tag: aruba_wired_psu_product_name
+  - symbol:
+      OID: 1.3.6.1.4.1.47196.4.1.1.3.11.2.1.1.6
+      name: arubaWiredPSUSerialNumber
+    tag: aruba_wired_psu_serial_number
+  - symbol:
+      OID: 1.3.6.1.4.1.47196.4.1.1.3.11.2.1.1.10
+      name: arubaWiredPSUAirflowDirection
+    tag: aruba_wired_psu_airflow_direction
+  - symbol:
+      OID: 1.3.6.1.4.1.47196.4.1.1.3.11.2.1.1.4
+      name: arubaWiredPSUState
+    tag: aruba_wired_psu_state
+  symbols:
+  - OID: 1.3.6.1.4.1.47196.4.1.1.3.11.2.1.1.7
+    name: arubaWiredPSUInstantaneousPower
+  - OID: 1.3.6.1.4.1.47196.4.1.1.3.11.2.1.1.9
+    name: arubaWiredPSUNumberFailures
+  table:
+    OID: 1.3.6.1.4.1.47196.4.1.1.3.11.2.1
+    name: arubaWiredPowerSupplyTable
+- MIB: ARUBAWIRED-FANTRAY-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.47196.4.1.1.3.11.4.1.1.3
+      name: arubaWiredFanTrayName
+    tag: aruba_wired_fan_tray_name
+  - symbol:
+      OID: 1.3.6.1.4.1.47196.4.1.1.3.11.4.1.1.5
+      name: arubaWiredFanTrayProductName
+    tag: aruba_wired_fan_tray_product_name
+  - symbol:
+      OID: 1.3.6.1.4.1.47196.4.1.1.3.11.4.1.1.6
+      name: arubaWiredFanTraySerialNumber
+    tag: aruba_wired_fan_tray_serial_number
+  - symbol:
+      OID: 1.3.6.1.4.1.47196.4.1.1.3.11.4.1.1.4
+      name: arubaWiredFanTrayState
+    tag: aruba_wired_fan_tray_state
+  symbols:
+  - constant_value_one: true
+    name: arubaWiredFanTray
+  table:
+    OID: 1.3.6.1.4.1.47196.4.1.1.3.11.4.1
+    name: arubaWiredFanTrayTable
+- MIB: ARUBAWIRED-FAN-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.47196.4.1.1.3.11.5.1.1.4
+      name: arubaWiredFanName
+    tag: aruba_wired_fan_name
+  - symbol:
+      OID: 1.3.6.1.4.1.47196.4.1.1.3.11.5.1.1.6
+      name: arubaWiredFanProductName
+    tag: aruba_wired_fan_product_name
+  - symbol:
+      OID: 1.3.6.1.4.1.47196.4.1.1.3.11.5.1.1.7
+      name: arubaWiredFanSerialNumber
+    tag: aruba_wired_fan_serial_number
+  - symbol:
+      OID: 1.3.6.1.4.1.47196.4.1.1.3.11.5.1.1.9
+      name: arubaWiredFanAirflowDirection
+    tag: aruba_wired_fan_airflow_direction
+  - symbol:
+      OID: 1.3.6.1.4.1.47196.4.1.1.3.11.5.1.1.5
+      name: arubaWiredFanState
+    tag: aruba_wired_fan_state
+  symbols:
+  - OID: 1.3.6.1.4.1.47196.4.1.1.3.11.5.1.1.8
+    name: arubaWiredFanRPM
+  table:
+    OID: 1.3.6.1.4.1.47196.4.1.1.3.11.5.1
+    name: arubaWiredFanTable
+sysobjectid:
+- 1.3.6.1.4.1.47196.4.1.1.1.*
+- 1.3.6.1.4.1.47196.4.1.1.1.1
+- 1.3.6.1.4.1.47196.4.1.1.1.2
+- 1.3.6.1.4.1.47196.4.1.1.1.3
+- 1.3.6.1.4.1.47196.4.1.1.1.5
+- 1.3.6.1.4.1.47196.4.1.1.1.50
+- 1.3.6.1.4.1.47196.4.1.1.1.70
+- 1.3.6.1.4.1.47196.4.1.1.1.101
+- 1.3.6.1.4.1.47196.4.1.1.1.103
+- 1.3.6.1.4.1.47196.4.1.1.1.104
+- 1.3.6.1.4.1.47196.4.1.1.1.150
+- 1.3.6.1.4.1.47196.4.1.1.1.304
+- 1.3.6.1.4.1.47196.4.1.1.1.405

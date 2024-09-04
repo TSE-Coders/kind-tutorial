@@ -1,0 +1,176 @@
+extends:
+- dlink.yaml
+metadata:
+  device:
+    fields:
+      type:
+        value: switch
+metrics:
+- MIB: DLINKSW-ENTITY-EXT-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.171.14.5.1.7.1.1
+      name: dEntityExtCpuUtilUnitId
+    tag: dlink_entity_ext_cpu_util_unit_id
+  - symbol:
+      OID: 1.3.6.1.4.1.171.14.5.1.7.1.2
+      name: dEntityExtCpuUtilCpuID
+    tag: cpu
+  - symbol:
+      OID: 1.3.6.1.4.1.171.14.5.1.7.1.2
+      name: dEntityExtCpuUtilCpuID
+    tag: dlink_entity_ext_cpu_util_cpu_id
+  symbols:
+  - OID: 1.3.6.1.4.1.171.14.5.1.7.1.3
+    name: cpu.usage
+  table:
+    OID: 1.3.6.1.4.1.171.14.5.1.7
+    name: dEntityExtCpuUtilTable
+- MIB: DLINKSW-ENTITY-EXT-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.171.14.5.1.4.1.1
+      name: dEntityExtMemUtilUnitId
+    tag: mem
+  - mapping:
+      1: dram
+      2: flash
+      3: nvram
+    symbol:
+      OID: 1.3.6.1.4.1.171.14.5.1.4.1.2
+      name: dEntityExtMemUtilType
+    tag: d_entity_ext_mem_util_type
+  symbols:
+  - OID: 1.3.6.1.4.1.171.14.5.1.4.1.3
+    name: memory.total
+  - OID: 1.3.6.1.4.1.171.14.5.1.4.1.4
+    name: memory.used
+  table:
+    OID: 1.3.6.1.4.1.171.14.5.1.4
+    name: dEntityExtMemoryUtilTable
+- MIB: DLINKSW-ENTITY-EXT-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.171.14.5.1.1.1.1.1
+      name: dEntityExtEnvTempUnitId
+    tag: d_entity_ext_env_temp_unit_id
+  - symbol:
+      OID: 1.3.6.1.4.1.171.14.5.1.1.1.1.2
+      name: dEntityExtEnvTempIndex
+    tag: d_entity_ext_env_temp_index
+  - symbol:
+      OID: 1.3.6.1.4.1.171.14.5.1.1.1.1.3
+      name: dEntityExtEnvTempDescr
+    tag: d_entity_ext_env_temp_descr
+  - mapping:
+      1: ok
+      2: abnormal
+    symbol:
+      OID: 1.3.6.1.4.1.171.14.5.1.1.1.1.7
+      name: dEntityExtEnvTempStatus
+    tag: d_entity_ext_env_temp_status
+  symbols:
+  - OID: 1.3.6.1.4.1.171.14.5.1.1.1.1.4
+    name: dlink.dEntityExtEnvTempCurrent
+  table:
+    OID: 1.3.6.1.4.1.171.14.5.1.1.1
+    name: dEntityExtEnvTempTable
+- MIB: DLINKSW-ENTITY-EXT-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.171.14.5.1.1.2.1.1
+      name: dEntityExtEnvFanUnitId
+    tag: d_entity_ext_env_fan_unit_id
+  - symbol:
+      OID: 1.3.6.1.4.1.171.14.5.1.1.2.1.2
+      name: dEntityExtEnvFanIndex
+    tag: d_entity_ext_env_fan_index
+  - symbol:
+      OID: 1.3.6.1.4.1.171.14.5.1.1.2.1.3
+      name: dEntityExtEnvFanDescr
+    tag: d_entity_ext_env_fan_descr
+  - mapping:
+      1: ok
+      2: fault
+    symbol:
+      OID: 1.3.6.1.4.1.171.14.5.1.1.2.1.4
+      name: dEntityExtEnvFanStatus
+    tag: d_entity_ext_env_fan_status
+  symbols:
+  - constant_value_one: true
+    name: dlink.dEntityExtEnvFan
+  table:
+    OID: 1.3.6.1.4.1.171.14.5.1.1.2
+    name: dEntityExtEnvFanTable
+- MIB: DLINKSW-ENTITY-EXT-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.171.14.5.1.1.3.1.1
+      name: dEntityExtEnvPowerUnitId
+    tag: d_entity_ext_env_power_unit_id
+  - symbol:
+      OID: 1.3.6.1.4.1.171.14.5.1.1.3.1.2
+      name: dEntityExtEnvPowerIndex
+    tag: d_entity_ext_env_power_index
+  - symbol:
+      OID: 1.3.6.1.4.1.171.14.5.1.1.3.1.3
+      name: dEntityExtEnvPowerDescr
+    tag: d_entity_ext_env_power_descr
+  - mapping:
+      1: in_operation
+      2: failed
+      3: empty
+    symbol:
+      OID: 1.3.6.1.4.1.171.14.5.1.1.3.1.6
+      name: dEntityExtEnvPowerStatus
+    tag: d_entity_ext_env_power_status
+  symbols:
+  - OID: 1.3.6.1.4.1.171.14.5.1.1.3.1.4
+    name: dlink.dEntityExtEnvPowerUsedPower
+  - OID: 1.3.6.1.4.1.171.14.5.1.1.3.1.5
+    name: dlink.dEntityExtEnvPowerMaxPower
+  table:
+    OID: 1.3.6.1.4.1.171.14.5.1.1.3
+    name: dEntityExtEnvPowerTable
+- MIB: DLINKSW-ENTITY-EXT-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.171.14.5.1.1.4.1.1
+      name: dEntityExtEnvAirFlowUnitId
+    tag: d_entity_ext_env_air_flow_unit_id
+  - mapping:
+      1: ok
+      2: abnormal
+    symbol:
+      OID: 1.3.6.1.4.1.171.14.5.1.1.4.1.2
+      name: dEntityExtEnvAirFlowStatus
+    tag: d_entity_ext_env_air_flow_status
+  symbols:
+  - constant_value_one: true
+    name: dlink.dEntityExtEnvAirFlow
+  table:
+    OID: 1.3.6.1.4.1.171.14.5.1.1.4
+    name: dEntityExtEnvAirFlowTable
+- MIB: DLINKSW-ENTITY-EXT-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.171.14.5.1.3.1.1
+      name: dEntityExtUnitIndex
+    tag: d_entity_ext_unit_index
+  - mapping:
+      1: ok
+      2: failed
+      3: empty
+    symbol:
+      OID: 1.3.6.1.4.1.171.14.5.1.3.1.2
+      name: dEntityExtUnitStatus
+    tag: d_entity_ext_unit_status
+  symbols:
+  - constant_value_one: true
+    name: dlink.dEntityExtUnit
+  table:
+    OID: 1.3.6.1.4.1.171.14.5.1.3
+    name: dEntityExtUnitTable
+sysobjectid:
+- 1.3.6.1.4.1.171.10.137.*
+- 1.3.6.1.4.1.171.10.137.1.1

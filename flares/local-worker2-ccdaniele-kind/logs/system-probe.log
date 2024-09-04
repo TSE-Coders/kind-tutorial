@@ -1,0 +1,272 @@
+2024-08-27 17:16:18 UTC | SYS-PROBE | INFO | (pkg/util/log/log.go:826 in func1) | Starting to load the configuration
+2024-08-27 17:16:18 UTC | SYS-PROBE | WARN | (pkg/util/log/log.go:871 in func1) | Unknown key in config file: runtime_security_config.activity_dump.cgroup_wait_list_size
+2024-08-27 17:16:18 UTC | SYS-PROBE | WARN | (pkg/util/log/log.go:871 in func1) | Unknown key in config file: runtime_security_config.network.enabled
+2024-08-27 17:16:18 UTC | SYS-PROBE | WARN | (pkg/util/log/log.go:871 in func1) | Unknown key in config file: runtime_security_config.syscall_monitor.enabled
+2024-08-27 17:16:18 UTC | SYS-PROBE | WARN | (pkg/util/log/log.go:871 in func1) | Unknown key in config file: runtime_security_config.activity_dump.path_merge.enabled
+2024-08-27 17:16:18 UTC | SYS-PROBE | WARN | (pkg/util/log/log.go:871 in func1) | config key runtime_security_config.network.enabled is unknown
+2024-08-27 17:16:18 UTC | SYS-PROBE | WARN | (pkg/util/log/log.go:871 in func1) | config key runtime_security_config.activity_dump.path_merge.enabled is unknown
+2024-08-27 17:16:18 UTC | SYS-PROBE | WARN | (pkg/util/log/log.go:871 in func1) | config key runtime_security_config.activity_dump.cgroup_wait_list_size is unknown
+2024-08-27 17:16:18 UTC | SYS-PROBE | WARN | (pkg/util/log/log.go:871 in func1) | config key runtime_security_config.syscall_monitor.enabled is unknown
+2024-08-27 17:16:18 UTC | SYS-PROBE | WARN | (pkg/util/log/log.go:871 in func1) | config key fips.enabled is unknown
+2024-08-27 17:16:18 UTC | SYS-PROBE | INFO | (pkg/util/log/log.go:826 in func1) | Loading proxy settings
+2024-08-27 17:16:18 UTC | SYS-PROBE | WARN | (pkg/util/log/log.go:871 in func1) | config key use_proxy_for_cloud_metadata is unknown
+2024-08-27 17:16:18 UTC | SYS-PROBE | DEBUG | (pkg/util/log/log.go:791 in func1) | 'use_proxy_for_cloud_metadata' is enabled: adding cloud provider URL to the no_proxy list
+2024-08-27 17:16:18 UTC | SYS-PROBE | DEBUG | (pkg/util/log/log.go:786 in func1) | Setting environment variable HOST_ETC to '/host/etc'
+2024-08-27 17:16:18 UTC | SYS-PROBE | WARN | (pkg/util/log/log.go:866 in func1) | configuration key `network_config.enable_http_monitoring` is deprecated, use `service_monitoring_config.enable_http_monitoring` instead
+2024-08-27 17:16:18 UTC | SYS-PROBE | WARN | (pkg/util/log/log.go:866 in func1) | configuration key `network_config.enable_https_monitoring` is deprecated, use `service_monitoring_config.tls.native.enabled` instead
+2024-08-27 17:16:18 UTC | SYS-PROBE | WARN | (pkg/util/log/log.go:866 in func1) | configuration key `runtime_security_config.activity_dump.cgroup_dump_timeout` is deprecated, use `runtime_security_config.activity_dump.dump_duration` instead
+2024-08-27 17:16:18 UTC | SYS-PROBE | WARN | (pkg/util/log/log.go:871 in func1) | config key disable_file_logging is unknown
+2024-08-27 17:16:18 UTC | SYS-PROBE | WARN | (pkg/util/log/log.go:871 in func1) | config key log_format_rfc3339 is unknown
+2024-08-27 17:16:18 UTC | SYS-PROBE | WARN | (pkg/config/model/viper.go:214 in checkKnownKey) | config key flare_stripped_keys is unknown
+2024-08-27 17:16:18 UTC | SYS-PROBE | WARN | (pkg/config/model/viper.go:418 in GetStringSlice) | failed to get configuration value for key "flare_stripped_keys": unable to cast <nil> of type <nil> to []string
+2024-08-27 17:16:18 UTC | SYS-PROBE | WARN | (pkg/config/model/viper.go:214 in checkKnownKey) | config key scrubber.additional_keys is unknown
+2024-08-27 17:16:18 UTC | SYS-PROBE | WARN | (pkg/config/model/viper.go:418 in GetStringSlice) | failed to get configuration value for key "scrubber.additional_keys": unable to cast <nil> of type <nil> to []string
+2024-08-27 17:16:18 UTC | SYS-PROBE | INFO | (pkg/config/setup/config.go:1834 in LoadCustom) | Starting to load the configuration
+2024-08-27 17:16:18 UTC | SYS-PROBE | INFO | (pkg/config/setup/config.go:1518 in LoadProxyFromEnv) | Loading proxy settings
+2024-08-27 17:16:18 UTC | SYS-PROBE | DEBUG | (pkg/config/setup/config.go:1573 in LoadProxyFromEnv) | 'use_proxy_for_cloud_metadata' is enabled: adding cloud provider URL to the no_proxy list
+2024-08-27 17:16:18 UTC | SYS-PROBE | DEBUG | (pkg/config/setup/config.go:1767 in useHostEtc) | '/host/etc' folder detected but HOST_ETC is already set to '/host/etc', leaving it untouched
+2024-08-27 17:16:18 UTC | SYS-PROBE | DEBUG | (pkg/config/setup/config.go:1900 in setupFipsEndpoints) | FIPS mode is disabled
+2024-08-27 17:16:18 UTC | SYS-PROBE | INFO | (pkg/config/env/environment_detection.go:124 in DetectFeatures) | 1 Features detected from environment: kubernetes
+2024-08-27 17:16:18 UTC | SYS-PROBE | DEBUG | (pkg/util/grpc/agent_client.go:43 in getGRPCClientConn) | attempting to create grpc agent client connection to: localhost:5001
+2024-08-27 17:16:18 UTC | SYS-PROBE | DEBUG | (pkg/util/grpc/agent_client.go:76 in GetDDAgentSecureClient) | grpc agent secure client created
+2024-08-27 17:16:18 UTC | SYS-PROBE | INFO | (pkg/config/remote/client/client.go:389 in pollLoop) | retrying the first update of remote-config state (rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing: dial tcp [::1]:5001: connect: connection refused")
+2024-08-27 17:16:18 UTC | SYS-PROBE | DEBUG | (automaxprocs@v1.5.3/maxprocs/maxprocs.go:47 in log) | maxprocs: Leaving GOMAXPROCS=12: CPU quota undefined
+2024-08-27 17:16:18 UTC | SYS-PROBE | INFO | (pkg/runtime/runtime.go:28 in func1) | runtime: set GOMAXPROCS to: 12
+2024-08-27 17:16:18 UTC | SYS-PROBE | INFO | (cmd/system-probe/subcommands/run/command.go:302 in startSystemProbe) | starting system-probe v7.55.2
+2024-08-27 17:16:18 UTC | SYS-PROBE | INFO | (cmd/system-probe/subcommands/run/command.go:408 in logUserAndGroupID) | current user id/name: 0/root
+2024-08-27 17:16:18 UTC | SYS-PROBE | INFO | (cmd/system-probe/subcommands/run/command.go:411 in logUserAndGroupID) | current group id/name: 0/root
+2024-08-27 17:16:18 UTC | SYS-PROBE | DEBUG | (pkg/process/net/uds.go:72 in NewListener) | uds: /var/run/sysprobe/sysprobe.sock successfully initialized
+2024-08-27 17:16:18 UTC | SYS-PROBE | INFO | (cmd/system-probe/api/module/loader.go:69 in Register) | module ebpf disabled
+2024-08-27 17:16:18 UTC | SYS-PROBE | INFO | (cmd/system-probe/api/module/loader.go:69 in Register) | module tcp_queue_length_tracer disabled
+2024-08-27 17:16:18 UTC | SYS-PROBE | INFO | (cmd/system-probe/api/module/loader.go:69 in Register) | module oom_kill_probe disabled
+2024-08-27 17:16:18 UTC | SYS-PROBE | INFO | (cmd/system-probe/api/module/loader.go:69 in Register) | module process disabled
+2024-08-27 17:16:18 UTC | SYS-PROBE | INFO | (cmd/system-probe/api/module/loader.go:69 in Register) | module dynamic_instrumentation disabled
+2024-08-27 17:16:18 UTC | SYS-PROBE | INFO | (cmd/system-probe/api/module/loader.go:69 in Register) | module language_detection disabled
+2024-08-27 17:16:18 UTC | SYS-PROBE | INFO | (cmd/system-probe/api/module/loader.go:69 in Register) | module compliance disabled
+2024-08-27 17:16:18 UTC | SYS-PROBE | INFO | (cmd/system-probe/api/module/loader.go:69 in Register) | module ping disabled
+2024-08-27 17:16:18 UTC | SYS-PROBE | INFO | (cmd/system-probe/api/module/loader.go:69 in Register) | module traceroute disabled
+2024-08-27 17:16:18 UTC | SYS-PROBE | INFO | (pkg/network/config/config.go:429 in New) | network process event monitoring enabled
+2024-08-27 17:16:18 UTC | SYS-PROBE | INFO | (pkg/network/tracer/utils_linux.go:35 in IsTracerSupportedByOS) | running on platform: debian
+2024-08-27 17:16:18 UTC | SYS-PROBE | INFO | (cmd/system-probe/modules/network_tracer.go:59 in createNetworkTracerModule) | enabling network performance monitoring (NPM)
+2024-08-27 17:16:18 UTC | SYS-PROBE | INFO | (cmd/system-probe/modules/network_tracer.go:62 in createNetworkTracerModule) | enabling universal service monitoring (USM)
+2024-08-27 17:16:18 UTC | SYS-PROBE | INFO | (pkg/network/tracer/connection/tracer.go:240 in NewTracer) | fentry tracer not supported, falling back to kprobe tracer
+2024-08-27 17:16:18 UTC | SYS-PROBE | DEBUG | (pkg/ebpf/btf.go:147 in get) | attempting BTF load from configured BTF file
+2024-08-27 17:16:18 UTC | SYS-PROBE | DEBUG | (pkg/ebpf/btf.go:147 in get) | attempting BTF load from kernel
+2024-08-27 17:16:18 UTC | SYS-PROBE | DEBUG | (pkg/ebpf/btf.go:158 in get) | successfully loaded BTF from kernel
+2024-08-27 17:16:18 UTC | SYS-PROBE | DEBUG | (pkg/ebpf/printk_patcher.go:206 in patchPrintkInstructions) | Patched 0 instructions for socket__classifier_grpc, errors: []
+2024-08-27 17:16:18 UTC | SYS-PROBE | DEBUG | (pkg/ebpf/printk_patcher.go:206 in patchPrintkInstructions) | Patched 0 instructions for kretprobe__tcp_close_clean_protocols, errors: []
+2024-08-27 17:16:18 UTC | SYS-PROBE | DEBUG | (pkg/ebpf/printk_patcher.go:206 in patchPrintkInstructions) | Patched 0 instructions for kretprobe__udpv6_recvmsg, errors: []
+2024-08-27 17:16:18 UTC | SYS-PROBE | DEBUG | (pkg/ebpf/printk_patcher.go:206 in patchPrintkInstructions) | Patched 0 instructions for kprobe__tcp_connect, errors: []
+2024-08-27 17:16:18 UTC | SYS-PROBE | DEBUG | (pkg/ebpf/printk_patcher.go:206 in patchPrintkInstructions) | Patched 0 instructions for kretprobe__tcp_recvmsg, errors: []
+2024-08-27 17:16:18 UTC | SYS-PROBE | DEBUG | (pkg/ebpf/printk_patcher.go:206 in patchPrintkInstructions) | Patched 0 instructions for kprobe__tcp_read_sock, errors: []
+2024-08-27 17:16:18 UTC | SYS-PROBE | DEBUG | (pkg/ebpf/printk_patcher.go:206 in patchPrintkInstructions) | Patched 0 instructions for socket__classifier_queues, errors: []
+2024-08-27 17:16:18 UTC | SYS-PROBE | DEBUG | (pkg/ebpf/printk_patcher.go:206 in patchPrintkInstructions) | Patched 0 instructions for kretprobe__ip_make_skb, errors: []
+2024-08-27 17:16:18 UTC | SYS-PROBE | DEBUG | (pkg/ebpf/printk_patcher.go:206 in patchPrintkInstructions) | Patched 0 instructions for kretprobe__inet_bind, errors: []
+2024-08-27 17:16:18 UTC | SYS-PROBE | DEBUG | (pkg/ebpf/printk_patcher.go:206 in patchPrintkInstructions) | Patched 0 instructions for kprobe__inet6_bind, errors: []
+2024-08-27 17:16:18 UTC | SYS-PROBE | DEBUG | (pkg/ebpf/printk_patcher.go:206 in patchPrintkInstructions) | Patched 0 instructions for kprobe__tcp_sendmsg, errors: []
+2024-08-27 17:16:18 UTC | SYS-PROBE | DEBUG | (pkg/ebpf/printk_patcher.go:206 in patchPrintkInstructions) | Patched 0 instructions for kprobe__tcp_finish_connect, errors: []
+2024-08-27 17:16:18 UTC | SYS-PROBE | DEBUG | (pkg/ebpf/printk_patcher.go:206 in patchPrintkInstructions) | Patched 0 instructions for kprobe__ip_make_skb, errors: []
+2024-08-27 17:16:18 UTC | SYS-PROBE | DEBUG | (pkg/ebpf/printk_patcher.go:206 in patchPrintkInstructions) | Patched 0 instructions for socket__classifier_dbs, errors: []
+2024-08-27 17:16:18 UTC | SYS-PROBE | DEBUG | (pkg/ebpf/printk_patcher.go:206 in patchPrintkInstructions) | Patched 0 instructions for kretprobe__inet_csk_accept, errors: []
+2024-08-27 17:16:18 UTC | SYS-PROBE | DEBUG | (pkg/ebpf/printk_patcher.go:206 in patchPrintkInstructions) | Patched 0 instructions for kretprobe__ip6_make_skb, errors: []
+2024-08-27 17:16:18 UTC | SYS-PROBE | DEBUG | (pkg/ebpf/printk_patcher.go:206 in patchPrintkInstructions) | Patched 0 instructions for kretprobe__udpv6_destroy_sock, errors: []
+2024-08-27 17:16:18 UTC | SYS-PROBE | DEBUG | (pkg/ebpf/printk_patcher.go:206 in patchPrintkInstructions) | Patched 0 instructions for kretprobe__tcp_read_sock, errors: []
+2024-08-27 17:16:18 UTC | SYS-PROBE | DEBUG | (pkg/ebpf/printk_patcher.go:206 in patchPrintkInstructions) | Patched 0 instructions for kprobe__skb_consume_udp, errors: []
+2024-08-27 17:16:18 UTC | SYS-PROBE | DEBUG | (pkg/ebpf/printk_patcher.go:206 in patchPrintkInstructions) | Patched 0 instructions for socket__classifier_entry, errors: []
+2024-08-27 17:16:18 UTC | SYS-PROBE | DEBUG | (pkg/ebpf/printk_patcher.go:206 in patchPrintkInstructions) | Patched 0 instructions for kretprobe__tcp_retransmit_skb, errors: []
+2024-08-27 17:16:18 UTC | SYS-PROBE | DEBUG | (pkg/ebpf/printk_patcher.go:206 in patchPrintkInstructions) | Patched 0 instructions for kprobe__udp_destroy_sock, errors: []
+2024-08-27 17:16:18 UTC | SYS-PROBE | DEBUG | (pkg/ebpf/printk_patcher.go:206 in patchPrintkInstructions) | Patched 0 instructions for kprobe__udp_recvmsg, errors: []
+2024-08-27 17:16:18 UTC | SYS-PROBE | DEBUG | (pkg/ebpf/printk_patcher.go:206 in patchPrintkInstructions) | Patched 0 instructions for kretprobe__tcp_close_flush, errors: []
+2024-08-27 17:16:18 UTC | SYS-PROBE | DEBUG | (pkg/ebpf/printk_patcher.go:206 in patchPrintkInstructions) | Patched 0 instructions for kprobe__ip6_make_skb, errors: []
+2024-08-27 17:16:18 UTC | SYS-PROBE | DEBUG | (pkg/ebpf/printk_patcher.go:206 in patchPrintkInstructions) | Patched 0 instructions for tracepoint__net__net_dev_queue, errors: []
+2024-08-27 17:16:18 UTC | SYS-PROBE | DEBUG | (pkg/ebpf/printk_patcher.go:206 in patchPrintkInstructions) | Patched 0 instructions for kprobe__inet_bind, errors: []
+2024-08-27 17:16:18 UTC | SYS-PROBE | DEBUG | (pkg/ebpf/printk_patcher.go:206 in patchPrintkInstructions) | Patched 0 instructions for kprobe__tcp_recvmsg, errors: []
+2024-08-27 17:16:18 UTC | SYS-PROBE | DEBUG | (pkg/ebpf/printk_patcher.go:206 in patchPrintkInstructions) | Patched 0 instructions for kprobe__inet_csk_listen_stop, errors: []
+2024-08-27 17:16:18 UTC | SYS-PROBE | DEBUG | (pkg/ebpf/printk_patcher.go:206 in patchPrintkInstructions) | Patched 0 instructions for kretprobe__udp_recvmsg, errors: []
+2024-08-27 17:16:18 UTC | SYS-PROBE | DEBUG | (pkg/ebpf/printk_patcher.go:206 in patchPrintkInstructions) | Patched 0 instructions for kretprobe__udp_destroy_sock, errors: []
+2024-08-27 17:16:18 UTC | SYS-PROBE | DEBUG | (pkg/ebpf/printk_patcher.go:206 in patchPrintkInstructions) | Patched 0 instructions for kprobe__tcp_retransmit_skb, errors: []
+2024-08-27 17:16:18 UTC | SYS-PROBE | DEBUG | (pkg/ebpf/printk_patcher.go:206 in patchPrintkInstructions) | Patched 0 instructions for kprobe__udpv6_destroy_sock, errors: []
+2024-08-27 17:16:18 UTC | SYS-PROBE | DEBUG | (pkg/ebpf/printk_patcher.go:206 in patchPrintkInstructions) | Patched 0 instructions for kretprobe__inet6_bind, errors: []
+2024-08-27 17:16:18 UTC | SYS-PROBE | DEBUG | (pkg/ebpf/printk_patcher.go:206 in patchPrintkInstructions) | Patched 0 instructions for kprobe__tcp_close, errors: []
+2024-08-27 17:16:18 UTC | SYS-PROBE | DEBUG | (pkg/ebpf/printk_patcher.go:206 in patchPrintkInstructions) | Patched 0 instructions for kprobe__udpv6_recvmsg, errors: []
+2024-08-27 17:16:18 UTC | SYS-PROBE | DEBUG | (pkg/ebpf/printk_patcher.go:206 in patchPrintkInstructions) | Patched 0 instructions for kretprobe__tcp_sendmsg, errors: []
+2024-08-27 17:16:18 UTC | SYS-PROBE | DEBUG | (pkg/ebpf/printk_patcher.go:206 in patchPrintkInstructions) | Patched 0 instructions for kprobe___nf_conntrack_hash_insert, errors: []
+2024-08-27 17:16:18 UTC | SYS-PROBE | DEBUG | (pkg/ebpf/printk_patcher.go:206 in patchPrintkInstructions) | Patched 0 instructions for kprobe_ctnetlink_fill_info, errors: []
+2024-08-27 17:16:19 UTC | SYS-PROBE | INFO | (pkg/network/tracer/ebpf_conntracker.go:172 in NewEBPFConntracker) | initialized ebpf conntracker
+2024-08-27 17:16:19 UTC | SYS-PROBE | DEBUG | (pkg/config/setup/config.go:2230 in IsCloudProviderEnabled) | cloud_provider_metadata is set to [aws gcp azure alibaba oracle ibm] in agent configuration, trying endpoints for AWS Cloud Provider
+2024-08-27 17:16:19 UTC | SYS-PROBE | DEBUG | (pkg/util/http/transport.go:144 in 1) | URL 'http://169.254.169.254/latest/meta-data/hostname' matches no_proxy list item '169.254.169.254': not using any proxy
+2024-08-27 17:16:19 UTC | SYS-PROBE | INFO | (pkg/network/dns/snooper.go:87 in newSocketFilterSnooper) | DNS Stats Collection has been enabled. Maximum number of stats objects: 20000
+2024-08-27 17:16:19 UTC | SYS-PROBE | INFO | (pkg/network/dns/snooper.go:89 in newSocketFilterSnooper) | DNS domain collection has been enabled
+2024-08-27 17:16:19 UTC | SYS-PROBE | INFO | (pkg/network/dns/parser.go:97 in newDNSParser) | Recording dns query types: [A]
+2024-08-27 17:16:19 UTC | SYS-PROBE | INFO | (pkg/network/tracer/tracer.go:290 in newReverseDNS) | dns inspection enabled
+2024-08-27 17:16:19 UTC | SYS-PROBE | INFO | (pkg/network/usm/ebpf_main.go:605 in initProtocols) | HTTP monitoring enabled
+2024-08-27 17:16:19 UTC | SYS-PROBE | INFO | (pkg/network/usm/ebpf_main.go:605 in initProtocols) | openssl monitoring enabled
+2024-08-27 17:16:19 UTC | SYS-PROBE | DEBUG | (pkg/network/usm/ebpf_main.go:450 in init) | disabled map: http2_in_flight
+2024-08-27 17:16:19 UTC | SYS-PROBE | DEBUG | (pkg/network/usm/ebpf_main.go:450 in init) | disabled map: http2_dynamic_table
+2024-08-27 17:16:19 UTC | SYS-PROBE | DEBUG | (pkg/network/usm/ebpf_main.go:450 in init) | disabled map: http2_dynamic_counter_table
+2024-08-27 17:16:19 UTC | SYS-PROBE | DEBUG | (pkg/network/usm/ebpf_main.go:450 in init) | disabled map: http2_iterations
+2024-08-27 17:16:19 UTC | SYS-PROBE | DEBUG | (pkg/network/usm/ebpf_main.go:450 in init) | disabled map: tls_http2_iterations
+2024-08-27 17:16:19 UTC | SYS-PROBE | DEBUG | (pkg/network/usm/ebpf_main.go:450 in init) | disabled map: http2_remainder
+2024-08-27 17:16:19 UTC | SYS-PROBE | DEBUG | (pkg/network/usm/ebpf_main.go:450 in init) | disabled map: http2_headers_to_process
+2024-08-27 17:16:19 UTC | SYS-PROBE | DEBUG | (pkg/network/usm/ebpf_main.go:450 in init) | disabled map: http2_frames_to_process
+2024-08-27 17:16:19 UTC | SYS-PROBE | DEBUG | (pkg/network/usm/ebpf_main.go:450 in init) | disabled map: http2_stream_heap
+2024-08-27 17:16:19 UTC | SYS-PROBE | DEBUG | (pkg/network/usm/ebpf_main.go:450 in init) | disabled map: http2_ctx_heap
+2024-08-27 17:16:19 UTC | SYS-PROBE | DEBUG | (pkg/network/usm/ebpf_main.go:450 in init) | disabled map: http2_batch_events
+2024-08-27 17:16:19 UTC | SYS-PROBE | DEBUG | (pkg/network/usm/ebpf_main.go:450 in init) | disabled map: http2_batch_state
+2024-08-27 17:16:19 UTC | SYS-PROBE | DEBUG | (pkg/network/usm/ebpf_main.go:450 in init) | disabled map: http2_batches
+2024-08-27 17:16:19 UTC | SYS-PROBE | DEBUG | (pkg/network/usm/ebpf_main.go:450 in init) | disabled map: terminated_http2_batch_events
+2024-08-27 17:16:19 UTC | SYS-PROBE | DEBUG | (pkg/network/usm/ebpf_main.go:450 in init) | disabled map: terminated_http2_batch_state
+2024-08-27 17:16:19 UTC | SYS-PROBE | DEBUG | (pkg/network/usm/ebpf_main.go:450 in init) | disabled map: terminated_http2_batches
+2024-08-27 17:16:19 UTC | SYS-PROBE | DEBUG | (pkg/network/usm/ebpf_main.go:450 in init) | disabled map: kafka_heap
+2024-08-27 17:16:19 UTC | SYS-PROBE | DEBUG | (pkg/network/usm/ebpf_main.go:450 in init) | disabled map: kafka_in_flight
+2024-08-27 17:16:19 UTC | SYS-PROBE | DEBUG | (pkg/network/usm/ebpf_main.go:450 in init) | disabled map: kafka_response
+2024-08-27 17:16:19 UTC | SYS-PROBE | DEBUG | (pkg/network/usm/ebpf_main.go:450 in init) | disabled map: kafka_client_id
+2024-08-27 17:16:19 UTC | SYS-PROBE | DEBUG | (pkg/network/usm/ebpf_main.go:450 in init) | disabled map: kafka_topic_name
+2024-08-27 17:16:19 UTC | SYS-PROBE | DEBUG | (pkg/network/usm/ebpf_main.go:450 in init) | disabled map: kafka_telemetry
+2024-08-27 17:16:19 UTC | SYS-PROBE | DEBUG | (pkg/network/usm/ebpf_main.go:450 in init) | disabled map: kafka_batch_events
+2024-08-27 17:16:19 UTC | SYS-PROBE | DEBUG | (pkg/network/usm/ebpf_main.go:450 in init) | disabled map: kafka_batch_state
+2024-08-27 17:16:19 UTC | SYS-PROBE | DEBUG | (pkg/network/usm/ebpf_main.go:450 in init) | disabled map: kafka_batches
+2024-08-27 17:16:19 UTC | SYS-PROBE | DEBUG | (pkg/network/usm/ebpf_main.go:450 in init) | disabled map: postgres_in_flight
+2024-08-27 17:16:19 UTC | SYS-PROBE | DEBUG | (pkg/network/usm/ebpf_main.go:450 in init) | disabled map: postgres_scratch_buffer
+2024-08-27 17:16:19 UTC | SYS-PROBE | DEBUG | (pkg/network/usm/ebpf_main.go:450 in init) | disabled map: postgres_batch_events
+2024-08-27 17:16:19 UTC | SYS-PROBE | DEBUG | (pkg/network/usm/ebpf_main.go:450 in init) | disabled map: postgres_batch_state
+2024-08-27 17:16:19 UTC | SYS-PROBE | DEBUG | (pkg/network/usm/ebpf_main.go:450 in init) | disabled map: postgres_batches
+2024-08-27 17:16:19 UTC | SYS-PROBE | DEBUG | (pkg/network/usm/ebpf_main.go:450 in init) | disabled map: java_tls_connections
+2024-08-27 17:16:19 UTC | SYS-PROBE | DEBUG | (pkg/network/usm/ebpf_main.go:450 in init) | disabled map: java_conn_tuple_by_peer
+2024-08-27 17:16:19 UTC | SYS-PROBE | DEBUG | (pkg/network/usm/ebpf_main.go:450 in init) | disabled map: java_tls_erpc_handlers
+2024-08-27 17:16:19 UTC | SYS-PROBE | DEBUG | (pkg/network/usm/ebpf_main.go:450 in init) | disabled map: offsets_data
+2024-08-27 17:16:19 UTC | SYS-PROBE | DEBUG | (pkg/network/usm/ebpf_main.go:450 in init) | disabled map: go_tls_read_args
+2024-08-27 17:16:19 UTC | SYS-PROBE | DEBUG | (pkg/network/usm/ebpf_main.go:450 in init) | disabled map: go_tls_write_args
+2024-08-27 17:16:19 UTC | SYS-PROBE | DEBUG | (pkg/network/usm/ebpf_main.go:450 in init) | disabled map: conn_tup_by_go_tls_conn
+2024-08-27 17:16:19 UTC | SYS-PROBE | DEBUG | (pkg/network/usm/utils/file_registry.go:182 in Register) | registering file dev/inode 0.63/2530433 path /host/proc/1/root/usr/lib/aarch64-linux-gnu/libcrypto.so.3 by pid 1
+2024-08-27 17:16:19 UTC | SYS-PROBE | DEBUG | (pkg/network/usm/utils/file_registry.go:182 in Register) | registering file dev/inode 0.591/3169486 path /host/proc/576905/root/usr/lib/aarch64-linux-gnu/libcrypto.so.3 by pid 576905
+2024-08-27 17:16:19 UTC | SYS-PROBE | DEBUG | (pkg/network/usm/utils/file_registry.go:182 in Register) | registering file dev/inode 0.591/3169556 path /host/proc/576905/root/usr/lib/aarch64-linux-gnu/libssl.so.3 by pid 576905
+2024-08-27 17:16:19 UTC | SYS-PROBE | DEBUG | (pkg/network/usm/utils/file_registry.go:182 in Register) | registering file dev/inode 0.557/289158 path /host/proc/1291221/root/usr/lib/aarch64-linux-gnu/libgnutls.so.30.34.3 by pid 1291221
+2024-08-27 17:16:19 UTC | SYS-PROBE | DEBUG | (pkg/network/usm/utils/file_registry.go:182 in Register) | registering file dev/inode 0.557/294335 path /host/proc/1291221/root/usr/lib/aarch64-linux-gnu/libcrypto.so.3 by pid 1291221
+2024-08-27 17:16:19 UTC | SYS-PROBE | DEBUG | (pkg/network/usm/utils/file_registry.go:182 in Register) | registering file dev/inode 0.557/294370 path /host/proc/1291221/root/usr/lib/aarch64-linux-gnu/libssl.so.3 by pid 1291221
+2024-08-27 17:16:19 UTC | SYS-PROBE | DEBUG | (pkg/network/usm/utils/file_registry.go:182 in Register) | registering file dev/inode 0.605/3031441 path /host/proc/1578490/root/opt/datadog-agent/embedded/lib/libcrypto.so.3 by pid 1578490
+2024-08-27 17:16:19 UTC | SYS-PROBE | DEBUG | (pkg/network/usm/utils/file_registry.go:182 in Register) | registering file dev/inode 0.605/3031613 path /host/proc/1578490/root/opt/datadog-agent/embedded/lib/libssl.so.3 by pid 1578490
+2024-08-27 17:16:19 UTC | SYS-PROBE | INFO | (pkg/network/usm/ebpf_main.go:265 in Start) | enabled USM protocol: HTTP
+2024-08-27 17:16:19 UTC | SYS-PROBE | INFO | (pkg/network/usm/ebpf_main.go:265 in Start) | enabled USM protocol: openssl
+2024-08-27 17:16:19 UTC | SYS-PROBE | INFO | (pkg/process/monitor/process_monitor.go:365 in func1) | initializing process monitor (netlink)
+2024-08-27 17:16:19 UTC | SYS-PROBE | INFO | (pkg/process/monitor/process_monitor.go:272 in mainEventLoop) | process monitor main event loop is starting
+2024-08-27 17:16:19 UTC | SYS-PROBE | INFO | (pkg/process/monitor/process_monitor.go:459 in Stop) | process monitor stopping due to a refcount of 0
+2024-08-27 17:16:19 UTC | SYS-PROBE | INFO | (pkg/process/monitor/process_monitor.go:293 in mainEventLoop) | process monitor main event loop is shutting down, having been marked to stop
+2024-08-27 17:16:19 UTC | SYS-PROBE | DEBUG | (pkg/process/monitor/process_monitor.go:252 in func1) | callback runner 4 has completed its execution
+2024-08-27 17:16:19 UTC | SYS-PROBE | DEBUG | (pkg/process/monitor/process_monitor.go:252 in func1) | callback runner 2 has completed its execution
+2024-08-27 17:16:19 UTC | SYS-PROBE | DEBUG | (pkg/process/monitor/process_monitor.go:252 in func1) | callback runner 11 has completed its execution
+2024-08-27 17:16:19 UTC | SYS-PROBE | DEBUG | (pkg/process/monitor/process_monitor.go:252 in func1) | callback runner 9 has completed its execution
+2024-08-27 17:16:19 UTC | SYS-PROBE | DEBUG | (pkg/process/monitor/process_monitor.go:252 in func1) | callback runner 10 has completed its execution
+2024-08-27 17:16:19 UTC | SYS-PROBE | DEBUG | (pkg/process/monitor/process_monitor.go:252 in func1) | callback runner 3 has completed its execution
+2024-08-27 17:16:19 UTC | SYS-PROBE | DEBUG | (pkg/process/monitor/process_monitor.go:252 in func1) | callback runner 7 has completed its execution
+2024-08-27 17:16:19 UTC | SYS-PROBE | DEBUG | (pkg/process/monitor/process_monitor.go:252 in func1) | callback runner 0 has completed its execution
+2024-08-27 17:16:19 UTC | SYS-PROBE | DEBUG | (pkg/process/monitor/process_monitor.go:252 in func1) | callback runner 1 has completed its execution
+2024-08-27 17:16:19 UTC | SYS-PROBE | DEBUG | (pkg/process/monitor/process_monitor.go:252 in func1) | callback runner 5 has completed its execution
+2024-08-27 17:16:19 UTC | SYS-PROBE | DEBUG | (pkg/process/monitor/process_monitor.go:252 in func1) | callback runner 8 has completed its execution
+2024-08-27 17:16:19 UTC | SYS-PROBE | DEBUG | (pkg/process/monitor/process_monitor.go:252 in func1) | callback runner 6 has completed its execution
+2024-08-27 17:16:19 UTC | SYS-PROBE | INFO | (pkg/config/remote/client/client.go:423 in pollLoop) | retrying the first update of remote-config state (rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing: dial tcp [::1]:5001: connect: connection refused")
+2024-08-27 17:16:20 UTC | SYS-PROBE | ERROR | (pkg/network/tracer/tracer.go:860 in newUSMMonitor) | usm startup failed: couldn't initialize process monitor: protocol not supported
+2024-08-27 17:16:20 UTC | SYS-PROBE | DEBUG | (pkg/network/port.go:37 in func1) | Read initial TCP pid->port mapping in 6.013125ms
+2024-08-27 17:16:20 UTC | SYS-PROBE | DEBUG | (pkg/network/tracer/connection/tracer.go:587 in initializePortBindingMaps) | adding initial TCP port binding: netns: 4026532675 port: 10256
+2024-08-27 17:16:20 UTC | SYS-PROBE | DEBUG | (pkg/network/tracer/connection/tracer.go:587 in initializePortBindingMaps) | adding initial TCP port binding: netns: 4026533575 port: 8443
+2024-08-27 17:16:20 UTC | SYS-PROBE | DEBUG | (pkg/network/tracer/connection/tracer.go:587 in initializePortBindingMaps) | adding initial TCP port binding: netns: 4026534946 port: 6262
+2024-08-27 17:16:20 UTC | SYS-PROBE | DEBUG | (pkg/network/tracer/connection/tracer.go:587 in initializePortBindingMaps) | adding initial TCP port binding: netns: 4026532675 port: 10248
+2024-08-27 17:16:20 UTC | SYS-PROBE | DEBUG | (pkg/network/tracer/connection/tracer.go:587 in initializePortBindingMaps) | adding initial TCP port binding: netns: 4026533846 port: 47100
+2024-08-27 17:16:20 UTC | SYS-PROBE | DEBUG | (pkg/network/tracer/connection/tracer.go:587 in initializePortBindingMaps) | adding initial TCP port binding: netns: 4026534946 port: 6000
+2024-08-27 17:16:20 UTC | SYS-PROBE | DEBUG | (pkg/network/tracer/connection/tracer.go:587 in initializePortBindingMaps) | adding initial TCP port binding: netns: 4026534946 port: 5555
+2024-08-27 17:16:20 UTC | SYS-PROBE | DEBUG | (pkg/network/tracer/connection/tracer.go:587 in initializePortBindingMaps) | adding initial TCP port binding: netns: 4026533846 port: 11211
+2024-08-27 17:16:20 UTC | SYS-PROBE | DEBUG | (pkg/network/tracer/connection/tracer.go:587 in initializePortBindingMaps) | adding initial TCP port binding: netns: 4026532675 port: 10249
+2024-08-27 17:16:20 UTC | SYS-PROBE | DEBUG | (pkg/network/tracer/connection/tracer.go:587 in initializePortBindingMaps) | adding initial TCP port binding: netns: 4026533846 port: 47500
+2024-08-27 17:16:20 UTC | SYS-PROBE | DEBUG | (pkg/network/tracer/connection/tracer.go:587 in initializePortBindingMaps) | adding initial TCP port binding: netns: 4026534822 port: 5556
+2024-08-27 17:16:20 UTC | SYS-PROBE | DEBUG | (pkg/network/tracer/connection/tracer.go:587 in initializePortBindingMaps) | adding initial TCP port binding: netns: 4026534822 port: 5005
+2024-08-27 17:16:20 UTC | SYS-PROBE | DEBUG | (pkg/network/tracer/connection/tracer.go:587 in initializePortBindingMaps) | adding initial TCP port binding: netns: 4026535217 port: 80
+2024-08-27 17:16:20 UTC | SYS-PROBE | DEBUG | (pkg/network/tracer/connection/tracer.go:587 in initializePortBindingMaps) | adding initial TCP port binding: netns: 4026534946 port: 5001
+2024-08-27 17:16:20 UTC | SYS-PROBE | DEBUG | (pkg/network/tracer/connection/tracer.go:587 in initializePortBindingMaps) | adding initial TCP port binding: netns: 4026532675 port: 33115
+2024-08-27 17:16:20 UTC | SYS-PROBE | DEBUG | (pkg/network/tracer/connection/tracer.go:587 in initializePortBindingMaps) | adding initial TCP port binding: netns: 4026532675 port: 10250
+2024-08-27 17:16:20 UTC | SYS-PROBE | DEBUG | (pkg/network/tracer/connection/tracer.go:587 in initializePortBindingMaps) | adding initial TCP port binding: netns: 4026533846 port: 8080
+2024-08-27 17:16:20 UTC | SYS-PROBE | DEBUG | (pkg/network/tracer/connection/tracer.go:587 in initializePortBindingMaps) | adding initial TCP port binding: netns: 4026533846 port: 10800
+2024-08-27 17:16:20 UTC | SYS-PROBE | DEBUG | (pkg/network/tracer/connection/tracer.go:587 in initializePortBindingMaps) | adding initial TCP port binding: netns: 4026534822 port: 5000
+2024-08-27 17:16:20 UTC | SYS-PROBE | DEBUG | (pkg/network/tracer/connection/tracer.go:587 in initializePortBindingMaps) | adding initial TCP port binding: netns: 4026534822 port: 8000
+2024-08-27 17:16:20 UTC | SYS-PROBE | DEBUG | (pkg/network/tracer/connection/tracer.go:587 in initializePortBindingMaps) | adding initial TCP port binding: netns: 4026535217 port: 81
+2024-08-27 17:16:20 UTC | SYS-PROBE | DEBUG | (pkg/network/tracer/connection/tracer.go:587 in initializePortBindingMaps) | adding initial TCP port binding: netns: 4026535637 port: 3000
+2024-08-27 17:16:20 UTC | SYS-PROBE | DEBUG | (pkg/network/tracer/connection/tracer.go:587 in initializePortBindingMaps) | adding initial TCP port binding: netns: 4026532675 port: 43243
+2024-08-27 17:16:20 UTC | SYS-PROBE | DEBUG | (pkg/network/tracer/connection/tracer.go:587 in initializePortBindingMaps) | adding initial TCP port binding: netns: 4026534824 port: 5432
+2024-08-27 17:16:20 UTC | SYS-PROBE | DEBUG | (pkg/network/port.go:37 in func1) | Read initial UDP pid->port mapping in 811.708µs
+2024-08-27 17:16:20 UTC | SYS-PROBE | DEBUG | (pkg/network/tracer/connection/tracer.go:608 in initializePortBindingMaps) | ignoring initial ephemeral UDP port bind to {4026532675 59284}
+2024-08-27 17:16:20 UTC | SYS-PROBE | DEBUG | (pkg/network/tracer/connection/tracer.go:612 in initializePortBindingMaps) | adding initial UDP port binding: netns: 4026534946 port: 8125
+2024-08-27 17:16:20 UTC | SYS-PROBE | INFO | (cmd/system-probe/api/module/loader.go:110 in Register) | module network_tracer started
+2024-08-27 17:16:20 UTC | SYS-PROBE | WARN | (pkg/security/probe/config/config.go:275 in getBool) | runtime_security_config.network.enabled has been deprecated: please set event_monitoring_config.network.enabled instead
+2024-08-27 17:16:20 UTC | SYS-PROBE | WARN | (pkg/security/probe/probe_ebpf.go:1587 in NewEBPFProbe) | the current environment may be misconfigured: 4 errors occurred:
+	* /etc/passwd doesn't seem to be a mountpoint
+	* /etc/group doesn't seem to be a mountpoint
+	* /host/root/usr/lib/os-release doesn't seem to be a mountpoint
+	* /host/sys/kernel/security doesn't seem to be a mountpoint
+
+2024-08-27 17:16:20 UTC | SYS-PROBE | INFO | (pkg/security/module/cws.go:94 in NewCWSConsumer) | Instantiating CWS rule engine
+2024-08-27 17:16:20 UTC | SYS-PROBE | DEBUG | (pkg/util/grpc/agent_client.go:43 in getGRPCClientConn) | attempting to create grpc agent client connection to: localhost:5001
+2024-08-27 17:16:20 UTC | SYS-PROBE | DEBUG | (pkg/util/grpc/agent_client.go:76 in GetDDAgentSecureClient) | grpc agent secure client created
+2024-08-27 17:16:20 UTC | SYS-PROBE | INFO | (cmd/system-probe/modules/eventmonitor.go:58 in createEventMonitorModule) | event monitoring cws consumer initialized
+2024-08-27 17:16:20 UTC | SYS-PROBE | INFO | (cmd/system-probe/modules/eventmonitor.go:71 in createEventMonitorModule) | event monitoring network consumer initialized
+2024-08-27 17:16:20 UTC | SYS-PROBE | INFO | (pkg/network/config/config.go:429 in New) | network process event monitoring enabled
+2024-08-27 17:16:20 UTC | SYS-PROBE | INFO | (pkg/config/remote/client/client.go:423 in pollLoop) | retrying the first update of remote-config state (rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing: dial tcp [::1]:5001: connect: connection refused")
+2024-08-27 17:16:21 UTC | SYS-PROBE | DEBUG | (pkg/security/probe/eventstream/monitor.go:226 in NewEventStreamMonitor) | monitoring perf ring buffer on 12 CPU, 41 events
+2024-08-27 17:16:21 UTC | SYS-PROBE | INFO | (comp/core/tagger/taggerimpl/remote/tagger.go:389 in func1) | tagger stream established successfully
+2024-08-27 17:16:21 UTC | SYS-PROBE | INFO | (comp/core/tagger/taggerimpl/remote/tagger.go:160 in Start) | remote tagger initialized successfully
+2024-08-27 17:16:21 UTC | SYS-PROBE | DEBUG | (pkg/util/grpc/agent_client.go:43 in getGRPCClientConn) | attempting to create grpc agent client connection to: localhost:5001
+2024-08-27 17:16:21 UTC | SYS-PROBE | DEBUG | (pkg/util/grpc/agent_client.go:64 in GetDDAgentClient) | grpc agent client created
+2024-08-27 17:16:21 UTC | SYS-PROBE | DEBUG | (pkg/security/utils/hostname.go:57 in func1) | Acquired hostname from gRPC: local-worker2-ccdaniele-kind
+2024-08-27 17:16:21 UTC | SYS-PROBE | INFO | (pkg/security/probe/probe_ebpf.go:1021 in ApplyFilterPolicy) | Setting in-kernel filter policy to `deny` for `open`
+2024-08-27 17:16:21 UTC | SYS-PROBE | INFO | (pkg/security/probe/probe_ebpf.go:1021 in ApplyFilterPolicy) | Setting in-kernel filter policy to `deny` for `mkdir`
+2024-08-27 17:16:21 UTC | SYS-PROBE | INFO | (pkg/security/probe/probe_ebpf.go:1021 in ApplyFilterPolicy) | Setting in-kernel filter policy to `deny` for `link`
+2024-08-27 17:16:21 UTC | SYS-PROBE | INFO | (pkg/security/probe/probe_ebpf.go:1021 in ApplyFilterPolicy) | Setting in-kernel filter policy to `deny` for `rename`
+2024-08-27 17:16:21 UTC | SYS-PROBE | INFO | (pkg/security/probe/probe_ebpf.go:1021 in ApplyFilterPolicy) | Setting in-kernel filter policy to `deny` for `unlink`
+2024-08-27 17:16:21 UTC | SYS-PROBE | INFO | (pkg/security/probe/probe_ebpf.go:1021 in ApplyFilterPolicy) | Setting in-kernel filter policy to `deny` for `rmdir`
+2024-08-27 17:16:21 UTC | SYS-PROBE | INFO | (pkg/security/probe/probe_ebpf.go:1021 in ApplyFilterPolicy) | Setting in-kernel filter policy to `deny` for `chmod`
+2024-08-27 17:16:21 UTC | SYS-PROBE | INFO | (pkg/security/probe/probe_ebpf.go:1021 in ApplyFilterPolicy) | Setting in-kernel filter policy to `deny` for `chown`
+2024-08-27 17:16:21 UTC | SYS-PROBE | INFO | (pkg/security/probe/probe_ebpf.go:1021 in ApplyFilterPolicy) | Setting in-kernel filter policy to `deny` for `utimes`
+2024-08-27 17:16:21 UTC | SYS-PROBE | INFO | (pkg/security/probe/probe_ebpf.go:1021 in ApplyFilterPolicy) | Setting in-kernel filter policy to `deny` for `setxattr`
+2024-08-27 17:16:21 UTC | SYS-PROBE | INFO | (pkg/security/probe/probe_ebpf.go:1021 in ApplyFilterPolicy) | Setting in-kernel filter policy to `deny` for `removexattr`
+2024-08-27 17:16:21 UTC | SYS-PROBE | INFO | (pkg/security/probe/probe_ebpf.go:1021 in ApplyFilterPolicy) | Setting in-kernel filter policy to `deny` for `chdir`
+2024-08-27 17:16:21 UTC | SYS-PROBE | INFO | (pkg/security/probe/probe_ebpf.go:1021 in ApplyFilterPolicy) | Setting in-kernel filter policy to `deny` for `mount`
+2024-08-27 17:16:21 UTC | SYS-PROBE | INFO | (pkg/security/probe/probe_ebpf.go:1021 in ApplyFilterPolicy) | Setting in-kernel filter policy to `deny` for `umount`
+2024-08-27 17:16:21 UTC | SYS-PROBE | INFO | (pkg/security/probe/probe_ebpf.go:1021 in ApplyFilterPolicy) | Setting in-kernel filter policy to `deny` for `fork`
+2024-08-27 17:16:21 UTC | SYS-PROBE | INFO | (pkg/security/probe/probe_ebpf.go:1021 in ApplyFilterPolicy) | Setting in-kernel filter policy to `deny` for `exec`
+2024-08-27 17:16:21 UTC | SYS-PROBE | INFO | (pkg/security/probe/probe_ebpf.go:1021 in ApplyFilterPolicy) | Setting in-kernel filter policy to `deny` for `exit`
+2024-08-27 17:16:21 UTC | SYS-PROBE | INFO | (pkg/security/probe/probe_ebpf.go:1021 in ApplyFilterPolicy) | Setting in-kernel filter policy to `deny` for `invalidate_dentry`
+2024-08-27 17:16:21 UTC | SYS-PROBE | INFO | (pkg/security/probe/probe_ebpf.go:1021 in ApplyFilterPolicy) | Setting in-kernel filter policy to `deny` for `setuid`
+2024-08-27 17:16:21 UTC | SYS-PROBE | INFO | (pkg/security/probe/probe_ebpf.go:1021 in ApplyFilterPolicy) | Setting in-kernel filter policy to `deny` for `setgid`
+2024-08-27 17:16:21 UTC | SYS-PROBE | INFO | (pkg/security/probe/probe_ebpf.go:1021 in ApplyFilterPolicy) | Setting in-kernel filter policy to `deny` for `capset`
+2024-08-27 17:16:21 UTC | SYS-PROBE | INFO | (pkg/security/probe/probe_ebpf.go:1021 in ApplyFilterPolicy) | Setting in-kernel filter policy to `deny` for `args_envs`
+2024-08-27 17:16:21 UTC | SYS-PROBE | INFO | (pkg/security/probe/probe_ebpf.go:1021 in ApplyFilterPolicy) | Setting in-kernel filter policy to `deny` for `mount_released`
+2024-08-27 17:16:21 UTC | SYS-PROBE | INFO | (pkg/security/probe/probe_ebpf.go:1021 in ApplyFilterPolicy) | Setting in-kernel filter policy to `deny` for `selinux`
+2024-08-27 17:16:21 UTC | SYS-PROBE | INFO | (pkg/security/probe/probe_ebpf.go:1021 in ApplyFilterPolicy) | Setting in-kernel filter policy to `deny` for `bpf`
+2024-08-27 17:16:21 UTC | SYS-PROBE | INFO | (pkg/security/probe/probe_ebpf.go:1021 in ApplyFilterPolicy) | Setting in-kernel filter policy to `deny` for `ptrace`
+2024-08-27 17:16:21 UTC | SYS-PROBE | INFO | (pkg/security/probe/probe_ebpf.go:1021 in ApplyFilterPolicy) | Setting in-kernel filter policy to `deny` for `mmap`
+2024-08-27 17:16:21 UTC | SYS-PROBE | INFO | (pkg/security/probe/probe_ebpf.go:1021 in ApplyFilterPolicy) | Setting in-kernel filter policy to `deny` for `mprotect`
+2024-08-27 17:16:21 UTC | SYS-PROBE | INFO | (pkg/security/probe/probe_ebpf.go:1021 in ApplyFilterPolicy) | Setting in-kernel filter policy to `deny` for `load_module`
+2024-08-27 17:16:21 UTC | SYS-PROBE | INFO | (pkg/security/probe/probe_ebpf.go:1021 in ApplyFilterPolicy) | Setting in-kernel filter policy to `deny` for `unload_module`
+2024-08-27 17:16:21 UTC | SYS-PROBE | INFO | (pkg/security/probe/probe_ebpf.go:1021 in ApplyFilterPolicy) | Setting in-kernel filter policy to `deny` for `signal`
+2024-08-27 17:16:21 UTC | SYS-PROBE | INFO | (pkg/security/probe/probe_ebpf.go:1021 in ApplyFilterPolicy) | Setting in-kernel filter policy to `deny` for `splice`
+2024-08-27 17:16:21 UTC | SYS-PROBE | INFO | (pkg/security/probe/probe_ebpf.go:1021 in ApplyFilterPolicy) | Setting in-kernel filter policy to `deny` for `cgroup_tracing`
+2024-08-27 17:16:21 UTC | SYS-PROBE | INFO | (pkg/security/probe/probe_ebpf.go:1021 in ApplyFilterPolicy) | Setting in-kernel filter policy to `deny` for `dns`
+2024-08-27 17:16:21 UTC | SYS-PROBE | INFO | (pkg/security/probe/probe_ebpf.go:1021 in ApplyFilterPolicy) | Setting in-kernel filter policy to `deny` for `net_device`
+2024-08-27 17:16:21 UTC | SYS-PROBE | INFO | (pkg/security/probe/probe_ebpf.go:1021 in ApplyFilterPolicy) | Setting in-kernel filter policy to `deny` for `veth_pair`
+2024-08-27 17:16:21 UTC | SYS-PROBE | INFO | (pkg/security/probe/probe_ebpf.go:1021 in ApplyFilterPolicy) | Setting in-kernel filter policy to `deny` for `bind`
+2024-08-27 17:16:21 UTC | SYS-PROBE | INFO | (pkg/security/probe/probe_ebpf.go:1021 in ApplyFilterPolicy) | Setting in-kernel filter policy to `deny` for `unshare_mntns`
+2024-08-27 17:16:21 UTC | SYS-PROBE | INFO | (pkg/security/probe/probe_ebpf.go:1021 in ApplyFilterPolicy) | Setting in-kernel filter policy to `deny` for `syscalls`
+2024-08-27 17:16:24 UTC | SYS-PROBE | ERROR | (cmd/system-probe/api/module/loader.go:103 in Register) | error registering HTTP endpoints for module event_monitor: failed to setup probe: probes activation validation failed: AllOf requirement failed, the following probes are not running [AllOf requirement failed, the following probes are not running [AllOf requirement failed, the following probes are not running [{UID:security EBPFFuncName:hook_security_socket_bind}: couldn't enable kprobe {UID:security EBPFFuncName:hook_security_socket_bind}: cannot write "p:p_security_socket_bind_security_1578626 security_socket_bind\n" to kprobe_events: write /sys/kernel/debug/tracing/kprobe_events: no such file or directory | {UID:security EBPFFuncName:hook_security_sk_classify_flow}: couldn't enable kprobe {UID:security EBPFFuncName:hook_security_sk_classify_flow}: cannot write "p:p_security_sk_classify_flow_security_1578626 security_sk_classify_flow\n" to kprobe_events: write /sys/kernel/debug/tracing/kprobe_events: no such file or directory]] | {UID:security EBPFFuncName:hook_security_socket_bind}: couldn't enable kprobe {UID:security EBPFFuncName:hook_security_socket_bind}: cannot write "p:p_security_socket_bind_security_1578626 security_socket_bind\n" to kprobe_events: write /sys/kernel/debug/tracing/kprobe_events: no such file or directory]
+AllOf requirement failed, the following probes are not running [{UID:security EBPFFuncName:hook_do_vfs_ioctl}: couldn't enable kprobe {UID:security EBPFFuncName:hook_do_vfs_ioctl}: cannot write "p:p_do_vfs_ioctl_security_1578626 do_vfs_ioctl\n" to kprobe_events: write /sys/kernel/debug/tracing/kprobe_events: no such file or directory]
+2024-08-27 17:16:24 UTC | SYS-PROBE | DEBUG | (cmd/system-probe/modules/network_tracer.go:115 in func2) | Got request on /network_tracer/register?client_id=process-agent-unique-id
+2024-08-27 17:16:25 UTC | SYS-PROBE | DEBUG | (pkg/network/tracer/connection/tcp_close_consumer.go:158 in func1) | tcp close summary: closed_count=221 elapsed=5.066178502s closed_rate=43.62/s lost_samples_count=0
+2024-08-27 17:16:25 UTC | SYS-PROBE | DEBUG | (pkg/network/tracer/tracer.go:595 in removeEntries) | Removed 0 connection entries in 709ns
+2024-08-27 17:16:25 UTC | SYS-PROBE | DEBUG | (pkg/network/dns/stats.go:183 in GetAndResetAllStats) | [DNS Stats] Number of processed stats: 176, Number of dropped stats: 0
+2024-08-27 17:16:25 UTC | SYS-PROBE | INFO | (cmd/system-probe/modules/network_tracer.go:303 in logRequests) | Got request on /connections?client_id=process-agent-unique-id (count: 1): retrieved 591 connections in 4.370125ms
+2024-08-27 17:16:55 UTC | SYS-PROBE | DEBUG | (pkg/network/tracer/connection/tcp_close_consumer.go:158 in func1) | tcp close summary: closed_count=787 elapsed=30.018727389s closed_rate=26.22/s lost_samples_count=0
+2024-08-27 17:16:55 UTC | SYS-PROBE | DEBUG | (pkg/network/tracer/tracer.go:595 in removeEntries) | Removed 194 connection entries in 679.834µs
+2024-08-27 17:16:55 UTC | SYS-PROBE | DEBUG | (pkg/network/dns/stats.go:183 in GetAndResetAllStats) | [DNS Stats] Number of processed stats: 58, Number of dropped stats: 0
+2024-08-27 17:16:55 UTC | SYS-PROBE | INFO | (cmd/system-probe/modules/network_tracer.go:303 in logRequests) | Got request on /connections?client_id=process-agent-unique-id (count: 2): retrieved 1435 connections in 11.158ms
+2024-08-27 17:17:19 UTC | SYS-PROBE | DEBUG | (pkg/network/dns/cache.go:190 in Expire) | dns entries expired. took=812.833µs total=35 expired=52
+2024-08-27 17:17:25 UTC | SYS-PROBE | DEBUG | (pkg/network/tracer/connection/tcp_close_consumer.go:158 in func1) | tcp close summary: closed_count=832 elapsed=29.993835347s closed_rate=27.74/s lost_samples_count=0
+2024-08-27 17:17:25 UTC | SYS-PROBE | DEBUG | (pkg/network/tracer/tracer.go:595 in removeEntries) | Removed 164 connection entries in 299.792µs
+2024-08-27 17:17:25 UTC | SYS-PROBE | DEBUG | (pkg/network/dns/stats.go:183 in GetAndResetAllStats) | [DNS Stats] Number of processed stats: 32, Number of dropped stats: 0
+2024-08-27 17:17:25 UTC | SYS-PROBE | INFO | (cmd/system-probe/modules/network_tracer.go:303 in logRequests) | Got request on /connections?client_id=process-agent-unique-id (count: 3): retrieved 1591 connections in 7.19375ms

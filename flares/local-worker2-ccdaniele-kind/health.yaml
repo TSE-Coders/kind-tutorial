@@ -1,0 +1,23 @@
+healthy:
+- ad-config-provider-cluster-checks
+- ad-config-provider-endpoints-checks
+- ad-config-provider-kubernetes-container-allinone
+- ad-kubeletlistener
+- ad-servicelistening
+- aggregator
+- collector-queue-15s
+- collector-queue-20s
+- collector-queue-900s
+- dogstatsd-main
+- forwarder
+- healthcheck
+- healthcheck
+- jmxfetch
+- logs-agent
+- process-language-detection-client-sender
+- tagger-store
+- tagger-workloadmeta
+- workloadmeta-containerd
+- workloadmeta-puller
+- workloadmeta-store
+unhealthy: []

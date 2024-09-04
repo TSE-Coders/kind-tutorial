@@ -1,0 +1,147 @@
+metrics:
+- MIB: UCD-SNMP-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.2021.10.1.5.1
+    name: cpu.usage
+- MIB: UCD-SNMP-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.2021.4.5.0
+    name: memory.total
+- MIB: UCD-SNMP-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.2021.4.6.0
+    name: memory.free
+- MIB: UCD-SNMP-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.2021.4.3.0
+    name: ucd.memTotalSwap
+- MIB: UCD-SNMP-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.2021.4.4.0
+    name: ucd.memAvailSwap
+- MIB: UCD-SNMP-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.2021.4.11.0
+    name: ucd.memTotalFree
+- MIB: UCD-SNMP-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.2021.4.12.0
+    name: ucd.memMinimumSwap
+- MIB: UCD-SNMP-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.2021.4.13.0
+    name: ucd.memShared
+- MIB: UCD-SNMP-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.2021.4.14.0
+    name: ucd.memBuffer
+- MIB: UCD-SNMP-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.2021.4.15.0
+    name: ucd.memCached
+- MIB: UCD-SNMP-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.2021.9.1.2
+      name: ucd.dskPath
+    tag: ucd_dsk_path
+  - symbol:
+      OID: 1.3.6.1.4.1.2021.9.1.3
+      name: ucd.dskDevice
+    tag: ucd_dsk_device
+  - mapping:
+      0: no_error
+      1: error
+    symbol:
+      OID: 1.3.6.1.4.1.2021.9.1.100
+      name: ucd.dskErrorFlag
+    tag: ucd_dsk_error_flag
+  symbols:
+  - OID: 1.3.6.1.4.1.2021.9.1.6
+    name: ucd.dskTotal
+  - OID: 1.3.6.1.4.1.2021.9.1.7
+    name: ucd.dskAvail
+  - OID: 1.3.6.1.4.1.2021.9.1.8
+    name: ucd.dskUsed
+  - OID: 1.3.6.1.4.1.2021.9.1.9
+    name: ucd.dskPercent
+  - OID: 1.3.6.1.4.1.2021.9.1.10
+    name: ucd.dskPercentNode
+  table:
+    OID: 1.3.6.1.4.1.2021.9
+    name: dskTable
+- MIB: UCD-DISKIO-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.2021.13.15.1.1.2
+      name: ucd.diskIODevice
+    tag: ucd_disk_io_device
+  symbols:
+  - OID: 1.3.6.1.4.1.2021.13.15.1.1.5
+    metric_type: monotonic_count
+    name: ucd.diskIOReads
+  - OID: 1.3.6.1.4.1.2021.13.15.1.1.6
+    metric_type: monotonic_count
+    name: ucd.diskIOWrites
+  - OID: 1.3.6.1.4.1.2021.13.15.1.1.9
+    name: ucd.diskIOLA1
+  - OID: 1.3.6.1.4.1.2021.13.15.1.1.10
+    name: ucd.diskIOLA5
+  - OID: 1.3.6.1.4.1.2021.13.15.1.1.11
+    name: ucd.diskIOLA15
+  - OID: 1.3.6.1.4.1.2021.13.15.1.1.12
+    metric_type: monotonic_count
+    name: ucd.diskIONReadX
+  - OID: 1.3.6.1.4.1.2021.13.15.1.1.13
+    metric_type: monotonic_count
+    name: ucd.diskIONWrittenX
+  table:
+    OID: 1.3.6.1.4.1.2021.13.15.1.1
+    name: diskIOTable
+- MIB: UCD-SNMP-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.2021.11.9.0
+    name: ucd.ssCpuUser
+- MIB: UCD-SNMP-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.2021.11.10.0
+    name: ucd.ssCpuSystem
+- MIB: UCD-SNMP-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.2021.11.11.0
+    name: ucd.ssCpuIdle
+- MIB: UCD-SNMP-MIB
+  metric_type: monotonic_count
+  symbol:
+    OID: 1.3.6.1.4.1.2021.11.50.0
+    name: ucd.ssCpuRawUser
+- MIB: UCD-SNMP-MIB
+  metric_type: monotonic_count
+  symbol:
+    OID: 1.3.6.1.4.1.2021.11.51.0
+    name: ucd.ssCpuRawNice
+- MIB: UCD-SNMP-MIB
+  metric_type: monotonic_count
+  symbol:
+    OID: 1.3.6.1.4.1.2021.11.52.0
+    name: ucd.ssCpuRawSystem
+- MIB: UCD-SNMP-MIB
+  metric_type: monotonic_count
+  symbol:
+    OID: 1.3.6.1.4.1.2021.11.53.0
+    name: ucd.ssCpuRawIdle
+- MIB: UCD-SNMP-MIB
+  metric_type: monotonic_count
+  symbol:
+    OID: 1.3.6.1.4.1.2021.11.54.0
+    name: ucd.ssCpuRawWait
+- MIB: UCD-SNMP-MIB
+  metric_type: monotonic_count
+  symbol:
+    OID: 1.3.6.1.4.1.2021.11.55.0
+    name: ucd.ssCpuRawKernel
+- MIB: UCD-SNMP-MIB
+  metric_type: monotonic_count
+  symbol:
+    OID: 1.3.6.1.4.1.2021.11.56.0
+    name: ucd.ssCpuRawInterrupt

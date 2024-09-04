@@ -1,0 +1,291 @@
+=== Starting diagnose ===
+==============
+Suite: connectivity-datadog-autodiscovery
+1. --------------
+  PASS Alibaba Metadata availability
+  Diagnosis: [Ignore if not applied] Alibaba HostAliases: unable to query metadata endpoint: Get "http://100.100.100.200/latest/meta-data/instance-id": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+
+2. --------------
+  PASS Azure Metadata availability
+  Diagnosis: [Ignore if not applied] Azure HostAliases: unable to query metadata endpoint: Get "http://169.254.169.254/metadata/instance/compute/vmId?api-version=2017-04-02&format=text": dial tcp 169.254.169.254:80: connect: connection refused
+
+3. --------------
+  PASS CRI availability
+  Diagnosis: Successfully connected to CRI availability environment
+
+4. --------------
+  PASS Cluster Agent availability
+  Diagnosis: Successfully connected to Cluster Agent availability environment
+
+5. --------------
+  PASS Containerd availability
+  Diagnosis: Successfully connected to Containerd availability environment
+
+6. --------------
+  PASS Docker availability
+  Diagnosis: [Ignore if not applied] error connecting to docker: temporary failure in dockerutil, will retry later: Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
+
+7. --------------
+  PASS EC2 Metadata availability
+  Diagnosis: [Ignore if not applied] Get "http://169.254.169.254/latest/meta-data/hostname": dial tcp 169.254.169.254:80: connect: connection refused
+
+8. --------------
+  PASS ECS Fargate Metadata availability
+  Diagnosis: [Ignore if not applied] error while initializing ECS metadata V2 client: temporary failure in ecsutil-meta-v2, will retry later: Get "http://169.254.170.2/v2/metadata": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+
+9. --------------
+  PASS ECS Metadata availability
+  Diagnosis: [Ignore if not applied] temporary failure in ecsutil-meta-v1, will retry later: could not detect ECS agent, tried URLs: [http://10.244.2.1:51678/ http://169.254.172.1:51678/ http://localhost:51678/]
+
+10. --------------
+  PASS ECS Metadata with tags availability
+  Diagnosis: [Ignore if not applied] temporary failure in ecsutil-meta-v3-or-v4, will retry later: Could not initialize client: missing metadata v3 URL
+
+11. --------------
+  PASS GCE Metadata availability
+  Diagnosis: [Ignore if not applied] unable to retrieve hostname from GCE: GCE metadata API error: Get "http://169.254.169.254/computeMetadata/v1/instance/hostname": dial tcp 169.254.169.254:80: connect: connection refused
+
+12. --------------
+  PASS IBM cloud Metadata availability
+  Diagnosis: [Ignore if not applied] IBM HostAliases: unable to get a token: Put "http://169.254.169.254/instance_identity/v1/token?version=2022-03-08": dial tcp 169.254.169.254:80: connect: connection refused
+
+13. --------------
+  PASS Kubelet availability
+  Diagnosis: Successfully connected to Kubelet availability environment
+
+14. --------------
+  PASS Kubernetes API Server availability
+  Diagnosis: Successfully connected to Kubernetes API Server availability environment
+
+15. --------------
+  PASS OracleCloud Metadata availability
+  Diagnosis: [Ignore if not applied] Oracle HostAliases: unable to query metadata endpoint: Get "http://169.254.169.254/opc/v2/instance/id": dial tcp 169.254.169.254:80: connect: connection refused
+
+16. --------------
+  PASS Tencent Metadata availability
+  Diagnosis: [Ignore if not applied] unable to get TencentCloud CVM instanceID: cloud provider is disabled by configuration
+
+==============
+Suite: connectivity-datadog-core-endpoints
+17. --------------
+  PASS Connectivity to https://agent-http-intake.logs.datadoghq.com/v1/input
+  Diagnosis: Connectivity to `https://agent-http-intake.logs.datadoghq.com/v1/input` is Ok
+
+18. --------------
+  PASS Connectivity to https://app.datadoghq.com/api/v1/series
+  Diagnosis: 
+...Retrieving or creating a new connection
+...Starting DNS lookup to resolve app.datadoghq.com
+...DNS Lookup: OK
+...Starting a new connection
+...Connection to the endpoint: OK
+...Starting TLS Handshake
+...TLS Handshake: OK
+Connectivity to `https://app.datadoghq.com/api/v1/series` is Ok
+Received status code 202 from the endpoint
+
+19. --------------
+  PASS Connectivity to https://app.datadoghq.com/api/v1/check_run
+  Diagnosis: 
+...Retrieving or creating a new connection
+...Reusing a previous connection that was idle for 50.625µs
+Connectivity to `https://app.datadoghq.com/api/v1/check_run` is Ok
+Received status code 202 from the endpoint
+
+20. --------------
+  PASS Connectivity to https://app.datadoghq.com/intake/
+  Diagnosis: 
+...Retrieving or creating a new connection
+...Reusing a previous connection that was idle for 35.042µs
+Connectivity to `https://app.datadoghq.com/intake/` is Ok
+Received status code 202 from the endpoint
+
+21. --------------
+  PASS Connectivity to https://app.datadoghq.com/api/v1/validate
+  Diagnosis: 
+...Retrieving or creating a new connection
+...Reusing a previous connection that was idle for 36.084µs
+Connectivity to `https://app.datadoghq.com/api/v1/validate` is Ok
+Received status code 200 from the endpoint
+
+22. --------------
+  PASS Connectivity to https://app.datadoghq.com/api/v1/metadata
+  Diagnosis: 
+...Retrieving or creating a new connection
+...Reusing a previous connection that was idle for 37.292µs
+Connectivity to `https://app.datadoghq.com/api/v1/metadata` is Ok
+Received status code 202 from the endpoint
+
+23. --------------
+  PASS Connectivity to https://app.datadoghq.com/api/v2/series
+  Diagnosis: 
+...Retrieving or creating a new connection
+...Reusing a previous connection that was idle for 33.916µs
+Connectivity to `https://app.datadoghq.com/api/v2/series` is Ok
+Received status code 202 from the endpoint
+
+24. --------------
+  PASS Connectivity to https://app.datadoghq.com/api/beta/sketches
+  Diagnosis: 
+...Retrieving or creating a new connection
+...Reusing a previous connection that was idle for 41.167µs
+Connectivity to `https://app.datadoghq.com/api/beta/sketches` is Ok
+Received status code 202 from the endpoint
+
+25. --------------
+  PASS Connectivity to https://7-55-2-flare.agent.datadoghq.com/support/flare
+  Diagnosis: Connectivity to `https://7-55-2-flare.agent.datadoghq.com/support/flare` is Ok
+Received status code 307 from the endpoint
+
+==============
+Suite: connectivity-datadog-event-platform
+26. --------------
+  PASS [DBM] Connectivity to https://dbm-metrics-intake.datadoghq.com/api/v2/databasequery
+  Diagnosis: Connectivity to `https://dbm-metrics-intake.datadoghq.com/api/v2/databasequery` is Ok
+
+27. --------------
+  PASS [DBM] Connectivity to https://dbm-metrics-intake.datadoghq.com/api/v2/dbmmetrics
+  Diagnosis: Connectivity to `https://dbm-metrics-intake.datadoghq.com/api/v2/dbmmetrics` is Ok
+
+28. --------------
+  PASS Connectivity to https://dbm-metrics-intake.datadoghq.com/api/v2/dbmmetadata
+  Diagnosis: Connectivity to `https://dbm-metrics-intake.datadoghq.com/api/v2/dbmmetadata` is Ok
+
+29. --------------
+  PASS [DBM] Connectivity to https://dbm-metrics-intake.datadoghq.com/api/v2/dbmactivity
+  Diagnosis: Connectivity to `https://dbm-metrics-intake.datadoghq.com/api/v2/dbmactivity` is Ok
+
+30. --------------
+  PASS [NDM] Connectivity to https://ndm-intake.datadoghq.com/api/v2/ndm
+  Diagnosis: Connectivity to `https://ndm-intake.datadoghq.com/api/v2/ndm` is Ok
+
+31. --------------
+  PASS [NDM] Connectivity to https://snmp-traps-intake.datadoghq.com/api/v2/ndmtraps
+  Diagnosis: Connectivity to `https://snmp-traps-intake.datadoghq.com/api/v2/ndmtraps` is Ok
+
+32. --------------
+  PASS [NDM] Connectivity to https://ndmflow-intake.datadoghq.com/api/v2/ndmflow
+  Diagnosis: Connectivity to `https://ndmflow-intake.datadoghq.com/api/v2/ndmflow` is Ok
+
+33. --------------
+  FAIL [Network Path] Connectivity to https://netpath-intake.datadoghq.com/api/v2/netpath
+  Diagnosis: Connection to `https://netpath-intake.datadoghq.com/api/v2/netpath` failed
+  Remediation: Please validate Agent configuration and firewall to access https://netpath-intake.datadoghq.com/api/v2/netpath
+  Error: client error
+
+34. --------------
+  PASS [Container] Connectivity to https://contlcycle-intake.datadoghq.com/api/v2/contlcycle
+  Diagnosis: Connectivity to `https://contlcycle-intake.datadoghq.com/api/v2/contlcycle` is Ok
+
+35. --------------
+  PASS [Container] Connectivity to https://contimage-intake.datadoghq.com/api/v2/contimage
+  Diagnosis: Connectivity to `https://contimage-intake.datadoghq.com/api/v2/contimage` is Ok
+
+36. --------------
+  PASS [SBOM] Connectivity to https://sbom-intake.datadoghq.com/api/v2/sbom
+  Diagnosis: Connectivity to `https://sbom-intake.datadoghq.com/api/v2/sbom` is Ok
+
+37. --------------
+  PASS [Service Discovery] Connectivity to https://instrumentation-telemetry-intake.datadoghq.com/api/v2/apmtelemetry
+  Diagnosis: Connectivity to `https://instrumentation-telemetry-intake.datadoghq.com/api/v2/apmtelemetry` is Ok
+
+==============
+Suite: port-conflict
+38. --------------
+  PASS health_port
+  Diagnosis: Required port 5555 is used by 'agent' process (PID=1578490) for tcp
+
+39. --------------
+  FAIL security_agent.cmd_port
+  Diagnosis: Required port 5010 is already used by '' process (PID=0) for tcp.
+
+40. --------------
+  PASS otlp_config.traces.internal_port
+  Diagnosis: Required port 5003 is not used
+
+41. --------------
+  PASS process_config.cmd_port
+  Diagnosis: Required port 6162 is used by 'process-agent' process (PID=1578575) for tcp
+
+42. --------------
+  PASS logs_config.dd_port
+  Diagnosis: Required port 10516 is not used
+
+43. --------------
+  PASS kubernetes_http_kubelet_port
+  Diagnosis: Required port 10255 is not used
+
+44. --------------
+  PASS process_config.expvar_port
+  Diagnosis: Required port 6062 is used by 'process-agent' process (PID=1578575) for tcp
+
+45. --------------
+  PASS dogstatsd_stats_port
+  Diagnosis: Required port 5000 is not used
+
+46. --------------
+  PASS cluster_agent.cmd_port
+  Diagnosis: Required port 5005 is not used
+
+47. --------------
+  PASS process_config.language_detection.grpc_port
+  Diagnosis: Required port 6262 is used by 'agent' process (PID=1578490) for tcp
+
+48. --------------
+  PASS external_metrics_provider.port
+  Diagnosis: Required port 8443 is not used
+
+49. --------------
+  PASS kubernetes_https_kubelet_port
+  Diagnosis: Required port 10250 is not used
+
+50. --------------
+  PASS cmd_port
+  Diagnosis: Required port 5001 is used by 'agent' process (PID=1578490) for tcp
+
+51. --------------
+  PASS cluster_checks.clc_runners_port
+  Diagnosis: Required port 5005 is not used
+
+52. --------------
+  PASS apm_config.debug.port
+  Diagnosis: Required port 5012 is used by 'trace-agent' process (PID=1578528) for tcp
+
+53. --------------
+  PASS fips.port_range_start
+  Diagnosis: Required port 9803 is not used
+
+54. --------------
+  PASS dogstatsd_port
+  Diagnosis: Required port 8125 is used by 'agent' process (PID=1578490) for udp
+
+55. --------------
+  PASS clc_runner_port
+  Diagnosis: Required port 5005 is not used
+
+56. --------------
+  FAIL security_agent.expvar_port
+  Diagnosis: Required port 5011 is already used by '' process (PID=0) for tcp.
+
+57. --------------
+  PASS network_devices.snmp_traps.port
+  Diagnosis: Required port 9162 is not used
+
+58. --------------
+  PASS expvar_port
+  Diagnosis: Required port 6000 is used by 'agent' process (PID=1578490) for tcp
+
+59. --------------
+  PASS admission_controller.port
+  Diagnosis: Required port 8000 is not used
+
+60. --------------
+  PASS apm_config.receiver_port
+  Diagnosis: Required port 8126 is used by 'trace-agent' process (PID=1578528) for tcp
+
+61. --------------
+  PASS metrics_port
+  Diagnosis: Required port 5000 is not used
+
+-------------------------
+  Total:61, Success:58, Fail:3

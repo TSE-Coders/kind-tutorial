@@ -1,0 +1,158 @@
+extends:
+- _base.yaml
+- _generic-host-resources-base.yaml
+- _generic-if.yaml
+metadata:
+  device:
+    fields:
+      type:
+        value: router
+      vendor:
+        value: peplink
+metric_tags:
+- OID: 1.3.6.1.4.1.23695.200.1.1.1.1.1
+  symbol: deviceModel
+  tag: peplink_device_model
+- OID: 1.3.6.1.4.1.23695.200.1.1.1.1.2
+  symbol: deviceSerialNumber
+  tag: peplink_device_serial_number
+- OID: 1.3.6.1.4.1.23695.200.1.1.1.1.3
+  symbol: deviceFirmwareVersion
+  tag: peplink_device_firmware_version
+- OID: 1.3.6.1.4.1.23695.1.1.1.1
+  symbol: balFirmware
+  tag: peplink_bal_firmware
+- OID: 1.3.6.1.4.1.23695.1.1.1.2
+  symbol: balSerialNumber
+  tag: peplink_bal_serial_number
+metrics:
+- MIB: PEPLINK-DEVICE
+  symbol:
+    OID: 1.3.6.1.4.1.23695.200.1.1.1.3.1.0
+    name: cpu.usage
+- MIB: PEPLINK-DEVICE
+  symbol:
+    OID: 1.3.6.1.4.1.23695.200.1.1.1.3.2.0
+    name: memory.total
+- MIB: PEPLINK-DEVICE
+  symbol:
+    OID: 1.3.6.1.4.1.23695.200.1.1.1.3.3.0
+    name: memory.usage
+- MIB: PEPLINK-DEVICE
+  symbol:
+    OID: 1.3.6.1.4.1.23695.200.1.1.1.4.4.1.0
+    name: peplink.deviceTemperatureCelsius
+- MIB: PEPLINK-DEVICE
+  symbol:
+    OID: 1.3.6.1.4.1.23695.200.1.1.1.4.4.2.0
+    name: peplink.deviceTemperatureFahrenheit
+- MIB: PEPLINK-DEVICE
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.23695.200.1.1.1.4.1.1.1
+      name: devicePSUId
+    tag: device_psu_id
+  - mapping:
+      0: error
+      1: true
+    symbol:
+      OID: 1.3.6.1.4.1.23695.200.1.1.1.4.1.1.2
+      name: devicePSUStatus
+    tag: device_psu_status
+  symbols:
+  - OID: 1.3.6.1.4.1.23695.200.1.1.1.4.1.1.5
+    name: peplink.devicePSUPercentage
+  table:
+    OID: 1.3.6.1.4.1.23695.200.1.1.1.4.1
+    name: devicePSUTable
+- MIB: PEPLINK-DEVICE
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.23695.200.1.1.1.4.2.1.1
+      name: deviceFanId
+    tag: device_fan_id
+  - mapping:
+      0: error
+      1: true
+    symbol:
+      OID: 1.3.6.1.4.1.23695.200.1.1.1.4.2.1.2
+      name: deviceFanStatus
+    tag: device_fan_status
+  symbols:
+  - OID: 1.3.6.1.4.1.23695.200.1.1.1.4.2.1.3
+    name: peplink.deviceFanSpeed
+  table:
+    OID: 1.3.6.1.4.1.23695.200.1.1.1.4.2
+    name: deviceFanTable
+- MIB: PEPLINK-DEVICE
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.23695.200.1.1.1.4.3.1.1
+      name: devicePowerSourceId
+    tag: device_power_source_id
+  - symbol:
+      OID: 1.3.6.1.4.1.23695.200.1.1.1.4.3.1.2
+      name: devicePowerSourceName
+    tag: device_power_source_name
+  - mapping:
+      0: no_cable_detected
+      1: connected
+    symbol:
+      OID: 1.3.6.1.4.1.23695.200.1.1.1.4.3.1.3
+      name: devicePowerSourceStatus
+    tag: device_power_source_status
+  symbols:
+  - constant_value_one: true
+    name: peplink.devicePowerSource
+  table:
+    OID: 1.3.6.1.4.1.23695.200.1.1.1.4.3
+    name: devicePowerSourceTable
+- MIB: PEPLINK-BALANCE-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.23695.1.1.2.2.1.1
+      name: linkConnNum
+    tag: link_conn_num
+  - symbol:
+      OID: 1.3.6.1.4.1.23695.1.1.2.2.1.2
+      name: linkName
+    tag: link_name
+  - symbol:
+      OID: 1.3.6.1.4.1.23695.1.1.2.2.1.3
+      name: linkStatus
+    tag: link_status
+  symbols:
+  - OID: 1.3.6.1.4.1.23695.1.1.2.2.1.4
+    metric_type: monotonic_count
+    name: peplink.linkThroughputIn
+  - OID: 1.3.6.1.4.1.23695.1.1.2.2.1.5
+    metric_type: monotonic_count
+    name: peplink.linkThroughputOut
+  - OID: 1.3.6.1.4.1.23695.1.1.2.2.1.6
+    metric_type: monotonic_count
+    name: peplink.linkDataTransferred
+  table:
+    OID: 1.3.6.1.4.1.23695.1.1.2.2
+    name: linkTable
+- MIB: PEPLINK-BALANCE-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.23695.1.1.3.1.1
+      name: wanUsageIndex
+    tag: wan_usage_index
+  symbols:
+  - OID: 1.3.6.1.4.1.23695.1.1.3.1.2
+    metric_type: monotonic_count
+    name: peplink.wanUsageThroughputIn
+  - OID: 1.3.6.1.4.1.23695.1.1.3.1.3
+    metric_type: monotonic_count
+    name: peplink.wanUsageThroughputOut
+  - OID: 1.3.6.1.4.1.23695.1.1.3.1.4
+    metric_type: monotonic_count
+    name: peplink.wanUsageDataTransferred
+  table:
+    OID: 1.3.6.1.4.1.23695.1.1.3
+    name: wanUsageTable
+sysobjectid:
+- 1.3.6.1.4.1.23695
+- 1.3.6.1.4.1.23695.*

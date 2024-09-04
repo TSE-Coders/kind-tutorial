@@ -1,0 +1,63 @@
+extends:
+- huawei.yaml
+metadata:
+  device:
+    fields:
+      type:
+        value: switch
+metrics:
+- MIB: HUAWEI-STACK-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.2011.5.25.183.1.6.0
+    name: huawei.hwStackReservedVlanId
+- MIB: HUAWEI-STACK-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.2011.5.25.183.1.20.1.4
+      format: mac_address
+      name: huawei.hwMemberStackMacAddress
+    tag: huawei_hw_member_stack_mac_address
+  - symbol:
+      OID: 1.3.6.1.4.1.2011.5.25.183.1.20.1.5
+      name: huawei.hwMemberStackDeviceType
+    tag: huawei_hw_member_stack_device_type
+  - symbol:
+      OID: 1.3.6.1.4.1.2011.5.25.183.1.20.1.7
+      name: huawei.hwMemberStackObjectId
+    tag: huawei_hw_member_stack_object_id
+  - mapping:
+      1: master
+      2: standby
+      3: slave
+    symbol:
+      OID: 1.3.6.1.4.1.2011.5.25.183.1.20.1.3
+      name: huawei.hwMemberStackRole
+    tag: huawei_hw_member_stack_role
+  symbols:
+  - OID: 1.3.6.1.4.1.2011.5.25.183.1.20.1.2
+    name: huawei.hwMemberStackPriority
+  table:
+    OID: 1.3.6.1.4.1.2011.5.25.183.1.20
+    name: hwStackMemberInfoTable
+- MIB: HUAWEI-STACK-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.2011.5.25.183.1.21.1.3
+      name: huawei.hwStackPortName
+    tag: huawei_hw_stack_port_name
+  - mapping:
+      1: up
+      2: down
+    symbol:
+      OID: 1.3.6.1.4.1.2011.5.25.183.1.21.1.5
+      name: huawei.hwStackPortStatus
+    tag: huawei_hw_stack_port_status
+  symbols:
+  - constant_value_one: true
+    name: huawei.hwStackPort
+  table:
+    OID: 1.3.6.1.4.1.2011.5.25.183.1.21
+    name: hwStackPortTable
+sysobjectid:
+- 1.3.6.1.4.1.2011.2.23.343
+- 1.3.6.1.4.1.2011.2.23.606

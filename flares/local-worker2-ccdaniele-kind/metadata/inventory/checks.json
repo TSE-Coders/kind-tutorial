@@ -1,0 +1,531 @@
+{
+    "hostname": "local-worker2-ccdaniele-kind",
+    "timestamp": 1724779043392593550,
+    "check_metadata": {
+        "container": [
+            {
+                "config.hash": "container",
+                "config.provider": "file",
+                "init_config": "",
+                "instance_config": "{}"
+            }
+        ],
+        "container_image": [
+            {
+                "config.hash": "container_image",
+                "config.provider": "file",
+                "init_config": "",
+                "instance_config": "{}"
+            }
+        ],
+        "container_lifecycle": [
+            {
+                "config.hash": "container_lifecycle",
+                "config.provider": "file",
+                "init_config": "",
+                "instance_config": "{}"
+            }
+        ],
+        "containerd": [
+            {
+                "config.hash": "containerd",
+                "config.provider": "file",
+                "init_config": "",
+                "instance_config": "collect_events: true\nfilters:\n- topic==\"/containers/create\"\n- topic==\"/containers/delete\"\n- topic==\"/containers/update\"\n- topic==\"/images/update\"\n- topic==\"/images/create\"\n- topic==\"/images/delete\"\n- topic==\"/tasks/oom\"\n- topic==\"/tasks/delete\""
+            }
+        ],
+        "cpu": [
+            {
+                "config.hash": "cpu",
+                "config.provider": "file",
+                "init_config": "",
+                "instance_config": "{}"
+            }
+        ],
+        "cri": [
+            {
+                "config.hash": "cri",
+                "config.provider": "file",
+                "init_config": "",
+                "instance_config": "{}"
+            }
+        ],
+        "disk": [
+            {
+                "config.hash": "disk:67cc0574430a16ba",
+                "config.provider": "file",
+                "init_config": "",
+                "instance_config": "use_mount: false"
+            }
+        ],
+        "file_handle": [
+            {
+                "config.hash": "file_handle",
+                "config.provider": "file",
+                "init_config": "",
+                "instance_config": "{}"
+            }
+        ],
+        "io": [
+            {
+                "config.hash": "io",
+                "config.provider": "file",
+                "init_config": "",
+                "instance_config": "{}"
+            }
+        ],
+        "kubelet": [
+            {
+                "config.hash": "kubelet",
+                "config.provider": "file",
+                "init_config": "",
+                "instance_config": "min_collection_interval: 20"
+            }
+        ],
+        "load": [
+            {
+                "config.hash": "load",
+                "config.provider": "file",
+                "init_config": "",
+                "instance_config": "{}"
+            }
+        ],
+        "memory": [
+            {
+                "config.hash": "memory",
+                "config.provider": "file",
+                "init_config": "",
+                "instance_config": "{}"
+            }
+        ],
+        "network": [
+            {
+                "config.hash": "network:4b0649b7e11f0772",
+                "config.provider": "file",
+                "init_config": "",
+                "instance_config": "{}"
+            }
+        ],
+        "nginx": [
+            {
+                "config.hash": "nginx:6dd1c2bc95cdc2f2",
+                "config.provider": "container",
+                "init_config": "{}",
+                "instance_config": "nginx_status_url: http://10.244.2.36:81/nginx_status/\ntags:\n- image_id:********@sha256:447a8665cc1dab95b1ca778e162215839ccbb9189104c79d7ec3a81e14577add\n- image_name:nginx\n- image_tag:latest\n- kube_container_name:nginx\n- kube_deployment:nginx-deployment\n- kube_namespace:nginx\n- kube_ownerref_kind:replicaset\n- kube_qos:BestEffort\n- kube_replica_set:nginx-deployment-5b69cd8969\n- kube_service:nginx-svc\n- pdnamespace:nginx\n- pod_phase:running\n- short_image:nginx"
+            }
+        ],
+        "ntp": [
+            {
+                "config.hash": "ntp:3c427a42a70bbf8",
+                "config.provider": "file",
+                "init_config": "",
+                "instance_config": "{}"
+            }
+        ],
+        "orchestrator_pod": [
+            {
+                "config.hash": "orchestrator_pod:888ebc42a3817b00",
+                "config.provider": "file",
+                "init_config": "",
+                "instance_config": "{}"
+            }
+        ],
+        "postgres": [
+            {
+                "config.hash": "postgres:c975648b1bc2ca9b",
+                "config.provider": "container",
+                "init_config": "{}",
+                "instance_config": "dbm: \"true\"\nhost: 10.244.2.65\npassword: "********"
+            }
+        ],
+        "sbom": [
+            {
+                "config.hash": "sbom",
+                "config.provider": "file",
+                "init_config": "",
+                "instance_config": "{}"
+            }
+        ],
+        "telemetry": [
+            {
+                "config.hash": "telemetry",
+                "config.provider": "file",
+                "init_config": "",
+                "instance_config": "{}"
+            }
+        ],
+        "uptime": [
+            {
+                "config.hash": "uptime",
+                "config.provider": "file",
+                "init_config": "",
+                "instance_config": "{}"
+            }
+        ]
+    },
+    "logs_metadata": {
+        "container_collect_all": [
+            {
+                "config": "{\"type\":\"containerd\"}",
+                "integration_name": "container_collect_all",
+                "service": "",
+                "source": "",
+                "state": {
+                    "error": "",
+                    "status": "success"
+                },
+                "tags": []
+            },
+            {
+                "config": "{\"type\":\"containerd\"}",
+                "integration_name": "container_collect_all",
+                "service": "",
+                "source": "",
+                "state": {
+                    "error": "",
+                    "status": "success"
+                },
+                "tags": []
+            },
+            {
+                "config": "{\"type\":\"containerd\"}",
+                "integration_name": "container_collect_all",
+                "service": "",
+                "source": "",
+                "state": {
+                    "error": "",
+                    "status": "success"
+                },
+                "tags": []
+            },
+            {
+                "config": "{\"type\":\"containerd\"}",
+                "integration_name": "container_collect_all",
+                "service": "",
+                "source": "",
+                "state": {
+                    "error": "",
+                    "status": "success"
+                },
+                "tags": []
+            },
+            {
+                "config": "{\"type\":\"containerd\"}",
+                "integration_name": "container_collect_all",
+                "service": "",
+                "source": "",
+                "state": {
+                    "error": "",
+                    "status": "success"
+                },
+                "tags": []
+            },
+            {
+                "config": "{\"type\":\"containerd\"}",
+                "integration_name": "container_collect_all",
+                "service": "",
+                "source": "",
+                "state": {
+                    "error": "",
+                    "status": "success"
+                },
+                "tags": []
+            },
+            {
+                "config": "{\"type\":\"containerd\"}",
+                "integration_name": "container_collect_all",
+                "service": "",
+                "source": "",
+                "state": {
+                    "error": "",
+                    "status": "success"
+                },
+                "tags": []
+            },
+            {
+                "config": "{\"type\":\"containerd\"}",
+                "integration_name": "container_collect_all",
+                "service": "",
+                "source": "",
+                "state": {
+                    "error": "",
+                    "status": "success"
+                },
+                "tags": []
+            },
+            {
+                "config": "{\"type\":\"containerd\"}",
+                "integration_name": "container_collect_all",
+                "service": "",
+                "source": "",
+                "state": {
+                    "error": "",
+                    "status": "success"
+                },
+                "tags": []
+            },
+            {
+                "config": "{\"type\":\"containerd\"}",
+                "integration_name": "container_collect_all",
+                "service": "",
+                "source": "",
+                "state": {
+                    "error": "",
+                    "status": "success"
+                },
+                "tags": []
+            },
+            {
+                "config": "{\"type\":\"containerd\"}",
+                "integration_name": "container_collect_all",
+                "service": "",
+                "source": "",
+                "state": {
+                    "error": "",
+                    "status": "success"
+                },
+                "tags": []
+            },
+            {
+                "config": "{\"type\":\"containerd\"}",
+                "integration_name": "container_collect_all",
+                "service": "",
+                "source": "",
+                "state": {
+                    "error": "",
+                    "status": "success"
+                },
+                "tags": []
+            },
+            {
+                "config": "{\"type\":\"containerd\"}",
+                "integration_name": "container_collect_all",
+                "service": "",
+                "source": "",
+                "state": {
+                    "error": "",
+                    "status": "success"
+                },
+                "tags": []
+            },
+            {
+                "config": "{\"type\":\"containerd\"}",
+                "integration_name": "container_collect_all",
+                "service": "",
+                "source": "",
+                "state": {
+                    "error": "",
+                    "status": "pending"
+                },
+                "tags": []
+            },
+            {
+                "config": "{\"type\":\"containerd\"}",
+                "integration_name": "container_collect_all",
+                "service": "",
+                "source": "",
+                "state": {
+                    "error": "",
+                    "status": "pending"
+                },
+                "tags": []
+            }
+        ],
+        "default/kind-datadog-648gw/agent": [
+            {
+                "config": "{\"type\":\"file\",\"path\":\"/var/log/pods/default_kind-datadog-648gw_d2128bd6-4ea5-4272-9b4f-d0275e6a6bcf/agent/*.log\",\"service\":\"agent\",\"source\":\"agent\"}",
+                "integration_name": "",
+                "service": "agent",
+                "source": "agent",
+                "state": {
+                    "error": "",
+                    "status": "success"
+                },
+                "tags": []
+            }
+        ],
+        "default/kind-datadog-648gw/init-config": [
+            {
+                "config": "{\"type\":\"file\",\"path\":\"/var/log/pods/default_kind-datadog-648gw_d2128bd6-4ea5-4272-9b4f-d0275e6a6bcf/init-config/*.log\",\"service\":\"agent\",\"source\":\"agent\"}",
+                "integration_name": "",
+                "service": "agent",
+                "source": "agent",
+                "state": {
+                    "error": "",
+                    "status": "success"
+                },
+                "tags": []
+            }
+        ],
+        "default/kind-datadog-648gw/init-volume": [
+            {
+                "config": "{\"type\":\"file\",\"path\":\"/var/log/pods/default_kind-datadog-648gw_d2128bd6-4ea5-4272-9b4f-d0275e6a6bcf/init-volume/*.log\",\"service\":\"agent\",\"source\":\"agent\"}",
+                "integration_name": "",
+                "service": "agent",
+                "source": "agent",
+                "state": {
+                    "error": "",
+                    "status": "success"
+                },
+                "tags": []
+            }
+        ],
+        "default/kind-datadog-648gw/process-agent": [
+            {
+                "config": "{\"type\":\"file\",\"path\":\"/var/log/pods/default_kind-datadog-648gw_d2128bd6-4ea5-4272-9b4f-d0275e6a6bcf/process-agent/*.log\",\"service\":\"agent\",\"source\":\"agent\"}",
+                "integration_name": "",
+                "service": "agent",
+                "source": "agent",
+                "state": {
+                    "error": "",
+                    "status": "success"
+                },
+                "tags": []
+            }
+        ],
+        "default/kind-datadog-648gw/seccomp-setup": [
+            {
+                "config": "{\"type\":\"file\",\"path\":\"/var/log/pods/default_kind-datadog-648gw_d2128bd6-4ea5-4272-9b4f-d0275e6a6bcf/seccomp-setup/*.log\",\"service\":\"agent\",\"source\":\"agent\"}",
+                "integration_name": "",
+                "service": "agent",
+                "source": "agent",
+                "state": {
+                    "error": "",
+                    "status": "success"
+                },
+                "tags": []
+            }
+        ],
+        "default/kind-datadog-648gw/security-agent": [
+            {
+                "config": "{\"type\":\"file\",\"path\":\"/var/log/pods/default_kind-datadog-648gw_d2128bd6-4ea5-4272-9b4f-d0275e6a6bcf/security-agent/*.log\",\"service\":\"agent\",\"source\":\"agent\"}",
+                "integration_name": "",
+                "service": "agent",
+                "source": "agent",
+                "state": {
+                    "error": "",
+                    "status": "success"
+                },
+                "tags": []
+            }
+        ],
+        "default/kind-datadog-648gw/system-probe": [
+            {
+                "config": "{\"type\":\"file\",\"path\":\"/var/log/pods/default_kind-datadog-648gw_d2128bd6-4ea5-4272-9b4f-d0275e6a6bcf/system-probe/*.log\",\"service\":\"agent\",\"source\":\"agent\"}",
+                "integration_name": "",
+                "service": "agent",
+                "source": "agent",
+                "state": {
+                    "error": "",
+                    "status": "pending"
+                },
+                "tags": []
+            }
+        ],
+        "default/kind-datadog-648gw/trace-agent": [
+            {
+                "config": "{\"type\":\"file\",\"path\":\"/var/log/pods/default_kind-datadog-648gw_d2128bd6-4ea5-4272-9b4f-d0275e6a6bcf/trace-agent/*.log\",\"service\":\"agent\",\"source\":\"agent\"}",
+                "integration_name": "",
+                "service": "agent",
+                "source": "agent",
+                "state": {
+                    "error": "",
+                    "status": "success"
+                },
+                "tags": []
+            }
+        ],
+        "default/pdserver-bdc89dfcf-v4bdb/pdserver": [
+            {
+                "config": "{\"type\":\"file\",\"path\":\"/var/log/pods/default_pdserver-bdc89dfcf-v4bdb_1abac9d8-440f-4025-b84e-32c0eca9f00e/pdserver/*.log\",\"service\":\"pdrace-server\",\"source\":\"pdrace-server\"}",
+                "integration_name": "",
+                "service": "pdrace-server",
+                "source": "pdrace-server",
+                "state": {
+                    "error": "",
+                    "status": "success"
+                },
+                "tags": []
+            }
+        ],
+        "default/postgresdb-88647cc65-4ns6l/postgresdb": [
+            {
+                "config": "{\"type\":\"file\",\"path\":\"/var/log/pods/default_postgresdb-88647cc65-4ns6l_b1094190-fd62-46ab-aee4-243836fd79e2/postgresdb/*.log\",\"service\":\"pdrace-postgres\",\"source\":\"pdrace-postgres\"}",
+                "integration_name": "",
+                "service": "pdrace-postgres",
+                "source": "pdrace-postgres",
+                "state": {
+                    "error": "",
+                    "status": "success"
+                },
+                "tags": []
+            }
+        ],
+        "ignite-namespace/ignite-cluster-0/ignite-node": [
+            {
+                "config": "{\"type\":\"file\",\"path\":\"/var/log/pods/ignite-namespace_ignite-cluster-0_9c1e8b7c-028b-40da-86c0-39468ee5708e/ignite-node/*.log\",\"service\":\"community\",\"source\":\"community\"}",
+                "integration_name": "",
+                "service": "community",
+                "source": "community",
+                "state": {
+                    "error": "",
+                    "status": "success"
+                },
+                "tags": []
+            }
+        ],
+        "kube-system/kindnet-jn2xr/kindnet-cni": [
+            {
+                "config": "{\"type\":\"file\",\"path\":\"/var/log/pods/kube-system_kindnet-jn2xr_444c0f23-dbbf-4dd6-8c63-72dce054ac97/kindnet-cni/*.log\",\"service\":\"kindnetd\",\"source\":\"kindnetd\"}",
+                "integration_name": "",
+                "service": "kindnetd",
+                "source": "kindnetd",
+                "state": {
+                    "error": "",
+                    "status": "success"
+                },
+                "tags": []
+            }
+        ],
+        "kube-system/kube-proxy-bddhr/kube-proxy": [
+            {
+                "config": "{\"type\":\"file\",\"path\":\"/var/log/pods/kube-system_kube-proxy-bddhr_4d6f81ac-8823-46b1-b028-c037325d0faf/kube-proxy/*.log\",\"service\":\"kube-proxy-arm64\",\"source\":\"kube-proxy-arm64\"}",
+                "integration_name": "",
+                "service": "kube-proxy-arm64",
+                "source": "kube-proxy-arm64",
+                "state": {
+                    "error": "",
+                    "status": "success"
+                },
+                "tags": []
+            }
+        ],
+        "kubernetes-dashboard/kubernetes-dashboard-6d6bbddd49-h2nfh/kubernetes-dashboard": [
+            {
+                "config": "{\"type\":\"file\",\"path\":\"/var/log/pods/kubernetes-dashboard_kubernetes-dashboard-6d6bbddd49-h2nfh_9c5546d4-8aec-425a-b615-c0b5bd3bd035/kubernetes-dashboard/*.log\",\"service\":\"dashboard\",\"source\":\"dashboard\"}",
+                "integration_name": "",
+                "service": "dashboard",
+                "source": "dashboard",
+                "state": {
+                    "error": "",
+                    "status": "success"
+                },
+                "tags": []
+            }
+        ],
+        "nginx/nginx-deployment-5b69cd8969-kr887/nginx": [
+            {
+                "config": "{\"type\":\"file\",\"path\":\"/var/log/pods/nginx_nginx-deployment-5b69cd8969-kr887_54d1829f-c260-48d5-aef9-a4fc2dfce85a/nginx/*.log\",\"service\":\"nginx\",\"source\":\"nginx\"}",
+                "integration_name": "",
+                "service": "nginx",
+                "source": "nginx",
+                "state": {
+                    "error": "",
+                    "status": "pending"
+                },
+                "tags": []
+            }
+        ]
+    },
+    "uuid": "d72f609f-fae4-489c-ae8b-f57a31d12fc6"
+}

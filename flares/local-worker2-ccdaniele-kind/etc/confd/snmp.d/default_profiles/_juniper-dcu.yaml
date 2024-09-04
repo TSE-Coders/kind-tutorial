@@ -1,0 +1,28 @@
+metrics:
+- MIB: JUNIPER-DCU-MIB
+  metric_tags:
+  - index_transform:
+    - end: 0
+      start: 0
+    symbol:
+      OID: 1.3.6.1.2.1.31.1.1.1.1
+      name: ifName
+    table: ifXTable
+    tag: interface
+  - symbol:
+      OID: 1.3.6.1.4.1.2636.3.6.2.1.2
+      name: jnxDcuStatsAddrFamily
+    tag: address_family
+  - symbol:
+      OID: 1.3.6.1.4.1.2636.3.6.2.1.3
+      name: jnxDcuStatsClassName
+    tag: destination_class_name
+  metric_type: monotonic_count
+  symbols:
+  - OID: 1.3.6.1.4.1.2636.3.6.2.1.4
+    name: jnxDcuStatsPackets
+  - OID: 1.3.6.1.4.1.2636.3.6.2.1.5
+    name: jnxDcuStatsBytes
+  table:
+    OID: 1.3.6.1.4.1.2636.3.6.2
+    name: jnxDcuStatsTable

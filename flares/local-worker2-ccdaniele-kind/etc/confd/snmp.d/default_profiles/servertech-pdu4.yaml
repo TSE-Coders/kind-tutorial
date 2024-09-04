@@ -1,0 +1,860 @@
+extends:
+- servertech.yaml
+metadata:
+  device:
+    fields:
+      type:
+        value: PDU
+metrics:
+- MIB: SENTRY4-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.1718.4.1.2.2.1.2
+      name: servertech.sentry4.st4UnitID
+    tag: servertech_sentry4_st4_unit_id
+  - symbol:
+      OID: 1.3.6.1.4.1.1718.4.1.2.2.1.3
+      name: servertech.sentry4.st4UnitName
+    tag: servertech_sentry4_st4_unit_name
+  - symbol:
+      OID: 1.3.6.1.4.1.1718.4.1.2.2.1.4
+      name: servertech.sentry4.st4UnitProductSN
+    tag: servertech_sentry4_st4_unit_product_sn
+  - symbol:
+      OID: 1.3.6.1.4.1.1718.4.1.2.2.1.5
+      name: servertech.sentry4.st4UnitModel
+    tag: servertech_sentry4_st4_unit_model
+  - symbol:
+      OID: 1.3.6.1.4.1.1718.4.1.2.2.1.6
+      name: servertech.sentry4.st4UnitAssetTag
+    tag: servertech_sentry4_st4_unit_asset_tag
+  - mapping:
+      0: master_pdu
+      1: link_pdu
+      2: controller
+      3: emcu
+    symbol:
+      OID: 1.3.6.1.4.1.1718.4.1.2.2.1.7
+      name: servertech.sentry4.st4UnitType
+    tag: servertech_sentry4_st4_unit_type
+  - symbol:
+      OID: 1.3.6.1.4.1.1718.4.1.2.2.1.9
+      name: servertech.sentry4.st4UnitProductMfrDate
+    tag: servertech_sentry4_st4_unit_product_mfr_date
+  - mapping:
+      0: normal
+      1: disabled
+      2: purged
+      5: reading
+      6: settle
+      7: not_found
+      8: lost
+      9: read_error
+      10: no_comm
+      11: pwr_error
+      12: breaker_tripped
+      13: fuse_blown
+      14: low_alarm
+      15: low_warning
+      16: high_warning
+      17: high_alarm
+      18: alarm
+      19: under_limit
+      20: over_limit
+      21: nvm_fail
+      22: profile_error
+      23: conflict
+    symbol:
+      OID: 1.3.6.1.4.1.1718.4.1.2.3.1.1
+      name: servertech.sentry4.st4UnitStatus
+    tag: servertech_sentry4_st4_unit_status
+  symbols:
+  - constant_value_one: true
+    name: servertech.sentry4.st4UnitMonitor
+  table:
+    OID: 1.3.6.1.4.1.1718.4.1.2.3
+    name: servertech.sentry4.st4UnitMonitorTable
+- MIB: SENTRY4-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.1718.4.1.3.2.1.2
+      name: servertech.sentry4.st4InputCordID
+    tag: servertech_sentry4_st4_input_cord_id
+  - symbol:
+      OID: 1.3.6.1.4.1.1718.4.1.3.2.1.3
+      name: servertech.sentry4.st4InputCordName
+    tag: servertech_sentry4_st4_input_cord_name
+  - symbol:
+      OID: 1.3.6.1.4.1.1718.4.1.3.2.1.6
+      name: servertech.sentry4.st4InputCordInletType
+    tag: servertech_sentry4_st4_input_cord_inlet_type
+  - symbol:
+      OID: 1.3.6.1.4.1.1718.4.1.3.2.1.7
+      name: servertech.sentry4.st4InputCordNominalVoltage
+    tag: servertech_sentry4_st4_input_cord_nominal_voltage
+  - symbol:
+      OID: 1.3.6.1.4.1.1718.4.1.3.2.1.8
+      name: servertech.sentry4.st4InputCordNominalVoltageMin
+    tag: servertech_sentry4_st4_input_cord_nominal_voltage_min
+  - symbol:
+      OID: 1.3.6.1.4.1.1718.4.1.3.2.1.9
+      name: servertech.sentry4.st4InputCordNominalVoltageMax
+    tag: servertech_sentry4_st4_input_cord_nominal_voltage_max
+  - symbol:
+      OID: 1.3.6.1.4.1.1718.4.1.3.2.1.10
+      name: servertech.sentry4.st4InputCordCurrentCapacity
+    tag: servertech_sentry4_st4_input_cord_current_capacity
+  - symbol:
+      OID: 1.3.6.1.4.1.1718.4.1.3.2.1.11
+      name: servertech.sentry4.st4InputCordCurrentCapacityMax
+    tag: servertech_sentry4_st4_input_cord_current_capacity_max
+  - symbol:
+      OID: 1.3.6.1.4.1.1718.4.1.3.2.1.12
+      name: servertech.sentry4.st4InputCordPowerCapacity
+    tag: servertech_sentry4_st4_input_cord_power_capacity
+  - symbol:
+      OID: 1.3.6.1.4.1.1718.4.1.3.2.1.20
+      name: servertech.sentry4.st4InputCordLineCount
+    tag: servertech_sentry4_st4_input_cord_line_count
+  - symbol:
+      OID: 1.3.6.1.4.1.1718.4.1.3.2.1.21
+      name: servertech.sentry4.st4InputCordPhaseCount
+    tag: servertech_sentry4_st4_input_cord_phase_count
+  - symbol:
+      OID: 1.3.6.1.4.1.1718.4.1.3.2.1.22
+      name: servertech.sentry4.st4InputCordOcpCount
+    tag: servertech_sentry4_st4_input_cord_ocp_count
+  - symbol:
+      OID: 1.3.6.1.4.1.1718.4.1.3.2.1.23
+      name: servertech.sentry4.st4InputCordBranchCount
+    tag: servertech_sentry4_st4_input_cord_branch_count
+  - symbol:
+      OID: 1.3.6.1.4.1.1718.4.1.3.2.1.24
+      name: servertech.sentry4.st4InputCordOutletCount
+    tag: servertech_sentry4_st4_input_cord_outlet_count
+  - mapping:
+      0: unknown
+      1: true
+      2: false
+    symbol:
+      OID: 1.3.6.1.4.1.1718.4.1.3.3.1.1
+      name: servertech.sentry4.st4InputCordState
+    tag: servertech_sentry4_st4_input_cord_state
+  - mapping:
+      0: normal
+      1: disabled
+      2: purged
+      5: reading
+      6: settle
+      7: not_found
+      8: lost
+      9: read_error
+      10: no_comm
+      11: pwr_error
+      12: breaker_tripped
+      13: fuse_blown
+      14: low_alarm
+      15: low_warning
+      16: high_warning
+      17: high_alarm
+      18: alarm
+      19: under_limit
+      20: over_limit
+      21: nvm_fail
+      22: profile_error
+      23: conflict
+    symbol:
+      OID: 1.3.6.1.4.1.1718.4.1.3.3.1.2
+      name: servertech.sentry4.st4InputCordStatus
+    tag: servertech_sentry4_st4_input_cord_status
+  - mapping:
+      0: normal
+      1: disabled
+      2: purged
+      5: reading
+      6: settle
+      7: not_found
+      8: lost
+      9: read_error
+      10: no_comm
+      11: pwr_error
+      12: breaker_tripped
+      13: fuse_blown
+      14: low_alarm
+      15: low_warning
+      16: high_warning
+      17: high_alarm
+      18: alarm
+      19: under_limit
+      20: over_limit
+      21: nvm_fail
+      22: profile_error
+      23: conflict
+    symbol:
+      OID: 1.3.6.1.4.1.1718.4.1.3.3.1.4
+      name: servertech.sentry4.st4InputCordActivePowerStatus
+    tag: servertech_sentry4_st4_input_cord_active_power_status
+  - mapping:
+      0: normal
+      1: disabled
+      2: purged
+      5: reading
+      6: settle
+      7: not_found
+      8: lost
+      9: read_error
+      10: no_comm
+      11: pwr_error
+      12: breaker_tripped
+      13: fuse_blown
+      14: low_alarm
+      15: low_warning
+      16: high_warning
+      17: high_alarm
+      18: alarm
+      19: under_limit
+      20: over_limit
+      21: nvm_fail
+      22: profile_error
+      23: conflict
+    symbol:
+      OID: 1.3.6.1.4.1.1718.4.1.3.3.1.6
+      name: servertech.sentry4.st4InputCordApparentPowerStatus
+    tag: servertech_sentry4_st4_input_cord_apparent_power_status
+  - mapping:
+      0: normal
+      1: disabled
+      2: purged
+      5: reading
+      6: settle
+      7: not_found
+      8: lost
+      9: read_error
+      10: no_comm
+      11: pwr_error
+      12: breaker_tripped
+      13: fuse_blown
+      14: low_alarm
+      15: low_warning
+      16: high_warning
+      17: high_alarm
+      18: alarm
+      19: under_limit
+      20: over_limit
+      21: nvm_fail
+      22: profile_error
+      23: conflict
+    symbol:
+      OID: 1.3.6.1.4.1.1718.4.1.3.3.1.9
+      name: servertech.sentry4.st4InputCordPowerFactorStatus
+    tag: servertech_sentry4_st4_input_cord_power_factor_status
+  - mapping:
+      0: normal
+      1: disabled
+      2: purged
+      5: reading
+      6: settle
+      7: not_found
+      8: lost
+      9: read_error
+      10: no_comm
+      11: pwr_error
+      12: breaker_tripped
+      13: fuse_blown
+      14: low_alarm
+      15: low_warning
+      16: high_warning
+      17: high_alarm
+      18: alarm
+      19: under_limit
+      20: over_limit
+      21: nvm_fail
+      22: profile_error
+      23: conflict
+    symbol:
+      OID: 1.3.6.1.4.1.1718.4.1.3.3.1.13
+      name: servertech.sentry4.st4InputCordOutOfBalanceStatus
+    tag: servertech_sentry4_st4_input_cord_out_of_balance_status
+  symbols:
+  - OID: 1.3.6.1.4.1.1718.4.1.3.3.1.3
+    name: servertech.sentry4.st4InputCordActivePower
+  - OID: 1.3.6.1.4.1.1718.4.1.3.3.1.5
+    name: servertech.sentry4.st4InputCordApparentPower
+  - OID: 1.3.6.1.4.1.1718.4.1.3.3.1.7
+    name: servertech.sentry4.st4InputCordPowerUtilized
+  - OID: 1.3.6.1.4.1.1718.4.1.3.3.1.8
+    name: servertech.sentry4.st4InputCordPowerFactor
+  - OID: 1.3.6.1.4.1.1718.4.1.3.3.1.10
+    name: servertech.sentry4.st4InputCordEnergy
+  - OID: 1.3.6.1.4.1.1718.4.1.3.3.1.11
+    name: servertech.sentry4.st4InputCordFrequency
+  - OID: 1.3.6.1.4.1.1718.4.1.3.3.1.12
+    name: servertech.sentry4.st4InputCordOutOfBalance
+  table:
+    OID: 1.3.6.1.4.1.1718.4.1.3.3
+    name: servertech.sentry4.st4InputCordMonitorTable
+- MIB: SENTRY4-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.1718.4.1.4.2.1.2
+      name: servertech.sentry4.st4LineID
+    tag: servertech_sentry4_st4_line_id
+  - symbol:
+      OID: 1.3.6.1.4.1.1718.4.1.4.2.1.4
+      name: servertech.sentry4.st4LineLabel
+    tag: servertech_sentry4_st4_line_label
+  - symbol:
+      OID: 1.3.6.1.4.1.1718.4.1.4.2.1.6
+      name: servertech.sentry4.st4LineCurrentCapacity
+    tag: servertech_sentry4_st4_line_current_capacity
+  - mapping:
+      0: unknown
+      1: true
+      2: false
+    symbol:
+      OID: 1.3.6.1.4.1.1718.4.1.4.3.1.1
+      name: servertech.sentry4.st4LineState
+    tag: servertech_sentry4_st4_line_state
+  - mapping:
+      0: normal
+      1: disabled
+      2: purged
+      5: reading
+      6: settle
+      7: not_found
+      8: lost
+      9: read_error
+      10: no_comm
+      11: pwr_error
+      12: breaker_tripped
+      13: fuse_blown
+      14: low_alarm
+      15: low_warning
+      16: high_warning
+      17: high_alarm
+      18: alarm
+      19: under_limit
+      20: over_limit
+      21: nvm_fail
+      22: profile_error
+      23: conflict
+    symbol:
+      OID: 1.3.6.1.4.1.1718.4.1.4.3.1.2
+      name: servertech.sentry4.st4LineStatus
+    tag: servertech_sentry4_st4_line_status
+  - mapping:
+      0: normal
+      1: disabled
+      2: purged
+      5: reading
+      6: settle
+      7: not_found
+      8: lost
+      9: read_error
+      10: no_comm
+      11: pwr_error
+      12: breaker_tripped
+      13: fuse_blown
+      14: low_alarm
+      15: low_warning
+      16: high_warning
+      17: high_alarm
+      18: alarm
+      19: under_limit
+      20: over_limit
+      21: nvm_fail
+      22: profile_error
+      23: conflict
+    symbol:
+      OID: 1.3.6.1.4.1.1718.4.1.4.3.1.4
+      name: servertech.sentry4.st4LineCurrentStatus
+    tag: servertech_sentry4_st4_line_current_status
+  symbols:
+  - OID: 1.3.6.1.4.1.1718.4.1.4.3.1.3
+    name: servertech.sentry4.st4LineCurrent
+  - OID: 1.3.6.1.4.1.1718.4.1.4.3.1.5
+    name: servertech.sentry4.st4LineCurrentUtilized
+  table:
+    OID: 1.3.6.1.4.1.1718.4.1.4.3
+    name: servertech.sentry4.st4LineMonitorTable
+- MIB: SENTRY4-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.1718.4.1.5.2.1.2
+      name: servertech.sentry4.st4PhaseID
+    tag: servertech_sentry4_st4_phase_id
+  - symbol:
+      OID: 1.3.6.1.4.1.1718.4.1.5.2.1.4
+      name: servertech.sentry4.st4PhaseLabel
+    tag: servertech_sentry4_st4_phase_label
+  - symbol:
+      OID: 1.3.6.1.4.1.1718.4.1.5.2.1.6
+      name: servertech.sentry4.st4PhaseNominalVoltage
+    tag: servertech_sentry4_st4_phase_nominal_voltage
+  - symbol:
+      OID: 1.3.6.1.4.1.1718.4.1.5.2.1.21
+      name: servertech.sentry4.st4PhaseOutletCount
+    tag: servertech_sentry4_st4_phase_outlet_count
+  - mapping:
+      0: unknown
+      1: true
+      2: false
+    symbol:
+      OID: 1.3.6.1.4.1.1718.4.1.5.3.1.1
+      name: servertech.sentry4.st4PhaseState
+    tag: servertech_sentry4_st4_phase_state
+  - mapping:
+      0: normal
+      1: disabled
+      2: purged
+      5: reading
+      6: settle
+      7: not_found
+      8: lost
+      9: read_error
+      10: no_comm
+      11: pwr_error
+      12: breaker_tripped
+      13: fuse_blown
+      14: low_alarm
+      15: low_warning
+      16: high_warning
+      17: high_alarm
+      18: alarm
+      19: under_limit
+      20: over_limit
+      21: nvm_fail
+      22: profile_error
+      23: conflict
+    symbol:
+      OID: 1.3.6.1.4.1.1718.4.1.5.3.1.2
+      name: servertech.sentry4.st4PhaseStatus
+    tag: servertech_sentry4_st4_phase_status
+  - mapping:
+      0: normal
+      1: disabled
+      2: purged
+      5: reading
+      6: settle
+      7: not_found
+      8: lost
+      9: read_error
+      10: no_comm
+      11: pwr_error
+      12: breaker_tripped
+      13: fuse_blown
+      14: low_alarm
+      15: low_warning
+      16: high_warning
+      17: high_alarm
+      18: alarm
+      19: under_limit
+      20: over_limit
+      21: nvm_fail
+      22: profile_error
+      23: conflict
+    symbol:
+      OID: 1.3.6.1.4.1.1718.4.1.5.3.1.4
+      name: servertech.sentry4.st4PhaseVoltageStatus
+    tag: servertech_sentry4_st4_phase_voltage_status
+  - mapping:
+      0: normal
+      1: disabled
+      2: purged
+      5: reading
+      6: settle
+      7: not_found
+      8: lost
+      9: read_error
+      10: no_comm
+      11: pwr_error
+      12: breaker_tripped
+      13: fuse_blown
+      14: low_alarm
+      15: low_warning
+      16: high_warning
+      17: high_alarm
+      18: alarm
+      19: under_limit
+      20: over_limit
+      21: nvm_fail
+      22: profile_error
+      23: conflict
+    symbol:
+      OID: 1.3.6.1.4.1.1718.4.1.5.3.1.11
+      name: servertech.sentry4.st4PhasePowerFactorStatus
+    tag: servertech_sentry4_st4_phase_power_factor_status
+  - mapping:
+      0: unknown
+      1: capacitive
+      2: inductive
+      3: resistive
+    symbol:
+      OID: 1.3.6.1.4.1.1718.4.1.5.3.1.12
+      name: servertech.sentry4.st4PhaseReactance
+    tag: servertech_sentry4_st4_phase_reactance
+  symbols:
+  - OID: 1.3.6.1.4.1.1718.4.1.5.3.1.3
+    name: servertech.sentry4.st4PhaseVoltage
+  - OID: 1.3.6.1.4.1.1718.4.1.5.3.1.5
+    name: servertech.sentry4.st4PhaseVoltageDeviation
+  - OID: 1.3.6.1.4.1.1718.4.1.5.3.1.6
+    name: servertech.sentry4.st4PhaseCurrent
+  - OID: 1.3.6.1.4.1.1718.4.1.5.3.1.7
+    name: servertech.sentry4.st4PhaseCurrentCrestFactor
+  - OID: 1.3.6.1.4.1.1718.4.1.5.3.1.8
+    name: servertech.sentry4.st4PhaseActivePower
+  - OID: 1.3.6.1.4.1.1718.4.1.5.3.1.9
+    name: servertech.sentry4.st4PhaseApparentPower
+  - OID: 1.3.6.1.4.1.1718.4.1.5.3.1.10
+    name: servertech.sentry4.st4PhasePowerFactor
+  - OID: 1.3.6.1.4.1.1718.4.1.5.3.1.13
+    name: servertech.sentry4.st4PhaseEnergy
+  table:
+    OID: 1.3.6.1.4.1.1718.4.1.5.3
+    name: servertech.sentry4.st4PhaseMonitorTable
+- MIB: SENTRY4-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.1718.4.1.6.2.1.2
+      name: servertech.sentry4.st4OcpID
+    tag: servertech_sentry4_st4_ocp_id
+  - symbol:
+      OID: 1.3.6.1.4.1.1718.4.1.6.2.1.4
+      name: servertech.sentry4.st4OcpLabel
+    tag: servertech_sentry4_st4_ocp_label
+  - mapping:
+      0: fuse
+      1: breaker
+    symbol:
+      OID: 1.3.6.1.4.1.1718.4.1.6.2.1.6
+      name: servertech.sentry4.st4OcpType
+    tag: servertech_sentry4_st4_ocp_type
+  - symbol:
+      OID: 1.3.6.1.4.1.1718.4.1.6.2.1.7
+      name: servertech.sentry4.st4OcpCurrentCapacity
+    tag: servertech_sentry4_st4_ocp_current_capacity
+  - symbol:
+      OID: 1.3.6.1.4.1.1718.4.1.6.2.1.8
+      name: servertech.sentry4.st4OcpCurrentCapacityMax
+    tag: servertech_sentry4_st4_ocp_current_capacity_max
+  - symbol:
+      OID: 1.3.6.1.4.1.1718.4.1.6.2.1.20
+      name: servertech.sentry4.st4OcpBranchCount
+    tag: servertech_sentry4_st4_ocp_branch_count
+  - symbol:
+      OID: 1.3.6.1.4.1.1718.4.1.6.2.1.21
+      name: servertech.sentry4.st4OcpOutletCount
+    tag: servertech_sentry4_st4_ocp_outlet_count
+  - mapping:
+      0: normal
+      1: disabled
+      2: purged
+      5: reading
+      6: settle
+      7: not_found
+      8: lost
+      9: read_error
+      10: no_comm
+      11: pwr_error
+      12: breaker_tripped
+      13: fuse_blown
+      14: low_alarm
+      15: low_warning
+      16: high_warning
+      17: high_alarm
+      18: alarm
+      19: under_limit
+      20: over_limit
+      21: nvm_fail
+      22: profile_error
+      23: conflict
+    symbol:
+      OID: 1.3.6.1.4.1.1718.4.1.6.3.1.1
+      name: servertech.sentry4.st4OcpStatus
+    tag: servertech_sentry4_st4_ocp_status
+  symbols:
+  - constant_value_one: true
+    name: servertech.sentry4.st4OcpMonitor
+  table:
+    OID: 1.3.6.1.4.1.1718.4.1.6.3
+    name: servertech.sentry4.st4OcpMonitorTable
+- MIB: SENTRY4-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.1718.4.1.7.2.1.2
+      name: servertech.sentry4.st4BranchID
+    tag: servertech_sentry4_st4_branch_id
+  - symbol:
+      OID: 1.3.6.1.4.1.1718.4.1.7.2.1.4
+      name: servertech.sentry4.st4BranchLabel
+    tag: servertech_sentry4_st4_branch_label
+  - symbol:
+      OID: 1.3.6.1.4.1.1718.4.1.7.2.1.6
+      name: servertech.sentry4.st4BranchCurrentCapacity
+    tag: servertech_sentry4_st4_branch_current_capacity
+  - symbol:
+      OID: 1.3.6.1.4.1.1718.4.1.7.2.1.20
+      name: servertech.sentry4.st4BranchPhaseID
+    tag: servertech_sentry4_st4_branch_phase_id
+  - symbol:
+      OID: 1.3.6.1.4.1.1718.4.1.7.2.1.21
+      name: servertech.sentry4.st4BranchOcpID
+    tag: servertech_sentry4_st4_branch_ocp_id
+  - symbol:
+      OID: 1.3.6.1.4.1.1718.4.1.7.2.1.30
+      name: servertech.sentry4.st4BranchOutletCount
+    tag: servertech_sentry4_st4_branch_outlet_count
+  - mapping:
+      0: unknown
+      1: true
+      2: false
+    symbol:
+      OID: 1.3.6.1.4.1.1718.4.1.7.3.1.1
+      name: servertech.sentry4.st4BranchState
+    tag: servertech_sentry4_st4_branch_state
+  - mapping:
+      0: normal
+      1: disabled
+      2: purged
+      5: reading
+      6: settle
+      7: not_found
+      8: lost
+      9: read_error
+      10: no_comm
+      11: pwr_error
+      12: breaker_tripped
+      13: fuse_blown
+      14: low_alarm
+      15: low_warning
+      16: high_warning
+      17: high_alarm
+      18: alarm
+      19: under_limit
+      20: over_limit
+      21: nvm_fail
+      22: profile_error
+      23: conflict
+    symbol:
+      OID: 1.3.6.1.4.1.1718.4.1.7.3.1.2
+      name: servertech.sentry4.st4BranchStatus
+    tag: servertech_sentry4_st4_branch_status
+  - mapping:
+      0: normal
+      1: disabled
+      2: purged
+      5: reading
+      6: settle
+      7: not_found
+      8: lost
+      9: read_error
+      10: no_comm
+      11: pwr_error
+      12: breaker_tripped
+      13: fuse_blown
+      14: low_alarm
+      15: low_warning
+      16: high_warning
+      17: high_alarm
+      18: alarm
+      19: under_limit
+      20: over_limit
+      21: nvm_fail
+      22: profile_error
+      23: conflict
+    symbol:
+      OID: 1.3.6.1.4.1.1718.4.1.7.3.1.4
+      name: servertech.sentry4.st4BranchCurrentStatus
+    tag: servertech_sentry4_st4_branch_current_status
+  symbols:
+  - OID: 1.3.6.1.4.1.1718.4.1.7.3.1.3
+    name: servertech.sentry4.st4BranchCurrent
+  - OID: 1.3.6.1.4.1.1718.4.1.7.3.1.5
+    name: servertech.sentry4.st4BranchCurrentUtilized
+  table:
+    OID: 1.3.6.1.4.1.1718.4.1.7.3
+    name: servertech.sentry4.st4BranchMonitorTable
+- MIB: SENTRY4-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.1718.4.1.8.2.1.2
+      name: servertech.sentry4.st4OutletID
+    tag: servertech_sentry4_st4_outlet_id
+  - symbol:
+      OID: 1.3.6.1.4.1.1718.4.1.8.2.1.3
+      name: servertech.sentry4.st4OutletName
+    tag: servertech_sentry4_st4_outlet_name
+  - symbol:
+      OID: 1.3.6.1.4.1.1718.4.1.8.2.1.6
+      name: servertech.sentry4.st4OutletSocketType
+    tag: servertech_sentry4_st4_outlet_socket_type
+  - symbol:
+      OID: 1.3.6.1.4.1.1718.4.1.8.2.1.7
+      name: servertech.sentry4.st4OutletCurrentCapacity
+    tag: servertech_sentry4_st4_outlet_current_capacity
+  - symbol:
+      OID: 1.3.6.1.4.1.1718.4.1.8.2.1.8
+      name: servertech.sentry4.st4OutletPowerCapacity
+    tag: servertech_sentry4_st4_outlet_power_capacity
+  - mapping:
+      0: true
+      1: false
+      2: last
+    symbol:
+      OID: 1.3.6.1.4.1.1718.4.1.8.2.1.20
+      name: servertech.sentry4.st4OutletWakeupState
+    tag: servertech_sentry4_st4_outlet_wakeup_state
+  - symbol:
+      OID: 1.3.6.1.4.1.1718.4.1.8.2.1.21
+      name: servertech.sentry4.st4OutletPostOnDelay
+    tag: servertech_sentry4_st4_outlet_post_on_delay
+  - symbol:
+      OID: 1.3.6.1.4.1.1718.4.1.8.2.1.30
+      name: servertech.sentry4.st4OutletPhaseID
+    tag: servertech_sentry4_st4_outlet_phase_id
+  - symbol:
+      OID: 1.3.6.1.4.1.1718.4.1.8.2.1.31
+      name: servertech.sentry4.st4OutletOcpID
+    tag: servertech_sentry4_st4_outlet_ocp_id
+  - symbol:
+      OID: 1.3.6.1.4.1.1718.4.1.8.2.1.32
+      name: servertech.sentry4.st4OutletBranchID
+    tag: servertech_sentry4_st4_outlet_branch_id
+  - mapping:
+      0: unknown
+      1: true
+      2: false
+    symbol:
+      OID: 1.3.6.1.4.1.1718.4.1.8.3.1.1
+      name: servertech.sentry4.st4OutletState
+    tag: servertech_sentry4_st4_outlet_state
+  - mapping:
+      0: normal
+      1: disabled
+      2: purged
+      5: reading
+      6: settle
+      7: not_found
+      8: lost
+      9: read_error
+      10: no_comm
+      11: pwr_error
+      12: breaker_tripped
+      13: fuse_blown
+      14: low_alarm
+      15: low_warning
+      16: high_warning
+      17: high_alarm
+      18: alarm
+      19: under_limit
+      20: over_limit
+      21: nvm_fail
+      22: profile_error
+      23: conflict
+    symbol:
+      OID: 1.3.6.1.4.1.1718.4.1.8.3.1.2
+      name: servertech.sentry4.st4OutletStatus
+    tag: servertech_sentry4_st4_outlet_status
+  symbols:
+  - constant_value_one: true
+    name: servertech.sentry4.st4OutletMonitor
+  table:
+    OID: 1.3.6.1.4.1.1718.4.1.8.3
+    name: servertech.sentry4.st4OutletMonitorTable
+- MIB: SENTRY4-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.1718.4.1.9.2.1.2
+      name: servertech.sentry4.st4TempSensorID
+    tag: servertech_sentry4_st4_temp_sensor_id
+  - symbol:
+      OID: 1.3.6.1.4.1.1718.4.1.9.2.1.3
+      name: servertech.sentry4.st4TempSensorName
+    tag: servertech_sentry4_st4_temp_sensor_name
+  - symbol:
+      OID: 1.3.6.1.4.1.1718.4.1.9.2.1.4
+      name: servertech.sentry4.st4TempSensorValueMin
+    tag: servertech_sentry4_st4_temp_sensor_value_min
+  - symbol:
+      OID: 1.3.6.1.4.1.1718.4.1.9.2.1.5
+      name: servertech.sentry4.st4TempSensorValueMax
+    tag: servertech_sentry4_st4_temp_sensor_value_max
+  - mapping:
+      0: normal
+      1: disabled
+      2: purged
+      5: reading
+      6: settle
+      7: not_found
+      8: lost
+      9: read_error
+      10: no_comm
+      11: pwr_error
+      12: breaker_tripped
+      13: fuse_blown
+      14: low_alarm
+      15: low_warning
+      16: high_warning
+      17: high_alarm
+      18: alarm
+      19: under_limit
+      20: over_limit
+      21: nvm_fail
+      22: profile_error
+      23: conflict
+    symbol:
+      OID: 1.3.6.1.4.1.1718.4.1.9.3.1.2
+      name: servertech.sentry4.st4TempSensorStatus
+    tag: servertech_sentry4_st4_temp_sensor_status
+  symbols:
+  - OID: 1.3.6.1.4.1.1718.4.1.9.3.1.1
+    name: servertech.sentry4.st4TempSensorValue
+  table:
+    OID: 1.3.6.1.4.1.1718.4.1.9.3
+    name: servertech.sentry4.st4TempSensorMonitorTable
+- MIB: SENTRY4-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.1718.4.1.10.2.1.2
+      name: servertech.sentry4.st4HumidSensorID
+    tag: servertech_sentry4_st4_humid_sensor_id
+  - symbol:
+      OID: 1.3.6.1.4.1.1718.4.1.10.2.1.3
+      name: servertech.sentry4.st4HumidSensorName
+    tag: servertech_sentry4_st4_humid_sensor_name
+  - mapping:
+      0: normal
+      1: disabled
+      2: purged
+      5: reading
+      6: settle
+      7: not_found
+      8: lost
+      9: read_error
+      10: no_comm
+      11: pwr_error
+      12: breaker_tripped
+      13: fuse_blown
+      14: low_alarm
+      15: low_warning
+      16: high_warning
+      17: high_alarm
+      18: alarm
+      19: under_limit
+      20: over_limit
+      21: nvm_fail
+      22: profile_error
+      23: conflict
+    symbol:
+      OID: 1.3.6.1.4.1.1718.4.1.10.3.1.2
+      name: servertech.sentry4.st4HumidSensorStatus
+    tag: servertech_sentry4_st4_humid_sensor_status
+  symbols:
+  - OID: 1.3.6.1.4.1.1718.4.1.10.3.1.1
+    name: servertech.sentry4.st4HumidSensorValue
+  table:
+    OID: 1.3.6.1.4.1.1718.4.1.10.3
+    name: servertech.sentry4.st4HumidSensorMonitorTable
+sysobjectid:
+- 1.3.6.1.4.1.1718.4

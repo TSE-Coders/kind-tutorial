@@ -1,0 +1,5 @@
+ad_identifiers:
+- _ecs_fargate
+init_config: null
+instances:
+- min_collection_interval: 20

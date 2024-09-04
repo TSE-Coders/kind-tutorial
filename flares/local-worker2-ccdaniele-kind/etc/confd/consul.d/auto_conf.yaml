@@ -1,0 +1,7 @@
+ad_identifiers:
+- consul
+init_config: null
+instances:
+- catalog_checks: true
+  new_leader_checks: true
+  url: http://%%host%%:8500

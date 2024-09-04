@@ -1,0 +1,70 @@
+
+=== kubernetes_apiserver check ===
+Configuration provider: file
+Configuration source: file:/etc/datadog-agent/conf.d/kubernetes_apiserver.d/conf.yaml.default
+Config for instance ID: kubernetes_apiserver:d7eb902eea9f51f7
+{}
+~
+===
+
+=== kubernetes_state_core check ===
+Configuration provider: file
+Configuration source: file:/etc/datadog-agent/conf.d/kubernetes_state_core.yaml.default
+Config for instance ID: kubernetes_state_core:f0ece86b2bc4e82e
+annotations_as_tags: {}
+collectors:
+- secrets
+- configmaps
+- nodes
+- pods
+- services
+- resourcequotas
+- replicationcontrollers
+- limitranges
+- persistentvolumeclaims
+- persistentvolumes
+- namespaces
+- endpoints
+- daemonsets
+- deployments
+- replicasets
+- statefulsets
+- cronjobs
+- jobs
+- horizontalpodautoscalers
+- poddisruptionbudgets
+- storageclasses
+- volumeattachments
+- ingresses
+labels_as_tags: {}
+~
+===
+
+=== orchestrator check ===
+Configuration provider: file
+Configuration source: file:/etc/datadog-agent/conf.d/orchestrator.yaml
+Config for instance ID: orchestrator:5e313062cfc91216
+collectors:
+- pods
+- clusters
+- deployments
+- namespaces
+- nodes
+- replicasets
+- jobs
+- cronjobs
+- nodes
+- services
+- daemonsets
+- statefulsets
+- ingresses
+- persistentvolumeclaims
+- persistentvolumes
+- roles
+- rolebindings
+- clusterroles
+- clusterrolebindings
+- serviceaccounts
+- horizontalpodautoscalers
+~
+===

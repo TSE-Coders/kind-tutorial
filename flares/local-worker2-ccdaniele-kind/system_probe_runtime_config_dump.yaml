@@ -1,0 +1,377 @@
+auto_exit:
+  noprocess:
+    enabled: false
+    excluded_processes: []
+  validation_period: 60
+ccm_network_config:
+  enabled: false
+dogstatsd_port: 8125
+dynamic_instrumentation:
+  enabled: false
+ebpf_check:
+  enabled: false
+  entry_count:
+    entries_for_iteration_restart_detection: 100
+    max_keys_buffer_size_bytes: 524288
+    max_restarts: 3
+    max_values_buffer_size_bytes: 1048576
+  kernel_bpf_stats: false
+event_monitoring_config:
+  custom_sensitive_words: []
+  dentry_cache_size: 1024
+  enable_all_probes: false
+  enable_kernel_filters: true
+  envs_with_value:
+  - LD_PRELOAD
+  - LD_LIBRARY_PATH
+  - PATH
+  - HISTSIZE
+  - HISTFILESIZE
+  - GLIBC_TUNABLES
+  erpc_dentry_resolution_enabled: true
+  event_server:
+    burst: 40
+  event_stream:
+    use_fentry: false
+    use_fentry_amd64: false
+    use_fentry_arm64: false
+    use_ring_buffer: true
+  events_stats:
+    polling_interval: 20
+    tags_cardinality: high
+  flush_discarder_window: 3
+  map_dentry_resolution_enabled: true
+  network:
+    classifier_handle: 0
+    classifier_priority: 10
+    enabled: true
+    ingress:
+      enabled: false
+    lazy_interface_prefixes: []
+  network_process:
+    enabled: true
+    max_processes_tracked: 1024
+  pid_cache_size: 10000
+  process:
+    enabled: false
+  remote_tagger: true
+  runtime_compilation:
+    enabled: false
+  runtime_monitor:
+    enabled: false
+  socket: /opt/datadog-agent/run/event-monitor.sock
+  syscalls_monitor:
+    enabled: false
+go_core_dump: false
+ignore_host_etc: false
+log_file: /var/log/datadog/system-probe.log
+log_file_max_rolls: 1
+log_file_max_size: 10Mb
+log_format_json: false
+log_level: debug
+log_to_console: true
+log_to_syslog: false
+network_config:
+  allow_netlink_conntracker_fallback: true
+  collect_tcp_v4: true
+  collect_tcp_v6: true
+  collect_udp_v4: true
+  collect_udp_v6: true
+  conntrack_init_timeout: 10s
+  dns_recorded_query_types: []
+  enable_connection_rollup: false
+  enable_dns_by_querytype: false
+  enable_gateway_lookup: true
+  enable_http_monitoring: true
+  enable_https_monitoring: true
+  enable_protocol_classification: true
+  enable_ringbuffers: true
+  enable_root_netns: true
+  enabled: true
+  ignore_conntrack_init_failure: false
+ping:
+  enabled: false
+proxy:
+  http: ""
+  https: ""
+  no_proxy:
+  - 169.254.169.254
+  - 100.100.100.200
+runtime_security_config:
+  activity_dump:
+    auto_suppression:
+      enabled: true
+    cgroup_differentiate_args: false
+    cgroup_dump_timeout: 20
+    cgroup_wait_list_size: 0
+    cgroup_wait_list_timeout: 4500s
+    cleanup_period: 30s
+    dump_duration: 900s
+    enabled: true
+    load_controller_period: 60s
+    local_storage:
+      compression: false
+      formats:
+      - profile
+      max_dumps_count: 100
+      output_directory: /opt/datadog-agent/run/runtime-security/profiles
+    max_dump_count_per_workload: 25
+    max_dump_size: 1750
+    min_timeout: 10m
+    path_merge:
+      enabled: false
+    rate_limiter: 500
+    silent_workloads:
+      delay: 10s
+      ticker: 10s
+    syscall_monitor:
+      period: 60s
+    tag_rules:
+      enabled: true
+    tags_resolution_period: 60s
+    traced_cgroups_count: 3
+    traced_event_types:
+    - exec
+    - open
+    - dns
+    - imds
+    workload_deny_list: []
+  compliance_module:
+    enabled: false
+  cookie_cache_size: 100
+  direct_send_from_system_probe: false
+  ebpfless:
+    enabled: false
+    socket: localhost:5678
+  enabled: true
+  enforcement:
+    enabled: true
+    raw_syscall:
+      enabled: false
+  etw_events_channel_size: 128
+  etw_events_max_buffers: 0
+  event_server:
+    burst: 40
+    rate: 10
+    retention: 6s
+  fim_enabled: true
+  hash_resolver:
+    cache_size: 500
+    enabled: true
+    event_types:
+    - exec
+    - open
+    hash_algorithms:
+    - sha1
+    - sha256
+    - ssdeep
+    max_file_size: 10485760
+    max_hash_burst: 1000
+    max_hash_rate: 500
+    replace: {}
+  imds_ipv4: 169.254.169.254
+  internal_monitoring:
+    enabled: false
+  log_patterns: []
+  log_tags: []
+  network:
+    enabled: true
+  policies:
+    dir: /etc/datadog-agent/runtime-security.d
+    monitor:
+      enabled: false
+      per_rule_enabled: false
+      report_internal_policies: false
+    watch_dir: false
+  remote_configuration:
+    dump_policies: false
+    enabled: true
+  sbom:
+    enabled: false
+    workloads_cache_size: 10
+  security_profile:
+    anomaly_detection:
+      default_minimum_stable_period: 900s
+      enabled: true
+      event_types:
+      - exec
+      minimum_stable_period:
+        dns: 900s
+        exec: 900s
+      rate_limiter:
+        num_events_allowed: 300
+        num_keys: 1000
+        period: 1m
+      silent_rule_events:
+        enabled: false
+      tag_rules:
+        enabled: true
+      unstable_profile_size_threshold: 5000000
+      unstable_profile_time_threshold: 1h
+      workload_warmup_period: 180s
+    auto_suppression:
+      enabled: true
+      event_types:
+      - exec
+      - dns
+    cache_size: 10
+    dir: /opt/datadog-agent/run/runtime-security/profiles
+    dns_match_max_depth: 3
+    enabled: true
+    max_count: 400
+    max_image_tags: 20
+    remote_configuration:
+      enabled: false
+    watch_dir: true
+  self_test:
+    enabled: true
+    send_report: true
+  socket: /var/run/sysprobe/runtime-security.sock
+  syscall_monitor:
+    enabled: false
+  use_secruntime_track: true
+  user_sessions:
+    cache_size: 1024
+  windows_filename_cache_max: 16384
+  windows_probe_block_on_channel_send: false
+  windows_registry_cache_max: 4096
+sbom:
+  cache:
+    clean_interval: 30m
+    max_disk_size: 100000000
+  cache_directory: /opt/datadog-agent/run/sbom-sysprobe
+  clear_cache_on_exit: false
+  host:
+    analyzers:
+    - os
+    enabled: true
+  scan_queue:
+    base_backoff: 5m
+    max_backoff: 1h
+secret_backend_arguments: []
+secret_backend_command: ""
+secret_backend_command_allow_group_exec_perm: true
+secret_backend_output_max_size: 0
+secret_backend_skip_checks: false
+secret_backend_timeout: 0
+service_monitoring_config:
+  enable_http_monitoring: true
+  enable_http_stats_by_status_code: true
+  enable_http2_monitoring: false
+  enable_kafka_monitoring: false
+  enable_ring_buffers: true
+  enabled: true
+  http_idle_connection_ttl_in_s: 30
+  http_map_cleaner_interval_in_s: 300
+  http_max_request_fragment: 512
+  http_notification_threshold: 512
+  http2_dynamic_table_map_cleaner_interval_seconds: 30
+  max_concurrent_requests: 131072
+  max_http_stats_buffered: 100000
+  max_kafka_stats_buffered: 100000
+  max_postgres_stats_buffered: 100000
+  max_tracked_http_connections: 1024
+  tls:
+    go:
+      exclude_self: true
+    istio:
+      enabled: false
+    java:
+      allow_regex: ""
+      args: dd.appsec.enabled=false,dd.trace.enabled=false,dd.usm.enabled=true
+      block_regex: ""
+      debug: false
+      dir: /opt/datadog-agent/embedded/share/system-probe/java
+      enabled: false
+    native:
+      enabled: true
+syslog_rfc: false
+syslog_uri: ""
+system_probe_config:
+  adjusted: true
+  allow_precompiled_fallback: true
+  allow_runtime_compiled_fallback: true
+  apt_config_dir: /host/etc/apt
+  attach_kprobes_with_kprobe_events_abi: false
+  bpf_debug: false
+  bpf_dir: /opt/datadog-agent/embedded/share/system-probe/ebpf
+  btf_path: ""
+  closed_channel_size: 500
+  closed_connection_flush_threshold: 0
+  collect_dns_domains: true
+  collect_dns_stats: true
+  collect_local_dns: false
+  conntrack_max_state_size: 131072
+  conntrack_rate_limit: 500
+  debug_port: 0
+  dest_excludes: {}
+  disable_dns_inspection: false
+  disable_ipv6: false
+  disable_tcp: false
+  disable_udp: false
+  dns_timeout_in_s: 15
+  ebpf_instrumentation:
+    enabled: false
+  enable_co_re: true
+  enable_conntrack: true
+  enable_conntrack_all_namespaces: true
+  enable_kernel_header_download: true
+  enable_oom_kill: false
+  enable_runtime_compiler: true
+  enable_tcp_queue_length: false
+  enable_tracepoints: false
+  enabled: true
+  excluded_linux_versions: []
+  external: false
+  health_port: 0
+  internal_profiling:
+    api_key: '***************************8b8dc'
+    block_profile_rate: 0
+    cpu_duration: 1m0s
+    custom_attributes:
+    - module
+    - rule_id
+    delta_profiles: true
+    enable_block_profiling: false
+    enable_goroutine_stacktraces: false
+    enable_mutex_profiling: false
+    enabled: false
+    env: ""
+    extra_tags: []
+    mutex_profile_fraction: 0
+    period: 5m0s
+    profile_dd_url: ""
+    site: datadoghq.com
+    unix_socket: ""
+  kernel_header_dirs: []
+  kernel_header_download_dir: /var/tmp/datadog-agent/system-probe/kernel-headers
+  language_detection:
+    enabled: false
+  max_closed_connections_buffered: 131072
+  max_connection_state_buffered: 75000
+  max_conns_per_message: 600
+  max_dns_stats: 20000
+  max_tracked_connections: 131072
+  memory_controller:
+    enabled: false
+    hierarchy: v1
+    pressure_levels: {}
+    thresholds: {}
+  offset_guess_threshold: 400
+  process_config:
+    enabled: false
+  process_service_inference:
+    enabled: false
+    use_windows_service_name: true
+  runtime_compiler_output_dir: /var/tmp/datadog-agent/system-probe/build
+  source_excludes: {}
+  sysprobe_socket: /var/run/sysprobe/sysprobe.sock
+  telemetry_enabled: false
+  windows:
+    enable_monotonic_count: false
+  yum_repos_dir: /host/etc/yum.repos.d
+  zypper_repos_dir: /host/etc/zypp/repos.d
+traceroute:
+  enabled: false
+windows_crash_detection:
+  enabled: false

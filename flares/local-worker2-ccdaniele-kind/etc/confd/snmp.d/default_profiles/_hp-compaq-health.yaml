@@ -1,0 +1,161 @@
+metrics:
+- MIB: CPQHLTH-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.232.6.2.8.1.0
+    name: cpqHeSysUtilLifeTime
+- MIB: CPQHLTH-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.232.6.2.8.2.0
+    name: cpqHeSysUtilEisaBusMin
+- MIB: CPQHLTH-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.232.6.2.2.2.0
+    name: cpqHeCritLogCondition
+- MIB: CPQHLTH-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.232.6.2.3.1.0
+    name: cpqHeCorrMemLogStatus
+- MIB: CPQHLTH-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.232.6.2.3.2.0
+    name: cpqHeCorrMemLogCondition
+- MIB: CPQHLTH-MIB
+  metric_type: monotonic_count
+  symbol:
+    OID: 1.3.6.1.4.1.232.6.2.3.3.0
+    name: cpqHeCorrMemTotalErrs
+- MIB: CPQHLTH-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.232.6.2.5.1.0
+    name: cpqHeAsrStatus
+- MIB: CPQHLTH-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.232.6.2.5.6.0
+    name: cpqHeAsrPost
+- MIB: CPQHLTH-MIB
+  metric_type: monotonic_count
+  symbol:
+    OID: 1.3.6.1.4.1.232.6.2.5.10.0
+    name: cpqHeAsrRebootCount
+- MIB: CPQHLTH-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.232.6.2.5.17.0
+    name: cpqHeAsrCondition
+- MIB: CPQHLTH-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.232.6.2.5.21.0
+    name: cpqHeAsrNetworkAccessStatus
+- MIB: CPQHLTH-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.232.6.2.6.3.0
+    name: cpqHeThermalTempStatus
+- MIB: CPQHLTH-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.232.6.2.6.4.0
+    name: cpqHeThermalSystemFanStatus
+- MIB: CPQHLTH-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.232.6.2.6.5.0
+    name: cpqHeThermalCpuFanStatus
+- MIB: CPQHLTH-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.232.6.2.6.8.1.3
+      name: cpqHeTemperatureIndex
+    tag: temperature_index
+  symbols:
+  - OID: 1.3.6.1.4.1.232.6.2.6.8.1.4
+    name: cpqHeTemperatureCelsius
+  - OID: 1.3.6.1.4.1.232.6.2.6.8.1.6
+    name: cpqHeTemperatureCondition
+  table:
+    OID: 1.3.6.1.4.1.232.6.2.6.8
+    name: cpqHeTemperatureTable
+- MIB: CPQHLTH-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.232.6.2.15.3.0
+    name: cpqHePowerMeterCurrReading
+- MIB: CPQHLTH-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.232.6.2.17.2.1.2
+      name: cpqHeSysBatteryIndex
+    tag: battery_index
+  symbols:
+  - OID: 1.3.6.1.4.1.232.6.2.17.2.1.4
+    name: cpqHeSysBatteryCondition
+  - OID: 1.3.6.1.4.1.232.6.2.17.2.1.5
+    name: cpqHeSysBatteryStatus
+  table:
+    OID: 1.3.6.1.4.1.232.6.2.17.2
+    name: cpqHeSysBatteryTable
+- MIB: CPQHLTH-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.232.6.2.6.1.0
+    name: cpqHeThermalCondition
+- MIB: CPQHLTH-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.232.6.2.9.2.0
+    name: cpqHeFltTolPwrSupplyStatus
+- MIB: CPQHLTH-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.232.6.2.14.13.1.15
+      name: cpqHeResMem2ModuleCellTablePtr
+    tag: mem_board_index
+  symbols:
+  - OID: 1.3.6.1.4.1.232.6.2.14.13.1.20
+    name: cpqHeResMem2ModuleCondition
+  table:
+    OID: 1.3.6.1.4.1.232.6.2.14.13
+    name: cpqHeResMem2ModuleTable
+- MIB: CPQHLTH-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.232.6.2.9.3.1.1
+      name: cpqHeFltTolPowerSupplyChassis
+    tag: chassis_num
+  symbols:
+  - OID: 1.3.6.1.4.1.232.6.2.9.3.1.5
+    name: cpqHeFltTolPowerSupplyStatus
+  table:
+    OID: 1.3.6.1.4.1.232.6.2.9.3
+    name: cpqHeFltTolPowerSupplyTable
+- MIB: CPQHLTH-MIB
+  metric_tags:
+  - mapping:
+      1: no_error
+      2: general_failure
+      3: bist_failure
+      4: fan_failure
+      5: temp_failure
+      6: interlock_open
+      7: eprom_failed
+      8: vref_failed
+      9: dac_failed
+      10: ram_test_failed
+      11: voltage_channel_failed
+      12: orringdiode_failed
+      13: brown_out
+      14: giveup_on_startup
+      15: nvram_invalid
+      16: calibration_table_invalid
+      17: no_power_input
+    symbol:
+      OID: 1.3.6.1.4.1.232.6.2.9.3.1.5
+      name: cpqHeFltTolPowerSupplyStatus
+    tag: power_supply_status
+  - symbol:
+      OID: 1.3.6.1.4.1.232.6.2.9.3.1.1
+      name: cpqHeFltTolPowerSupplyChassis
+    tag: chassis_num
+  symbols:
+  - constant_value_one: true
+    name: cpqHeFltTolPowerSupply
+  - OID: 1.3.6.1.4.1.232.6.2.9.3.1.7
+    name: cpqHeFltTolPowerSupplyCapacityUsed
+  - OID: 1.3.6.1.4.1.232.6.2.9.3.1.8
+    name: cpqHeFltTolPowerSupplyCapacityMaximum
+  table:
+    OID: 1.3.6.1.4.1.232.6.2.9.3
+    name: cpqHeFltTolPowerSupplyTable

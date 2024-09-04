@@ -1,0 +1,208 @@
+extends:
+- _base.yaml
+- _generic-if.yaml
+metadata:
+  device:
+    fields:
+      type:
+        value: storage
+      vendor:
+        value: synology
+metric_tags:
+- OID: 1.3.6.1.4.1.6574.1.5.1.0
+  symbol: modelName
+  tag: synology_model_name
+- OID: 1.3.6.1.4.1.6574.1.5.2.0
+  symbol: serialNumber
+  tag: synology_serial_number
+- OID: 1.3.6.1.4.1.6574.1.5.3.0
+  symbol: version
+  tag: synology_version
+metrics:
+- MIB: UCD-SNMP-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.2021.10.1.5.1
+    name: cpu.usage
+- MIB: HOST-RESOURCES-MIB
+  symbol:
+    OID: 1.3.6.1.2.1.25.2.3.1.6.1
+    name: memory.total
+- MIB: HOST-RESOURCES-MIB
+  symbol:
+    OID: 1.3.6.1.2.1.25.2.3.1.6.6
+    name: hrMemoryBuffers
+- MIB: HOST-RESOURCES-MIB
+  symbol:
+    OID: 1.3.6.1.2.1.25.2.3.1.6.7
+    name: hrCachedMemory
+- MIB: SYNOLOGY-SYSTEM-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.6574.1.2.0
+    name: synology.system.temperature
+- MIB: SYNOLOGY-DISK-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.6574.2.1.1.2
+      name: synology.diskID
+    tag: synology_disk_id
+  - symbol:
+      OID: 1.3.6.1.4.1.6574.2.1.1.3
+      name: synology.diskModel
+    tag: synology_disk_model
+  - symbol:
+      OID: 1.3.6.1.4.1.6574.2.1.1.4
+      name: synology.diskType
+    tag: synology_disk_type
+  - mapping:
+      1: normal
+      2: initialized
+      3: not_initialized
+      4: system_partition_failed
+      5: crashed
+    symbol:
+      OID: 1.3.6.1.4.1.6574.2.1.1.5
+      name: synology.diskStatus
+    tag: synology_disk_status
+  symbols:
+  - OID: 1.3.6.1.4.1.6574.2.1.1.6
+    name: synology.diskTemperature
+  table:
+    OID: 1.3.6.1.4.1.6574.2.1
+    name: diskTable
+- MIB: SYNOLOGY-RAID-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.6574.3.1.1.2
+      name: synology.raid.raidName
+    tag: synology_raid_name
+  - mapping:
+      1: normal
+      2: repairing
+      3: migrating
+      4: expanding
+      5: deleting
+      6: creating
+      7: raid_syncing
+      8: raid_parity_checking
+      9: raid_assembling
+      10: canceling
+      11: degrade
+      12: crashed
+      13: data_scrubbing
+      14: raid_deploying
+      15: raid_un_deploying
+      16: raid_mount_cache
+      17: raid_unmount_cache
+      18: raid_expanding_unfinished_shr
+      19: raid_convert_shr_to_pool
+      20: raid_migrate_shr1_to_shr2
+      21: raid_unknown_status
+    symbol:
+      OID: 1.3.6.1.4.1.6574.3.1.1.3
+      name: synology.raid.raidStatus
+    tag: synology_raid_status
+  symbols:
+  - OID: 1.3.6.1.4.1.6574.3.1.1.4
+    metric_type: monotonic_count
+    name: synology.raidFreeSize
+  - OID: 1.3.6.1.4.1.6574.3.1.1.5
+    metric_type: monotonic_count
+    name: synology.raidTotalSize
+  table:
+    OID: 1.3.6.1.4.1.6574.3.1
+    name: raidTable
+- MIB: SYNOLOGY-SMART-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.6574.5.1.1.2
+      name: synology.diskSMARTInfoDevName
+    tag: synology_disk_smart_info_dev_name
+  - symbol:
+      OID: 1.3.6.1.4.1.6574.5.1.1.3
+      name: synology.diskSMARTAttrName
+    tag: synology_disk_smart_attr_name
+  - symbol:
+      OID: 1.3.6.1.4.1.6574.5.1.1.4
+      name: synology.diskSMARTAttrId
+    tag: synology_disk_smart_attr_id
+  - symbol:
+      OID: 1.3.6.1.4.1.6574.5.1.1.9
+      name: synology.diskSMARTAttrStatus
+    tag: synology_disk_smart_attr_status
+  symbols:
+  - OID: 1.3.6.1.4.1.6574.5.1.1.5
+    name: synology.diskSMARTAttrCurrent
+  - OID: 1.3.6.1.4.1.6574.5.1.1.7
+    name: synology.diskSMARTAttrThreshold
+  table:
+    OID: 1.3.6.1.4.1.6574.5.1
+    name: diskSMARTTable
+- MIB: SYNOLOGY-SERVICES-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.6574.6.1.1.2
+      name: synology.serviceName
+    tag: synology_service_name
+  symbols:
+  - OID: 1.3.6.1.4.1.6574.6.1.1.3
+    name: synology.serviceUsers
+  table:
+    OID: 1.3.6.1.4.1.6574.6.1
+    name: serviceTable
+- MIB: SYNOLOGY-STORAGEIO-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.6574.101.1.1.2
+      name: synology.storageIODevice
+    tag: synology_storage_io_device
+  symbols:
+  - OID: 1.3.6.1.4.1.6574.101.1.1.5
+    metric_type: monotonic_count
+    name: synology.storageIOReads
+  - OID: 1.3.6.1.4.1.6574.101.1.1.6
+    metric_type: monotonic_count
+    name: synology.storageIOWrites
+  - OID: 1.3.6.1.4.1.6574.101.1.1.8
+    name: synology.storageIOLA
+  - OID: 1.3.6.1.4.1.6574.101.1.1.12
+    metric_type: monotonic_count
+    name: synology.storageIONReadX
+  - OID: 1.3.6.1.4.1.6574.101.1.1.13
+    metric_type: monotonic_count
+    name: synology.storageIONWrittenX
+  table:
+    OID: 1.3.6.1.4.1.6574.101.1
+    name: null
+- MIB: SYNOLOGY-SPACEIO-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.6574.102.1.1.2
+      name: synology.spaceIODevice
+    tag: synology_space_io_device
+  symbols:
+  - OID: 1.3.6.1.4.1.6574.102.1.1.5
+    metric_type: monotonic_count
+    name: synology.spaceIOReads
+  - OID: 1.3.6.1.4.1.6574.102.1.1.6
+    metric_type: monotonic_count
+    name: synology.spaceIOWrites
+  - OID: 1.3.6.1.4.1.6574.102.1.1.8
+    name: synology.spaceIOLA
+  - OID: 1.3.6.1.4.1.6574.102.1.1.12
+    metric_type: monotonic_count
+    name: synology.spaceIONReadX
+  - OID: 1.3.6.1.4.1.6574.102.1.1.13
+    metric_type: monotonic_count
+    name: synology.spaceIONWrittenX
+  table:
+    OID: 1.3.6.1.4.1.6574.102.1
+    name: null
+- MIB: SYNOLOGY-GPUINFO-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.6574.108.2.0
+    name: synology.gpuUtilization
+- MIB: SYNOLOGY-GPUINFO-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.6574.108.3.0
+    name: synology.gpuMemoryUtilization
+sysobjectid: 1.3.6.1.4.1.6574.*

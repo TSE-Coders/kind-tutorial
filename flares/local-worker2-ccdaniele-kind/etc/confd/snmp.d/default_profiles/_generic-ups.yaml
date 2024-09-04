@@ -1,0 +1,132 @@
+metric_tags:
+- OID: 1.3.6.1.2.1.33.1.1.1
+  symbol: upsIdentManufacturer
+  tag: ups_ident_manufacturer
+- OID: 1.3.6.1.2.1.33.1.1.2
+  symbol: upsIdentModel
+  tag: ups_ident_model
+- OID: 1.3.6.1.2.1.33.1.1.5
+  symbol: upsIdentName
+  tag: ups_ident_name
+metrics:
+- MIB: UPS-MIB
+  symbol:
+    OID: 1.3.6.1.2.1.33.1.2.2.0
+    name: upsSecondsOnBattery
+- MIB: UPS-MIB
+  symbol:
+    OID: 1.3.6.1.2.1.33.1.2.3.0
+    name: upsEstimatedMinutesRemaining
+- MIB: UPS-MIB
+  symbol:
+    OID: 1.3.6.1.2.1.33.1.2.4.0
+    name: upsEstimatedChargeRemaining
+- MIB: UPS-MIB
+  symbol:
+    OID: 1.3.6.1.2.1.33.1.2.5.0
+    name: upsBatteryVoltage
+- MIB: UPS-MIB
+  symbol:
+    OID: 1.3.6.1.2.1.33.1.2.6.0
+    name: upsBatteryCurrent
+- MIB: UPS-MIB
+  symbol:
+    OID: 1.3.6.1.2.1.33.1.2.7.0
+    name: upsBatteryTemperature
+- MIB: UPS-MIB
+  metric_type: monotonic_count
+  symbol:
+    OID: 1.3.6.1.2.1.33.1.3.1.0
+    name: upsInputLineBads
+- MIB: UPS-MIB
+  symbol:
+    OID: 1.3.6.1.2.1.33.1.3.2.0
+    name: upsInputNumLines
+- MIB: UPS-MIB
+  symbol:
+    OID: 1.3.6.1.2.1.33.1.4.2.0
+    name: upsOutputFrequency
+- MIB: UPS-MIB
+  symbol:
+    OID: 1.3.6.1.2.1.33.1.4.3.0
+    name: upsOutputNumLines
+- MIB: UPS-MIB
+  symbol:
+    OID: 1.3.6.1.2.1.33.1.5.1.0
+    name: upsBypassFrequency
+- MIB: UPS-MIB
+  symbol:
+    OID: 1.3.6.1.2.1.33.1.5.2.0
+    name: upsBypassNumLines
+- MIB: UPS-MIB
+  symbol:
+    OID: 1.3.6.1.2.1.33.1.6.1.0
+    name: upsAlarmsPresent
+- MIB: UPS-MIB
+  symbol:
+    OID: 1.3.6.1.2.1.33.1.7.5.0
+    name: upsTestStartTime
+- MIB: UPS-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.2.1.33.1.4.4.1.1
+      name: upsOutputLineIndex
+    tag: ups_output_line_index
+  symbols:
+  - OID: 1.3.6.1.2.1.33.1.4.4.1.2
+    name: upsOutputVoltage
+  - OID: 1.3.6.1.2.1.33.1.4.4.1.3
+    name: upsOutputCurrent
+  - OID: 1.3.6.1.2.1.33.1.4.4.1.4
+    name: upsOutputPower
+  - OID: 1.3.6.1.2.1.33.1.4.4.1.5
+    name: upsOutputPercentLoad
+  table:
+    OID: 1.3.6.1.2.1.33.1.4.4
+    name: upsOutputTable
+- MIB: UPS-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.2.1.33.1.3.3.1.1
+      name: upsInputLineIndex
+    tag: ups_input_line_index
+  symbols:
+  - OID: 1.3.6.1.2.1.33.1.3.3.1.2
+    name: upsInputFrequency
+  - OID: 1.3.6.1.2.1.33.1.3.3.1.3
+    name: upsInputVoltage
+  - OID: 1.3.6.1.2.1.33.1.3.3.1.4
+    name: upsInputCurrent
+  - OID: 1.3.6.1.2.1.33.1.3.3.1.5
+    name: upsInputTruePower
+  table:
+    OID: 1.3.6.1.2.1.33.1.3.3
+    name: upsInputTable
+- MIB: UPS-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.2.1.33.1.5.3.1.1
+      name: upsBypassLineIndex
+    tag: ups_bypass_line_index
+  symbols:
+  - OID: 1.3.6.1.2.1.33.1.5.3.1.2
+    name: upsBypassVoltage
+  - OID: 1.3.6.1.2.1.33.1.5.3.1.3
+    name: upsBypassCurrent
+  - OID: 1.3.6.1.2.1.33.1.5.3.1.4
+    name: upsBypassPower
+  table:
+    OID: 1.3.6.1.2.1.33.1.5.3
+    name: upsBypassTable
+- MIB: UPS-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.2.1.33.1.6.2.1.2
+      name: upsAlarmDescr
+    tag: ups_alarm_descr
+  symbols:
+  - OID: 1.3.6.1.2.1.33.1.6.2.1.3
+    name: upsAlarmTime
+  table:
+    OID: 1.3.6.1.2.1.33.1.6.2
+    name: upsAlarmTable

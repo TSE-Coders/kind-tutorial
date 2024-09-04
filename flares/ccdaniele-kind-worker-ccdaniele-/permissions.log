@@ -1,0 +1,13 @@
+File path                                          | mode  | owner      | group      | error     |
+---------------------------------------------------------------------------------------------------
+/etc/datadog-agent/conf.d/kubernetes_apiserver.d/conf.yaml.default | -rw-r--r-- | root       | root       |           |
+/etc/datadog-agent/conf.d/orchestrator.yaml        | -rw-r--r-- | root       | root       |           |
+/etc/datadog-agent/datadog-cluster.yaml            | -rw-r--r-- | root       | root       |           |
+/etc/datadog-agent/system-probe.yaml               |       |            |            | could not stat file /etc/datadog-agent/system-probe.yaml: stat /etc/datadog-agent/system-probe.yaml: no such file or directory|
+/etc/datadog-agent/security-agent.yaml             |       |            |            | could not stat file /etc/datadog-agent/security-agent.yaml: stat /etc/datadog-agent/security-agent.yaml: no such file or directory|
+/var/log/datadog/cluster-agent.log                 | -rw-r--r-- | root       | root       |           |
+/etc/datadog-agent/conf.d                          | drwxr-xr-x | root       | root       |           |
+/etc/datadog-agent/conf.d/orchestrator.d/conf.yaml.default | -rw-r--r-- | root       | root       |           |
+/opt/datadog-agent/bin/dist/conf.d                 |       |            |            | could not stat file /opt/datadog-agent/bin/dist/conf.d: stat /opt/datadog-agent/bin/dist/conf.d: no such file or directory|
+/var/log/datadog                                   | drwxrwxrwx | root       | root       |           |
+/etc/datadog-agent/conf.d/kubernetes_state_core.yaml.default | -rw-r--r-- | root       | root       |           |

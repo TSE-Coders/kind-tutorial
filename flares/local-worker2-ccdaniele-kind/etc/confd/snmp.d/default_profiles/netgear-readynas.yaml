@@ -1,0 +1,123 @@
+extends:
+- _generic-ucd.yaml
+- netgear.yaml
+metadata:
+  device:
+    fields:
+      type:
+        value: storage
+metrics:
+- MIB: READYNASOS-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.4526.22.3.1.2
+      name: netgear.readynasos.diskID
+    tag: netgear_readynasos_disk_id
+  - symbol:
+      OID: 1.3.6.1.4.1.4526.22.3.1.3
+      name: netgear.readynasos.diskSlotName
+    tag: netgear_readynasos_disk_slot_name
+  - symbol:
+      OID: 1.3.6.1.4.1.4526.22.3.1.4
+      name: netgear.readynasos.diskSerial
+    tag: netgear_readynasos_disk_serial
+  - symbol:
+      OID: 1.3.6.1.4.1.4526.22.3.1.5
+      name: netgear.readynasos.diskModel
+    tag: netgear_readynasos_disk_model
+  - symbol:
+      OID: 1.3.6.1.4.1.4526.22.3.1.8
+      name: netgear.readynasos.diskInterface
+    tag: netgear_readynasos_disk_interface
+  - mapping:
+      0: online
+      1: offline
+    symbol:
+      OID: 1.3.6.1.4.1.4526.22.3.1.9
+      name: netgear.readynasos.diskState
+    tag: netgear_readynasos_disk_state
+  symbols:
+  - OID: 1.3.6.1.4.1.4526.22.3.1.6
+    name: netgear.readynasos.ataError
+  - OID: 1.3.6.1.4.1.4526.22.3.1.7
+    name: netgear.readynasos.diskCapacity
+  - OID: 1.3.6.1.4.1.4526.22.3.1.10
+    name: netgear.readynasos.diskTemperature
+  table:
+    OID: 1.3.6.1.4.1.4526.22.3
+    name: diskTable
+- MIB: READYNASOS-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.4526.22.4.1.4
+      name: netgear.readynasos.fanType
+    tag: netgear_readynasos_fan_type
+  symbols:
+  - OID: 1.3.6.1.4.1.4526.22.4.1.2
+    name: netgear.readynasos.fanRPM
+  - OID: 1.3.6.1.4.1.4526.22.4.1.3
+    name: netgear.readynasos.fanStatus
+  table:
+    OID: 1.3.6.1.4.1.4526.22.4
+    name: fanTable
+- MIB: READYNASOS-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.4526.22.5.1.3
+      name: netgear.readynasos.temperatureType
+    tag: netgear_readynasos_temperature_type
+  symbols:
+  - OID: 1.3.6.1.4.1.4526.22.5.1.2
+    name: netgear.readynasos.temperatureValue
+  - OID: 1.3.6.1.4.1.4526.22.5.1.4
+    name: netgear.readynasos.temperatureMin
+  - OID: 1.3.6.1.4.1.4526.22.5.1.5
+    name: netgear.readynasos.temperatureMax
+  table:
+    OID: 1.3.6.1.4.1.4526.22.5
+    name: temperatureTable
+- MIB: READYNASOS-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.4526.22.7.1.2
+      name: netgear.readynasos.volumeName
+    tag: netgear_readynasos_volume_name
+  - mapping:
+      1: redundant
+      2: unprotected
+      3: degraded
+      4: dead
+      5: inactive
+      6: unknown
+    symbol:
+      OID: 1.3.6.1.4.1.4526.22.7.1.4
+      name: netgear.readynasos.volumeStatus
+    tag: netgear_readynasos_volume_status
+  symbols:
+  - OID: 1.3.6.1.4.1.4526.22.7.1.3
+    name: netgear.readynasos.volumeRAIDLevel
+  - OID: 1.3.6.1.4.1.4526.22.7.1.5
+    name: netgear.readynasos.volumeSize
+  - OID: 1.3.6.1.4.1.4526.22.7.1.6
+    name: netgear.readynasos.volumeFreeSpace
+  table:
+    OID: 1.3.6.1.4.1.4526.22.7
+    name: volumeTable
+- MIB: READYNASOS-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.4526.22.8.1.2
+      name: netgear.readynasos.psuDesc
+    tag: netgear_readynasos_psu_desc
+  - symbol:
+      OID: 1.3.6.1.4.1.4526.22.8.1.3
+      name: netgear.readynasos.psuStatus
+    tag: netgear_readynasos_psu_status
+  symbols:
+  - constant_value_one: true
+    name: netgear.readynasos.psu
+  table:
+    OID: 1.3.6.1.4.1.4526.22.8
+    name: psuTable
+sysobjectid:
+- 1.3.6.1.4.1.4526.100.16.*

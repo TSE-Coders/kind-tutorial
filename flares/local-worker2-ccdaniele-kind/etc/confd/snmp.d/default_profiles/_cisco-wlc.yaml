@@ -1,0 +1,247 @@
+device:
+  vendor: cisco
+metrics:
+- MIB: AIRESPACE-WIRELESS-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.14179.2.2.1.1.1
+      name: bsnAPDot3MacAddress
+    tag: ap_mac_address
+  - symbol:
+      OID: 1.3.6.1.4.1.14179.2.2.1.1.3
+      name: bsnAPName
+    tag: ap_name
+  - symbol:
+      OID: 1.3.6.1.4.1.14179.2.2.1.1.4
+      name: bsnAPLocation
+    tag: ap_location
+  - symbol:
+      OID: 1.3.6.1.4.1.14179.2.2.1.1.19
+      name: bsnApIpAddress
+    tag: ap_ip_address
+  - mapping:
+      1: associated
+      2: disassociating
+      3: downloading
+    symbol:
+      OID: 1.3.6.1.4.1.14179.2.2.1.1.6
+      name: bsnAPOperationStatus
+    tag: ap_oper_status
+  - mapping:
+      1: enable
+      2: disable
+    symbol:
+      OID: 1.3.6.1.4.1.14179.2.2.1.1.37
+      name: bsnAPAdminStatus
+    tag: ap_admin_status
+  symbols:
+  - constant_value_one: true
+    name: accessPoint
+  table:
+    OID: 1.3.6.1.4.1.14179.2.2.1
+    name: bsnAPTable
+- MIB: AIRESPACE-WIRELESS-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.14179.2.2.2.1.1
+      name: bsnAPIfSlotId
+    tag: ap_if_slot_id
+  - index_transform:
+    - end: 5
+      start: 0
+    symbol:
+      OID: 1.3.6.1.4.1.14179.2.2.1.1.1
+      name: bsnAPDot3MacAddress
+    table: bsnAPTable
+    tag: ap_mac_address
+  - index_transform:
+    - end: 5
+      start: 0
+    symbol:
+      OID: 1.3.6.1.4.1.14179.2.2.1.1.3
+      name: bsnAPName
+    table: bsnAPTable
+    tag: ap_name
+  - index_transform:
+    - end: 5
+      start: 0
+    symbol:
+      OID: 1.3.6.1.4.1.14179.2.2.1.1.4
+      name: bsnAPLocation
+    table: bsnAPTable
+    tag: ap_location
+  - index_transform:
+    - end: 5
+      start: 0
+    symbol:
+      OID: 1.3.6.1.4.1.14179.2.2.1.1.19
+      name: bsnApIpAddress
+    table: bsnAPTable
+    tag: ap_ip_address
+  - mapping:
+      1: down
+      2: up
+    symbol:
+      OID: 1.3.6.1.4.1.14179.2.2.2.1.12
+      name: bsnAPIfOperStatus
+    tag: ap_if_oper_status
+  - mapping:
+      1: enable
+      2: disable
+    symbol:
+      OID: 1.3.6.1.4.1.14179.2.2.2.1.34
+      name: bsnAPIfAdminStatus
+    tag: ap_if_admin_status
+  symbols:
+  - constant_value_one: true
+    name: accessPointInterface
+  table:
+    OID: 1.3.6.1.4.1.14179.2.2.2
+    name: bsnAPIfTable
+- MIB: AIRESPACE-WIRELESS-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.14179.2.2.2.1.1
+      name: bsnAPIfSlotId
+    tag: ap_if_slot_id
+  - index_transform:
+    - end: 5
+      start: 0
+    symbol:
+      OID: 1.3.6.1.4.1.14179.2.2.1.1.1
+      name: bsnAPDot3MacAddress
+    table: bsnAPTable
+    tag: ap_mac_address
+  - index_transform:
+    - end: 5
+      start: 0
+    symbol:
+      OID: 1.3.6.1.4.1.14179.2.2.1.1.3
+      name: bsnAPName
+    table: bsnAPTable
+    tag: ap_name
+  - index_transform:
+    - end: 5
+      start: 0
+    symbol:
+      OID: 1.3.6.1.4.1.14179.2.2.1.1.4
+      name: bsnAPLocation
+    table: bsnAPTable
+    tag: ap_location
+  - index_transform:
+    - end: 5
+      start: 0
+    symbol:
+      OID: 1.3.6.1.4.1.14179.2.2.1.1.19
+      name: bsnApIpAddress
+    table: bsnAPTable
+    tag: ap_ip_address
+  metric_type: gauge
+  symbols:
+  - OID: 1.3.6.1.4.1.14179.2.2.2.1.15
+    name: bsnApIfNoOfUsers
+  table:
+    OID: 1.3.6.1.4.1.14179.2.2.2
+    name: bsnAPIfTable
+- MIB: AIRESPACE-WIRELESS-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.14179.2.2.2.1.1
+      name: bsnAPIfSlotId
+    table: bsnAPIfTable
+    tag: ap_if_slot_id
+  - index_transform:
+    - end: 5
+      start: 0
+    symbol:
+      OID: 1.3.6.1.4.1.14179.2.2.1.1.1
+      name: bsnAPDot3MacAddress
+    table: bsnAPTable
+    tag: ap_mac_address
+  - index_transform:
+    - end: 5
+      start: 0
+    symbol:
+      OID: 1.3.6.1.4.1.14179.2.2.1.1.3
+      name: bsnAPName
+    table: bsnAPTable
+    tag: ap_name
+  - index_transform:
+    - end: 5
+      start: 0
+    symbol:
+      OID: 1.3.6.1.4.1.14179.2.2.1.1.4
+      name: bsnAPLocation
+    table: bsnAPTable
+    tag: ap_location
+  - index_transform:
+    - end: 5
+      start: 0
+    symbol:
+      OID: 1.3.6.1.4.1.14179.2.2.1.1.19
+      name: bsnApIpAddress
+    table: bsnAPTable
+    tag: ap_ip_address
+  symbols:
+  - OID: 1.3.6.1.4.1.14179.2.2.13.1.1
+    name: bsnAPIfLoadRxUtilization
+  - OID: 1.3.6.1.4.1.14179.2.2.13.1.2
+    name: bsnAPIfLoadTxUtilization
+  - OID: 1.3.6.1.4.1.14179.2.2.13.1.24
+    name: bsnAPIfPoorSNRClients
+  - OID: 1.3.6.1.4.1.14179.2.2.13.1.3
+    name: bsnAPIfLoadChannelUtilization
+  table:
+    OID: 1.3.6.1.4.1.14179.2.2.13
+    name: bsnAPIfLoadParametersTable
+- MIB: AIRESPACE-WIRELESS-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.14179.2.1.1.1.1
+      name: bsnDot11EssIndex
+    tag: wlan_index
+  - symbol:
+      OID: 1.3.6.1.4.1.14179.2.1.1.1.2
+      name: bsnDot11EssSsid
+    tag: ssid
+  - mapping:
+      0: disable
+      1: enable
+    symbol:
+      OID: 1.3.6.1.4.1.14179.2.1.1.1.6
+      name: bsnDot11EssAdminStatus
+    tag: wlan_admin_status
+  - mapping:
+      1: active
+      2: notInService
+      3: notReady
+      4: createAndGo
+      5: createAndWait
+      6: destroy
+    symbol:
+      OID: 1.3.6.1.4.1.14179.2.1.1.1.60
+      name: bsnDot11EssRowStatus
+    tag: wlan_row_status
+  symbols:
+  - constant_value_one: true
+    name: wlan
+  table:
+    OID: 1.3.6.1.4.1.14179.2.1.1
+    name: bsnDot11EssTable
+- MIB: AIRESPACE-WIRELESS-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.14179.2.1.1.1.1
+      name: bsnDot11EssIndex
+    tag: wlan_index
+  - symbol:
+      OID: 1.3.6.1.4.1.14179.2.1.1.1.2
+      name: bsnDot11EssSsid
+    tag: ssid
+  metric_type: gauge
+  symbols:
+  - OID: 1.3.6.1.4.1.14179.2.1.1.1.38
+    name: bsnDot11EssNumberOfMobileStations
+  table:
+    OID: 1.3.6.1.4.1.14179.2.1.1
+    name: bsnDot11EssTable

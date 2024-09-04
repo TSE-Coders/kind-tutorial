@@ -1,0 +1,35 @@
+metadata:
+  device:
+    fields:
+      model:
+        symbols:
+        - OID: 1.3.6.1.2.1.47.1.1.1.1.13.1
+          name: entPhysicalModelName
+        - OID: 1.3.6.1.2.1.1.1.0
+          match_pattern: running on an Arista Networks ([\w-]+)
+          match_value: $1
+          name: sysDescr
+      os_name:
+        symbol:
+          OID: 1.3.6.1.2.1.1.1.0
+          match_pattern: \bArista Networks EOS\b
+          match_value: EOS
+          name: sysDescr
+      os_version:
+        symbol:
+          OID: 1.3.6.1.2.1.1.1.0
+          match_pattern: \sversion\s(\S+)
+          match_value: $1
+          name: sysDescr
+      product_name:
+        symbol:
+          OID: 1.3.6.1.2.1.47.1.1.1.1.2.1
+          name: entPhysicalDescr
+      serial_number:
+        symbol:
+          OID: 1.3.6.1.2.1.47.1.1.1.1.11.1
+          name: entPhysicalSerialNum
+      version:
+        symbol:
+          OID: 1.3.6.1.2.1.47.1.1.1.1.8.1
+          name: entPhysicalHardwareRev

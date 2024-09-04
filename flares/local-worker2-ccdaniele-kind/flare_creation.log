@@ -1,0 +1,3 @@
+error reading file '/opt/datadog-agent/run/secret-audit-file.json' to be copy to 'secret-audit-file.json': open /opt/datadog-agent/run/secret-audit-file.json: no such file or directory
+error collecting data for 'docker_inspect.log': temporary failure in dockerutil, will retry later: Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
+error reading file '/etc/datadog-agent/security-agent.yaml' to be copy to 'etc/security-agent.yaml': open /etc/datadog-agent/security-agent.yaml: no such file or directory

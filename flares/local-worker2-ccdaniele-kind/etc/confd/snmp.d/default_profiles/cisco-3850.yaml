@@ -1,0 +1,17 @@
+device:
+  vendor: cisco
+extends:
+- _base.yaml
+- _cisco-generic.yaml
+- _cisco-catalyst.yaml
+metadata:
+  device:
+    fields:
+      serial_number:
+        symbol:
+          MIB: OLD-CISCO-CHASSIS-MIB
+          OID: 1.3.6.1.4.1.9.3.6.3.0
+          name: chassisId
+      type:
+        value: switch
+sysobjectid: 1.3.6.1.4.1.9.1.1745

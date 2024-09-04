@@ -1,0 +1,14 @@
+delta_seconds: 14.99960934
+event_monitor:
+  Error: |-
+    failed to setup probe: probes activation validation failed: AllOf requirement failed, the following probes are not running [AllOf requirement failed, the following probes are not running [AllOf requirement failed, the following probes are not running [{UID:security EBPFFuncName:hook_security_socket_bind}: couldn't enable kprobe {UID:security EBPFFuncName:hook_security_socket_bind}: cannot write "p:p_security_socket_bind_security_1578626 security_socket_bind\n" to kprobe_events: write /sys/kernel/debug/tracing/kprobe_events: no such file or directory | {UID:security EBPFFuncName:hook_security_sk_classify_flow}: couldn't enable kprobe {UID:security EBPFFuncName:hook_security_sk_classify_flow}: cannot write "p:p_security_sk_classify_flow_security_1578626 security_sk_classify_flow\n" to kprobe_events: write /sys/kernel/debug/tracing/kprobe_events: no such file or directory]] | {UID:security EBPFFuncName:hook_security_socket_bind}: couldn't enable kprobe {UID:security EBPFFuncName:hook_security_socket_bind}: cannot write "p:p_security_socket_bind_security_1578626 security_socket_bind\n" to kprobe_events: write /sys/kernel/debug/tracing/kprobe_events: no such file or directory]
+    AllOf requirement failed, the following probes are not running [{UID:security EBPFFuncName:hook_do_vfs_ioctl}: couldn't enable kprobe {UID:security EBPFFuncName:hook_do_vfs_ioctl}: cannot write "p:p_do_vfs_ioctl_security_1578626 do_vfs_ioctl\n" to kprobe_events: write /sys/kernel/debug/tracing/kprobe_events: no such file or directory]
+network_tracer:
+  tracer:
+    last_check: 1.724779015e+09
+  universal_service_monitoring:
+    error: 'could not enable USM: couldn''t initialize process monitor: protocol not
+      supported'
+    state: running
+updated_at: 1.724779029e+09
+uptime: 45.000438979s

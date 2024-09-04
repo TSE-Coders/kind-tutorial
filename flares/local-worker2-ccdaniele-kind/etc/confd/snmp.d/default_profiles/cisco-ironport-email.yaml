@@ -1,0 +1,329 @@
+extends:
+- _base.yaml
+- _generic-if.yaml
+- _cisco-metadata.yaml
+metric_tags:
+- OID: 1.3.6.1.4.1.15497.1.2.2.1.0
+  symbol: cacheAdmin
+  tag: ironport_cache_admin
+- OID: 1.3.6.1.4.1.15497.1.2.2.2.0
+  symbol: cacheSoftware
+  tag: ironport_cache_software
+- OID: 1.3.6.1.4.1.15497.1.2.2.3.0
+  symbol: cacheVersion
+  tag: ironport_cache_version
+- OID: 1.3.6.1.4.1.15497.1.2.2.4.0
+  symbol: licenseExpiration
+  tag: ironport_license_expiration
+- OID: 1.3.6.1.4.1.15497.1.2.2.5.0
+  symbol: httpPorts
+  tag: ironport_http_ports
+metrics:
+- MIB: ASYNCOS-MAIL-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.15497.1.1.1.1.0
+    name: memory.usage
+- MIB: ASYNCOS-MAIL-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.15497.1.1.1.2.0
+    name: cpu.usage
+- MIB: ASYNCOS-MAIL-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.15497.1.1.1.14.0
+    name: ironport.oldestMessageAge
+- MIB: ASYNCOS-MAIL-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.15497.1.1.1.3.0
+    name: ironport.perCentDiskIOUtilization
+- MIB: ASYNCOS-MAIL-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.15497.1.1.1.4.0
+    name: ironport.perCentQueueUtilization
+- MIB: ASYNCOS-MAIL-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.15497.1.1.1.8.1.4
+      name: ironport.powerSupplyName
+    tag: ironport_power_supply_name
+  - mapping:
+      1: power_supply_not_installed
+      2: power_supply_healthy
+      3: power_supply_no_ac
+      4: power_supply_faulty
+    symbol:
+      OID: 1.3.6.1.4.1.15497.1.1.1.8.1.2
+      name: ironport.powerSupplyStatus
+    tag: ironport_power_supply_status
+  - mapping:
+      1: power_supply_redundancy_ok
+      2: power_supply_redundancy_lost
+    symbol:
+      OID: 1.3.6.1.4.1.15497.1.1.1.8.1.3
+      name: ironport.powerSupplyRedundancy
+    tag: ironport_power_supply_redundancy
+  symbols:
+  - constant_value_one: true
+    name: ironport.powerSupply
+  table:
+    OID: 1.3.6.1.4.1.15497.1.1.1.8
+    name: powerSupplyTable
+- MIB: ASYNCOS-MAIL-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.15497.1.1.1.9.1.3
+      name: ironport.temperatureName
+    tag: ironport_temperature_name
+  symbols:
+  - OID: 1.3.6.1.4.1.15497.1.1.1.9.1.2
+    name: ironport.degreesCelsius
+  table:
+    OID: 1.3.6.1.4.1.15497.1.1.1.9
+    name: temperatureTable
+- MIB: ASYNCOS-MAIL-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.15497.1.1.1.10.1.3
+      name: ironport.fanName
+    tag: ironport_fan_name
+  symbols:
+  - OID: 1.3.6.1.4.1.15497.1.1.1.10.1.2
+    name: ironport.fanRPMs
+  table:
+    OID: 1.3.6.1.4.1.15497.1.1.1.10
+    name: fanTable
+- MIB: ASYNCOS-MAIL-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.15497.1.1.1.11.0
+    name: ironport.workQueueMessages
+- MIB: ASYNCOS-MAIL-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.15497.1.1.1.12.1.2
+      name: ironport.keyDescription
+    tag: ironport_key_description
+  - mapping:
+      1: "true"
+      2: "false"
+    symbol:
+      OID: 1.3.6.1.4.1.15497.1.1.1.12.1.3
+      name: ironport.keyIsPerpetual
+    tag: ironport_key_is_perpetual
+  symbols:
+  - OID: 1.3.6.1.4.1.15497.1.1.1.12.1.4
+    name: ironport.keySecondsUntilExpire
+  table:
+    OID: 1.3.6.1.4.1.15497.1.1.1.12
+    name: keyExpirationTable
+- MIB: ASYNCOS-MAIL-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.15497.1.1.1.13.1.2
+      name: ironport.updateServiceName
+    tag: ironport_update_service_name
+  symbols:
+  - OID: 1.3.6.1.4.1.15497.1.1.1.13.1.3
+    name: ironport.updates
+  - OID: 1.3.6.1.4.1.15497.1.1.1.13.1.4
+    name: ironport.updateFailures
+  table:
+    OID: 1.3.6.1.4.1.15497.1.1.1.13
+    name: updateTable
+- MIB: ASYNCOS-MAIL-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.15497.1.1.1.15.0
+    name: ironport.outstandingDNSRequests
+- MIB: ASYNCOS-MAIL-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.15497.1.1.1.16.0
+    name: ironport.pendingDNSRequests
+- MIB: ASYNCOS-MAIL-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.15497.1.1.1.17.0
+    name: ironport.raidEvents
+- MIB: ASYNCOS-MAIL-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.15497.1.1.1.18.1.3
+      name: ironport.raidID
+    tag: ironport_raid_id
+  - mapping:
+      1: drive_healthy
+      2: drive_failure
+      3: drive_rebuild
+    symbol:
+      OID: 1.3.6.1.4.1.15497.1.1.1.18.1.2
+      name: ironport.raidStatus
+    tag: ironport_raid_status
+  - symbol:
+      OID: 1.3.6.1.4.1.15497.1.1.1.18.1.4
+      name: ironport.raidLastError
+    tag: ironport_raid_last_error
+  symbols:
+  - constant_value_one: true
+    name: ironport.raid
+  table:
+    OID: 1.3.6.1.4.1.15497.1.1.1.18
+    name: raidTable
+- MIB: ASYNCOS-MAIL-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.15497.1.1.1.19.0
+    name: ironport.openFilesOrSockets
+- MIB: ASYNCOS-MAIL-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.15497.1.1.1.20.0
+    name: ironport.mailTransferThreads
+- MIB: ASYNCOS-MAIL-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.15497.1.1.1.26.0
+    name: ironport.perCentCPULoad
+- MIB: ASYNCOSWEBSECURITYAPPLIANCE-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.15497.1.2.3.2.2.0
+    name: ironport.cacheClientRequests
+- MIB: ASYNCOSWEBSECURITYAPPLIANCE-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.15497.1.2.3.2.4.0
+    name: ironport.cacheClientErrors
+- MIB: ASYNCOSWEBSECURITYAPPLIANCE-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.15497.1.2.3.2.7.0
+    name: ironport.cacheClientIdleConns
+- MIB: ASYNCOSWEBSECURITYAPPLIANCE-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.15497.1.2.3.2.8.0
+    name: ironport.cacheClientTotalConns
+- MIB: ASYNCOSWEBSECURITYAPPLIANCE-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.15497.1.2.3.2.9.0
+    name: ironport.cacheClientMaxConns
+- MIB: ASYNCOSWEBSECURITYAPPLIANCE-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.15497.1.2.3.2.10.0
+    name: ironport.cacheClientAccepts
+- MIB: ASYNCOSWEBSECURITYAPPLIANCE-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.15497.1.2.3.2.17.0
+    name: ironport.cacheClientReqDenials
+- MIB: ASYNCOSWEBSECURITYAPPLIANCE-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.15497.1.2.3.3.2.0
+    name: ironport.cacheServerRequests
+- MIB: ASYNCOSWEBSECURITYAPPLIANCE-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.15497.1.2.3.3.3.0
+    name: ironport.cacheServerSockets
+- MIB: ASYNCOSWEBSECURITYAPPLIANCE-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.15497.1.2.3.3.4.0
+    name: ironport.cacheServerErrors
+- MIB: ASYNCOSWEBSECURITYAPPLIANCE-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.15497.1.2.3.3.7.0
+    name: ironport.cacheServerIdleConns
+- MIB: ASYNCOSWEBSECURITYAPPLIANCE-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.15497.1.2.3.3.8.0
+    name: ironport.cacheServerTotalConns
+- MIB: ASYNCOSWEBSECURITYAPPLIANCE-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.15497.1.2.3.3.9.0
+    name: ironport.cacheServerCloseIdleConns
+- MIB: ASYNCOSWEBSECURITYAPPLIANCE-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.15497.1.2.3.3.10.0
+    name: ironport.cacheServerLimitIdleConns
+- MIB: ASYNCOSWEBSECURITYAPPLIANCE-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.15497.1.2.3.3.11.0
+    name: ironport.cacheServerConnsThresh
+- MIB: ASYNCOSWEBSECURITYAPPLIANCE-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.15497.1.2.3.6.1.0
+    name: ironport.cacheTotalHttpReqs
+- MIB: ASYNCOSWEBSECURITYAPPLIANCE-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.15497.1.2.3.6.2.0
+    name: ironport.cacheMeanRespTime
+- MIB: ASYNCOSWEBSECURITYAPPLIANCE-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.15497.1.2.3.6.3.0
+    name: ironport.cacheMeanMissRespTime
+- MIB: ASYNCOSWEBSECURITYAPPLIANCE-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.15497.1.2.3.6.4.0
+    name: ironport.cacheMeanHitRespTime
+- MIB: ASYNCOSWEBSECURITYAPPLIANCE-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.15497.1.2.3.6.5.0
+    name: ironport.cacheMeanHitRatio
+- MIB: ASYNCOSWEBSECURITYAPPLIANCE-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.15497.1.2.3.6.6.0
+    name: ironport.cacheMeanByteHitRatio
+- MIB: ASYNCOSWEBSECURITYAPPLIANCE-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.15497.1.2.3.6.7.0
+    name: ironport.cacheTotalBandwidthSaving
+- MIB: ASYNCOSWEBSECURITYAPPLIANCE-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.15497.1.2.3.6.8.0
+    name: ironport.cacheDuration
+- MIB: ASYNCOSWEBSECURITYAPPLIANCE-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.15497.1.2.3.6.9.0
+    name: ironport.cacheCltReplyErrPct
+- MIB: ASYNCOSWEBSECURITYAPPLIANCE-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.15497.1.2.3.7.1.1.0
+    name: ironport.cacheThruputNow
+- MIB: ASYNCOSWEBSECURITYAPPLIANCE-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.15497.1.2.3.7.2.1.0
+    name: ironport.cacheBwidthSavingNow
+- MIB: ASYNCOSWEBSECURITYAPPLIANCE-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.15497.1.2.3.7.3.1.0
+    name: ironport.cacheBwidthSpentNow
+- MIB: ASYNCOSWEBSECURITYAPPLIANCE-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.15497.1.2.3.7.4.1.0
+    name: ironport.cacheBwidthTotalNow
+- MIB: ASYNCOSWEBSECURITYAPPLIANCE-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.15497.1.2.3.7.5.1.0
+    name: ironport.cacheHitsNow
+- MIB: ASYNCOSWEBSECURITYAPPLIANCE-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.15497.1.2.3.7.6.1.0
+    name: ironport.cacheMissesNow
+- MIB: ASYNCOSWEBSECURITYAPPLIANCE-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.15497.1.2.3.7.7.1.0
+    name: ironport.cacheHitRespTimeNow
+- MIB: ASYNCOSWEBSECURITYAPPLIANCE-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.15497.1.2.3.7.8.1.0
+    name: ironport.cacheMissRespTimeNow
+- MIB: ASYNCOSWEBSECURITYAPPLIANCE-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.15497.1.2.3.7.9.1.0
+    name: ironport.cacheTotalRespTimeNow
+- MIB: ASYNCOSWEBSECURITYAPPLIANCE-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.15497.1.2.3.7.10.1.0
+    name: ironport.cacheErrsNow
+- MIB: ASYNCOSWEBSECURITYAPPLIANCE-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.15497.1.2.3.7.11.1.0
+    name: ironport.cacheDeniedNow
+- MIB: ASYNCOSWEBSECURITYAPPLIANCE-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.15497.1.2.3.7.12.1.0
+    name: ironport.cacheErrRespTimeNow
+- MIB: ASYNCOSWEBSECURITYAPPLIANCE-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.15497.1.2.3.7.13.1.0
+    name: ironport.cacheDeniedRespTimeNow
+sysobjectid:
+- 1.3.6.1.4.1.15497.1.*
+- 1.3.6.1.4.1.15497.1.2

@@ -1,0 +1,39 @@
+extends:
+- _base.yaml
+- _generic-if.yaml
+- _generic-entity-sensor.yaml
+metadata:
+  device:
+    fields:
+      type:
+        value: switch
+      vendor:
+        value: extreme-networks
+metrics:
+- MIB: EXTREME-SOFTWARE-MONITOR-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.1916.1.32.1.2.0
+    name: cpu.usage
+- MIB: EXTREME-SOFTWARE-MONITOR-MIB
+  metric_tags:
+  - index: 1
+    tag: mem
+  symbols:
+  - OID: 1.3.6.1.4.1.1916.1.32.2.2.1.2
+    name: memory.total
+  - OID: 1.3.6.1.4.1.1916.1.32.2.2.1.3
+    name: memory.free
+  table:
+    OID: 1.3.6.1.4.1.1916.1.32.2.2
+    name: extremeMemoryMonitorSystemTable
+- MIB: EXTREME-SYSTEM-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.1916.1.1.1.8.0
+    name: extremeCurrentTemperature
+- MIB: EXTREME-SYSTEM-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.1916.1.1.1.20.0
+    name: extremeInputPowerVoltage
+sysobjectid:
+- 1.3.6.1.4.1.1916.2.89
+- 1.3.6.1.4.1.1916.2.343

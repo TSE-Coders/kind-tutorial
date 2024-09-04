@@ -1,0 +1,202 @@
+Checks:
+  kubernetes_apiserver:
+    kubernetes_apiserver:
+      AverageExecutionTime: 125
+      Cancelling: false
+      CheckConfigSource: file:/etc/datadog-agent/conf.d/kubernetes_apiserver.d/conf.yaml.default
+      CheckID: kubernetes_apiserver
+      CheckName: kubernetes_apiserver
+      CheckVersion: ""
+      EventPlatformEvents: {}
+      Events: 0
+      ExecutionTimes:
+      - 1002
+      - 0
+      - 0
+      - 0
+      - 1
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      HistogramBuckets: 0
+      Interval: 1.5e+10
+      LastDelay: 0
+      LastError: ""
+      LastExecutionTime: 0
+      LastSuccessDate: 1.724081865e+09
+      LastWarnings: []
+      LongRunning: false
+      MetricSamples: 0
+      ServiceChecks: 0
+      TotalErrors: 0
+      TotalEventPlatformEvents: {}
+      TotalEvents: 0
+      TotalHistogramBuckets: 0
+      TotalMetricSamples: 0
+      TotalRuns: 8
+      TotalServiceChecks: 0
+      TotalWarnings: 0
+      UpdateTimestamp: 1.724081865e+09
+  kubernetes_state_core:
+    kubernetes_state_core:f0ece86b2bc4e82e:
+      AverageExecutionTime: 1
+      Cancelling: false
+      CheckConfigSource: file:/etc/datadog-agent/conf.d/kubernetes_state_core.yaml.default
+      CheckID: kubernetes_state_core:f0ece86b2bc4e82e
+      CheckName: kubernetes_state_core
+      CheckVersion: ""
+      EventPlatformEvents: {}
+      Events: 0
+      ExecutionTimes:
+      - 1
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 9
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      HistogramBuckets: 0
+      Interval: 1.5e+10
+      LastDelay: 0
+      LastError: ""
+      LastExecutionTime: 9
+      LastSuccessDate: 1.724081872e+09
+      LastWarnings: []
+      LongRunning: false
+      MetricSamples: 542
+      ServiceChecks: 9
+      TotalErrors: 0
+      TotalEventPlatformEvents: {}
+      TotalEvents: 0
+      TotalHistogramBuckets: 0
+      TotalMetricSamples: 542
+      TotalRuns: 8
+      TotalServiceChecks: 9
+      TotalWarnings: 0
+      UpdateTimestamp: 1.724081872e+09
+  orchestrator:
+    orchestrator:5e313062cfc91216:
+      AverageExecutionTime: 86
+      Cancelling: false
+      CheckConfigSource: file:/etc/datadog-agent/conf.d/orchestrator.yaml
+      CheckID: orchestrator:5e313062cfc91216
+      CheckName: orchestrator
+      CheckVersion: ""
+      EventPlatformEvents: {}
+      Events: 0
+      ExecutionTimes:
+      - 1001
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 33
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      HistogramBuckets: 0
+      Interval: 1e+10
+      LastDelay: 0
+      LastError: ""
+      LastExecutionTime: 33
+      LastSuccessDate: 1.72408187e+09
+      LastWarnings: []
+      LongRunning: false
+      MetricSamples: 0
+      ServiceChecks: 0
+      TotalErrors: 0
+      TotalEventPlatformEvents: {}
+      TotalEvents: 0
+      TotalHistogramBuckets: 0
+      TotalMetricSamples: 0
+      TotalRuns: 12
+      TotalServiceChecks: 0
+      TotalWarnings: 1
+      UpdateTimestamp: 1.72408187e+09
+Running: {}
+RunningChecks: 0
+Runs: 28
+Warnings: 1
+Workers:
+  Count: 4
+  Instances:
+    worker_1:
+      Utilization: 0
+    worker_2:
+      Utilization: 0
+    worker_3:
+      Utilization: 0
+    worker_4:
+      Utilization: 0

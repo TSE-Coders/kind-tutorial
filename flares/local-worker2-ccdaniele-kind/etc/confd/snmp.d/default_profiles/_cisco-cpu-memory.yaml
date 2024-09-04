@@ -1,0 +1,23 @@
+metrics:
+- MIB: CISCO-PROCESS-MIB
+  metric_tags:
+  - index: 1
+    tag: cpu
+  symbols:
+  - OID: 1.3.6.1.4.1.9.9.109.1.1.1.1.7
+    name: cpu.usage
+  table:
+    OID: 1.3.6.1.4.1.9.9.109.1.1.1
+    name: cpmCPUTotalTable
+- MIB: CISCO-MEMORY-POOL-MIB
+  metric_tags:
+  - index: 1
+    tag: mem
+  symbols:
+  - OID: 1.3.6.1.4.1.9.9.48.1.1.1.5
+    name: memory.used
+  - OID: 1.3.6.1.4.1.9.9.48.1.1.1.6
+    name: memory.free
+  table:
+    OID: 1.3.6.1.4.1.9.9.48.1.1
+    name: ciscoMemoryPoolTable

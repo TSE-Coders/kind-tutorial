@@ -1,0 +1,5 @@
+ad_identifiers:
+- cluster-agent
+init_config: null
+instances:
+- prometheus_url: http://%%host%%:5000/metrics

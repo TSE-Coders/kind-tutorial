@@ -1,0 +1,243 @@
+{
+    "apiKey": "***************************8b8dc",
+    "agentVersion": "7.55.2",
+    "uuid": "d72f609f-fae4-489c-ae8b-f57a31d12fc6",
+    "internalHostname": "local-worker2-ccdaniele-kind",
+    "os": "linux",
+    "agent-flavor": "agent",
+    "python": "3.11.8 (main, Jul 25 2024, 18:20:16) [GCC 9.4.0]",
+    "systemStats": {
+        "cpuCores": 1,
+        "machine": "arm64",
+        "platform": "linux",
+        "pythonV": "3.11.8",
+        "processor": "",
+        "macV": [
+            "",
+            "",
+            ""
+        ],
+        "nixV": [
+            "debian",
+            "12",
+            ""
+        ],
+        "fbsdV": [
+            "",
+            "",
+            ""
+        ],
+        "winV": [
+            "",
+            "",
+            ""
+        ]
+    },
+    "meta": {
+        "socket-hostname": "kind-datadog-648gw",
+        "timezones": [
+            "UTC"
+        ],
+        "socket-fqdn": "kind-datadog-648gw",
+        "ec2-hostname": "",
+        "hostname": "local-worker2-ccdaniele-kind",
+        "host_aliases": [
+            "local-worker2-ccdaniele-kind"
+        ],
+        "instance-id": "",
+        "cluster-name": "ccdaniele-kind"
+    },
+    "host-tags": {
+        "system": [
+            "cluster_name:ccdaniele-kind",
+            "env:kind-testing",
+            "kube_cluster_name:ccdaniele-kind",
+            "kube_node:local-worker2",
+            "maintainer:daniel_calderon",
+            "team:nyc-tse",
+            "valuesyaml:ddkind-values.yaml"
+        ]
+    },
+    "container-meta": {
+        "cri_name": "containerd",
+        "cri_version": "v1.7.15",
+        "kubelet_version": "v1.30.0"
+    },
+    "network": null,
+    "logs": {
+        "transport": "HTTP",
+        "auto_multi_line_detection_enabled": false
+    },
+    "install-method": {
+        "tool": "helm",
+        "tool_version": "Helm",
+        "installer_version": "datadog-3.69.3"
+    },
+    "proxy-info": {
+        "no-proxy-nonexact-match": false,
+        "proxy-behavior-changed": false,
+        "no-proxy-nonexact-match-explicitly-set": false
+    },
+    "otlp": {
+        "enabled": false
+    },
+    "resources": {
+        "meta": {
+            "host": "local-worker2-ccdaniele-kind"
+        },
+        "processes": {
+            "snaps": [
+                [
+                    1724779043,
+                    [
+                        [
+                            "root",
+                            0,
+                            5.473635228159889,
+                            5607424000,
+                            450007040,
+                            "agent",
+                            2
+                        ],
+                        [
+                            "root",
+                            0,
+                            2.071775791451334,
+                            2891759616,
+                            170328064,
+                            "system-probe",
+                            1
+                        ],
+                        [
+                            "root",
+                            0,
+                            1.2679064572105858,
+                            1641484288,
+                            104239104,
+                            "ruby",
+                            1
+                        ],
+                        [
+                            "root",
+                            0,
+                            1.09223597239293,
+                            5854650368,
+                            89796608,
+                            "java",
+                            1
+                        ],
+                        [
+                            "root",
+                            0,
+                            0.91531995095575,
+                            2922549248,
+                            75251712,
+                            "kubelet",
+                            1
+                        ],
+                        [
+                            "root",
+                            0,
+                            0.8864733228475757,
+                            2560819200,
+                            72880128,
+                            "process-agent",
+                            1
+                        ],
+                        [
+                            "root",
+                            0,
+                            0.7770155647238122,
+                            2567950336,
+                            63881216,
+                            "security-agent",
+                            1
+                        ],
+                        [
+                            "root",
+                            0,
+                            0.7423398252362657,
+                            10145169408,
+                            61030400,
+                            "containerd-shim-runc-v2",
+                            8
+                        ],
+                        [
+                            "root",
+                            0,
+                            0.7229094539716925,
+                            2542149632,
+                            59432960,
+                            "trace-agent",
+                            1
+                        ],
+                        [
+                            "root",
+                            0,
+                            0.706966585241786,
+                            3082473472,
+                            58122240,
+                            "containerd",
+                            1
+                        ],
+                        [
+                            "root,statd",
+                            0,
+                            0.3573195454090267,
+                            154300416,
+                            29376512,
+                            "nginx",
+                            13
+                        ],
+                        [
+                            "root",
+                            0,
+                            0.3009714687417639,
+                            1315868672,
+                            24743936,
+                            "kube-proxy",
+                            1
+                        ],
+                        [
+                            "root",
+                            0,
+                            0.2255915925281753,
+                            759685120,
+                            18546688,
+                            "kindnetd",
+                            1
+                        ],
+                        [
+                            "root",
+                            0,
+                            0.07014862241158808,
+                            23273472,
+                            5767168,
+                            "systemd",
+                            1
+                        ],
+                        [
+                            "root",
+                            0,
+                            0.028846628108174358,
+                            109604864,
+                            2371584,
+                            "systemd-journald",
+                            1
+                        ],
+                        [
+                            "root",
+                            0,
+                            0.001594286872990638,
+                            811008,
+                            131072,
+                            "pause",
+                            1
+                        ]
+                    ]
+                ]
+            ]
+        }
+    },
+    "gohai": "{\"cpu\":{\"cache_size\":\"0 KB\",\"cache_size_l1\":\"0\",\"cache_size_l2\":\"0\",\"cache_size_l3\":\"0\",\"cpu_cores\":\"12\",\"cpu_logical_processors\":\"12\",\"cpu_pkgs\":\"1\",\"family\":\"none\",\"model\":\"0x000\",\"model_name\":\"0x000\",\"stepping\":\"r0p0\",\"vendor_id\":\"Apple\"},\"filesystem\":[{\"kb_size\":\"4014332\",\"mounted_on\":\"/sys/firmware\",\"name\":\"tmpfs\"},{\"kb_size\":\"61202244\",\"mounted_on\":\"/\",\"name\":\"overlay\"},{\"kb_size\":\"61202244\",\"mounted_on\":\"/tmp\",\"name\":\"/dev/vda1\"},{\"kb_size\":\"61202244\",\"mounted_on\":\"/host/var/run/containerd/io.containerd.runtime.v2.task/k8s.io/25e8c301e77bb1eb9788a4037cd570e4e7b93edba9216ee3771fbf409b9f8991/rootfs\",\"name\":\"overlay\"},{\"kb_size\":\"61202244\",\"mounted_on\":\"/host/var/run/containerd/io.containerd.runtime.v2.task/k8s.io/1ed8df0d1c9875ff28e7789621c2ab92d9010ebaeebc54b2fbb523f5bf7edbdd/rootfs\",\"name\":\"overlay\"},{\"kb_size\":\"65536\",\"mounted_on\":\"/host/var/run/containerd/io.containerd.grpc.v1.cri/sandboxes/a6b18dcdc0e3fa0ecc001a75adbec677b0fd0b5e3b641b3bc7e2ecf2c6efd615/shm\",\"name\":\"shm\"},{\"kb_size\":\"61202244\",\"mounted_on\":\"/host/var/run/containerd/io.containerd.runtime.v2.task/k8s.io/a6b18dcdc0e3fa0ecc001a75adbec677b0fd0b5e3b641b3bc7e2ecf2c6efd615/rootfs\",\"name\":\"overlay\"},{\"kb_size\":\"61202244\",\"mounted_on\":\"/etc/passwd\",\"name\":\"overlay\"},{\"kb_size\":\"65536\",\"mounted_on\":\"/host/var/run/containerd/io.containerd.grpc.v1.cri/sandboxes/7a55969feed3a6f4b3c0442b4f32f349af63529c7ea6e1bafe737295d1b9c2fb/shm\",\"name\":\"shm\"},{\"kb_size\":\"65536\",\"mounted_on\":\"/host/var/run/containerd/io.containerd.grpc.v1.cri/sandboxes/cd337cfd19c6c4509c26c4499d91377d5fd133ff94884c1d64977c77730259bd/shm\",\"name\":\"shm\"},{\"kb_size\":\"61202244\",\"mounted_on\":\"/host/var/run/containerd/io.containerd.runtime.v2.task/k8s.io/663d511872d9b53bdc281efc09ba93e1b30cdc367a9780a5601c58be7bcda798/rootfs\",\"name\":\"overlay\"},{\"kb_size\":\"65536\",\"mounted_on\":\"/dev\",\"name\":\"tmpfs\"},{\"kb_size\":\"61202244\",\"mounted_on\":\"/host/var/run/containerd/io.containerd.runtime.v2.task/k8s.io/0b7626ca1769c3a435021fd41d2e52fe259349ee7fc5f846533b4c9c6f19f94c/rootfs\",\"name\":\"overlay\"},{\"kb_size\":\"61202244\",\"mounted_on\":\"/host/var/run/containerd/io.containerd.runtime.v2.task/k8s.io/dcfde52fb25c1061c020529cdbe46dea9a1fa8a52385a400612e0c40ce2da281/rootfs\",\"name\":\"overlay\"},{\"kb_size\":\"61202244\",\"mounted_on\":\"/host/var/run/containerd/io.containerd.runtime.v2.task/k8s.io/824c53928750de386daac7f4ed021809024360be66f38a735fd2c30b094469cb/rootfs\",\"name\":\"overlay\"},{\"kb_size\":\"65536\",\"mounted_on\":\"/host/var/run/containerd/io.containerd.grpc.v1.cri/sandboxes/24d86881f316d56525a7d780deddf879d95155f2f23b16e87294cef8978ba0a5/shm\",\"name\":\"shm\"},{\"kb_size\":\"61202244\",\"mounted_on\":\"/host/var/run/containerd/io.containerd.runtime.v2.task/k8s.io/30e6b76ea9d7a78f9e24b4e80af8584c5128ae865863dd8f84284836592cfa84/rootfs\",\"name\":\"overlay\"},{\"kb_size\":\"61202244\",\"mounted_on\":\"/host/var/run/containerd/io.containerd.runtime.v2.task/k8s.io/7a55969feed3a6f4b3c0442b4f32f349af63529c7ea6e1bafe737295d1b9c2fb/rootfs\",\"name\":\"overlay\"},{\"kb_size\":\"65536\",\"mounted_on\":\"/host/var/run/containerd/io.containerd.grpc.v1.cri/sandboxes/dcfde52fb25c1061c020529cdbe46dea9a1fa8a52385a400612e0c40ce2da281/shm\",\"name\":\"shm\"},{\"kb_size\":\"61202244\",\"mounted_on\":\"/host/var/run/containerd/io.containerd.runtime.v2.task/k8s.io/b4075a4c0098c4deb8567005dde19df9d010a15e60bc1c9833afd4f3faa3d2c2/rootfs\",\"name\":\"overlay\"},{\"kb_size\":\"65536\",\"mounted_on\":\"/host/var/run/containerd/io.containerd.grpc.v1.cri/sandboxes/ccd6b8b272e2f703562c1a62dadec87586b6a71da739c6fefb2dc7787c170840/shm\",\"name\":\"shm\"},{\"kb_size\":\"4014332\",\"mounted_on\":\"/host/var/run\",\"name\":\"tmpfs\"},{\"kb_size\":\"5120\",\"mounted_on\":\"/host/var/run/lock\",\"name\":\"tmpfs\"},{\"kb_size\":\"61202244\",\"mounted_on\":\"/host/var/run/containerd/io.containerd.runtime.v2.task/k8s.io/0f606e5ed3185f178f0b82303ef630527558672d425c598cfc84004ccab79191/rootfs\",\"name\":\"overlay\"},{\"kb_size\":\"61202244\",\"mounted_on\":\"/host/var/run/containerd/io.containerd.runtime.v2.task/k8s.io/1e4de88be41d323193b69a435771ef6958f9c45b6ce780829daa173be00e477e/rootfs\",\"name\":\"overlay\"},{\"kb_size\":\"65536\",\"mounted_on\":\"/dev/shm\",\"name\":\"shm\"},{\"kb_size\":\"65536\",\"mounted_on\":\"/host/var/run/containerd/io.containerd.grpc.v1.cri/sandboxes/0f606e5ed3185f178f0b82303ef630527558672d425c598cfc84004ccab79191/shm\",\"name\":\"shm\"},{\"kb_size\":\"65536\",\"mounted_on\":\"/host/var/run/containerd/io.containerd.grpc.v1.cri/sandboxes/a5e22351277a7c10a2ebdddff6e4dc29de33ede235cb2eba6bf3560ec91d2b88/shm\",\"name\":\"shm\"},{\"kb_size\":\"8028668\",\"mounted_on\":\"/var/run/secrets/kubernetes.io/serviceaccount\",\"name\":\"tmpfs\"},{\"kb_size\":\"61202244\",\"mounted_on\":\"/host/var/run/containerd/io.containerd.runtime.v2.task/k8s.io/cd337cfd19c6c4509c26c4499d91377d5fd133ff94884c1d64977c77730259bd/rootfs\",\"name\":\"overlay\"},{\"kb_size\":\"61202244\",\"mounted_on\":\"/host/var/run/containerd/io.containerd.runtime.v2.task/k8s.io/ccd6b8b272e2f703562c1a62dadec87586b6a71da739c6fefb2dc7787c170840/rootfs\",\"name\":\"overlay\"},{\"kb_size\":\"61202244\",\"mounted_on\":\"/host/var/run/containerd/io.containerd.runtime.v2.task/k8s.io/24d86881f316d56525a7d780deddf879d95155f2f23b16e87294cef8978ba0a5/rootfs\",\"name\":\"overlay\"}],\"memory\":{\"swap_total\":\"1048572kB\",\"total\":\"8221356032\"},\"network\":null,\"platform\":{\"GOOARCH\":\"arm64\",\"GOOS\":\"linux\",\"goV\":\"1.21.11\",\"hardware_platform\":\"aarch64\",\"hostname\":\"kind-datadog-648gw\",\"kernel_name\":\"Linux\",\"kernel_release\":\"6.6.32-linuxkit\",\"kernel_version\":\"#1 SMP Thu Jun 13 14:13:01 UTC 2024\",\"machine\":\"aarch64\",\"os\":\"GNU/Linux\",\"processor\":\"aarch64\"}}"
+}

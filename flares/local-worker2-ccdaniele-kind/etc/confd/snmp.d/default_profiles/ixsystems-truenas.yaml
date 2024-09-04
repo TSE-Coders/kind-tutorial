@@ -1,0 +1,160 @@
+extends:
+- _base.yaml
+- _generic-host-resources-base.yaml
+- _generic-if.yaml
+- _generic-ucd.yaml
+metadata:
+  device:
+    fields:
+      type:
+        value: storage
+      vendor:
+        value: iXsystems
+metrics:
+- MIB: FREENAS-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.50536.1.1.1.1.2
+      name: freenas.zpoolDescr
+    tag: freenas_zpool_descr
+  symbols:
+  - OID: 1.3.6.1.4.1.50536.1.1.1.1.10
+    name: freenas.zpoolReadBytes
+  - OID: 1.3.6.1.4.1.50536.1.1.1.1.11
+    name: freenas.zpoolWriteBytes
+  - OID: 1.3.6.1.4.1.50536.1.1.1.1.12
+    name: freenas.zpoolReadOps1sec
+  - OID: 1.3.6.1.4.1.50536.1.1.1.1.13
+    name: freenas.zpoolWriteOps1sec
+  - OID: 1.3.6.1.4.1.50536.1.1.1.1.14
+    name: freenas.zpoolReadBytes1sec
+  - OID: 1.3.6.1.4.1.50536.1.1.1.1.15
+    name: freenas.zpoolWriteBytes1sec
+  - OID: 1.3.6.1.4.1.50536.1.1.1.1.3
+    name: freenas.zpoolAllocationUnits
+  - OID: 1.3.6.1.4.1.50536.1.1.1.1.4
+    name: freenas.zpoolSize
+  - OID: 1.3.6.1.4.1.50536.1.1.1.1.5
+    name: freenas.zpoolUsed
+  - OID: 1.3.6.1.4.1.50536.1.1.1.1.6
+    name: freenas.zpoolAvailable
+  - OID: 1.3.6.1.4.1.50536.1.1.1.1.7
+    name: freenas.zpoolHealth
+  - OID: 1.3.6.1.4.1.50536.1.1.1.1.8
+    name: freenas.zpoolReadOps
+  - OID: 1.3.6.1.4.1.50536.1.1.1.1.9
+    name: freenas.zpoolWriteOps
+  table:
+    OID: 1.3.6.1.4.1.50536.1.1.1
+    name: zpoolTable
+- MIB: FREENAS-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.50536.1.2.1.1.2
+      name: freenas.datasetDescr
+    tag: freenas_dataset_descr
+  symbols:
+  - OID: 1.3.6.1.4.1.50536.1.2.1.1.3
+    name: freenas.datasetAllocationUnits
+  - OID: 1.3.6.1.4.1.50536.1.2.1.1.4
+    name: freenas.datasetSize
+  - OID: 1.3.6.1.4.1.50536.1.2.1.1.5
+    name: freenas.datasetUsed
+  - OID: 1.3.6.1.4.1.50536.1.2.1.1.6
+    name: freenas.datasetAvailable
+  table:
+    OID: 1.3.6.1.4.1.50536.1.2.1
+    name: datasetTable
+- MIB: FREENAS-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.50536.1.3.1.1.2
+      name: freenas.zvolDescr
+    tag: freenas_zvol_descr
+  symbols:
+  - OID: 1.3.6.1.4.1.50536.1.3.1.1.3
+    name: freenas.zvolAllocationUnits
+  - OID: 1.3.6.1.4.1.50536.1.3.1.1.4
+    name: freenas.zvolSize
+  - OID: 1.3.6.1.4.1.50536.1.3.1.1.5
+    name: freenas.zvolUsed
+  - OID: 1.3.6.1.4.1.50536.1.3.1.1.6
+    name: freenas.zvolAvailable
+  - OID: 1.3.6.1.4.1.50536.1.3.1.1.7
+    name: freenas.zvolReferenced
+  table:
+    OID: 1.3.6.1.4.1.50536.1.3.1
+    name: zvolTable
+- MIB: FREENAS-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.50536.1.4.1.0
+    name: freenas.zfsArcSize
+- MIB: FREENAS-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.50536.1.4.10.0
+    name: freenas.zfsArcCacheMissRatio
+- MIB: FREENAS-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.50536.1.4.2.0
+    name: freenas.zfsArcMeta
+- MIB: FREENAS-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.50536.1.4.3.0
+    name: freenas.zfsArcData
+- MIB: FREENAS-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.50536.1.4.4.0
+    name: freenas.zfsArcHits
+- MIB: FREENAS-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.50536.1.4.5.0
+    name: freenas.zfsArcMisses
+- MIB: FREENAS-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.50536.1.4.6.0
+    name: freenas.zfsArcC
+- MIB: FREENAS-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.50536.1.4.7.0
+    name: freenas.zfsArcP
+- MIB: FREENAS-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.50536.1.4.8.0
+    name: freenas.zfsArcMissPercent
+- MIB: FREENAS-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.50536.1.4.9.0
+    name: freenas.zfsArcCacheHitRatio
+- MIB: FREENAS-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.50536.1.5.1.0
+    name: freenas.zfsL2ArcHits
+- MIB: FREENAS-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.50536.1.5.2.0
+    name: freenas.zfsL2ArcMisses
+- MIB: FREENAS-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.50536.1.5.3.0
+    name: freenas.zfsL2ArcRead
+- MIB: FREENAS-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.50536.1.5.4.0
+    name: freenas.zfsL2ArcWrite
+- MIB: FREENAS-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.50536.1.5.5.0
+    name: freenas.zfsL2ArcSize
+- MIB: FREENAS-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.50536.1.6.1.0
+    name: freenas.zfsZilstatOps1sec
+- MIB: FREENAS-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.50536.1.6.2.0
+    name: freenas.zfsZilstatOps5sec
+- MIB: FREENAS-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.50536.1.6.3.0
+    name: freenas.zfsZilstatOps10sec
+sysobjectid: 1.3.6.1.4.1.50536.3.2

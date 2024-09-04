@@ -1,0 +1,128 @@
+extends:
+- _base.yaml
+- _generic-if.yaml
+metadata:
+  device:
+    fields:
+      vendor:
+        value: fireeye
+metric_tags:
+- OID: 1.3.6.1.4.1.25597.11.1.1.2.0
+  symbol: feHardwareModel
+  tag: fe_hardware_model
+- OID: 1.3.6.1.4.1.25597.11.1.1.3.0
+  symbol: feSerialNumber
+  tag: fe_serial_number
+metrics:
+- MIB: HOST-RESOURCES-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.2.1.25.3.3.1.1
+      name: hrProcessorFrwID
+    tag: hr_processor_frw_id
+  symbols:
+  - OID: 1.3.6.1.2.1.25.3.3.1.2
+    name: cpu.usage
+  table:
+    OID: 1.3.6.1.2.1.25.3.3
+    name: hrProcessorTable
+- MIB: HOST-RESOURCES-MIB
+  symbol:
+    OID: 1.3.6.1.2.1.25.2.3.1.6.1
+    name: memory.total
+- MIB: HOST-RESOURCES-MIB
+  symbol:
+    OID: 1.3.6.1.2.1.25.2.3.1.6.6
+    name: feMemoryBuffers
+- MIB: HOST-RESOURCES-MIB
+  symbol:
+    OID: 1.3.6.1.2.1.25.2.3.1.6.7
+    name: feCachedMemory
+- MIB: FE-FIREEYE-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.4.1.25597.11.2.1.3.1.2
+      name: fePhysicalDiskName
+    tag: fe_physical_disk_name
+  - mapping:
+      1: "true"
+      2: "false"
+    symbol:
+      OID: 1.3.6.1.4.1.25597.11.2.1.3.1.4
+      name: fePhysicalDiskIsHealthy
+    tag: fe_physical_disk_is_healthy
+  symbols:
+  - constant_value_one: true
+    name: fePhysicalDisk
+  table:
+    OID: 1.3.6.1.4.1.25597.11.2.1.3
+    name: fePhysicalDiskTable
+- MIB: FE-FIREEYE-MIB
+  metric_type: monotonic_count
+  symbol:
+    OID: 1.3.6.1.4.1.25597.13.1.1.0
+    name: feTotalEmailCount
+- MIB: FE-FIREEYE-MIB
+  metric_type: monotonic_count
+  symbol:
+    OID: 1.3.6.1.4.1.25597.13.1.4.0
+    name: feInfectedEmailCount
+- MIB: FE-FIREEYE-MIB
+  metric_type: monotonic_count
+  symbol:
+    OID: 1.3.6.1.4.1.25597.13.1.7.0
+    name: feAnalyzedEmailCount
+- MIB: FE-FIREEYE-MIB
+  metric_type: monotonic_count
+  symbol:
+    OID: 1.3.6.1.4.1.25597.13.1.10.0
+    name: feTotalUrlCount
+- MIB: FE-FIREEYE-MIB
+  metric_type: monotonic_count
+  symbol:
+    OID: 1.3.6.1.4.1.25597.13.1.13.0
+    name: feInfectedUrlCount
+- MIB: FE-FIREEYE-MIB
+  metric_type: monotonic_count
+  symbol:
+    OID: 1.3.6.1.4.1.25597.13.1.16.0
+    name: feAnalyzedUrlCount
+- MIB: FE-FIREEYE-MIB
+  metric_type: monotonic_count
+  symbol:
+    OID: 1.3.6.1.4.1.25597.13.1.19.0
+    name: feTotalAttachmentCount
+- MIB: FE-FIREEYE-MIB
+  metric_type: monotonic_count
+  symbol:
+    OID: 1.3.6.1.4.1.25597.13.1.22.0
+    name: feInfectedAttachmentCount
+- MIB: FE-FIREEYE-MIB
+  metric_type: monotonic_count
+  symbol:
+    OID: 1.3.6.1.4.1.25597.13.1.25.0
+    name: feAnalyzedAttachmentCount
+- MIB: FE-FIREEYE-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.25597.13.1.40.0
+    name: feeQuarantineUsage
+- MIB: FE-FIREEYE-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.25597.13.1.44.0
+    name: feDeferredEmailCount
+- MIB: FE-FIREEYE-MIB
+  symbol:
+    OID: 1.3.6.1.4.1.25597.13.1.45.0
+    name: feHoldQueueEmailCount
+- MIB: FE-FIREEYE-MIB
+  metric_type: monotonic_count
+  symbol:
+    OID: 1.3.6.1.4.1.25597.15.1.1.0
+    name: feTotalObjectAnalyzedCount
+- MIB: FE-FIREEYE-MIB
+  metric_type: monotonic_count
+  symbol:
+    OID: 1.3.6.1.4.1.25597.15.1.4.0
+    name: feTotalMaliciousObjectCount
+sysobjectid:
+- 1.3.6.1.4.1.25597.1

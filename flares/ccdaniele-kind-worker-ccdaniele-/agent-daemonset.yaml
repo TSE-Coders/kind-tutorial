@@ -1,0 +1,1224 @@
+metadata:
+  annotations:
+    deprecated.daemonset.template.generation: "3"
+    meta.helm.sh/release-name: agent-kind
+    meta.helm.sh/release-namespace: default
+  creationTimestamp: "2024-08-19T14:57:47Z"
+  generation: 3
+  labels:
+    app.kubernetes.io/component: agent
+    app.kubernetes.io/instance: agent-kind
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/name: agent-kind-datadog
+    app.kubernetes.io/version: "7"
+    helm.sh/chart: datadog-3.69.3
+  managedFields:
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:deprecated.daemonset.template.generation: {}
+          f:meta.helm.sh/release-name: {}
+          f:meta.helm.sh/release-namespace: {}
+        f:labels:
+          .: {}
+          f:app.kubernetes.io/component: {}
+          f:app.kubernetes.io/instance: {}
+          f:app.kubernetes.io/managed-by: {}
+          f:app.kubernetes.io/name: {}
+          f:app.kubernetes.io/version: {}
+          f:helm.sh/chart: {}
+      f:spec:
+        f:revisionHistoryLimit: {}
+        f:selector: {}
+        f:template:
+          f:metadata:
+            f:annotations:
+              .: {}
+              f:checksum/autoconf-config: {}
+              f:checksum/checksd-config: {}
+              f:checksum/clusteragent_token: '********'
+              f:checksum/confd-config: {}
+              f:checksum/install_info: {}
+            f:labels:
+              .: {}
+              f:admission.datadoghq.com/enabled: {}
+              f:app: {}
+              f:app.kubernetes.io/component: {}
+              f:app.kubernetes.io/instance: {}
+              f:app.kubernetes.io/managed-by: {}
+              f:app.kubernetes.io/name: {}
+            f:name: {}
+          f:spec:
+            f:affinity: {}
+            f:automountServiceAccountToken: {}
+            f:containers:
+              k:{"name":"agent"}:
+                .: {}
+                f:command: {}
+                f:env:
+                  .: {}
+                  k:{"name":"DD_API_KEY"}:
+                    .: {}
+                    f:name: {}
+                    f:valueFrom:
+                      .: {}
+                      f:secretKeyRef: {}
+                  k:{"name":"DD_APM_ENABLED"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"DD_AUTH_TOKEN_FILE_PATH"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"DD_CLUSTER_AGENT_AUTH_TOKEN"}:
+                    .: {}
+                    f:name: {}
+                    f:valueFrom:
+                      .: {}
+                      f:secretKeyRef: {}
+                  k:{"name":"DD_CLUSTER_AGENT_ENABLED"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"DD_CLUSTER_AGENT_KUBERNETES_SERVICE_NAME"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"DD_CLUSTER_NAME"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"DD_COMPLIANCE_CONFIG_ENABLED"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"DD_CONTAINER_IMAGE_ENABLED"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"DD_CONTAINER_LIFECYCLE_ENABLED"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"DD_DOGSTATSD_NON_LOCAL_TRAFFIC"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"DD_DOGSTATSD_PORT"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"DD_DOGSTATSD_SOCKET"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"DD_DOGSTATSD_TAG_CARDINALITY"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"DD_EXPVAR_PORT"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"DD_EXTRA_CONFIG_PROVIDERS"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"DD_HEALTH_PORT"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"DD_IGNORE_AUTOCONF"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"DD_KUBELET_CORE_CHECK_ENABLED"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"DD_KUBELET_TLS_VERIFY"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"DD_KUBERNETES_KUBELET_HOST"}:
+                    .: {}
+                    f:name: {}
+                    f:valueFrom:
+                      .: {}
+                      f:fieldRef: {}
+                  k:{"name":"DD_LANGUAGE_DETECTION_ENABLED"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"DD_LANGUAGE_DETECTION_REPORTING_ENABLED"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"DD_LOG_LEVEL"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"DD_LOGS_CONFIG_AUTO_MULTI_LINE_DETECTION"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"DD_LOGS_CONFIG_CONTAINER_COLLECT_ALL"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"DD_LOGS_CONFIG_K8S_CONTAINER_USE_FILE"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"DD_LOGS_ENABLED"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"DD_ORCHESTRATOR_EXPLORER_ENABLED"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"DD_OTLP_CONFIG_LOGS_ENABLED"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"DD_PROCESS_AGENT_DISCOVERY_ENABLED"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"DD_PROCESS_CONFIG_CONTAINER_COLLECTION_ENABLED"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"DD_PROCESS_CONFIG_PROCESS_COLLECTION_ENABLED"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"DD_PROCESS_CONFIG_RUN_IN_CORE_AGENT_ENABLED"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"DD_REMOTE_CONFIGURATION_ENABLED"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"DD_STRIP_PROCESS_ARGS"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"DD_TAGS"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"KUBERNETES"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                f:image: {}
+                f:imagePullPolicy: {}
+                f:livenessProbe:
+                  .: {}
+                  f:failureThreshold: {}
+                  f:httpGet:
+                    .: {}
+                    f:path: {}
+                    f:port: {}
+                    f:scheme: {}
+                  f:initialDelaySeconds: {}
+                  f:periodSeconds: {}
+                  f:successThreshold: {}
+                  f:timeoutSeconds: {}
+                f:name: {}
+                f:ports:
+                  .: {}
+                  k:{"containerPort":8125,"protocol":"UDP"}:
+                    .: {}
+                    f:containerPort: {}
+                    f:name: {}
+                    f:protocol: {}
+                f:readinessProbe:
+                  .: {}
+                  f:failureThreshold: {}
+                  f:httpGet:
+                    .: {}
+                    f:path: {}
+                    f:port: {}
+                    f:scheme: {}
+                  f:initialDelaySeconds: {}
+                  f:periodSeconds: {}
+                  f:successThreshold: {}
+                  f:timeoutSeconds: {}
+                f:resources: {}
+                f:startupProbe:
+                  .: {}
+                  f:failureThreshold: {}
+                  f:httpGet:
+                    .: {}
+                    f:path: {}
+                    f:port: {}
+                    f:scheme: {}
+                  f:initialDelaySeconds: {}
+                  f:periodSeconds: {}
+                  f:successThreshold: {}
+                  f:timeoutSeconds: {}
+                f:terminationMessagePath: {}
+                f:terminationMessagePolicy: {}
+                f:volumeMounts:
+                  .: {}
+                  k:{"mountPath":"/etc/datadog-agent"}:
+                    .: {}
+                    f:mountPath: {}
+                    f:name: {}
+                  k:{"mountPath":"/etc/datadog-agent/auth"}:
+                    .: {}
+                    f:mountPath: {}
+                    f:name: {}
+                  k:{"mountPath":"/etc/datadog-agent/install_info"}:
+                    .: {}
+                    f:mountPath: {}
+                    f:name: {}
+                    f:readOnly: {}
+                    f:subPath: {}
+                  k:{"mountPath":"/etc/passwd"}: '********'
+                  k:{"mountPath":"/host/etc/os-release"}:
+                    .: {}
+                    f:mountPath: {}
+                    f:name: {}
+                    f:readOnly: {}
+                  k:{"mountPath":"/host/proc"}:
+                    .: {}
+                    f:mountPath: {}
+                    f:mountPropagation: {}
+                    f:name: {}
+                    f:readOnly: {}
+                  k:{"mountPath":"/host/sys/fs/cgroup"}:
+                    .: {}
+                    f:mountPath: {}
+                    f:mountPropagation: {}
+                    f:name: {}
+                    f:readOnly: {}
+                  k:{"mountPath":"/host/var/run"}:
+                    .: {}
+                    f:mountPath: {}
+                    f:mountPropagation: {}
+                    f:name: {}
+                    f:readOnly: {}
+                  k:{"mountPath":"/opt/datadog-agent/run"}:
+                    .: {}
+                    f:mountPath: {}
+                    f:mountPropagation: {}
+                    f:name: {}
+                  k:{"mountPath":"/tmp"}:
+                    .: {}
+                    f:mountPath: {}
+                    f:name: {}
+                  k:{"mountPath":"/var/lib/docker/containers"}:
+                    .: {}
+                    f:mountPath: {}
+                    f:mountPropagation: {}
+                    f:name: {}
+                    f:readOnly: {}
+                  k:{"mountPath":"/var/log/containers"}:
+                    .: {}
+                    f:mountPath: {}
+                    f:mountPropagation: {}
+                    f:name: {}
+                    f:readOnly: {}
+                  k:{"mountPath":"/var/log/datadog"}:
+                    .: {}
+                    f:mountPath: {}
+                    f:name: {}
+                  k:{"mountPath":"/var/log/pods"}:
+                    .: {}
+                    f:mountPath: {}
+                    f:mountPropagation: {}
+                    f:name: {}
+                    f:readOnly: {}
+                  k:{"mountPath":"/var/run/datadog"}:
+                    .: {}
+                    f:mountPath: {}
+                    f:name: {}
+              k:{"name":"trace-agent"}:
+                .: {}
+                f:command: {}
+                f:env:
+                  .: {}
+                  k:{"name":"DD_API_KEY"}:
+                    .: {}
+                    f:name: {}
+                    f:valueFrom:
+                      .: {}
+                      f:secretKeyRef: {}
+                  k:{"name":"DD_APM_ENABLED"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"DD_APM_NON_LOCAL_TRAFFIC"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"DD_APM_RECEIVER_PORT"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"DD_APM_RECEIVER_SOCKET"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"DD_AUTH_TOKEN_FILE_PATH"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"DD_CLUSTER_AGENT_AUTH_TOKEN"}:
+                    .: {}
+                    f:name: {}
+                    f:valueFrom:
+                      .: {}
+                      f:secretKeyRef: {}
+                  k:{"name":"DD_CLUSTER_AGENT_ENABLED"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"DD_CLUSTER_AGENT_KUBERNETES_SERVICE_NAME"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"DD_CLUSTER_NAME"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"DD_DOGSTATSD_SOCKET"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"DD_INSTRUMENTATION_INSTALL_ID"}:
+                    .: {}
+                    f:name: {}
+                    f:valueFrom:
+                      .: {}
+                      f:configMapKeyRef: {}
+                  k:{"name":"DD_INSTRUMENTATION_INSTALL_TIME"}:
+                    .: {}
+                    f:name: {}
+                    f:valueFrom:
+                      .: {}
+                      f:configMapKeyRef: {}
+                  k:{"name":"DD_INSTRUMENTATION_INSTALL_TYPE"}:
+                    .: {}
+                    f:name: {}
+                    f:valueFrom:
+                      .: {}
+                      f:configMapKeyRef: {}
+                  k:{"name":"DD_KUBELET_TLS_VERIFY"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"DD_KUBERNETES_KUBELET_HOST"}:
+                    .: {}
+                    f:name: {}
+                    f:valueFrom:
+                      .: {}
+                      f:fieldRef: {}
+                  k:{"name":"DD_LANGUAGE_DETECTION_ENABLED"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"DD_LANGUAGE_DETECTION_REPORTING_ENABLED"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"DD_LOG_LEVEL"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"DD_OTLP_CONFIG_LOGS_ENABLED"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"DD_REMOTE_CONFIGURATION_ENABLED"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"DD_TAGS"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"KUBERNETES"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                f:image: {}
+                f:imagePullPolicy: {}
+                f:livenessProbe:
+                  .: {}
+                  f:failureThreshold: {}
+                  f:initialDelaySeconds: {}
+                  f:periodSeconds: {}
+                  f:successThreshold: {}
+                  f:tcpSocket:
+                    .: {}
+                    f:port: {}
+                  f:timeoutSeconds: {}
+                f:name: {}
+                f:ports:
+                  .: {}
+                  k:{"containerPort":8126,"protocol":"TCP"}:
+                    .: {}
+                    f:containerPort: {}
+                    f:hostPort: {}
+                    f:name: {}
+                    f:protocol: {}
+                f:resources: {}
+                f:terminationMessagePath: {}
+                f:terminationMessagePolicy: {}
+                f:volumeMounts:
+                  .: {}
+                  k:{"mountPath":"/etc/datadog-agent"}:
+                    .: {}
+                    f:mountPath: {}
+                    f:name: {}
+                    f:readOnly: {}
+                  k:{"mountPath":"/etc/datadog-agent/auth"}:
+                    .: {}
+                    f:mountPath: {}
+                    f:name: {}
+                    f:readOnly: {}
+                  k:{"mountPath":"/host/proc"}:
+                    .: {}
+                    f:mountPath: {}
+                    f:mountPropagation: {}
+                    f:name: {}
+                    f:readOnly: {}
+                  k:{"mountPath":"/host/sys/fs/cgroup"}:
+                    .: {}
+                    f:mountPath: {}
+                    f:mountPropagation: {}
+                    f:name: {}
+                    f:readOnly: {}
+                  k:{"mountPath":"/host/var/run"}:
+                    .: {}
+                    f:mountPath: {}
+                    f:mountPropagation: {}
+                    f:name: {}
+                    f:readOnly: {}
+                  k:{"mountPath":"/tmp"}:
+                    .: {}
+                    f:mountPath: {}
+                    f:name: {}
+                  k:{"mountPath":"/var/log/datadog"}:
+                    .: {}
+                    f:mountPath: {}
+                    f:name: {}
+                  k:{"mountPath":"/var/run/datadog"}:
+                    .: {}
+                    f:mountPath: {}
+                    f:name: {}
+            f:dnsPolicy: {}
+            f:hostPID: {}
+            f:initContainers:
+              .: {}
+              k:{"name":"init-config"}:
+                .: {}
+                f:args: {}
+                f:command: {}
+                f:env:
+                  .: {}
+                  k:{"name":"DD_API_KEY"}:
+                    .: {}
+                    f:name: {}
+                    f:valueFrom:
+                      .: {}
+                      f:secretKeyRef: {}
+                  k:{"name":"DD_AUTH_TOKEN_FILE_PATH"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"DD_CLUSTER_NAME"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"DD_KUBELET_TLS_VERIFY"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"DD_KUBERNETES_KUBELET_HOST"}:
+                    .: {}
+                    f:name: {}
+                    f:valueFrom:
+                      .: {}
+                      f:fieldRef: {}
+                  k:{"name":"DD_LANGUAGE_DETECTION_ENABLED"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"DD_LANGUAGE_DETECTION_REPORTING_ENABLED"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"DD_OTLP_CONFIG_LOGS_ENABLED"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"DD_REMOTE_CONFIGURATION_ENABLED"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"DD_TAGS"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"KUBERNETES"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                f:image: {}
+                f:imagePullPolicy: {}
+                f:name: {}
+                f:resources: {}
+                f:terminationMessagePath: {}
+                f:terminationMessagePolicy: {}
+                f:volumeMounts:
+                  .: {}
+                  k:{"mountPath":"/etc/datadog-agent"}:
+                    .: {}
+                    f:mountPath: {}
+                    f:name: {}
+                  k:{"mountPath":"/host/proc"}:
+                    .: {}
+                    f:mountPath: {}
+                    f:mountPropagation: {}
+                    f:name: {}
+                    f:readOnly: {}
+                  k:{"mountPath":"/host/var/run"}:
+                    .: {}
+                    f:mountPath: {}
+                    f:mountPropagation: {}
+                    f:name: {}
+                    f:readOnly: {}
+                  k:{"mountPath":"/var/log/datadog"}:
+                    .: {}
+                    f:mountPath: {}
+                    f:name: {}
+              k:{"name":"init-volume"}:
+                .: {}
+                f:args: {}
+                f:command: {}
+                f:image: {}
+                f:imagePullPolicy: {}
+                f:name: {}
+                f:resources: {}
+                f:terminationMessagePath: {}
+                f:terminationMessagePolicy: {}
+                f:volumeMounts:
+                  .: {}
+                  k:{"mountPath":"/opt/datadog-agent"}:
+                    .: {}
+                    f:mountPath: {}
+                    f:name: {}
+            f:nodeSelector: {}
+            f:restartPolicy: {}
+            f:schedulerName: {}
+            f:securityContext:
+              .: {}
+              f:runAsUser: {}
+            f:serviceAccount: {}
+            f:serviceAccountName: {}
+            f:terminationGracePeriodSeconds: {}
+            f:volumes:
+              .: {}
+              k:{"name":"apmsocket"}:
+                .: {}
+                f:hostPath:
+                  .: {}
+                  f:path: {}
+                  f:type: {}
+                f:name: {}
+              k:{"name":"auth-token"}:
+                .: {}
+                f:emptyDir: {}
+                f:name: {}
+              k:{"name":"cgroups"}:
+                .: {}
+                f:hostPath:
+                  .: {}
+                  f:path: {}
+                  f:type: {}
+                f:name: {}
+              k:{"name":"config"}:
+                .: {}
+                f:emptyDir: {}
+                f:name: {}
+              k:{"name":"dsdsocket"}:
+                .: {}
+                f:hostPath:
+                  .: {}
+                  f:path: {}
+                  f:type: {}
+                f:name: {}
+              k:{"name":"installinfo"}:
+                .: {}
+                f:configMap:
+                  .: {}
+                  f:defaultMode: {}
+                  f:name: {}
+                f:name: {}
+              k:{"name":"logdatadog"}:
+                .: {}
+                f:emptyDir: {}
+                f:name: {}
+              k:{"name":"logdockercontainerpath"}:
+                .: {}
+                f:hostPath:
+                  .: {}
+                  f:path: {}
+                  f:type: {}
+                f:name: {}
+              k:{"name":"logpodpath"}:
+                .: {}
+                f:hostPath:
+                  .: {}
+                  f:path: {}
+                  f:type: {}
+                f:name: {}
+              k:{"name":"logscontainerspath"}:
+                .: {}
+                f:hostPath:
+                  .: {}
+                  f:path: {}
+                  f:type: {}
+                f:name: {}
+              k:{"name":"os-release-file"}:
+                .: {}
+                f:hostPath:
+                  .: {}
+                  f:path: {}
+                  f:type: {}
+                f:name: {}
+              k:{"name":"passwd"}: '********'
+              k:{"name":"pointerdir"}:
+                .: {}
+                f:hostPath:
+                  .: {}
+                  f:path: {}
+                  f:type: {}
+                f:name: {}
+              k:{"name":"procdir"}:
+                .: {}
+                f:hostPath:
+                  .: {}
+                  f:path: {}
+                  f:type: {}
+                f:name: {}
+              k:{"name":"runtimesocketdir"}:
+                .: {}
+                f:hostPath:
+                  .: {}
+                  f:path: {}
+                  f:type: {}
+                f:name: {}
+              k:{"name":"s6-run"}:
+                .: {}
+                f:emptyDir: {}
+                f:name: {}
+              k:{"name":"tmpdir"}:
+                .: {}
+                f:emptyDir: {}
+                f:name: {}
+        f:updateStrategy:
+          f:rollingUpdate:
+            .: {}
+            f:maxSurge: {}
+            f:maxUnavailable: {}
+          f:type: {}
+    manager: helm
+    operation: Update
+    time: "2024-08-19T15:35:56Z"
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:currentNumberScheduled: {}
+        f:desiredNumberScheduled: {}
+        f:numberAvailable: {}
+        f:numberReady: {}
+        f:observedGeneration: {}
+        f:updatedNumberScheduled: {}
+    manager: kube-controller-manager
+    operation: Update
+    subresource: status
+    time: "2024-08-19T15:36:59Z"
+  name: agent-kind-datadog
+  namespace: default
+  resourceVersion: "4870"
+  uid: 037aa861-fd8b-4899-8342-a6b850ca034e
+spec:
+  revisionHistoryLimit: 10
+  selector:
+    matchLabels:
+      app: agent-kind-datadog
+  template:
+    metadata:
+      annotations:
+        checksum/autoconf-config: 74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b
+        checksum/checksd-config: 44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a
+        checksum/clusteragent_token: '********'
+        checksum/confd-config: 44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a
+        checksum/install_info: 88c52cd7ef5158f4eb2738b4c3b575985b7d139c6b2a25213c46c5a6266e22e7
+      creationTimestamp: null
+      labels:
+        admission.datadoghq.com/enabled: "false"
+        app: agent-kind-datadog
+        app.kubernetes.io/component: agent
+        app.kubernetes.io/instance: agent-kind
+        app.kubernetes.io/managed-by: Helm
+        app.kubernetes.io/name: agent-kind-datadog
+      name: agent-kind-datadog
+    spec:
+      affinity: {}
+      automountServiceAccountToken: true
+      containers:
+      - command:
+        - agent
+        - run
+        env:
+        - name: DD_API_KEY
+          valueFrom:
+            secretKeyRef:
+              key: api-key
+              name: datadog-secret
+        - name: DD_REMOTE_CONFIGURATION_ENABLED
+          value: "true"
+        - name: DD_AUTH_TOKEN_FILE_PATH
+          value: /etc/datadog-agent/auth/token
+        - name: DD_LANGUAGE_DETECTION_ENABLED
+          value: "true"
+        - name: DD_LANGUAGE_DETECTION_REPORTING_ENABLED
+          value: "true"
+        - name: DD_CLUSTER_NAME
+          value: ccdaniele-kind
+        - name: DD_TAGS
+          value: env:kind-testing maintainer:daniel_calderon team:nyc-tse valuesyaml:ddkind-values.yaml
+        - name: KUBERNETES
+          value: "yes"
+        - name: DD_KUBERNETES_KUBELET_HOST
+          valueFrom:
+            fieldRef:
+              apiVersion: v1
+              fieldPath: status.hostIP
+        - name: DD_KUBELET_TLS_VERIFY
+          value: "false"
+        - name: DD_OTLP_CONFIG_LOGS_ENABLED
+          value: "false"
+        - name: DD_PROCESS_CONFIG_PROCESS_COLLECTION_ENABLED
+          value: "true"
+        - name: DD_PROCESS_CONFIG_CONTAINER_COLLECTION_ENABLED
+          value: "true"
+        - name: DD_PROCESS_AGENT_DISCOVERY_ENABLED
+          value: "true"
+        - name: DD_STRIP_PROCESS_ARGS
+          value: "false"
+        - name: DD_PROCESS_CONFIG_RUN_IN_CORE_AGENT_ENABLED
+          value: "true"
+        - name: DD_LOG_LEVEL
+          value: debug
+        - name: DD_DOGSTATSD_PORT
+          value: "8125"
+        - name: DD_DOGSTATSD_NON_LOCAL_TRAFFIC
+          value: "true"
+        - name: DD_DOGSTATSD_TAG_CARDINALITY
+          value: low
+        - name: DD_CLUSTER_AGENT_ENABLED
+          value: "true"
+        - name: DD_CLUSTER_AGENT_KUBERNETES_SERVICE_NAME
+          value: agent-kind-datadog-cluster-agent
+        - name: DD_CLUSTER_AGENT_AUTH_TOKEN
+          valueFrom:
+            secretKeyRef:
+              key: token
+              name: agent-kind-datadog-cluster-agent
+        - name: DD_APM_ENABLED
+          value: "true"
+        - name: DD_LOGS_ENABLED
+          value: "true"
+        - name: DD_LOGS_CONFIG_CONTAINER_COLLECT_ALL
+          value: "true"
+        - name: DD_LOGS_CONFIG_K8S_CONTAINER_USE_FILE
+          value: "true"
+        - name: DD_LOGS_CONFIG_AUTO_MULTI_LINE_DETECTION
+          value: "false"
+        - name: DD_HEALTH_PORT
+          value: "5555"
+        - name: DD_DOGSTATSD_SOCKET
+          value: /var/run/datadog/dsd.socket
+        - name: DD_EXTRA_CONFIG_PROVIDERS
+          value: clusterchecks endpointschecks
+        - name: DD_IGNORE_AUTOCONF
+          value: kubernetes_state
+        - name: DD_CONTAINER_LIFECYCLE_ENABLED
+          value: "true"
+        - name: DD_ORCHESTRATOR_EXPLORER_ENABLED
+          value: "true"
+        - name: DD_EXPVAR_PORT
+          value: "6000"
+        - name: DD_COMPLIANCE_CONFIG_ENABLED
+          value: "false"
+        - name: DD_CONTAINER_IMAGE_ENABLED
+          value: "true"
+        - name: DD_KUBELET_CORE_CHECK_ENABLED
+          value: "true"
+        image: gcr.io/datadoghq/agent:7.55.2
+        imagePullPolicy: IfNotPresent
+        livenessProbe:
+          failureThreshold: 6
+          httpGet:
+            path: /live
+            port: 5555
+            scheme: HTTP
+          initialDelaySeconds: 15
+          periodSeconds: 15
+          successThreshold: 1
+          timeoutSeconds: 5
+        name: agent
+        ports:
+        - containerPort: 8125
+          name: dogstatsdport
+          protocol: UDP
+        readinessProbe:
+          failureThreshold: 6
+          httpGet:
+            path: /ready
+            port: 5555
+            scheme: HTTP
+          initialDelaySeconds: 15
+          periodSeconds: 15
+          successThreshold: 1
+          timeoutSeconds: 5
+        resources: {}
+        startupProbe:
+          failureThreshold: 6
+          httpGet:
+            path: /startup
+            port: 5555
+            scheme: HTTP
+          initialDelaySeconds: 15
+          periodSeconds: 15
+          successThreshold: 1
+          timeoutSeconds: 5
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+        volumeMounts:
+        - mountPath: /var/log/datadog
+          name: logdatadog
+        - mountPath: /etc/datadog-agent/install_info
+          name: installinfo
+          readOnly: true
+          subPath: install_info
+        - mountPath: /tmp
+          name: tmpdir
+        - mountPath: /host/etc/os-release
+          name: os-release-file
+          readOnly: true
+        - mountPath: /etc/datadog-agent
+          name: config
+        - mountPath: /etc/datadog-agent/auth
+          name: auth-token
+        - mountPath: /host/var/run
+          mountPropagation: None
+          name: runtimesocketdir
+          readOnly: true
+        - mountPath: /var/run/datadog
+          name: dsdsocket
+        - mountPath: /host/proc
+          mountPropagation: None
+          name: procdir
+          readOnly: true
+        - mountPath: /host/sys/fs/cgroup
+          mountPropagation: None
+          name: cgroups
+          readOnly: true
+        - mountPath: /etc/passwd
+          name: passwd
+          readOnly: true
+        - mountPath: /opt/datadog-agent/run
+          mountPropagation: None
+          name: pointerdir
+        - mountPath: /var/log/pods
+          mountPropagation: None
+          name: logpodpath
+          readOnly: true
+        - mountPath: /var/log/containers
+          mountPropagation: None
+          name: logscontainerspath
+          readOnly: true
+        - mountPath: /var/lib/docker/containers
+          mountPropagation: None
+          name: logdockercontainerpath
+          readOnly: true
+      - command:
+        - trace-agent
+        - -config=/etc/datadog-agent/datadog.yaml
+        env:
+        - name: DD_API_KEY
+          valueFrom:
+            secretKeyRef:
+              key: api-key
+              name: datadog-secret
+        - name: DD_REMOTE_CONFIGURATION_ENABLED
+          value: "true"
+        - name: DD_AUTH_TOKEN_FILE_PATH
+          value: /etc/datadog-agent/auth/token
+        - name: DD_LANGUAGE_DETECTION_ENABLED
+          value: "true"
+        - name: DD_LANGUAGE_DETECTION_REPORTING_ENABLED
+          value: "true"
+        - name: DD_CLUSTER_NAME
+          value: ccdaniele-kind
+        - name: DD_TAGS
+          value: env:kind-testing maintainer:daniel_calderon team:nyc-tse valuesyaml:ddkind-values.yaml
+        - name: KUBERNETES
+          value: "yes"
+        - name: DD_KUBERNETES_KUBELET_HOST
+          valueFrom:
+            fieldRef:
+              apiVersion: v1
+              fieldPath: status.hostIP
+        - name: DD_KUBELET_TLS_VERIFY
+          value: "false"
+        - name: DD_OTLP_CONFIG_LOGS_ENABLED
+          value: "false"
+        - name: DD_CLUSTER_AGENT_ENABLED
+          value: "true"
+        - name: DD_CLUSTER_AGENT_KUBERNETES_SERVICE_NAME
+          value: agent-kind-datadog-cluster-agent
+        - name: DD_CLUSTER_AGENT_AUTH_TOKEN
+          valueFrom:
+            secretKeyRef:
+              key: token
+              name: agent-kind-datadog-cluster-agent
+        - name: DD_LOG_LEVEL
+          value: debug
+        - name: DD_APM_ENABLED
+          value: "true"
+        - name: DD_APM_NON_LOCAL_TRAFFIC
+          value: "true"
+        - name: DD_APM_RECEIVER_PORT
+          value: "8126"
+        - name: DD_APM_RECEIVER_SOCKET
+          value: /var/run/datadog/apm.socket
+        - name: DD_DOGSTATSD_SOCKET
+          value: /var/run/datadog/dsd.socket
+        - name: DD_INSTRUMENTATION_INSTALL_TIME
+          valueFrom:
+            configMapKeyRef:
+              key: install_time
+              name: agent-kind-datadog-kpi-telemetry-configmap
+        - name: DD_INSTRUMENTATION_INSTALL_ID
+          valueFrom:
+            configMapKeyRef:
+              key: install_id
+              name: agent-kind-datadog-kpi-telemetry-configmap
+        - name: DD_INSTRUMENTATION_INSTALL_TYPE
+          valueFrom:
+            configMapKeyRef:
+              key: install_type
+              name: agent-kind-datadog-kpi-telemetry-configmap
+        image: gcr.io/datadoghq/agent:7.55.2
+        imagePullPolicy: IfNotPresent
+        livenessProbe:
+          failureThreshold: 3
+          initialDelaySeconds: 15
+          periodSeconds: 15
+          successThreshold: 1
+          tcpSocket:
+            port: 8126
+          timeoutSeconds: 5
+        name: trace-agent
+        ports:
+        - containerPort: 8126
+          hostPort: 8126
+          name: traceport
+          protocol: TCP
+        resources: {}
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+        volumeMounts:
+        - mountPath: /etc/datadog-agent
+          name: config
+          readOnly: true
+        - mountPath: /var/log/datadog
+          name: logdatadog
+        - mountPath: /etc/datadog-agent/auth
+          name: auth-token
+          readOnly: true
+        - mountPath: /host/proc
+          mountPropagation: None
+          name: procdir
+          readOnly: true
+        - mountPath: /host/sys/fs/cgroup
+          mountPropagation: None
+          name: cgroups
+          readOnly: true
+        - mountPath: /tmp
+          name: tmpdir
+        - mountPath: /var/run/datadog
+          name: dsdsocket
+        - mountPath: /host/var/run
+          mountPropagation: None
+          name: runtimesocketdir
+          readOnly: true
+      dnsPolicy: ClusterFirst
+      hostPID: true
+      initContainers:
+      - args:
+        - cp -r /etc/datadog-agent /opt
+        command:
+        - bash
+        - -c
+        image: gcr.io/datadoghq/agent:7.55.2
+        imagePullPolicy: IfNotPresent
+        name: init-volume
+        resources: {}
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+        volumeMounts:
+        - mountPath: /opt/datadog-agent
+          name: config
+      - args:
+        - for script in $(find /etc/cont-init.d/ -type f -name '*.sh' | sort) ; do
+          bash $script ; done
+        command:
+        - bash
+        - -c
+        env:
+        - name: DD_API_KEY
+          valueFrom:
+            secretKeyRef:
+              key: api-key
+              name: datadog-secret
+        - name: DD_REMOTE_CONFIGURATION_ENABLED
+          value: "true"
+        - name: DD_AUTH_TOKEN_FILE_PATH
+          value: /etc/datadog-agent/auth/token
+        - name: DD_LANGUAGE_DETECTION_ENABLED
+          value: "true"
+        - name: DD_LANGUAGE_DETECTION_REPORTING_ENABLED
+          value: "true"
+        - name: DD_CLUSTER_NAME
+          value: ccdaniele-kind
+        - name: DD_TAGS
+          value: env:kind-testing maintainer:daniel_calderon team:nyc-tse valuesyaml:ddkind-values.yaml
+        - name: KUBERNETES
+          value: "yes"
+        - name: DD_KUBERNETES_KUBELET_HOST
+          valueFrom:
+            fieldRef:
+              apiVersion: v1
+              fieldPath: status.hostIP
+        - name: DD_KUBELET_TLS_VERIFY
+          value: "false"
+        - name: DD_OTLP_CONFIG_LOGS_ENABLED
+          value: "false"
+        image: gcr.io/datadoghq/agent:7.55.2
+        imagePullPolicy: IfNotPresent
+        name: init-config
+        resources: {}
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+        volumeMounts:
+        - mountPath: /var/log/datadog
+          name: logdatadog
+        - mountPath: /etc/datadog-agent
+          name: config
+        - mountPath: /host/proc
+          mountPropagation: None
+          name: procdir
+          readOnly: true
+        - mountPath: /host/var/run
+          mountPropagation: None
+          name: runtimesocketdir
+          readOnly: true
+      nodeSelector:
+        kubernetes.io/os: linux
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext:
+        runAsUser: 0
+      serviceAccount: agent-kind-datadog
+      serviceAccountName: agent-kind-datadog
+      terminationGracePeriodSeconds: 30
+      volumes:
+      - emptyDir: {}
+        name: auth-token
+      - configMap:
+          defaultMode: 420
+          name: agent-kind-datadog-installinfo
+        name: installinfo
+      - emptyDir: {}
+        name: config
+      - emptyDir: {}
+        name: logdatadog
+      - emptyDir: {}
+        name: tmpdir
+      - hostPath:
+          path: /proc
+          type: ""
+        name: procdir
+      - hostPath:
+          path: /sys/fs/cgroup
+          type: ""
+        name: cgroups
+      - hostPath:
+          path: /etc/os-release
+          type: ""
+        name: os-release-file
+      - hostPath:
+          path: /var/run/datadog/
+          type: DirectoryOrCreate
+        name: dsdsocket
+      - hostPath:
+          path: /var/run/datadog/
+          type: DirectoryOrCreate
+        name: apmsocket
+      - emptyDir: {}
+        name: s6-run
+      - hostPath:
+          path: /etc/passwd
+          type: ""
+        name: passwd
+      - hostPath:
+          path: /var/lib/datadog-agent/logs
+          type: ""
+        name: pointerdir
+      - hostPath:
+          path: /var/log/pods
+          type: ""
+        name: logpodpath
+      - hostPath:
+          path: /var/log/containers
+          type: ""
+        name: logscontainerspath
+      - hostPath:
+          path: /var/lib/docker/containers
+          type: ""
+        name: logdockercontainerpath
+      - hostPath:
+          path: /var/run
+          type: ""
+        name: runtimesocketdir
+  updateStrategy:
+    rollingUpdate:
+      maxSurge: 0
+      maxUnavailable: 10%
+    type: RollingUpdate
+status:
+  currentNumberScheduled: 2
+  desiredNumberScheduled: 2
+  numberAvailable: 2
+  numberMisscheduled: 0
+  numberReady: 2
+  observedGeneration: 3
+  updatedNumberScheduled: 2

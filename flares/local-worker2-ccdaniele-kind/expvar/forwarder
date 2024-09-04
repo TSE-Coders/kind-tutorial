@@ -1,0 +1,118 @@
+APIKeyFailure: {}
+APIKeyStatus:
+  API key ending with 8b8dc: API Key valid
+FileStorage:
+  CurrentSizeInBytes: 0
+  DeserializeCount: 0
+  DeserializeErrorsCount: 0
+  DeserializeTransactionsCount: 0
+  FileSize: 0
+  FilesCount: 0
+  FilesRemovedCount: 0
+  PointsDroppedCount: 0
+  SerializeCount: 0
+  StartupReloadedRetryFilesCount: 0
+RemovalPolicy:
+  FilesFromUnknownDomainCount: 0
+  NewRemovalPolicyCount: 0
+  OutdatedFilesCount: 0
+  RegisteredDomainCount: 0
+TransactionContainer:
+  CurrentMemSizeInBytes: 0
+  ErrorsCount: 0
+  PointsDroppedCount: 0
+  TransactionsCount: 0
+  TransactionsDroppedCount: 0
+Transactions:
+  Cluster: 0
+  ClusterRole: 0
+  ClusterRoleBinding: 0
+  ConnectionEvents:
+    ConnectSuccess: 3
+    DNSSuccess: 3
+  CronJob: 0
+  CustomResource: 0
+  CustomResourceDefinition: 0
+  DaemonSet: 0
+  Deployment: 0
+  Dropped: 0
+  DroppedByEndpoint: {}
+  ECSTask: 0
+  Errors: 0
+  ErrorsByType:
+    ConnectionErrors: 0
+    DNSErrors: 0
+    SentRequestErrors: 0
+    TLSErrors: 0
+    WroteRequestErrors: 0
+  HTTPErrors: 0
+  HTTPErrorsByCode: {}
+  HighPriorityQueueFull: 0
+  HorizontalPodAutoscaler: 0
+  Ingress: 0
+  InputBytesByEndpoint:
+    check_run_v1: 2518
+    intake: 5276
+    metadata_v1: 22701
+    orchestrator: 8535
+    orchmanifest: 26505
+    process: 61006
+    series_v2: 173869
+  InputCountByEndpoint:
+    check_run_v1: 4
+    intake: 5
+    metadata_v1: 5
+    orchestrator: 2
+    orchmanifest: 2
+    process: 7
+    series_v2: 4
+  Job: 0
+  LimitRange: 0
+  Namespace: 0
+  NetworkPolicy: 0
+  Node: 0
+  OrchestratorManifest: 2
+  PersistentVolume: 0
+  PersistentVolumeClaim: 0
+  Pod: 2
+  ReplicaSet: 0
+  Requeued: 0
+  RequeuedByEndpoint: {}
+  Retried: 0
+  RetriedByEndpoint: {}
+  RetryQueueSize: 0
+  Role: 0
+  RoleBinding: 0
+  Service: 0
+  ServiceAccount: 0
+  StatefulSet: 0
+  StorageClass: 0
+  Success: 29
+  SuccessByEndpoint:
+    check_run_v1: 4
+    connections: 0
+    container: 0
+    events_v2: 0
+    host_metadata_v2: 0
+    intake: 5
+    metadata_v1: 5
+    orchestrator: 2
+    orchmanifest: 2
+    process: 7
+    rtcontainer: 0
+    rtprocess: 0
+    series_v1: 0
+    series_v2: 4
+    services_checks_v2: 0
+    sketches_v1: 0
+    sketches_v2: 0
+    validate_v1: 0
+  SuccessBytesByEndpoint:
+    check_run_v1: 2518
+    intake: 5276
+    metadata_v1: 22701
+    orchestrator: 8535
+    orchmanifest: 26505
+    process: 61006
+    series_v2: 173869
+  VerticalPodAutoscaler: 0

@@ -1,0 +1,24 @@
+init_config: null
+instances:
+- collectors:
+  - pods
+  - clusters
+  - deployments
+  - namespaces
+  - nodes
+  - replicasets
+  - jobs
+  - cronjobs
+  - nodes
+  - services
+  - daemonsets
+  - statefulsets
+  - ingresses
+  - persistentvolumeclaims
+  - persistentvolumes
+  - roles
+  - rolebindings
+  - clusterroles
+  - clusterrolebindings
+  - serviceaccounts
+  - horizontalpodautoscalers

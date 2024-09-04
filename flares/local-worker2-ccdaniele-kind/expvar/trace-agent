@@ -1,0 +1,1050 @@
+Event: {}
+ServiceCheck: {}
+check_run_v1: 0
+cmdline:
+- trace-agent
+- --config=/etc/datadog-agent/datadog.yaml
+compressor:
+  BytesIn: 0
+  BytesOut: 0
+  TotalCompressCycles: 0
+  TotalPayloads: 0
+config:
+  AgentVersion: 7.55.2
+  AnalyzedRateByServiceLegacy: {}
+  AnalyzedSpansByService: {}
+  BucketInterval: 1e+10
+  ComputeStatsBySpanKind: false
+  ConfigPath: /etc/datadog-agent/datadog.yaml
+  ConnectionLimit: 0
+  ConnectionResetInterval: 0
+  ContainerProcRoot: /host/proc
+  DDAgentBin: /opt/datadog-agent/bin/agent/agent
+  DebugServerPort: 5012
+  DebuggerDiagnosticsProxy:
+    DDURL: ""
+  DebuggerProxy:
+    DDURL: ""
+  DecoderTimeout: 1000
+  Decoders: 0
+  DefaultEnv: kind-testing
+  EVPProxy:
+    AdditionalEndpoints: null
+    DDURL: ""
+    Enabled: true
+    MaxPayloadSize: 5.24288e+06
+  Enabled: true
+  Endpoints:
+  - Host: https://trace.agent.datadoghq.com
+    NoProxy: false
+  ErrorTPS: 10
+  ExtraAggregators: null
+  ExtraSampleRate: 1
+  FargateOrchestrator: Unknown
+  Features: {}
+  GUIPort: "-1"
+  GitCommit: be4db09
+  GlobalTags: {}
+  Hostname: local-worker2-ccdaniele-kind
+  Ignore: {}
+  InstallSignature:
+    install_id: a2547c9f-9fb4-431c-be29-c93dcd87a383
+    install_time: 1.724778972e+09
+    install_type: k8s_manual
+  LambdaFunctionName: ""
+  LogFilePath: /var/log/datadog/trace-agent.log
+  MaxCPU: 0
+  MaxCatalogEntries: 5000
+  MaxConnections: 1000
+  MaxEPS: 200
+  MaxMemory: 0
+  MaxRemoteTPS: 100
+  MaxRequestBytes: 2.62144e+07
+  MaxResourceLen: 5000
+  MaxSenderRetries: 4
+  OTLPReceiver:
+    AttributesTranslator: {}
+    BindHost: 0.0.0.0
+    GRPCPort: 0
+    MaxRequestBytes: 2.62144e+07
+    ProbabilisticSampling: 100
+    SpanNameAsResourceName: false
+    SpanNameRemappings: {}
+  Obfuscation:
+    CreditCards:
+      Enabled: true
+      Luhn: false
+    ES:
+      Enabled: true
+      KeepValues: null
+      ObfuscateSQLValues: null
+    HTTP:
+      remove_path_digits: false
+      remove_query_string: false
+    Memcached:
+      Enabled: true
+      KeepCommand: false
+    Mongo:
+      Enabled: true
+      KeepValues: null
+      ObfuscateSQLValues: null
+    Redis:
+      Enabled: true
+      RemoveAllArgs: false
+    RemoveStackTraces: false
+    SQLExecPlan:
+      Enabled: false
+      KeepValues: null
+      ObfuscateSQLValues: null
+    SQLExecPlanNormalize:
+      Enabled: false
+      KeepValues: null
+      ObfuscateSQLValues: null
+  PeerServiceAggregation: false
+  PeerTags: null
+  PeerTagsAggregation: false
+  PipeBufferSize: 1e+06
+  PipeSecurityDescriptor: D:AI(A;;GA;;;WD)
+  ProbabilisticSamplerEnabled: false
+  ProbabilisticSamplerHashSeed: 0
+  ProbabilisticSamplerSamplingPercentage: 0
+  ProfilingProxy:
+    AdditionalEndpoints: null
+    DDURL: ""
+  ProxyURL: null
+  RareSamplerCardinality: 200
+  RareSamplerCooldownPeriod: 3e+11
+  RareSamplerEnabled: false
+  RareSamplerTPS: 5
+  ReceiverHost: 0.0.0.0
+  ReceiverPort: 8126
+  ReceiverSocket: /var/run/datadog/apm.socket
+  ReceiverTimeout: 0
+  RejectTags: null
+  RejectTagsRegex: null
+  ReplaceTags: null
+  RequireTags: null
+  RequireTagsRegex: null
+  Site: datadoghq.com
+  SkipSSLValidation: false
+  StatsWriter:
+    ConnectionLimit: 0
+    FlushPeriodSeconds: 0
+    QueueSize: 0
+  StatsdEnabled: true
+  StatsdHost: localhost
+  StatsdPipeName: ""
+  StatsdPort: 8125
+  StatsdSocket: /var/run/datadog/dsd.socket
+  SymDBProxy:
+    DDURL: ""
+  SynchronousFlushing: false
+  TargetTPS: 10
+  TelemetryConfig:
+    Enabled: true
+    Endpoints:
+    - Host: https://instrumentation-telemetry-intake.datadoghq.com
+      NoProxy: false
+  TraceBuffer: 0
+  TraceWriter:
+    ConnectionLimit: 0
+    FlushPeriodSeconds: 0
+    QueueSize: 0
+  WatchdogInterval: 1e+10
+  WindowsPipeName: ""
+connections: 0
+container: 0
+events_v2: 0
+forwarder:
+  APIKeyFailure: {}
+  APIKeyStatus: {}
+  FileStorage:
+    CurrentSizeInBytes: 0
+    DeserializeCount: 0
+    DeserializeErrorsCount: 0
+    DeserializeTransactionsCount: 0
+    FileSize: 0
+    FilesCount: 0
+    FilesRemovedCount: 0
+    PointsDroppedCount: 0
+    SerializeCount: 0
+    StartupReloadedRetryFilesCount: 0
+  RemovalPolicy:
+    FilesFromUnknownDomainCount: 0
+    NewRemovalPolicyCount: 0
+    OutdatedFilesCount: 0
+    RegisteredDomainCount: 0
+  TransactionContainer:
+    CurrentMemSizeInBytes: 0
+    ErrorsCount: 0
+    PointsDroppedCount: 0
+    TransactionsCount: 0
+    TransactionsDroppedCount: 0
+  Transactions:
+    Cluster: 0
+    ClusterRole: 0
+    ClusterRoleBinding: 0
+    ConnectionEvents:
+      ConnectSuccess: 0
+      DNSSuccess: 0
+    CronJob: 0
+    CustomResource: 0
+    CustomResourceDefinition: 0
+    DaemonSet: 0
+    Deployment: 0
+    Dropped: 0
+    DroppedByEndpoint: {}
+    ECSTask: 0
+    Errors: 0
+    ErrorsByType:
+      ConnectionErrors: 0
+      DNSErrors: 0
+      SentRequestErrors: 0
+      TLSErrors: 0
+      WroteRequestErrors: 0
+    HTTPErrors: 0
+    HTTPErrorsByCode: {}
+    HighPriorityQueueFull: 0
+    HorizontalPodAutoscaler: 0
+    Ingress: 0
+    InputBytesByEndpoint: {}
+    InputCountByEndpoint: {}
+    Job: 0
+    LimitRange: 0
+    Namespace: 0
+    NetworkPolicy: 0
+    Node: 0
+    OrchestratorManifest: 0
+    PersistentVolume: 0
+    PersistentVolumeClaim: 0
+    Pod: 0
+    ReplicaSet: 0
+    Requeued: 0
+    RequeuedByEndpoint: {}
+    Retried: 0
+    RetriedByEndpoint: {}
+    RetryQueueSize: 0
+    Role: 0
+    RoleBinding: 0
+    Service: 0
+    ServiceAccount: 0
+    StatefulSet: 0
+    StorageClass: 0
+    Success: 0
+    SuccessByEndpoint:
+      check_run_v1: 0
+      connections: 0
+      container: 0
+      events_v2: 0
+      host_metadata_v2: 0
+      intake: 0
+      orchestrator: 0
+      process: 0
+      rtcontainer: 0
+      rtprocess: 0
+      series_v1: 0
+      series_v2: 0
+      services_checks_v2: 0
+      sketches_v1: 0
+      sketches_v2: 0
+      validate_v1: 0
+    SuccessBytesByEndpoint: {}
+    VerticalPodAutoscaler: 0
+host_metadata_v2: 0
+hostname:
+  errors: {}
+  provider: ""
+intake: 0
+jsonstream:
+  CompressorLocks: 0
+  ItemDrops: 0
+  PayloadFulls: 0
+  TotalCalls: 0
+  TotalItems: 0
+  TotalLockTime: 0
+  TotalSerializationTime: 0
+  WriteItemErrors: 0
+kubeletQueries: 8
+memstats:
+  Alloc: 1.4377544e+07
+  BuckHashSys: 1.498741e+06
+  BySize:
+  - Frees: 0
+    Mallocs: 0
+    Size: 0
+  - Frees: 16024
+    Mallocs: 18662
+    Size: 8
+  - Frees: 208122
+    Mallocs: 223805
+    Size: 16
+  - Frees: 70288
+    Mallocs: 75319
+    Size: 24
+  - Frees: 78179
+    Mallocs: 83467
+    Size: 32
+  - Frees: 105286
+    Mallocs: 119159
+    Size: 48
+  - Frees: 38207
+    Mallocs: 42926
+    Size: 64
+  - Frees: 20665
+    Mallocs: 22535
+    Size: 80
+  - Frees: 13384
+    Mallocs: 15242
+    Size: 96
+  - Frees: 24012
+    Mallocs: 25674
+    Size: 112
+  - Frees: 5393
+    Mallocs: 6056
+    Size: 128
+  - Frees: 5743
+    Mallocs: 6405
+    Size: 144
+  - Frees: 2571
+    Mallocs: 3082
+    Size: 160
+  - Frees: 1762
+    Mallocs: 2382
+    Size: 176
+  - Frees: 1385
+    Mallocs: 1538
+    Size: 192
+  - Frees: 2022
+    Mallocs: 2505
+    Size: 208
+  - Frees: 827
+    Mallocs: 885
+    Size: 224
+  - Frees: 450
+    Mallocs: 468
+    Size: 240
+  - Frees: 1424
+    Mallocs: 1658
+    Size: 256
+  - Frees: 6904
+    Mallocs: 8601
+    Size: 288
+  - Frees: 1085
+    Mallocs: 1255
+    Size: 320
+  - Frees: 1797
+    Mallocs: 1915
+    Size: 352
+  - Frees: 290
+    Mallocs: 537
+    Size: 384
+  - Frees: 199
+    Mallocs: 612
+    Size: 416
+  - Frees: 376
+    Mallocs: 523
+    Size: 448
+  - Frees: 187
+    Mallocs: 199
+    Size: 480
+  - Frees: 845
+    Mallocs: 1001
+    Size: 512
+  - Frees: 1744
+    Mallocs: 1970
+    Size: 576
+  - Frees: 318
+    Mallocs: 408
+    Size: 640
+  - Frees: 133
+    Mallocs: 194
+    Size: 704
+  - Frees: 112
+    Mallocs: 162
+    Size: 768
+  - Frees: 235
+    Mallocs: 333
+    Size: 896
+  - Frees: 417
+    Mallocs: 521
+    Size: 1024
+  - Frees: 460
+    Mallocs: 637
+    Size: 1152
+  - Frees: 189
+    Mallocs: 301
+    Size: 1280
+  - Frees: 657
+    Mallocs: 735
+    Size: 1408
+  - Frees: 250
+    Mallocs: 325
+    Size: 1536
+  - Frees: 168
+    Mallocs: 225
+    Size: 1792
+  - Frees: 291
+    Mallocs: 2404
+    Size: 2048
+  - Frees: 139
+    Mallocs: 185
+    Size: 2304
+  - Frees: 260
+    Mallocs: 357
+    Size: 2688
+  - Frees: 107
+    Mallocs: 134
+    Size: 3072
+  - Frees: 4
+    Mallocs: 10
+    Size: 3200
+  - Frees: 55
+    Mallocs: 66
+    Size: 3456
+  - Frees: 444
+    Mallocs: 491
+    Size: 4096
+  - Frees: 87
+    Mallocs: 117
+    Size: 4864
+  - Frees: 58
+    Mallocs: 144
+    Size: 5376
+  - Frees: 66
+    Mallocs: 82
+    Size: 6144
+  - Frees: 2
+    Mallocs: 5
+    Size: 6528
+  - Frees: 14
+    Mallocs: 17
+    Size: 6784
+  - Frees: 28
+    Mallocs: 29
+    Size: 6912
+  - Frees: 99
+    Mallocs: 123
+    Size: 8192
+  - Frees: 108
+    Mallocs: 128
+    Size: 9472
+  - Frees: 14
+    Mallocs: 15
+    Size: 9728
+  - Frees: 35
+    Mallocs: 36
+    Size: 10240
+  - Frees: 61
+    Mallocs: 72
+    Size: 10880
+  - Frees: 108
+    Mallocs: 112
+    Size: 12288
+  - Frees: 32
+    Mallocs: 34
+    Size: 13568
+  - Frees: 13
+    Mallocs: 20
+    Size: 14336
+  - Frees: 58
+    Mallocs: 70
+    Size: 16384
+  - Frees: 24
+    Mallocs: 27
+    Size: 18432
+  DebugGC: false
+  EnableGC: true
+  Frees: 658852
+  GCCPUFraction: 0.0001366902205174575
+  GCSys: 5.221536e+06
+  HeapAlloc: 1.4377544e+07
+  HeapIdle: 1.4516224e+07
+  HeapInuse: 2.1594112e+07
+  HeapObjects: 62731
+  HeapReleased: 3.448832e+06
+  HeapSys: 3.6110336e+07
+  LastGC: 1.724779048941111e+18
+  Lookups: 0
+  MCacheInuse: 14400
+  MCacheSys: 15600
+  MSpanInuse: 476952
+  MSpanSys: 554064
+  Mallocs: 721583
+  NextGC: 2.9388184e+07
+  NumForcedGC: 0
+  NumGC: 12
+  OtherSys: 2.250931e+06
+  PauseEnd:
+  - 1.7247789783180406e+18
+  - 1.7247789783243448e+18
+  - 1.7247789783314473e+18
+  - 1.7247789784456466e+18
+  - 1.7247789784705682e+18
+  - 1.7247789794971779e+18
+  - 1.7247789806784474e+18
+  - 1.7247789807105516e+18
+  - 1.724778980807432e+18
+  - 1.7247789817876186e+18
+  - 1.7247790385385656e+18
+  - 1.724779048941111e+18
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  PauseNs:
+  - 657041
+  - 12501
+  - 880875
+  - 1.229959e+06
+  - 872667
+  - 59792
+  - 810334
+  - 657583
+  - 152416
+  - 63542
+  - 252584
+  - 84291
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  PauseTotalNs: 5.733585e+06
+  StackInuse: 1.6384e+06
+  StackSys: 1.6384e+06
+  Sys: 4.7289608e+07
+  TotalAlloc: 7.45466e+07
+orchestrator: 0
+pid: 1.578528e+06
+process: 0
+ratebyservice: {}
+ratebyservice_filtered: {}
+receiver: []
+rtcontainer: 0
+rtprocess: 0
+serializer:
+  SendEventsErrItemTooBigs: 0
+  SendEventsErrItemTooBigsFallback: 0
+series: {}
+series_v1: 0
+series_v2: 0
+services_checks_v2: 0
+sketch_series:
+  ItemTooBig: 0
+  PayloadFull: 0
+  UnexpectedItemDrops: 0
+sketches_v1: 0
+sketches_v2: 0
+splitter:
+  NotTooBig: 0
+  PayloadDrops: 0
+  TooBig: 0
+  TotalLoops: 0
+stats_writer:
+  Bytes: 0
+  ClientPayloads: 0
+  Errors: 0
+  Payloads: 0
+  Retries: 0
+  Splits: 0
+  StatsBuckets: 0
+  StatsEntries: 0
+trace_writer:
+  Bytes: 0
+  BytesUncompressed: 0
+  Errors: 0
+  Events: 0
+  Payloads: 0
+  Retries: 0
+  SingleMaxSize: 0
+  Spans: 0
+  Traces: 0
+uptime: 71
+validate_v1: 0
+version:
+  GitCommit: be4db09
+  Version: 7.55.2
+watchdog:
+  CPU:
+    UserAvg: 0.0019998654247891864
+  Mem:
+    Alloc: 2.1749392e+07

@@ -1,0 +1,293 @@
+{
+	"entities": {
+		"internal://global-entity-id": {
+			"tags": {
+				"workloadmeta-static": [
+					"kube_cluster_name:ccdaniele-kind"
+				]
+			}
+		},
+		"kubernetes_pod_uid://27d5c2d0-bac9-49fd-9368-705b4dd1b307": {
+			"tags": {
+				"workloadmeta-kubernetes_pod": [
+					"kube_namespace:default",
+					"kube_app_managed_by:Helm",
+					"kube_app_component:agent",
+					"kube_app_instance:agent-kind",
+					"kube_ownerref_kind:daemonset",
+					"kube_daemon_set:agent-kind-datadog",
+					"pod_phase:running",
+					"kube_qos:BestEffort",
+					"kube_app_name:agent-kind-datadog",
+					"kube_cluster_name:ccdaniele-kind",
+					"pod_name:agent-kind-datadog-8vf5p",
+					"kube_ownerref_name:agent-kind-datadog"
+				]
+			}
+		},
+		"kubernetes_pod_uid://33e41f8a-3219-4fec-bc71-6312bb323aae": {
+			"tags": {
+				"workloadmeta-kubernetes_pod": [
+					"kube_namespace:kube-system",
+					"pod_phase:running",
+					"kube_qos:Guaranteed",
+					"kube_ownerref_kind:daemonset",
+					"kube_daemon_set:kindnet",
+					"kube_cluster_name:ccdaniele-kind",
+					"kube_ownerref_name:kindnet",
+					"pod_name:kindnet-rtcx4"
+				]
+			}
+		},
+		"kubernetes_pod_uid://344052d9-642b-435e-ac82-18dd12a4a856": {
+			"tags": {
+				"workloadmeta-kubernetes_pod": [
+					"kube_daemon_set:kube-proxy",
+					"kube_cluster_name:ccdaniele-kind",
+					"kube_namespace:kube-system",
+					"pod_phase:running",
+					"kube_priority_class:system-node-critical",
+					"kube_qos:BestEffort",
+					"kube_ownerref_kind:daemonset",
+					"pod_name:kube-proxy-6tvg4",
+					"kube_ownerref_name:kube-proxy"
+				]
+			}
+		},
+		"kubernetes_pod_uid://52d0408f-068e-46c8-8890-48f83cb2c981": {
+			"tags": {
+				"workloadmeta-kubernetes_pod": [
+					"kube_ownerref_kind:daemonset",
+					"kube_daemon_set:kube-proxy",
+					"kube_cluster_name:ccdaniele-kind",
+					"kube_namespace:kube-system",
+					"pod_phase:running",
+					"kube_priority_class:system-node-critical",
+					"kube_qos:BestEffort",
+					"pod_name:kube-proxy-ds5pg",
+					"kube_ownerref_name:kube-proxy"
+				]
+			}
+		},
+		"kubernetes_pod_uid://53b22f4b-7bea-454b-83a0-19eb4800d623": {
+			"tags": {
+				"workloadmeta-kubernetes_pod": [
+					"kube_replica_set:coredns-7db6d8ff4d",
+					"kube_cluster_name:ccdaniele-kind",
+					"kube_namespace:kube-system",
+					"pod_phase:running",
+					"kube_priority_class:system-cluster-critical",
+					"kube_qos:Burstable",
+					"kube_ownerref_kind:replicaset",
+					"kube_deployment:coredns",
+					"pod_name:coredns-7db6d8ff4d-s99h7",
+					"kube_ownerref_name:coredns-7db6d8ff4d"
+				]
+			}
+		},
+		"kubernetes_pod_uid://53f35026-cbc6-471f-b5ee-3bff2035dbc6": {
+			"tags": {
+				"workloadmeta-kubernetes_pod": [
+					"kube_priority_class:system-node-critical",
+					"kube_qos:Burstable",
+					"kube_ownerref_kind:node",
+					"kube_cluster_name:ccdaniele-kind",
+					"kube_namespace:kube-system",
+					"pod_phase:running",
+					"pod_name:kube-scheduler-ccdaniele-kind-control-plane",
+					"kube_ownerref_name:ccdaniele-kind-control-plane"
+				]
+			}
+		},
+		"kubernetes_pod_uid://5501859a-4267-48cb-8712-5c4de1c9dec9": {
+			"tags": {
+				"workloadmeta-kubernetes_pod": [
+					"kube_namespace:kube-system",
+					"pod_phase:running",
+					"kube_priority_class:system-node-critical",
+					"kube_qos:Burstable",
+					"kube_ownerref_kind:node",
+					"kube_cluster_name:ccdaniele-kind",
+					"pod_name:etcd-ccdaniele-kind-control-plane",
+					"kube_ownerref_name:ccdaniele-kind-control-plane"
+				]
+			}
+		},
+		"kubernetes_pod_uid://704f229c-f53f-4675-9f14-53558d18abc6": {
+			"tags": {
+				"workloadmeta-kubernetes_pod": [
+					"kube_namespace:kube-system",
+					"pod_phase:running",
+					"kube_priority_class:system-node-critical",
+					"kube_qos:Burstable",
+					"kube_ownerref_kind:node",
+					"kube_cluster_name:ccdaniele-kind",
+					"pod_name:kube-controller-manager-ccdaniele-kind-control-plane",
+					"kube_ownerref_name:ccdaniele-kind-control-plane"
+				]
+			}
+		},
+		"kubernetes_pod_uid://80a06409-5c3b-4637-94d5-de27f023cea1": {
+			"tags": {
+				"workloadmeta-kubernetes_pod": [
+					"kube_replica_set:agent-kind-datadog-cluster-agent-668c55cbfc",
+					"kube_qos:BestEffort",
+					"kube_app_name:agent-kind-datadog",
+					"kube_deployment:agent-kind-datadog-cluster-agent",
+					"kube_app_instance:agent-kind",
+					"kube_app_managed_by:Helm",
+					"kube_ownerref_kind:replicaset",
+					"kube_cluster_name:ccdaniele-kind",
+					"kube_namespace:default",
+					"pod_phase:succeeded",
+					"kube_app_component:cluster-agent",
+					"pod_name:agent-kind-datadog-cluster-agent-668c55cbfc-v2mnv",
+					"kube_ownerref_name:agent-kind-datadog-cluster-agent-668c55cbfc"
+				]
+			}
+		},
+		"kubernetes_pod_uid://8d104a41-9ba0-4491-a74d-e39a4bc58481": {
+			"tags": {
+				"workloadmeta-kubernetes_pod": [
+					"kube_deployment:coredns",
+					"kube_replica_set:coredns-7db6d8ff4d",
+					"kube_cluster_name:ccdaniele-kind",
+					"kube_namespace:kube-system",
+					"pod_phase:running",
+					"kube_priority_class:system-cluster-critical",
+					"kube_qos:Burstable",
+					"kube_ownerref_kind:replicaset",
+					"pod_name:coredns-7db6d8ff4d-c9dzb",
+					"kube_ownerref_name:coredns-7db6d8ff4d"
+				]
+			}
+		},
+		"kubernetes_pod_uid://aa8cda0c-7a81-40be-9ab1-16664ed9703b": {
+			"tags": {
+				"workloadmeta-kubernetes_pod": [
+					"pod_phase:running",
+					"kube_qos:BestEffort",
+					"kube_app_name:agent-kind-datadog",
+					"kube_app_instance:agent-kind",
+					"kube_daemon_set:agent-kind-datadog",
+					"kube_cluster_name:ccdaniele-kind",
+					"kube_namespace:default",
+					"kube_app_managed_by:Helm",
+					"kube_app_component:agent",
+					"kube_ownerref_kind:daemonset",
+					"kube_ownerref_name:agent-kind-datadog",
+					"pod_name:agent-kind-datadog-7zcm2"
+				]
+			}
+		},
+		"kubernetes_pod_uid://ad313387-290d-440c-aec8-4d248ee13606": {
+			"tags": {
+				"workloadmeta-kubernetes_pod": [
+					"kube_app_name:agent-kind-datadog",
+					"kube_cluster_name:ccdaniele-kind",
+					"kube_app_managed_by:Helm",
+					"pod_phase:succeeded",
+					"kube_qos:BestEffort",
+					"kube_app_instance:agent-kind",
+					"kube_app_component:agent",
+					"kube_ownerref_kind:daemonset",
+					"kube_daemon_set:agent-kind-datadog",
+					"kube_namespace:default",
+					"pod_name:agent-kind-datadog-pbfsq",
+					"kube_ownerref_name:agent-kind-datadog"
+				]
+			}
+		},
+		"kubernetes_pod_uid://b779f822-4cb3-4d22-9b4a-f7ba24399dca": {
+			"tags": {
+				"workloadmeta-kubernetes_pod": [
+					"kube_deployment:local-path-provisioner",
+					"kube_replica_set:local-path-provisioner-988d74bc",
+					"kube_cluster_name:ccdaniele-kind",
+					"kube_namespace:local-path-storage",
+					"pod_phase:running",
+					"kube_qos:BestEffort",
+					"kube_ownerref_kind:replicaset",
+					"pod_name:local-path-provisioner-988d74bc-4p2hf",
+					"kube_ownerref_name:local-path-provisioner-988d74bc"
+				]
+			}
+		},
+		"kubernetes_pod_uid://cd10dd4e-04d0-4eec-9300-6a3d091b5def": {
+			"tags": {
+				"workloadmeta-kubernetes_pod": [
+					"kube_cluster_name:ccdaniele-kind",
+					"kube_namespace:kube-system",
+					"pod_phase:running",
+					"kube_priority_class:system-node-critical",
+					"kube_qos:BestEffort",
+					"kube_ownerref_kind:daemonset",
+					"kube_daemon_set:kube-proxy",
+					"pod_name:kube-proxy-z74vc",
+					"kube_ownerref_name:kube-proxy"
+				]
+			}
+		},
+		"kubernetes_pod_uid://d6e28246-3bdf-4483-a871-a5d39b417121": {
+			"tags": {
+				"workloadmeta-kubernetes_pod": [
+					"kube_namespace:kube-system",
+					"pod_phase:running",
+					"kube_qos:Guaranteed",
+					"kube_ownerref_kind:daemonset",
+					"kube_daemon_set:kindnet",
+					"kube_cluster_name:ccdaniele-kind",
+					"pod_name:kindnet-h4dv8",
+					"kube_ownerref_name:kindnet"
+				]
+			}
+		},
+		"kubernetes_pod_uid://f42e5cdb-df56-4326-a363-00e2669b6f87": {
+			"tags": {
+				"workloadmeta-kubernetes_pod": [
+					"kube_deployment:agent-kind-datadog-cluster-agent",
+					"kube_replica_set:agent-kind-datadog-cluster-agent-75dd97446",
+					"kube_cluster_name:ccdaniele-kind",
+					"kube_namespace:default",
+					"pod_phase:running",
+					"kube_app_component:cluster-agent",
+					"kube_app_name:agent-kind-datadog",
+					"kube_ownerref_kind:replicaset",
+					"kube_qos:BestEffort",
+					"kube_app_instance:agent-kind",
+					"kube_app_managed_by:Helm",
+					"pod_name:agent-kind-datadog-cluster-agent-75dd97446-nh2pf",
+					"kube_ownerref_name:agent-kind-datadog-cluster-agent-75dd97446"
+				]
+			}
+		},
+		"kubernetes_pod_uid://fc202e05-923f-4a3c-bb7a-8eedf3bab00a": {
+			"tags": {
+				"workloadmeta-kubernetes_pod": [
+					"kube_namespace:kube-system",
+					"pod_phase:running",
+					"kube_priority_class:system-node-critical",
+					"kube_qos:Burstable",
+					"kube_ownerref_kind:node",
+					"kube_cluster_name:ccdaniele-kind",
+					"pod_name:kube-apiserver-ccdaniele-kind-control-plane",
+					"kube_ownerref_name:ccdaniele-kind-control-plane"
+				]
+			}
+		},
+		"kubernetes_pod_uid://fee5595b-129f-456d-87a7-205f6403c378": {
+			"tags": {
+				"workloadmeta-kubernetes_pod": [
+					"kube_namespace:kube-system",
+					"pod_phase:running",
+					"kube_qos:Guaranteed",
+					"kube_ownerref_kind:daemonset",
+					"kube_daemon_set:kindnet",
+					"kube_cluster_name:ccdaniele-kind",
+					"pod_name:kindnet-ct8xn",
+					"kube_ownerref_name:kindnet"
+				]
+			}
+		}
+	}
+}

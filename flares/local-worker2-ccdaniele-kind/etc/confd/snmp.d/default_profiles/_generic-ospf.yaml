@@ -1,0 +1,235 @@
+metrics:
+- MIB: OSPF-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.2.1.14.10.1.3
+      name: ospfNbrRtrId
+    tag: neighbor_id
+  - symbol:
+      OID: 1.3.6.1.2.1.14.10.1.1
+      name: ospfNbrIpAddr
+    tag: neighbor_ip
+  - mapping:
+      1: down
+      2: attempt
+      3: init
+      4: two_way
+      5: exchange_start
+      6: exchange
+      7: loading
+      8: full
+    symbol:
+      OID: 1.3.6.1.2.1.14.10.1.6
+      name: ospfNbrState
+    tag: neighbor_state
+  symbols:
+  - OID: 1.3.6.1.2.1.14.10.1.6
+    name: ospfNbrState
+  - OID: 1.3.6.1.2.1.14.10.1.7
+    name: ospfNbrEvents
+  - OID: 1.3.6.1.2.1.14.10.1.8
+    name: ospfNbrLsRetransQLen
+  table:
+    OID: 1.3.6.1.2.1.14.10
+    name: ospfNbrTable
+- MIB: OSPF-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.2.1.14.10.1.3
+      name: ospfNbrRtrId
+    tag: neighbor_id
+  - symbol:
+      OID: 1.3.6.1.2.1.14.10.1.1
+      name: ospfNbrIpAddr
+    tag: neighbor_ip
+  - mapping:
+      1: down
+      2: attempt
+      3: init
+      4: two_way
+      5: exchange_start
+      6: exchange
+      7: loading
+      8: full
+    symbol:
+      OID: 1.3.6.1.2.1.14.10.1.6
+      name: ospfNbrState
+    tag: neighbor_state
+  symbols:
+  - constant_value_one: true
+    name: ospfNbr
+  table:
+    OID: 1.3.6.1.2.1.14.10
+    name: ospfNbrTable
+- MIB: OSPF-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.2.1.14.11.1.3
+      name: ospfVirtNbrIpAddr
+    tag: neighbor_ip
+  - symbol:
+      OID: 1.3.6.1.2.1.14.11.1.2
+      name: ospfVirtNbrRtrId
+    tag: neighbor_id
+  - mapping:
+      1: down
+      2: attempt
+      3: init
+      4: two_way
+      5: exchange_start
+      6: exchange
+      7: loading
+      8: full
+    symbol:
+      OID: 1.3.6.1.2.1.14.11.1.5
+      name: ospfVirtNbrState
+    tag: neighbor_state
+  symbols:
+  - OID: 1.3.6.1.2.1.14.11.1.5
+    name: ospfVirtNbrState
+  - OID: 1.3.6.1.2.1.14.11.1.6
+    name: ospfVirtNbrEvents
+  - OID: 1.3.6.1.2.1.14.11.1.7
+    name: ospfVirtNbrLsRetransQLen
+  table:
+    OID: 1.3.6.1.2.1.14.11
+    name: ospfVirtNbrTable
+- MIB: OSPF-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.2.1.14.11.1.3
+      name: ospfVirtNbrIpAddr
+    tag: neighbor_ip
+  - symbol:
+      OID: 1.3.6.1.2.1.14.11.1.2
+      name: ospfVirtNbrRtrId
+    tag: neighbor_id
+  - mapping:
+      1: down
+      2: attempt
+      3: init
+      4: two_way
+      5: exchange_start
+      6: exchange
+      7: loading
+      8: full
+    symbol:
+      OID: 1.3.6.1.2.1.14.11.1.5
+      name: ospfVirtNbrState
+    tag: neighbor_state
+  symbols:
+  - constant_value_one: true
+    name: ospfVirtNbr
+  table:
+    OID: 1.3.6.1.2.1.14.11
+    name: ospfVirtNbrTable
+- MIB: OSPF-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.2.1.14.7.1.1
+      name: ospfIfIpAddress
+    tag: ospf_ip_addr
+  - MIB: OSPF-MIB
+    symbol:
+      OID: 1.3.6.1.2.1.14.10.1.3
+      name: ospfNbrRtrId
+    table: ospfNbrTable
+    tag: neighbor_id
+  - mapping:
+      1: down
+      2: loopback
+      3: waiting
+      4: point_to_point
+      5: designated_router
+      6: backup_designated_router
+      7: other_designated_router
+    symbol:
+      OID: 1.3.6.1.2.1.14.7.1.12
+      name: ospfIfState
+    tag: if_state
+  symbols:
+  - OID: 1.3.6.1.2.1.14.7.1.8
+    name: ospfIfRetransInterval
+  - OID: 1.3.6.1.2.1.14.7.1.12
+    name: ospfIfState
+  - OID: 1.3.6.1.2.1.14.7.1.21
+    name: ospfIfLsaCount
+  table:
+    OID: 1.3.6.1.2.1.14.7
+    name: ospfIfTable
+- MIB: OSPF-MIB
+  metric_tags:
+  - symbol:
+      OID: 1.3.6.1.2.1.14.7.1.1
+      name: ospfIfIpAddress
+    tag: ospf_ip_addr
+  - MIB: OSPF-MIB
+    symbol:
+      OID: 1.3.6.1.2.1.14.10.1.3
+      name: ospfNbrRtrId
+    table: ospfNbrTable
+    tag: neighbor_id
+  - mapping:
+      1: down
+      2: loopback
+      3: waiting
+      4: point_to_point
+      5: designated_router
+      6: backup_designated_router
+      7: other_designated_router
+    symbol:
+      OID: 1.3.6.1.2.1.14.7.1.12
+      name: ospfIfState
+    tag: if_state
+  symbols:
+  - constant_value_one: true
+    name: ospfIf
+  table:
+    OID: 1.3.6.1.2.1.14.7
+    name: ospfIfTable
+- MIB: OSPF-MIB
+  metric_tags:
+  - MIB: OSPF-MIB
+    symbol:
+      OID: 1.3.6.1.2.1.14.11.1.2
+      name: ospfVirtNbrRtrId
+    table: ospfVirtNbrTable
+    tag: neighbor_id
+  - mapping:
+      1: down
+      4: point_to_point
+    symbol:
+      OID: 1.3.6.1.2.1.14.9.1.7
+      name: ospfVirtIfState
+    tag: if_state
+  symbols:
+  - OID: 1.3.6.1.2.1.14.9.1.4
+    name: ospfVirtIfRetransInterval
+  - OID: 1.3.6.1.2.1.14.9.1.7
+    name: ospfVirtIfState
+  - OID: 1.3.6.1.2.1.14.9.1.12
+    name: ospfVirtIfLsaCount
+  table:
+    OID: 1.3.6.1.2.1.14.9
+    name: ospfVirtIfTable
+- MIB: OSPF-MIB
+  metric_tags:
+  - MIB: OSPF-MIB
+    symbol:
+      OID: 1.3.6.1.2.1.14.11.1.2
+      name: ospfVirtNbrRtrId
+    table: ospfVirtNbrTable
+    tag: neighbor_id
+  - mapping:
+      1: down
+      4: point_to_point
+    symbol:
+      OID: 1.3.6.1.2.1.14.9.1.7
+      name: ospfVirtIfState
+    tag: if_state
+  symbols:
+  - constant_value_one: true
+    name: ospfVirtIf
+  table:
+    OID: 1.3.6.1.2.1.14.9
+    name: ospfVirtIfTable

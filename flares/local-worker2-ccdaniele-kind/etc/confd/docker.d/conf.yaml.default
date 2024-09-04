@@ -1,0 +1,7 @@
+ad_identifiers:
+- _docker
+init_config: null
+instances:
+- collected_event_types:
+  - oom
+  - kill
